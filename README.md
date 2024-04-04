@@ -11,6 +11,8 @@ Enlace del Proyecto
 3. [Tecnologías](#Tecnologías)
 4. [Instalación](#Instalación)
 5. [Galeria](#Galeria)
+6.
+7.
 
 ## Información del Proyecto 
 ***
@@ -35,12 +37,12 @@ Enlace del Proyecto
 
 ### Desarrollador Backend
 
-| [<img src="https://media.licdn.com/dms/image/C4D03AQGJIRRIIfpvYA/profile-displayphoto-shrink_200_200/0/1650919771838?e=1717632000&v=beta&t=A003fTvoq-95kXWgRKgv3ilDYBX6z7faQGkWYdmO1D4" width=130><br><sub>Leandro Andriani</sub>](https://www.linkedin.com/in/leandro-jonatan-andriani-07194b238/) |
+| [<img src="https://avatars.githubusercontent.com/u/126698066?v=4" width=130><br><sub>Leandro Andriani</sub>](https://www.linkedin.com/in/leandro-jonatan-andriani-07194b238/) |
 | :---: |
 
 ### Diseñadoras UX/UI
 
-| [<img src="https://media.licdn.com/dms/image/D5603AQGQt9BANKMVBg/profile-displayphoto-shrink_800_800/0/1642275144907?e=1717632000&v=beta&t=JBSL1WYhy4ON5Hj_42VaxE43R7b7a7yg5Ghi2TMPZCY" width=130><br><sub>Ximena Ellis</sub>](https://www.linkedin.com/in/ximenaellis/) | [<img src="https://avatars.githubusercontent.com/u/103214015?v=4" width=130><br><sub>Natalia Caniza Toral</sub>](https://www.linkedin.com/in/naticanizatoral/) |
+| [<img src="https://avatars.githubusercontent.com/u/137641974?v=4" width=130><br><sub>Ximena Ellis</sub>](https://www.linkedin.com/in/ximenaellis/) | [<img src="https://avatars.githubusercontent.com/u/103214015?v=4" width=130><br><sub>Natalia Caniza Toral</sub>](https://www.linkedin.com/in/naticanizatoral/) |
 | :---: | :---: | 
 
 ### Desarrolladoras Frontend
@@ -76,3 +78,11 @@ Lista de tecnologías usadas:
 
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
+
+
+## Instalación
+***
+
+
+## Galeria
+***
