@@ -64,7 +64,7 @@ Lista de tecnologías usadas:
 * [![Next][Next.js]][Next-url]
 * [Express.js](https://example.com)
 * [NODEjs](https://example.com)
-* [MySQL Workbench](https://example.com)
+* [PostgreSQL](https://example.com)
 * [Figma](https://example.com)
 * [Google Forms](https://example.com)
 * [Google Docs](https://example.com)
@@ -73,7 +73,7 @@ Lista de tecnologías usadas:
 * [CSS](https://example.com)
 * [JavaScript](https://example.com)
 * [Git ](https://example.com)
-* [JGitHub](https://example.com)
+* [GitHub](https://example.com)
 
 
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
