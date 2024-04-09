@@ -7,8 +7,8 @@
 /* boton principal  */
 
 .btt-1{
-    color: var(--ocre-cero);
-    background-color: var(--naranja);
+    color: var(--secundario);
+    background-color: var(--acento);
     border-radius: 12px;
     padding: 4px;
     height: 48px;
@@ -18,11 +18,30 @@
 /* boton secundario */
 
 .btt-2{
-    color: var(--naranja);
+    color: var(--acento);
     background-color: none;
-    border: 1px solid var(--naranja);
+    border: 1px solid var(--acento);
     border-radius: 12px;
     padding: 4px;
     height: 48px;
     width: 164px;
+}
+
+/* HEADER  */
+
+header{
+    position: absolute;
+    width: 100vw;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+
+}
+header nav{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    padding: 0 24px 0 24px;
 }

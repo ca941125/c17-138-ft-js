@@ -1,18 +1,24 @@
 /* variables locales creadas*/
 :root{
-    --verde-cien: #93C0A3;
-    --verde-doscientos: #7BA088;
-    --verde-trescientos: #62806D;
-    --verde-cuatroscientos: #4A6052;
-    --verde-quinientos: #314036;
-    --verde-seiscientos: #1D2621;
+    --primario: #93C0A3;
+    --primario-claro: #C9E0D1;
+    --primario-oscuro-medio: #62806D;
+    --primario-oscuro: #4A6052;
+    --primario-oscuro-al80: #4a6052da;
 
-    --ocre-cero: #F6F4ED;
-    --ocre-cien: #E3DFC8;
+    --secundario: #e3dfc8;
 
-    --naranja: #F46701;
-    --naranja-cien: #;
-    --naranja-doscientos: #;
+    --acento: #F46701;
+    --acento-hover: #f6802b;
+    --acento-dark-mode: #f89a56;
+    --acento-al20: ;
+
+    --textos: #1D2621;
+    --textos-grises: #4A6052;
+
+    --blanco-2: #F9F9F4;
+    --blanco-1: #FFFFFF;
+    --fondo: #F6F4ED;
 }
 /*para llamar ->  var(--blanco) 
 para llamar @import url("variables.css) en el css principal*/
