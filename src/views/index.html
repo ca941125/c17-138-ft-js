@@ -7,7 +7,7 @@
     <!-- style -->
     <link rel="stylesheet" href="../public/css/reset.css">
     <link rel="stylesheet" href="../public/css/general-style.css">
-
+    <link rel="stylesheet" href="../public/css/index.css">
 
     <title>Home Wasi</title>
 </head>
@@ -32,11 +32,15 @@
                     <a href="">Cómo funciona</a>
                     <a href="">Contacto</a>
                 </div>
-                <div class="nav-icon">
+
+                 <!-- ICÓNOS DE SESIÓN INICIADA -->
+
+                <!-- <div class="nav-icon">
                     <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
                     <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
                     <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
-                </div>
+                </div> -->
+
                 <div class="nav-button">
                     <button>Inicia sesión</button>
                     <button class="btt-2">Registrate</button>
@@ -44,13 +48,12 @@
             </nav>
         </header>
 
-
         <div class="container-image">
             <img src="../public/images/Encabezado.png" alt="">
             <h1>Deja que tu mascota se sienta como en casa mientras te vas de viaje.</h1>
         </div>
 
-        <div class="container-search">
+        <div class="container-search  bg-p-claro ">
             <form>
                 <fieldset>
                     <legend>Elige la fecha que desearías reservar un alojamiento para tu mascota</legend>
@@ -65,15 +68,10 @@
                     <select name="">
                         <option value="">La Pampa</option>
                         <option value="">Córdoba</option>
-                        ...
                     </select>
-                    
+
                     <label for="">Tipo de mascota</label>
-                    <select name="">
-                        <option value="">perro</option>
-                        <option value="">gato</option>
-                        ...
-                    </select>
+                    <input type="submit" name="" id="">
 
                     <label for="">Cantidad</label>
                     <select name="">
@@ -88,6 +86,7 @@
                 </fieldset>
             </form>
         </div>
+        
         <div class="container-metricas">
             <p>Nuestros números hablan por si solos</p>
             <p><span>3000</span><br>Anfitriones</p>
@@ -136,20 +135,19 @@
 </main>
 
 
-
 <!-- FOOTER -->
-<footer>
-    <h3>Contacto</h3>
+<footer class="bg-p-oscuro">
+    <h3 class="c-blanco-1">Contacto</h3>
     <section class="footer">
         <div class="footer-info">
-            <h4 class="v-100" >Estamos aquí para ayudarte!</h4>
-            <p>Ponete en contacto con nosotros si tienes alguna pregunta, comentario o sugerencia.</p>
+            <h4 class="c-acento" >Estamos aquí para ayudarte!</h4>
+            <p class="c-blanco-1">Ponete en contacto con nosotros si tienes alguna pregunta, comentario o sugerencia.</p>
             <div class="footer-redes">
                 <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
                 <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
                 <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
             </div>
-            <ul class="footer-contacto">
+            <ul class="footer-contacto c-blanco-1">
                 <li>
                     <img src="../public/images/icon-minus.svg" alt="">
                     123 456 789
@@ -158,13 +156,13 @@
                     <img src="../public/images/icon-minus.svg" alt="">
                     wasi@info.com
                 </li>
-                <li>
+                <li >
                     <img src="../public/images/icon-minus.svg" alt="">
                     Dirección 123 - Argentina
                 </li>
             </ul>
         </div>
-        <div class="footer-form">
+        <div class="footer-form c-blanco-1">
             <form action="">
                 <label for="">E-mail</label>
                 <input type="email">
@@ -172,7 +170,7 @@
                 <label for="">Tu consulta</label>
                 <textarea name="" id="" cols="30" rows="10"></textarea>
             
-                <input type="submit" value="Enviar">
+                <input class="bg-acento" type="submit" value="Enviar">
             </form>
         </div>
     </section>
