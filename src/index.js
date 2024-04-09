@@ -24,7 +24,10 @@ app.use(session({
 app.set('view engine', 'ejs')
 app.set('views', join(__dirname, 'views'))
 
-app.use(indexRoutes)
+/* app.use(indexRoutes) */
+app.get('/', (req, res) => {
+    res.send('hola')
+})
 
 app.use((req, res, next)=> {
     res.send('Página solicitada no encontrada')
