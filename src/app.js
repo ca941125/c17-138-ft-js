@@ -32,5 +32,4 @@ app.use((req, res, next)=> {
     next()
 })
 
-app.listen(PORT)
-console.log('Server on port', PORT)
+export default app

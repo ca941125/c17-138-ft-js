@@ -8,6 +8,5 @@ import session from 'express-session'
 import app from './src/app.js'
 
 
-
 app.listen(PORT)
 console.log('Server on port', PORT)
