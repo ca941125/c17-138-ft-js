@@ -1,4 +1,5 @@
 import pool from '../db.js'
+import { db } from '@vercel/postgres'
 
 export const getIndex = async (req, res) => {
     const data = await pool.query('SELECT * FROM alojamientos LIMIT 8 OFFSET 0')
