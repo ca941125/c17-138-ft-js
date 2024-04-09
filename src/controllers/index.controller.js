@@ -8,5 +8,5 @@ export const getIndex = async (req, res) => {
     console.log(data[0])
     res.render('index', {data: data[0]}) */
     const users = await client.sql`SELECT * FROM usuarios;`;
-    res.json(users)
+    res.json({users: users.rows})
 }
