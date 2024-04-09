@@ -5,7 +5,7 @@ import morgan from 'morgan'
 import {PORT} from './config.js'
 import bcryptjs from 'bcryptjs'
 import session from 'express-session'
-import app from './src/app.js'
+import app from './src/index.js'
 
 
 app.listen(PORT)
