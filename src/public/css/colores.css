@@ -1,0 +1,36 @@
+@import url(variables.css);
+
+/* -------------------------------------------- */
+/* COLORS */
+/* -------------------------------------------- */
+.v-100 { color: var(--verde-cien); }
+.v-200{ color: var(--verde-doscientos); }
+.v-300 { color: var(--verde-trescientos); }
+.v-400 { color: var(--verde-cuatroscientos); }
+.v-500 { color: var(--verde-quinientos); }
+.v-600 { color: var(--verde-seiscientos); }
+
+.o-0 { color: var(--ocre-cero);}
+.o-100 { color: var(--ocre-cien);}
+
+.n-0 { color: var(--naranja);}
+.n-100 { color: var(--naranja-cien);}
+.n-200 { color: var(--naranja-doscientos);}
+
+/* -------------------------------------------- */
+/* BACKGROUND COLOR */
+/* -------------------------------------------- */
+
+.bg-v-100 { background-color: var(--verde-cien); }
+.bg-v-200{ background-color: var(--verde-doscientos); }
+.bg-v-300 { background-color: var(--verde-trescientos); }
+.bg-v-400 { background-color: var(--verde-cuatroscientos); }
+.bg-v-500 { background-color: var(--verde-quinientos); }
+.bg-v-600 { background-color: var(--verde-seiscientos); }
+
+.bg-o-0 { background-color: var(--ocre-cero);}
+.bg-o-100 { background-color: var(--ocre-cien);}
+
+.bg-n-0 { background-color: var(--naranja);}
+.bg-n-100 { background-color: var(--naranja-cien);}
+.bg-n-200 { background-color: var(--naranja-doscientos);}
