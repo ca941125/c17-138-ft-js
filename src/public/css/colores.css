@@ -3,7 +3,7 @@
 /* -------------------------------------------- */
 /* COLORS */
 /* -------------------------------------------- */
-.c-primario   { color: var(--primario); }
+.c-primario   { color: var(--primario); } 
 .c-p-claro    { color: var(--primario-claro); }
 .c-p-oscuro-m { color: var(--primario-oscuro-medio); }
 .c-p-oscuro   { color: var(--primario-oscuro); }
@@ -19,9 +19,9 @@
 .c-texto      { color: var(--textos); }
 .c-texto-gris { color: var(--textos-grises); }
 
+.c-fondo      { color: var(--fondo);}
 .c-blanco-1   { color: var(--blanco-1);}
 .c-blanco-2   { color: var(--blanco-2);}
-.c-fondo      { color: var(--fondo);}
 
 /* -------------------------------------------- */
 /* BACKGROUND COLOR */
@@ -43,6 +43,6 @@
 .bg-texto      { background-color: var(--textos); }
 .bg-texto-gris { background-color: var(--textos-grises); }
 
+.bg-fondo      { background-color: var(--fondo);}
 .bg-blanco-1   { background-color: var(--blanco-1);}
 .bg-blanco-2   { background-color: var(--blanco-2);}
-.bg-fondo      { background-color: var(--fondo);}
