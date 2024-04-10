@@ -1,4 +1,5 @@
 @import url(colores.css);
+@import url(fuentes.css);
 
 /*
 BORDER RADIUS
@@ -47,17 +48,21 @@ FOOTER
     width: 164px;
 }
 
-/* -------------------------------------------- */
-/* TIPOGRAFÍAS */
-/* -------------------------------------------- */
 
-*{
-    font-family: 'Lato';
+body {
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* MAIN  */
+main{
+    flex-grow: 1;
 }
 
+/* -------------------------------------------- */
+/* HEADER STYLE */
+/* -------------------------------------------- */
 
-
-/* HEADER  */
 
 header{
     position: absolute;
@@ -88,7 +93,9 @@ header nav .nav-button{
     justify-content: space-between;
 }
 
-/* FOOTER */
+/* -------------------------------------------- */
+/* FOOTER STYLE */
+/* -------------------------------------------- */
 
 footer{
     width: 100vw;

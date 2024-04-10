@@ -1,0 +1,134 @@
+@import url(colores.css);
+/* -------------------------------------------- */
+/* FUENTES */
+/* -------------------------------------------- */
+
+*{
+    font-family: 'Lato';
+}
+
+/* display large */
+.f-dl{ 
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+    text-align: center;
+}
+/* display medium */
+.f-dm{
+    font-size: 48px;
+}
+/* display medium bold*/
+.f-dmb{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-align: right;
+    color: var(--secundario);
+}
+/* display small */
+.f-ds{
+    font-size: 36px;
+}
+/* display small bold */
+.f-dsb{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    color: var(--textos);
+}
+
+
+/* headline large  */
+.f-hl{
+    font-size: 0;
+}
+/* headline medium  */
+.f-hm{
+    font-size: 0;
+}
+/* headline medium bold  */
+.f-hmb{
+    font-size: 0;
+}
+/* headline small regular  */
+.f-hmr{
+    font-size: 0;
+}
+/* headline small medium  */
+.f-hsm{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    color: var(--textos);
+    text-align: center;
+}
+/* headline small bold  */
+.f-hsb{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: var(--textos);
+}
+
+
+/* title large regular  */
+.f-tlr{
+    font-size: 0;
+}
+/* title large bold*/
+.f-tlb{
+    font-size: 0;
+}
+/* title medium */
+.f-tm{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--textos);
+    text-align: center;
+}
+/* title small */
+.f-ts{
+    font-size: 0;
+}
+
+
+/* label large  */
+.f-ll{
+    font-size: 0;
+}
+/* label small */
+.f-ls{
+    font-size: 0;
+}
+
+
+/* body large*/
+.f-bl{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: var(--textos-grises);
+}
+/* body large bold*/
+.f-blb{
+    font-size: 0;
+}
+/* body medium*/
+.f-bm{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: var(--textos-grises);
+}
+/* body medium bold*/
+.f-bmb{
+    font-size: 0;
+}
+/* body small*/
+.f-bs{
+    font-size: 0;
+}

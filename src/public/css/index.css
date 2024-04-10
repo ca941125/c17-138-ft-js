@@ -4,15 +4,42 @@ html{
 }
 
 /* CONTAINER */
-
+.container{
+    width: 100vw;
+}
 .container .container-image img{
     width: 100vw;
 }
+
+.container .container-image .titulo-principal{
+    width: 40%;
+    position: relative;
+    top: -280px;
+    left: -180px;
+    float: right;
+}
+
+.container .container-search{
+    width: 80%;
+    height: 144px;
+    margin: 20px auto;
+    position: relative;
+    top: -100px;
+}
+
+.container .container-metricas{
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* COMO FUNCIONA */
 
 .comoFunciona{
     width: 100%;
+    padding: 48px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,12 +49,19 @@ html{
 }
 .comoFunciona .cards{
     width: 80%;
+    padding: 24px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .comoFunciona .cards .card{
+    padding: 16px 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+.recomendadosParaTi{
+    
 }
