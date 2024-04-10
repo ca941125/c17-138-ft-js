@@ -1,4 +1,3 @@
-@import url(colores.css);
 /* -------------------------------------------- */
 /* FUENTES */
 /* -------------------------------------------- */
@@ -24,7 +23,6 @@
     font-weight: 700;
     line-height: 56px;
     text-align: right;
-    color: var(--secundario);
 }
 /* display small */
 .f-ds{
@@ -35,7 +33,6 @@
     font-size: 36px;
     font-weight: 700;
     line-height: 44px;
-    color: var(--textos);
 }
 
 
@@ -49,32 +46,36 @@
 }
 /* headline medium bold  */
 .f-hmb{
-    font-size: 0;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
 }
 /* headline small regular  */
 .f-hmr{
-    font-size: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
 }
 /* headline small medium  */
 .f-hsm{
     font-size: 24px;
     font-weight: 500;
     line-height: 32px;
-    color: var(--textos);
-    text-align: center;
 }
 /* headline small bold  */
 .f-hsb{
     font-size: 24px;
     font-weight: 700;
     line-height: 32px;
-    color: var(--textos);
 }
 
 
 /* title large regular  */
 .f-tlr{
-    font-size: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15px;
 }
 /* title large bold*/
 .f-tlb{
@@ -82,15 +83,14 @@
     font-weight: 700;
     line-height: 24px;
     initial-letter: 0.15px;
-    color: var(--textos);
 }
 /* title medium */
 .f-tm{
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    color: var(--textos);
     text-align: center;
+    letter-spacing: 0.15px;
 }
 /* title small */
 .f-ts{
@@ -104,7 +104,6 @@
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0.1px;
-    color: var(--textos);
 }
 /* label small */
 .f-ls{
@@ -117,12 +116,13 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    text-align: center;
-    color: var(--textos-grises);
 }
 /* body large bold*/
 .f-blb{
-    font-size: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.5px;
 }
 /* body medium*/
 .f-bm{
@@ -133,7 +133,10 @@
 }
 /* body medium bold*/
 .f-bmb{
-    font-size: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.25px;
 }
 /* body small*/
 .f-bs{
