@@ -72,14 +72,26 @@ FOOTER
     font-size: 24px;
     font-weight: 500;
 }
+/* BODY  */
+body {
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* MAIN  */
+ main{
+ flex-grow: 1;
+ }
 
 /* HEADER  */
 
+
 header{
-    position: absolute;
+    /*position: absolute;*/
     width: 100vw;
     margin: 20px auto;
 }
+
 header nav{
     width: 80%;
     height: 72px;
