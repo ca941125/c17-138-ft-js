@@ -9,4 +9,5 @@ export const getIndex = async (req, res) => {
     res.render('index', {data: data[0]}) */
     const users = await client.sql`SELECT * FROM mascotas;`;
     res.json({users: users.rows})
+    res.render('index', ({users: users.rows}))
 }
