@@ -1,0 +1,33 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+/* CONTAINER */
+
+.container .container-image img{
+    width: 100vw;
+}
+
+/* COMO FUNCIONA */
+
+.comoFunciona{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.comoFunciona h3{
+   text-align: center;
+}
+.comoFunciona .cards{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.comoFunciona .cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
