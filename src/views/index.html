@@ -7,11 +7,11 @@
     <!-- style -->
     <link rel="stylesheet" href="../public/css/reset.css">
     <link rel="stylesheet" href="../public/css/general-style.css">
-
+    <link rel="stylesheet" href="../public/css/index.css">
 
     <title>Home Wasi</title>
 </head>
-<body>
+<body class="bg-p-oscuro">
 
 <!-- MAIN -->
 
@@ -21,36 +21,35 @@
     <section class="container">
     
         <!-- HEADER -->
-        
         <header>
             <nav class="nav bg-oscuro80">
-                <div class="nav-image">
+                <div class="nav-bar c-fondo t-bold">
                     <a href=""><img src="../public/images/logo-orange.png" alt="logo"></a>
-                </div>
-                <div class="nav-bar">
                     <a href="">Quiénes somos</a>
-                    <a href="">Cómo funciona</a>
                     <a href="">Contacto</a>
                 </div>
-                <div class="nav-icon">
+
+                 <!-- ICÓNOS DE SESIÓN INICIADA -->
+
+                <!-- <div class="nav-icon">
                     <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
                     <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
                     <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
-                </div>
-                <div class="nav-button">
-                    <button>Inicia sesión</button>
+                </div> -->
+
+                <div class="nav-button t-bold">
+                    <button class="c-a-dark-mode">Inicia sesión</button>
                     <button class="btt-2">Registrate</button>
                 </div>
             </nav>
         </header>
 
-
         <div class="container-image">
             <img src="../public/images/Encabezado.png" alt="">
-            <h1>Deja que tu mascota se sienta como en casa mientras te vas de viaje.</h1>
+            <h1 class="c-secundario">Deja que tu mascota se sienta como en casa mientras te vas de viaje.</h1>
         </div>
 
-        <div class="container-search">
+        <div class="container-search  bg-p-claro ">
             <form>
                 <fieldset>
                     <legend>Elige la fecha que desearías reservar un alojamiento para tu mascota</legend>
@@ -65,15 +64,10 @@
                     <select name="">
                         <option value="">La Pampa</option>
                         <option value="">Córdoba</option>
-                        ...
                     </select>
-                    
+
                     <label for="">Tipo de mascota</label>
-                    <select name="">
-                        <option value="">perro</option>
-                        <option value="">gato</option>
-                        ...
-                    </select>
+                    <input type="submit" name="" id="">
 
                     <label for="">Cantidad</label>
                     <select name="">
@@ -88,6 +82,7 @@
                 </fieldset>
             </form>
         </div>
+        
         <div class="container-metricas">
             <p>Nuestros números hablan por si solos</p>
             <p><span>3000</span><br>Anfitriones</p>
@@ -98,81 +93,144 @@
 
     <!-- COMO FUNCIONA -->
 
-    <section class="comoFunciona">
-        <h3>Cómo funciona</h3>
-        <div class="Cards">
+    <section class="comoFunciona bg-blanco-1">
+        <h3 class="titulo">Cómo funciona</h3>
+        <div class="cards">
             <div class="card">
-                <img src="../public/images/image 68.png" alt="">
-                <img src="../public/images/icon-minus.svg" alt="">
+                <img src="../public/images/home-cards/Ellipse68.png" alt="">
+                <img src="../public/images/home-cards/Number4.png" alt="">
                 <p><span>Buscar</span><br>
                     Encuentra anfitriones cercanos y disponibles para hospedad a tus mascotas.
                 </p>
             </div>
             <div class="card">
-                <img src="../public/images/image 68.png" alt="">
-                <img src="../public/images/icon-minus.svg" alt="">
+                <img src="../public/images/home-cards/Ellipse69.png" alt="">
+                <img src="../public/images/home-cards/Number2.png" alt="">
                 <p><span>Elegir</span><br>
                     Selecciona el anfitrión que mejor se adapte a tus necesidades y preferencias.
                 </p>
             </div>
             <div class="card">
-                <img src="../public/images/image 68.png" alt="">
-                <img src="../public/images/icon-minus.svg" alt="">
+                <img src="../public/images/home-cards/Ellipse67.png" alt="">
+                <img src="../public/images/home-cards/Number3.png" alt="">
                 <p><span>Contactar</span><br>
                     Comunícate con el anfitrión para coordinar detalles y reservar el alojamiento.
                 </p>
             </div>
             <div class="card">
-                <img src="../public/images/image 68.png" alt="">
-                <img src="../public/images/icon-minus.svg" alt="">
+                <img src="../public/images/home-cards/Ellipse66.png" alt="">
+                <img src="../public/images/home-cards/Number4.png" alt="">
                 <p><span>Disfrutar</span><br>
                     Deja a tus mascotas en buenas manos y disfruta de tu viaje con tranquilidad.
                 </p>
             </div>
-
         </div>
     </section>
 
+    <!-- RECOMENDADOS PARA TI -->
+
+    <section class="RecomendadosParaTi">
+        <div id="cards">
+            <div class="paraTiCard">
+                <img src="../public/images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
+                <div>
+                    <div>
+                        <p id="nombre">Nombre Anfitrión</p>
+                        <p id="ubicacion">Texto Ubicación</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/icons/estrella.svg" alt=""><span id="valoracion">5.0</span>
+                    </div>
+                </div>
+                <hr>
+                <div id="especificaciones">
+                    <div class="icon-text">
+                        <img src="../public/images/icons/perro.svg" alt="">
+                        <p></p>
+                    </div>
+                    <div class="icon-text">
+                        <img src="../public/images/icons/casa.svg" alt="">
+                        <p></p>
+                    </div>
+                    <div class="icon-text">
+                        <img src="../public/images/icons/jardin.svg" alt="">
+                        <p></p>
+                    </div>
+                    <div class="icon-text">
+                        <img src="../public/images/icons/cerco.svg" alt="">
+                        <p></p>
+                    </div>
+                </div>
+                <hr>
+                <p id="descripcionUsuario">
+                    Write an amazing description in this dedicated card section. Each word counts.
+                </p>
+                <div>
+                    <div id="precio">
+                        <span id="valorPrecio">$50.000</span>
+                        <p>AR/noche</p>
+                    </div>
+                    <div>
+                        <button id="valorLabel" class="btt-1">Label</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="paraTiCard"></div>
+            <div class="paraTiCard"></div>
+            <div class="paraTiCard"></div>
+            <div class="paraTiCard"></div>
+            <div class="paraTiCard"></div>
+            <div class="paraTiCard"></div>
+            <div class="paraTiCard"></div>
+        </div>
+    </section>
+
+    <!-- QUIENES NOS ELIGEN -->
+
+    <!-- PREGUNTAS FRECUENTES -->
+
+    <!-- MARCAS -->
+
 </main>
 
-
-
 <!-- FOOTER -->
-<footer>
-    <h3>Contacto</h3>
-    <section class="footer">
+<footer class="bg-p-oscuro">
+    <h3 class="titulo c-blanco-1">Contacto</h3>
+    
+    <section class="footer c-blanco-2">
         <div class="footer-info">
-            <h4 class="v-100" >Estamos aquí para ayudarte!</h4>
+            <h4 class="subtitulo c-a-dark-mode" >Estamos aquí para ayudarte!</h4>
             <p>Ponete en contacto con nosotros si tienes alguna pregunta, comentario o sugerencia.</p>
             <div class="footer-redes">
-                <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
-                <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
-                <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
+                <a href=""><img src="../public/images/icons/facebook.svg" alt=""></a>
+                <a href=""><img src="../public/images/icons/twitter.svg" alt=""></a>
+                <a href=""><img src="../public/images/icons/instagram.svg" alt=""></a>
             </div>
-            <ul class="footer-contacto">
+            <ul class="footer-contacto ">
                 <li>
-                    <img src="../public/images/icon-minus.svg" alt="">
+                    <img src="../public/images/icons/telefono.svg" alt="">
                     123 456 789
                 </li>
                 <li>
-                    <img src="../public/images/icon-minus.svg" alt="">
+                    <img src="../public/images/icons/sobre.svg" alt="">
                     wasi@info.com
                 </li>
-                <li>
-                    <img src="../public/images/icon-minus.svg" alt="">
+                <li >
+                    <img src="../public/images/icons/mundo.svg" alt="">
                     Dirección 123 - Argentina
                 </li>
             </ul>
         </div>
-        <div class="footer-form">
+        <div class="footer-form c-blanco-1">
             <form action="">
                 <label for="">E-mail</label>
-                <input type="email">
+                <input class="footerEmail br-8" type="email" placeholder="email@email.com">
 
                 <label for="">Tu consulta</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea class="br-8" id="" cols="20" rows="10"></textarea>
             
-                <input type="submit" value="Enviar">
+                <input class="enviar bg-acento btt-1" type="submit" value="Enviar">
             </form>
         </div>
     </section>
