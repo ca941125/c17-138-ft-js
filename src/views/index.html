@@ -23,10 +23,10 @@
         <!-- HEADER -->
         <header>
             <nav class="nav bg-oscuro80">
-                <div class="nav-bar c-fondo t-bold">
-                    <a href=""><img src="../public/images/logo-orange.png" alt="logo"></a>
-                    <a href="">Quiénes somos</a>
-                    <a href="">Contacto</a>
+                <div class="nav-bar c-fondo">
+                    <a href="#"><img src="../public/images/logo-orange.png" alt="logo"></a>
+                    <a href="#quienesSomos">Quiénes somos</a>
+                    <a href="#contacto">Contacto</a>
                 </div>
 
                  <!-- ICÓNOS DE SESIÓN INICIADA -->
@@ -37,7 +37,7 @@
                     <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
                 </div> -->
 
-                <div class="nav-button t-bold">
+                <div class="nav-button">
                     <button class="c-a-dark-mode">Inicia sesión</button>
                     <button class="btt-2">Registrate</button>
                 </div>
@@ -46,31 +46,34 @@
 
         <div class="container-image">
             <img src="../public/images/Encabezado.png" alt="">
-            <h1 class="c-secundario">Deja que tu mascota se sienta como en casa mientras te vas de viaje.</h1>
+            <h1 class="titulo-principal f-dmb">Deja que tu mascota se sienta como en casa mientras te vas de viaje.</h1>
         </div>
 
-        <div class="container-search  bg-p-claro ">
-            <form>
+        <div class="container-search br-8 bg-p-claro  ">
+
+            <form id="barraBuscador">
                 <fieldset>
-                    <legend>Elige la fecha que desearías reservar un alojamiento para tu mascota</legend>
+                    <legend class="f-tm">Elige la fecha que desearías reservar un alojamiento para tu mascota</legend>
                     
-                    <label for="">Fecha de ingreso </label>
+                    <label class="f-bm" for="">Fecha de ingreso </label>
                     <input id="fechaDeIngreso" type="date">
             
-                    <label for="">Fecha de salida</label>
+                    <label class="f-bm" for="">Fecha de salida</label>
                     <input id="fechaDeSalida" type="date">
                     
                     <label for="">Ubicación</label>
-                    <select name="">
-                        <option value="">La Pampa</option>
-                        <option value="">Córdoba</option>
+                    <select id="ubicacion" name="">
+                        <option id="provincia" value=""></option>
                     </select>
 
                     <label for="">Tipo de mascota</label>
-                    <input type="submit" name="" id="">
+                    <select name="" id="tipoDeMascota">
+                        <option value="gato">Gato</option>
+                        <option value="perro">Perro</option>
+                    </select>
 
                     <label for="">Cantidad</label>
-                    <select name="">
+                    <select id="cantidadDeMascotas" name="">
                         <option value="">1</option>
                         <option value="">2</option>
                         <option value="">3</option>
@@ -78,49 +81,54 @@
                         <option value="">5</option>
                     </select>
 
-                     <input type="submit" value="Enviar">
+                     <input id="botonEnviarBuscador" type="submit" value="Enviar">
                 </fieldset>
             </form>
+
         </div>
         
-        <div class="container-metricas">
+        <div class="container-metricas c-texto">
             <p>Nuestros números hablan por si solos</p>
-            <p><span>3000</span><br>Anfitriones</p>
-            <p><span>437</span><br>Ciudades registradas</p>
-            <p><span>826</span><br>Mascotas alojadas con éxito</p>
+            <p class="f-tm"><span class="f-dl">3000</span><br>Anfitriones</p>
+            <p class="f-tm"><span class="f-dl">437</span><br>Ciudades registradas</p>
+            <p class="f-tm"><span class="f-dl">826</span><br>Mascotas alojadas con éxito</p>
         </div>
     </section>
 
     <!-- COMO FUNCIONA -->
 
     <section class="comoFunciona bg-blanco-1">
-        <h3 class="titulo">Cómo funciona</h3>
+        <h3 class="f-dsb">Cómo funciona</h3>
         <div class="cards">
             <div class="card">
                 <img src="../public/images/home-cards/Ellipse68.png" alt="">
                 <img src="../public/images/home-cards/Number4.png" alt="">
-                <p><span>Buscar</span><br>
+                <p>Buscar</p>
+                <p class="f-bl">
                     Encuentra anfitriones cercanos y disponibles para hospedad a tus mascotas.
                 </p>
             </div>
             <div class="card">
                 <img src="../public/images/home-cards/Ellipse69.png" alt="">
                 <img src="../public/images/home-cards/Number2.png" alt="">
-                <p><span>Elegir</span><br>
+                <p class="">Elegir</p>
+                <p class="f-bl">
                     Selecciona el anfitrión que mejor se adapte a tus necesidades y preferencias.
                 </p>
             </div>
             <div class="card">
                 <img src="../public/images/home-cards/Ellipse67.png" alt="">
                 <img src="../public/images/home-cards/Number3.png" alt="">
-                <p><span>Contactar</span><br>
+                <p>Contactar</p>
+                <p class="f-bl">
                     Comunícate con el anfitrión para coordinar detalles y reservar el alojamiento.
                 </p>
             </div>
             <div class="card">
                 <img src="../public/images/home-cards/Ellipse66.png" alt="">
                 <img src="../public/images/home-cards/Number4.png" alt="">
-                <p><span>Disfrutar</span><br>
+                <p>Disfrutar</p>
+                <p class="f-bl">
                     Deja a tus mascotas en buenas manos y disfruta de tu viaje con tranquilidad.
                 </p>
             </div>
@@ -129,52 +137,58 @@
 
     <!-- RECOMENDADOS PARA TI -->
 
-    <section class="RecomendadosParaTi">
+    <section class="recomendadosParaTi c-fondo">
+        <h3 class="f-dsb">Recomendado para ti</h3>
         <div id="cards">
             <div class="paraTiCard">
                 <img src="../public/images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
+                
                 <div>
                     <div>
-                        <p id="nombre">Nombre Anfitrión</p>
-                        <p id="ubicacion">Texto Ubicación</p>
+                        <p class="f-hsb" >Nombre Anfitrión</p>
+                        <p class="f-bm">Texto Ubicación</p>
                     </div>
                     <div>
-                        <img src="../public/images/icons/estrella.svg" alt=""><span id="valoracion">5.0</span>
+                        <img src="../public/images/icons/estrella.svg" alt=""><span id="valoracion" class="f-bm">5.0</span>
                     </div>
                 </div>
+
                 <hr>
+
                 <div id="especificaciones">
                     <div class="icon-text">
                         <img src="../public/images/icons/perro.svg" alt="">
-                        <p></p>
+                        <p class="f-bm c-primario">1 Perro</p>
                     </div>
                     <div class="icon-text">
                         <img src="../public/images/icons/casa.svg" alt="">
-                        <p></p>
+                        <p class="f-bm c-primario">Casa</p>
                     </div>
                     <div class="icon-text">
                         <img src="../public/images/icons/jardin.svg" alt="">
-                        <p></p>
+                        <p class="f-bm c-primario">1 Jardin</p>
                     </div>
                     <div class="icon-text">
                         <img src="../public/images/icons/cerco.svg" alt="">
-                        <p></p>
+                        <p class="f-bm c-primario">Cercado</p>
                     </div>
                 </div>
+
                 <hr>
-                <p id="descripcionUsuario">
+
+                <p id="descripcionUsuario" class="f-bm c-texto-gris" >
                     Write an amazing description in this dedicated card section. Each word counts.
                 </p>
+
                 <div>
                     <div id="precio">
-                        <span id="valorPrecio">$50.000</span>
-                        <p>AR/noche</p>
+                        <span id="valorPrecio" class="f-tlb">$50.000</span>
+                        <p class="f-ll">AR/noche</p>
                     </div>
                     <div>
                         <button id="valorLabel" class="btt-1">Label</button>
                     </div>
                 </div>
-                
             </div>
             <div class="paraTiCard"></div>
             <div class="paraTiCard"></div>
@@ -200,7 +214,7 @@
     
     <section class="footer c-blanco-2">
         <div class="footer-info">
-            <h4 class="subtitulo c-a-dark-mode" >Estamos aquí para ayudarte!</h4>
+            <h4 class="c-a-dark-mode" >Estamos aquí para ayudarte!</h4>
             <p>Ponete en contacto con nosotros si tienes alguna pregunta, comentario o sugerencia.</p>
             <div class="footer-redes">
                 <a href=""><img src="../public/images/icons/facebook.svg" alt=""></a>

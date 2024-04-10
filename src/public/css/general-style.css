@@ -1,13 +1,12 @@
 @import url(colores.css);
+@import url(fuentes.css);
 
 /*
 BORDER RADIUS
 BOTTON STYLE
  -boton principal
  -boton secundario
-TIPOGRAFÍAS
- -bold
- -subtitulos
+GENERAL STYLE
 HEADER
 FOOTER
 */
@@ -48,29 +47,17 @@ FOOTER
 }
 
 /* -------------------------------------------- */
-/* TIPOGRAFÍAS */
+/* GENERAL STYLE */
 /* -------------------------------------------- */
 
-*{
-    font-family: 'Lato';
+body {
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
-/* bold */
-
-.t-bold{
-    font-weight: bold;
-}
-
-/* titulo */
-.titulo{
-    font-size: 36px;
-    margin: 30px auto;
-    padding: 20px ;
-}
-/* subtitulo */
-.subtitulo{
-    font-size: 24px;
-    font-weight: 500;
+/* MAIN  */
+main{
+    flex-grow: 1;
 }
 /* BODY  */
 body {
@@ -84,7 +71,6 @@ body {
  }
 
 /* HEADER  */
-
 
 header{
     /*position: absolute;*/
@@ -116,7 +102,9 @@ header nav .nav-button{
     justify-content: space-between;
 }
 
-/* FOOTER */
+/* -------------------------------------------- */
+/* FOOTER STYLE */
+/* -------------------------------------------- */
 
 footer{
     width: 100vw;
@@ -151,8 +139,8 @@ footer .footer-contacto {
     justify-content: space-between;
 } 
 footer .footer-contacto img{
-    width: 24px;
-    height: 24px;
+    width: 25px;
+    height: 25px;
     margin-right: 15px;
 }
 footer .footer-contacto li{
