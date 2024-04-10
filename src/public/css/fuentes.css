@@ -78,7 +78,11 @@
 }
 /* title large bold*/
 .f-tlb{
-    font-size: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    initial-letter: 0.15px;
+    color: var(--textos);
 }
 /* title medium */
 .f-tm{
@@ -96,7 +100,11 @@
 
 /* label large  */
 .f-ll{
-    font-size: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: var(--textos);
 }
 /* label small */
 .f-ls{
@@ -122,7 +130,6 @@
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0.25px;
-    color: var(--textos-grises);
 }
 /* body medium bold*/
 .f-bmb{
