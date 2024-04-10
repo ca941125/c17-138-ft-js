@@ -24,9 +24,9 @@
         <header>
             <nav class="nav bg-oscuro80">
                 <div class="nav-bar c-fondo t-bold">
-                    <a href=""><img src="../public/images/logo-orange.png" alt="logo"></a>
-                    <a href="">Quiénes somos</a>
-                    <a href="">Contacto</a>
+                    <a href="#"><img src="../public/images/logo-orange.png" alt="logo"></a>
+                    <a href="#quienesSomos">Quiénes somos</a>
+                    <a href="#contacto">Contacto</a>
                 </div>
 
                  <!-- ICÓNOS DE SESIÓN INICIADA -->
@@ -46,11 +46,12 @@
 
         <div class="container-image">
             <img src="../public/images/Encabezado.png" alt="">
-            <h1 class="c-secundario">Deja que tu mascota se sienta como en casa mientras te vas de viaje.</h1>
+            <h1 class="titulo-principal c-secundario">Deja que tu mascota se sienta como en casa mientras te vas de viaje.</h1>
         </div>
 
-        <div class="container-search  bg-p-claro ">
-            <form>
+        <div class="container-search br-8 bg-p-claro  ">
+
+            <form id="barraBuscador">
                 <fieldset>
                     <legend>Elige la fecha que desearías reservar un alojamiento para tu mascota</legend>
                     
@@ -61,16 +62,18 @@
                     <input id="fechaDeSalida" type="date">
                     
                     <label for="">Ubicación</label>
-                    <select name="">
-                        <option value="">La Pampa</option>
-                        <option value="">Córdoba</option>
+                    <select id="ubicacion" name="">
+                        <option id="provincia" value=""></option>
                     </select>
 
                     <label for="">Tipo de mascota</label>
-                    <input type="submit" name="" id="">
+                    <select name="" id="tipoDeMascota">
+                        <option value="gato">Gato</option>
+                        <option value="perro">Perro</option>
+                    </select>
 
                     <label for="">Cantidad</label>
-                    <select name="">
+                    <select id="cantidadDeMascotas" name="">
                         <option value="">1</option>
                         <option value="">2</option>
                         <option value="">3</option>
@@ -78,12 +81,13 @@
                         <option value="">5</option>
                     </select>
 
-                     <input type="submit" value="Enviar">
+                     <input id="botonEnviarBuscador" type="submit" value="Enviar">
                 </fieldset>
             </form>
+
         </div>
         
-        <div class="container-metricas">
+        <div class="container-metricas c-texto">
             <p>Nuestros números hablan por si solos</p>
             <p><span>3000</span><br>Anfitriones</p>
             <p><span>437</span><br>Ciudades registradas</p>
@@ -106,7 +110,8 @@
             <div class="card">
                 <img src="../public/images/home-cards/Ellipse69.png" alt="">
                 <img src="../public/images/home-cards/Number2.png" alt="">
-                <p><span>Elegir</span><br>
+                <p class="">Elegir</p>
+                <p>
                     Selecciona el anfitrión que mejor se adapte a tus necesidades y preferencias.
                 </p>
             </div>
