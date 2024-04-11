@@ -5,7 +5,8 @@ import morgan from 'morgan'
 import bcryptjs from 'bcryptjs'
 import session from 'express-session'
 import indexRoutes from './routes/index.routes.js'
-import loginRoutes from './routes/login.route.js'
+import loginRoutes from './routes/login.routes.js'
+import registerRoutes from './routes/register.routes.js'
 
 
 const app = express()
@@ -27,6 +28,7 @@ app.set('views', join(__dirname, 'views'))
 
 app.use(indexRoutes)
 app.use(loginRoutes)
+app.use(registerRoutes)
 
 app.get('/logout', (req, res) => {
     req.session.destroy(() => {
