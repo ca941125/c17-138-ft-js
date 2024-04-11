@@ -7,8 +7,8 @@ router.get('/login', getLogin)
 
 router.post('/login', postLogin)
 
-router.put('/', )
+router.put('/login', )
 
-router.delete('/, ')
+router.delete('/login', )
 
 export default router

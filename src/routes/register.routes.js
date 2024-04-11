@@ -7,8 +7,8 @@ router.get('/register', getRegister)
 
 router.post('/register', postRegister)
 
-router.put('/', )
+router.put('/register', )
 
-router.delete('/, ')
+router.delete('/register',)
 
 export default router

@@ -9,6 +9,6 @@ router.post('/', )
 
 router.put('/', )
 
-router.delete('/, ')
+router.delete('/', )
 
 export default router
