@@ -27,3 +27,5 @@ async function searchApi(){
                     }) */
                 })
 }
+
+searchApi()
