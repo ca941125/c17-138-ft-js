@@ -1,11 +1,14 @@
+@font-face {
+    font-family: Lato;
+    src: url('../fonts/Lato-Regular.ttf'), 
+         url('../fonts/Lato-Bold.ttf'), 
+}
 /* -------------------------------------------- */
 /* FUENTES */
 /* -------------------------------------------- */
 
 *{
     font-family: 'Lato';
-    src: url('../fonts/Lato-Regular.ttf'), 
-    url('../fonts/Lato-Bold.ttf'), 
 }
 
 /* display large */
