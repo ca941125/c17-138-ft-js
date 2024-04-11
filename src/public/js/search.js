@@ -1,8 +1,8 @@
 
-const url = 'https://infra.datos.gob.ar/georef/provincias.json'
+const url = 'json/provincias.json'
 function searchApi() {
 
-    fetch(url, { mode: 'no-cors'})
+    fetch(url)
         .then(data => data.json())
         .then(data1 => {
 
