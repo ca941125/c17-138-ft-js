@@ -4,6 +4,7 @@ import {fileURLToPath} from 'url'
 import morgan from 'morgan'
 import bcryptjs from 'bcryptjs'
 import session from 'express-session'
+
 import indexRoutes from './routes/index.routes.js'
 import loginRoutes from './routes/login.routes.js'
 import registerRoutes from './routes/register.routes.js'
