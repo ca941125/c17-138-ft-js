@@ -6,7 +6,11 @@ h3{
     text-align: center;
     margin: 48px auto;
 }
-
+header{
+    position: absolute;
+    width: 100vw;
+    margin: 20px auto;
+}
 /* -------------------------------------------- */
 /* CONTAINER  */
 /* -------------------------------------------- */
@@ -28,20 +32,45 @@ h3{
 /* search */
 .container-search{
     width: 80%;
-    height: 100px; 
+    height: 144px; 
     margin: 30px auto 10px;
     padding: 16px 24px; 
     position: relative;
     top: -100px;
 }
 
-.container-search fieldset{
-    width: 80%;
+.container-search form{
     display: flex;
+    flex-direction: column;
+}
+.container-search legend{
+    padding-left: 4px;
+}
+.container-search .formSearch{
+    height: 80px;
+    width: 150%;
+    display: flex;
+    align-items: flex-end;
 }
 .container-search .search{
-    width: 170px;
+    padding: 4px;
 }
+
+.container-search .search input{
+    width: 172px;
+    height: 48px;
+    margin-top: 5px;
+    padding: 8px;
+}
+.container-search .search select{
+    width: 172px;
+    height: 48px;
+    margin-top: 5px;
+    padding: 8px;
+}
+
+
+
 /* metricas */
 .container-metricas{
     margin: 0 auto;
@@ -54,6 +83,7 @@ h3{
     top: -100px;
 }
 .container-metricas .metrica{
+    text-align: center;
     width: 20%;
 }
 
@@ -63,7 +93,7 @@ h3{
 
 .comoFunciona{
     width: 100%;
-    padding: 0 24px;
+    padding: 48px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,6 +124,13 @@ h3{
     padding: 48px 24px;
     display: flex;
     flex-direction: column;
+    gap: 24px;
+}
+.recomendadosParaTi .cards{
+    margin: auto;
+    width: 80%;
+    padding: 16px 0 32px 0;
+    display: flex;
     gap: 24px;
 }
 .recomendadosParaTi .paraTiCard{
@@ -135,7 +172,12 @@ h3{
 }
 .recomendadosParaTi .paraTiCard .precioCard{
     display: flex;
+    justify-content: space-between;
     gap: 8px;
+}
+
+.recomendadosParaTi .paraTiCard .precioCard button{
+    width: 112px;
 }
 
 /* -------------------------------------------- */
@@ -162,13 +204,35 @@ h3{
 /* PREGUNTAS FRECUENTES */
 /* -------------------------------------------- */
 
+.pgtsFrecuentes{
+    padding: 48px 24px;
+}
+.pgtsFrecuentes .preguntas{
+    padding: 0 0 48px 0;
+    width: 80%;
+    margin: auto;
+}
+
+.pgtsFrecuentes summary{
+    margin: 10px auto;
+    border-radius: 8px;
+    border: 3px solid var(--primario);
+    padding: 10px 16px;
+
+}
+.pgtsFrecuentes .answer{
+    margin: 10px auto;
+    border-radius: 8px;
+    background-color:  var(--fondo);
+    padding: 10px 16px;
+}
+
 /* -------------------------------------------- */
 /* MARCAS  */
 /* -------------------------------------------- */
 
 .brands{
     padding: 48px 0 64px 0;
-    
 }
 .brands .contenedorBrands{
     margin: 0 auto;
