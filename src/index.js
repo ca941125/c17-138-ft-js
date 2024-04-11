@@ -5,6 +5,7 @@ import morgan from 'morgan'
 import bcryptjs from 'bcryptjs'
 import session from 'express-session'
 import indexRoutes from './routes/index.routes.js'
+import loginRoutes from './routes/login.route.js'
 
 
 const app = express()
@@ -25,6 +26,8 @@ app.set('view engine', 'ejs')
 app.set('views', join(__dirname, 'views'))
 
 app.use(indexRoutes)
+app.use(loginRoutes)
+
 
 app.use((req, res, next)=> {
     res.send('Página solicitada no encontrada')
