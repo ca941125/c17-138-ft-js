@@ -1,5 +1,6 @@
 import pool from '../db.js'
 import { db } from '@vercel/postgres'
+import bcryptjs from 'bcryptjs'
 
 export const getLogin = async (req, res) => {
     /* const client = await db.connect() */
@@ -18,18 +19,18 @@ export const postLogin = async (req, res) => {
     const client = await db.connect()
 
     try {
-        const data = await client.sql`SELECT * FROM usuarios WHERE nombreusuario = ${user};`;
-        console.log(data[0].pass)
-        if(data[0].length === 0 || !(await bcryptjs.compare(pass, data[0].pass))){
+        const {rows} = await client.sql`SELECT * FROM usuarios WHERE nombreusuario = ${user};`;
+        console.log(rows[0])
+        if(rows[0].length == 0 || !(await bcryptjs.compare(pass, rows[0].contraseña))){
             res.render('login', {msg: 'Usuario y/o contraseña incorrectas'})
         }else{
             req.session.loggedin = true
-            req.session.name = data[0].nombreusuario
-            req.session.idUser = data[0].usuarioid
-            req.session.rol= data[0].rol
+            req.session.name = rows[0].nombreusuario
+            req.session.idUser = rows[0].usuarioid
+            req.session.rol= rows[0].rol
             res.render('login', {
                 ruta: '/admin',
-                id: data[0].usuarioid
+                id: rows[0].usuarioid
             })
         }
 

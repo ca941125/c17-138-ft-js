@@ -3,9 +3,9 @@ import {getLogin, postLogin} from '../controllers/login.controller.js'
 
 const router = Router()
 
-router.get('/', getLogin)
+router.get('/login', getLogin)
 
-router.post('/', postLogin)
+router.post('/login', postLogin)
 
 router.put('/', )
 

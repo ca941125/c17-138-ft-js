@@ -28,6 +28,11 @@ app.set('views', join(__dirname, 'views'))
 app.use(indexRoutes)
 app.use(loginRoutes)
 
+app.get('/logout', (req, res) => {
+    req.session.destroy(() => {
+        res.redirect('/')
+    })
+})
 
 app.use((req, res, next)=> {
     res.send('Página solicitada no encontrada')
