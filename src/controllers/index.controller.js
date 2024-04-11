@@ -7,10 +7,13 @@ export const getIndex = async (req, res) => {
         res.render('admin', {
          login: true,
          name: req.session.name,
-         id: req.session.id
+         id: req.session.id,
+         rol: req.session.rol
         })
     } else {
-        res.render('index')
+        res.render('index', {
+            login: false
+        })
     }
 
 }
