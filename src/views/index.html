@@ -53,31 +53,31 @@
 
             <form id="barraBuscador">
                 <legend class="f-tm">Elige la fecha que desearías reservar un alojamiento para tu mascota</legend>
-                <fieldset>
+                <div class="formSearch">
                     <div class="search">
                         <label class="f-bm c-texto-gris" for="">Fecha de ingreso </label>
-                        <input id="fechaDeIngreso" type="date">
+                        <input id="fechaDeIngreso" type="date" class="br-8 bg-blanco-1">
                     </div>
                     <div class="search">
                         <label class="f-bm c-texto-gris" for="">Fecha de salida</label>
-                        <input id="fechaDeSalida" type="date">
+                        <input id="fechaDeSalida" type="date" class="br-8 bg-blanco-1">
                     </div>
                     <div class="search">
                         <label class="f-bm c-texto-gris" for="">Ubicación</label>
-                        <select id="ubicacion" name="">
+                        <select id="ubicacion" name="" class="br-8 bg-blanco-1">
                             <option id="provincia" value=""></option>
                         </select>
                     </div>
                     <div class="search">
                         <label class="f-bm c-texto-gris" for="">Tipo de mascota</label>
-                        <select name="" id="tipoDeMascota">
+                        <select name="" id="tipoDeMascota" class="br-8 bg-blanco-1">
                             <option value="gato">Gato</option>
                             <option value="perro">Perro</option>
                         </select>
                     </div>
                     <div class="search">
                         <label class="f-bm c-texto-gris" for="">Cantidad</label>
-                        <select id="cantidadDeMascotas" name="">
+                        <select id="cantidadDeMascotas" name="" class="br-8 bg-blanco-1">
                             <option value="">1</option>
                             <option value="">2</option>
                             <option value="">3</option>
@@ -88,7 +88,7 @@
                     <div class="search">
                         <input id="botonEnviarBuscador" class="btt-1" type="submit" value="Enviar">
                     </div>
-                </fieldset>
+                </div>
             </form>
 
         </div>
@@ -108,7 +108,7 @@
         <div class="cards">
             <div class="card">
                 <img src="../public/images/home-cards/Ellipse68.png" alt="">
-                <img src="../public/images/home-cards/Number4.png" alt="">
+                <img src="../public/images/home-cards/Number1.png" alt="">
                 <p>Buscar</p>
                 <p class="f-bl c-texto-gris">
                     Encuentra anfitriones cercanos y disponibles para hospedad a tus mascotas.
@@ -185,11 +185,11 @@
                         </p>
                     </div>
                     <div class="precioCard">
-                        <div>
+                        <div class="izq">
                             <span class="f-tlb">$50.000</span>
                             <p class="f-ll">AR/noche</p>
                         </div>
-                        <div>
+                        <div class="der">
                             <button class="btt-1">Label</button>
                         </div>
                     </div>
@@ -381,13 +381,29 @@
         <div class="preguntas">
             <details>
                 <summary class="question f-bl c-texto">¿pregunta 1?</summary>
-                <div class="answer f-bl c-texto">respuesta</div>
+                <div class="answer f-bl c-texto">respuesta 1</div>
             </details>
     
             <details>
                 <summary class="question f-bl c-texto">¿pregunta 2?</summary>
                 <div class="answer f-bl c-texto">respuesta 2</div>
             </details>
+
+            <details>
+                <summary class="question f-bl c-texto">¿pregunta 3?</summary>
+                <div class="answer f-bl c-texto">respuesta 3</div>
+            </details>
+
+            <details>
+                <summary class="question f-bl c-texto">¿pregunta 4?</summary>
+                <div class="answer f-bl c-texto">respuesta 4</div>
+            </details>
+
+            <details>
+                <summary class="question f-bl c-texto">¿pregunta 5?</summary>
+                <div class="answer f-bl c-texto">respuesta 5</div>
+            </details>
+
         </div>
     </section>
 
@@ -450,10 +466,10 @@
         <div class="footer-form c-blanco-1">
             <form action="">
                 <label class="f-bm" for="">E-mail</label>
-                <input class="footerEmail br-8" type="email" placeholder="email@email.com">
+                <input class="footerEmail br-8 c-texto" type="email" placeholder="email@email.com">
 
                 <label class="f-bm" for="">Tu consulta</label>
-                <textarea class="br-8" id="" cols="20" rows="10"></textarea>
+                <textarea class="br-8 c-texto" id="" cols="20" rows="10"></textarea>
             
                 <input class="enviar f-tm btt-1" type="submit" value="Enviar">
             </form>

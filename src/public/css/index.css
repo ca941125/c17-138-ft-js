@@ -6,7 +6,11 @@ h3{
     text-align: center;
     margin: 48px auto;
 }
-
+header{
+    position: absolute;
+    width: 100vw;
+    margin: 20px auto;
+}
 /* -------------------------------------------- */
 /* CONTAINER  */
 /* -------------------------------------------- */
@@ -28,7 +32,7 @@ h3{
 /* search */
 .container-search{
     width: 80%;
-    height: 100px; 
+    height: 144px; 
     margin: 30px auto 10px;
     padding: 16px 24px; 
     position: relative;
@@ -36,11 +40,37 @@ h3{
 }
 
 .container-search form{
-    
     display: flex;
+    flex-direction: column;
+}
+.container-search legend{
+    padding-left: 4px;
+}
+.container-search .formSearch{
+    height: 80px;
+    width: 150%;
+    display: flex;
+    align-items: flex-end;
+}
+.container-search .search{
+    padding: 4px;
 }
 
-    
+.container-search .search input{
+    width: 172px;
+    height: 48px;
+    margin-top: 5px;
+    padding: 8px;
+}
+.container-search .search select{
+    width: 172px;
+    height: 48px;
+    margin-top: 5px;
+    padding: 8px;
+}
+
+
+
 /* metricas */
 .container-metricas{
     margin: 0 auto;
@@ -53,6 +83,7 @@ h3{
     top: -100px;
 }
 .container-metricas .metrica{
+    text-align: center;
     width: 20%;
 }
 
@@ -141,7 +172,12 @@ h3{
 }
 .recomendadosParaTi .paraTiCard .precioCard{
     display: flex;
+    justify-content: space-between;
     gap: 8px;
+}
+
+.recomendadosParaTi .paraTiCard .precioCard button{
+    width: 112px;
 }
 
 /* -------------------------------------------- */
