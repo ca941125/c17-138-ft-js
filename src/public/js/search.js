@@ -1,13 +1,8 @@
-const corsAnywhere = 'https://cors-anywhere.herokuapp.com/'
+
 const url = 'https://infra.datos.gob.ar/georef/provincias.json'
 function searchApi() {
 
-    fetch(url, {
-        method: 'GET',
-        headers: new Headers({
-            'Content-Type': 'application/json'
-        })
-    })
+    fetch(url, { mode: 'no-cors'})
         .then(data => data.json())
         .then(data1 => {
 
@@ -25,9 +20,6 @@ function searchApi() {
                 </li>
                 `
             }) */
-        })
-        .finally(() => {
-            console.log("fin")
         })
 }
 
