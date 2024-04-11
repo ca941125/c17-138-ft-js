@@ -4,7 +4,7 @@ import { db } from '@vercel/postgres'
 export const getIndex = async (req, res) => {
     /* const client = await db.connect() */
     if(req.session.loggedin){
-        res.render('admin', {
+        res.render('index', {
          login: true,
          name: req.session.name,
          id: req.session.id,

@@ -29,7 +29,7 @@ export const postLogin = async (req, res) => {
             req.session.idUser = rows[0].usuarioid
             req.session.rol= rows[0].rol
             res.render('login', {
-                ruta: '/admin',
+                ruta: '/index',
                 id: rows[0].usuarioid
             })
         }
