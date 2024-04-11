@@ -11,3 +11,18 @@ export const getLogin = async (req, res) => {
     /* res.json({users: users.rows}) */
     res.render('index')
 }
+
+export const postLogin = async (req, res) => {
+    const { user, name, rol, pass } = req.body
+    let passwordHaash = await bcryptjs.hash(pass, 8)
+
+    try {
+        const [rows] = await pool.query(`INSERT INTO users (user, name, rol, pass) VALUES (?, ?, ?, ?)`, [user, name, rol, passwordHaash])
+        res.render('register', {
+            id: rows.insertId,
+            user
+        })
+    } catch (error) {
+        res.send(error)
+    }
+}
