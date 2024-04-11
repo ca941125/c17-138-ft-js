@@ -35,13 +35,12 @@ h3{
     top: -100px;
 }
 
-.container-search fieldset{
-    width: 80%;
+.container-search form{
+    
     display: flex;
 }
-.container-search .search{
-    width: 170px;
-}
+
+    
 /* metricas */
 .container-metricas{
     margin: 0 auto;
@@ -63,7 +62,7 @@ h3{
 
 .comoFunciona{
     width: 100%;
-    padding: 0 24px;
+    padding: 48px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,6 +93,13 @@ h3{
     padding: 48px 24px;
     display: flex;
     flex-direction: column;
+    gap: 24px;
+}
+.recomendadosParaTi .cards{
+    margin: auto;
+    width: 80%;
+    padding: 16px 0 32px 0;
+    display: flex;
     gap: 24px;
 }
 .recomendadosParaTi .paraTiCard{
@@ -162,13 +168,35 @@ h3{
 /* PREGUNTAS FRECUENTES */
 /* -------------------------------------------- */
 
+.pgtsFrecuentes{
+    padding: 48px 24px;
+}
+.pgtsFrecuentes .preguntas{
+    padding: 0 0 48px 0;
+    width: 80%;
+    margin: auto;
+}
+
+.pgtsFrecuentes summary{
+    margin: 10px auto;
+    border-radius: 8px;
+    border: 3px solid var(--primario);
+    padding: 10px 16px;
+
+}
+.pgtsFrecuentes .answer{
+    margin: 10px auto;
+    border-radius: 8px;
+    background-color:  var(--fondo);
+    padding: 10px 16px;
+}
+
 /* -------------------------------------------- */
 /* MARCAS  */
 /* -------------------------------------------- */
 
 .brands{
     padding: 48px 0 64px 0;
-    
 }
 .brands .contenedorBrands{
     margin: 0 auto;
