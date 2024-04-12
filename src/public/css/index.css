@@ -1,91 +1,96 @@
 html{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background-color: var(--primario);
 }
 h3{
     text-align: center;
     margin: 48px auto;
 }
+
+/* header */
 header{
     position: absolute;
-    width: 100vw;
-    margin: 20px auto;
 }
 /* -------------------------------------------- */
 /* CONTAINER  */
 /* -------------------------------------------- */
-
 .container{
     width: 100%;
-}
-/* hero image */
-.container .container-image img{
-    width: 100vw;
-}
-.container .container-image .titulo-principal{
-    width: 40%;
-    position: relative;
-    top: -280px;
-    left: -180px;
-    float: right;
-}
-/* search */
-.container-search{
-    width: 80%;
-    height: 144px; 
-    margin: 30px auto 10px;
-    padding: 16px 24px; 
-    position: relative;
-    top: -100px;
-}
-
-.container-search form{
-    display: flex;
-    flex-direction: column;
-}
-.container-search legend{
-    padding-left: 4px;
-}
-.container-search .formSearch{
-    height: 80px;
-    width: 150%;
+    height: 100vh;
+    background-image: url(../images/Encabezado.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: flex-end;
+    flex-direction: row-reverse;
 }
-.container-search .search{
-    padding: 4px;
-}
-
-.container-search .search input{
-    width: 172px;
-    height: 48px;
-    margin-top: 5px;
-    padding: 8px;
-}
-.container-search .search select{
-    width: 172px;
-    height: 48px;
-    margin-top: 5px;
-    padding: 8px;
-}
-
-
-
-/* metricas */
-.container-metricas{
-    margin: 0 auto;
+.container .titulo-principal{
     width: 80%;
+    margin: 5% auto;
+    text-align: right;
+}
+.searchMetricas {
+   width: 80%;
+   margin: 1% auto;
+   position: relative;
+   top: -50px;
+}
+
+.searchMetricas .container-search{
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+.searchMetricas .title-form{
+    padding: 0 0 0 5px;
+}
+.searchMetricas form{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.searchMetricas .row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 5px;
+}
+.searchMetricas input[type="date"], select, textarea {
+    width: 100%;
+    padding: 12px;
+}
+.searchMetricas input[type=submit]{
+    width: 100%;
+}
+.searchMetricas label {
+    padding: 12px 12px 12px 0;
+}
+.searchMetricas .col-25 {
+    float: left;
+    margin-top: 6px;
+}
+.searchMetricas .col-75 {
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+}
+/* metricas */
+.searchMetricas .container-metricas{
+    margin: 0 auto;
+    width: 90%;
     padding: 45px 24px 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
-    top: -100px;
 }
-.container-metricas .metrica{
+.searchMetricas .container-metricas .metrica{
     text-align: center;
-    width: 20%;
+    width: 25%;
 }
+
 
 /* -------------------------------------------- */
 /* COMO FUNCIONA  */
@@ -131,6 +136,7 @@ header{
     width: 80%;
     padding: 16px 0 32px 0;
     display: flex;
+    justify-content: center;
     gap: 24px;
 }
 .recomendadosParaTi .paraTiCard{

@@ -55,16 +55,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-/* MAIN  */
-main{
-    flex-grow: 1;
-}
 
 /* HEADER  */
 
 header{
-    /*position: absolute;*/
-    width: 100vw;
+    width: 100%;
     margin: 20px auto;
 }
 
@@ -98,7 +93,7 @@ header nav .nav-button{
 
 footer{
     padding: 24px 0 64px 0;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
