@@ -1,509 +1,489 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- style -->
-    <link rel="stylesheet" href="../public/css/reset.css">
-    <link rel="stylesheet" href="../public/css/general-style.css">
-    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general-style.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <title>Home Wasi</title>
 </head>
+
 <body>
-    <!-- HEADER -->
-    <header>
-        <nav class="nav bg-oscuro80">
-            <div class="nav-bar c-fondo">
-                <a href="#"><img src="../public/images/logo-orange.png" alt="logo"></a>
-                <a class="f-tm c-secundario" href="#quienesSomos">Quiénes somos</a>
-                <a class="f-tm c-secundario" href="#contacto">Contacto</a>
-            </div>
-    
-             <!-- ICÓNOS DE SESIÓN INICIADA -->
-    
-            <!-- <div class="nav-icon">
-                <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
-                <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
-                <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
-            </div> -->
-    
-            <div class="nav-button">
-                <button class="f-tm c-a-dark-mode">Inicia sesión</button>
-                <button class="f-tm btt-2">Registrate</button>
-            </div>
-        </nav>
-    </header>
-<!-- MAIN -->
-<!-- MAIN -->
 
-<main>
-    <!-- CONTAINER -->
+    <!-- MAIN -->
 
-    <section class="container">       
-        <h1 class="titulo-principal f-dmb c-blanco-1">Deja que tu mascota se <br>sienta como en casa <br> mientras te vas de viaje.</h1>
-    </section>
+    <main>
 
-    <!--  SEARCH Y METRICAS-->
-    <section class="searchMetricas bg-primario br-8">
-    <!-- SEARCH -->
-    <div class="container-search bg-p-claro br-8">
-        <p class="title-form f-tm">Elige la fecha que desearías reservar un alojamiento para tu mascota.</p>
-        <div class="container-form br-8">
-            <form action="">
-                <div class="row">
-                    <div class="col-25">
-                        <label class="f-bm c-texto-gris" for="fname" placeholder=" " >Fecha de ingreso</label>
+        <!-- CONTAINER -->
+        <section class="container bg-primario">
+
+            <!-- HEADER -->
+            <header>
+                <nav class="nav bg-oscuro80">
+                    <div class="nav-bar c-fondo">
+                        <a href="#"><img src="images/logo-orange.png" alt="logo"></a>
+                        <a class="f-tm c-secundario" href="#quienesSomos">Quiénes somos</a>
+                        <a class="f-tm c-secundario" href="#contacto">Contacto</a>
                     </div>
-                    <div class="col-75">
-                        <input type="date" id="" name="" class="br-8 bg-blanco-1">
+
+                    <!-- ICÓNOS DE SESIÓN INICIADA -->
+
+                    <!-- <div class="nav-icon">
+                    <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
+                    <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
+                    <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
+                </div> -->
+
+                    <div class="nav-button">
+                        <button class="f-tm c-a-dark-mode">Inicia sesión</button>
+                        <button class="f-tm btt-2">Registrate</button>
+                    </div>
+                </nav>
+            </header>
+            <!-- HERO -IMAGE -->
+            <div class="container-image">
+                <img src="images/Encabezado.png" alt="">
+                <h1 class="titulo-principal f-dmb c-blanco-1">Deja que tu mascota se sienta como en casa mientras te vas
+                    de viaje.</h1>
+            </div>
+            <!--  SEARCH -->
+            <div class="container-search br-8 bg-p-claro ">
+
+                <form id="barraBuscador">
+                    <legend class="f-tm">Elige la fecha que desearías reservar un alojamiento para tu mascota</legend>
+                    <div class="formSearch">
+                        <div class="search">
+                            <label class="f-bm c-texto-gris" for="">Fecha de ingreso </label>
+                            <input id="fechaDeIngreso" type="date" class="br-8 bg-blanco-1">
+                        </div>
+                        <div class="search">
+                            <label class="f-bm c-texto-gris" for="">Fecha de salida</label>
+                            <input id="fechaDeSalida" type="date" class="br-8 bg-blanco-1">
+                        </div>
+                        <div class="search">
+                            <label class="f-bm c-texto-gris" for="">Ubicación</label>
+                            <select id="ubicacion" name="" class="br-8 bg-blanco-1">
+                                <option id="provincia" value=""></option>
+                            </select>
+                        </div>
+                        <div class="search">
+                            <label class="f-bm c-texto-gris" for="">Tipo de mascota</label>
+                            <select name="" id="tipoDeMascota" class="br-8 bg-blanco-1">
+                                <option value="gato">Gato</option>
+                                <option value="perro">Perro</option>
+                            </select>
+                        </div>
+                        <div class="search">
+                            <label class="f-bm c-texto-gris" for="">Cantidad</label>
+                            <select id="cantidadDeMascotas" name="" class="br-8 bg-blanco-1">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                        <div class="search">
+                            <input id="botonEnviarBuscador" class="btt-1" type="submit" value="Enviar">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <!--  METRICAS -->
+            <div class="container-metricas c-texto">
+                <p class="metrica f-hsm">Nuestros números hablan por si solos</p>
+                <p class="metrica f-tm"><span class="f-dl">3000</span><br>Anfitriones</p>
+                <p class="metrica f-tm"><span class="f-dl">437</span><br>Ciudades registradas</p>
+                <p class="metrica f-tm"><span class="f-dl">826</span><br>Mascotas alojadas con éxito</p>
+            </div>
+        </section>
+
+        <!-- COMO FUNCIONA -->
+
+        <section class="comoFunciona bg-blanco-1">
+            <h3 class="f-dsb c-texto">Cómo funciona</h3>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/home-cards/Ellipse68.png" alt="">
+                    <img src="images/home-cards/Number1.png" alt="">
+                    <p>Buscar</p>
+                    <p class="f-bl c-texto-gris">
+                        Encuentra anfitriones cercanos y disponibles para hospedad a tus mascotas.
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/home-cards/Ellipse69.png" alt="">
+                    <img src="images/home-cards/Number2.png" alt="">
+                    <p class="">Elegir</p>
+                    <p class="f-bl c-texto-gris">
+                        Selecciona el anfitrión que mejor se adapte a tus necesidades y preferencias.
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/home-cards/Ellipse67.png" alt="">
+                    <img src="images/home-cards/Number3.png" alt="">
+                    <p>Contactar</p>
+                    <p class="f-bl c-texto-gris">
+                        Comunícate con el anfitrión para coordinar detalles y reservar el alojamiento.
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/home-cards/Ellipse66.png" alt="">
+                    <img src="images/home-cards/Number4.png" alt="">
+                    <p>Disfrutar</p>
+                    <p class="f-bl c-texto-gris">
+                        Deja a tus mascotas en buenas manos y disfruta de tu viaje con tranquilidad.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECOMENDADOS PARA TI -->
+
+        <section class="recomendadosParaTi bg-fondo">
+            <h3 class="f-dsb c-texto">Recomendado para ti</h3>
+            <div id="cards" class="cards">
+                <!-- primera card -->
+                <div class="paraTiCard bg-blanco-1 br-8">
+                    <img src="images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
+
+                    <div class="cuerpoCard">
+                        <div class="esp">
+                            <div class="nombreCard">
+                                <div>
+                                    <p class="f-hsb">Nombre Anfitrión</p>
+                                    <p class="f-bm">Texto Ubicación</p>
+                                </div>
+                                <div class="clasif">
+                                    <img src="images/icons/estrella.svg" alt="">
+                                    <span class="f-bm">5.0</span>
+                                </div>
+                            </div>
+                            <div class="iconosCard">
+                                <div class="iconText">
+                                    <img src="images/icons/perro-verde.svg" alt="">
+                                    <p class="f-bm c-primario">1 Perro</p>
+                                </div>
+                                <div class="iconText">
+                                    <img src="images/icons/casa-verde.svg" alt="">
+                                    <p class="f-bm c-primario">Casa</p>
+                                </div>
+                                <div class="iconText">
+                                    <img src="images/icons/jardin-verde.svg" alt="">
+                                    <p class="f-bm c-primario">1 Jardin</p>
+                                </div>
+                                <div class="iconText">
+                                    <img src="images/icons/cerco-verde.svg" alt="">
+                                    <p class="f-bm c-primario">Cercado</p>
+                                </div>
+                            </div>
+                            <p class="f-bm c-texto-gris">
+                                Write an amazing description in this dedicated card section. Each word counts.
+                            </p>
+                        </div>
+                        <div class="precioCard">
+                            <div class="izq">
+                                <span class="f-tlb">$50.000</span>
+                                <p class="f-ll">AR/noche</p>
+                            </div>
+                            <div class="der">
+                                <button class="btt-1">Label</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- segunda card -->
+                <div class="paraTiCard bg-blanco-1 br-8">
+                    <img src="images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
 
-                <div class="row">
-                    <div class="col-25">
-                        <label class="f-bm c-texto-gris" for="lname">Fecha de salida</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="date" id="" name="" class="br-8 bg-blanco-1">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-25">
-                        <label class="f-bm c-texto-gris" for="">Ubicación</label>
-                    </div>
-                    <div class="col-75">
-                        <select id="" name="" class="br-8 bg-blanco-1">
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-25">
-                        <label class="f-bm c-texto-gris" for="">Tipo de mascota</label>
-                    </div>
-                    <div class="col-75">
-                        <select id="" name="" class="br-8 bg-blanco-1">
-                            <option value=""></option>
-                            <option value="">Perro</option>
-                            <option value="">Gato</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-25">
-                        <label class="f-bm c-texto-gris" for="">Cantidad</label>
-                    </div>
-                    <div class="col-75">
-                        <select id="" name="" class="br-8 bg-blanco-1">
-                            <option value=""></option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div >
-                        <input class="col-75 btt-1" type="submit" value="Enviar">
-                    </div>
-                </div>
-            </form>
-        </div>
-       </div>
-    
-
-    <!--  METRICAS -->
-        <div class="container-metricas c-texto">
-            <p class="metrica f-hsm">Nuestros números hablan por si solos</p>
-            <p class="metrica f-tm"><span class="f-dl">3000</span><br>Anfitriones</p>
-            <p class="metrica f-tm"><span class="f-dl">437</span><br>Ciudades registradas</p>
-            <p class="metrica f-tm"><span class="f-dl">826</span><br>Mascotas alojadas con éxito</p>
-        </div>
-    </section>
-
-    <!-- COMO FUNCIONA -->
-
-    <section class="comoFunciona bg-blanco-1">
-        <h3 class="f-dsb c-texto">Cómo funciona</h3>
-        <div class="cards">
-            <div class="card">
-                <img src="../public/images/home-cards/Ellipse68.png" alt="">
-                <img src="../public/images/home-cards/Number1.png" alt="">
-                <p>Buscar</p>
-                <p class="f-bl c-texto-gris">
-                    Encuentra anfitriones cercanos y disponibles para hospedad a tus mascotas.
-                </p>
-            </div>
-            <div class="card">
-                <img src="../public/images/home-cards/Ellipse69.png" alt="">
-                <img src="../public/images/home-cards/Number2.png" alt="">
-                <p class="">Elegir</p>
-                <p class="f-bl c-texto-gris">
-                    Selecciona el anfitrión que mejor se adapte a tus necesidades y preferencias.
-                </p>
-            </div>
-            <div class="card">
-                <img src="../public/images/home-cards/Ellipse67.png" alt="">
-                <img src="../public/images/home-cards/Number3.png" alt="">
-                <p>Contactar</p>
-                <p class="f-bl c-texto-gris">
-                    Comunícate con el anfitrión para coordinar detalles y reservar el alojamiento.
-                </p>
-            </div>
-            <div class="card">
-                <img src="../public/images/home-cards/Ellipse66.png" alt="">
-                <img src="../public/images/home-cards/Number4.png" alt="">
-                <p>Disfrutar</p>
-                <p class="f-bl c-texto-gris">
-                    Deja a tus mascotas en buenas manos y disfruta de tu viaje con tranquilidad.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- RECOMENDADOS PARA TI -->
-
-    <section class="recomendadosParaTi bg-fondo">
-        <h3 class="f-dsb c-texto">Recomendado para ti</h3>
-        <div id="cards" class="cards">
-<!-- primera card -->
-            <div class="paraTiCard bg-blanco-1 br-8">
-                <img src="../public/images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
-                
-                <div class="cuerpoCard">
-                    <div class="esp">
-                        <div class="nombreCard">
+                    <div class="cuerpoCard">
+                        <div class="esp">
+                            <div class="nombreCard">
+                                <div>
+                                    <p class="f-hsb">Nombre Anfitrión</p>
+                                    <p class="f-bm">Texto Ubicación</p>
+                                </div>
+                                <div class="clasif">
+                                    <img src="images/icons/estrella.svg" alt="">
+                                    <span class="f-bm">5.0</span>
+                                </div>
+                            </div>
+                            <div class="iconosCard">
+                                <div class="iconText">
+                                    <img src="images/icons/perro-verde.svg" alt="">
+                                    <p class="f-bm c-primario">1 Perro</p>
+                                </div>
+                                <div class="iconText">
+                                    <img src="images/icons/casa-verde.svg" alt="">
+                                    <p class="f-bm c-primario">Casa</p>
+                                </div>
+                                <div class="iconText">
+                                    <img src="images/icons/jardin-verde.svg" alt="">
+                                    <p class="f-bm c-primario">1 Jardin</p>
+                                </div>
+                                <div class="iconText">
+                                    <img src="images/icons/cerco-verde.svg" alt="">
+                                    <p class="f-bm c-primario">Cercado</p>
+                                </div>
+                            </div>
+                            <p class="f-bm c-texto-gris">
+                                Write an amazing description in this dedicated card section. Each word counts.
+                            </p>
+                        </div>
+                        <div class="precioCard">
                             <div>
-                                <p class="f-hsb" >Nombre Anfitrión</p>
-                                <p class="f-bm">Texto Ubicación</p>
+                                <span class="f-tlb">$50.000</span>
+                                <p class="f-ll">AR/noche</p>
                             </div>
-                            <div class="clasif">
-                                <img src="../public/images/icons/estrella.svg" alt="">
-                                <span class="f-bm">5.0</span>
-                            </div>
-                        </div>
-                        <div class="iconosCard">
-                            <div class="iconText">
-                                <img src="../public/images/icons/perro-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Perro</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/casa-verde.svg" alt="">
-                                <p class="f-bm c-primario">Casa</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/jardin-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Jardin</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/cerco-verde.svg" alt="">
-                                <p class="f-bm c-primario">Cercado</p>
-                            </div>
-                        </div>
-                        <p class="f-bm c-texto-gris" >
-                            Write an amazing description in this dedicated card section. Each word counts.
-                        </p>
-                    </div>
-                    <div class="precioCard">
-                        <div class="izq">
-                            <span class="f-tlb">$50.000</span>
-                            <p class="f-ll">AR/noche</p>
-                        </div>
-                        <div class="der">
-                            <button class="btt-1">Label</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!-- segunda card -->
-            <div class="paraTiCard bg-blanco-1 br-8">
-                <img src="../public/images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
-                
-                <div class="cuerpoCard">
-                    <div class="esp">
-                        <div class="nombreCard">
                             <div>
-                                <p class="f-hsb" >Nombre Anfitrión</p>
-                                <p class="f-bm">Texto Ubicación</p>
+                                <button class="btt-1">Label</button>
                             </div>
-                            <div class="clasif">
-                                <img src="../public/images/icons/estrella.svg" alt="">
-                                <span class="f-bm">5.0</span>
-                            </div>
-                        </div>
-                        <div class="iconosCard">
-                            <div class="iconText">
-                                <img src="../public/images/icons/perro-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Perro</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/casa-verde.svg" alt="">
-                                <p class="f-bm c-primario">Casa</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/jardin-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Jardin</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/cerco-verde.svg" alt="">
-                                <p class="f-bm c-primario">Cercado</p>
-                            </div>
-                        </div>
-                        <p class="f-bm c-texto-gris" >
-                            Write an amazing description in this dedicated card section. Each word counts.
-                        </p>
-                    </div>
-                    <div class="precioCard">
-                        <div>
-                            <span class="f-tlb">$50.000</span>
-                            <p class="f-ll">AR/noche</p>
-                        </div>
-                        <div>
-                            <button class="btt-1">Label</button>
                         </div>
                     </div>
                 </div>
-            </div>
-<!-- tercer card -->
-            <div class="paraTiCard bg-blanco-1 br-8">
-                <img src="../public/images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
-                
-                <div class="cuerpoCard">
-                    <div class="esp">
-                        <div class="nombreCard">
+                <!-- tercer card -->
+                <div class="paraTiCard bg-blanco-1 br-8">
+                    <img src="images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
+
+                    <div class="cuerpoCard">
+                        <div class="esp">
+                            <div class="nombreCard">
+                                <div>
+                                    <p class="f-hsb">Nombre Anfitrión</p>
+                                    <p class="f-bm">Texto Ubicación</p>
+                                </div>
+                                <div class="clasif">
+                                    <img src="images/icons/estrella.svg" alt="">
+                                    <span class="f-bm">5.0</span>
+                                </div>
+                            </div>
+                            <div class="iconosCard">
+                                <div class="iconText">
+                                    <img src="images/icons/perro-verde.svg" alt="">
+                                    <p class="f-bm c-primario">1 Perro</p>
+                                </div>
+                                <div class="iconText">
+                                    <img src="images/icons/casa-verde.svg" alt="">
+                                    <p class="f-bm c-primario">Casa</p>
+                                </div>
+                                <div class="iconText">
+                                    <img src="images/icons/jardin-verde.svg" alt="">
+                                    <p class="f-bm c-primario">1 Jardin</p>
+                                </div>
+                                <div class="iconText">
+                                    <img src="images/icons/cerco-verde.svg" alt="">
+                                    <p class="f-bm c-primario">Cercado</p>
+                                </div>
+                            </div>
+                            <p class="f-bm c-texto-gris">
+                                Write an amazing description in this dedicated card section. Each word counts.
+                            </p>
+                        </div>
+                        <div class="precioCard">
                             <div>
-                                <p class="f-hsb" >Nombre Anfitrión</p>
-                                <p class="f-bm">Texto Ubicación</p>
+                                <span class="f-tlb">$50.000</span>
+                                <p class="f-ll">AR/noche</p>
                             </div>
-                            <div class="clasif">
-                                <img src="../public/images/icons/estrella.svg" alt="">
-                                <span class="f-bm">5.0</span>
-                            </div>
-                        </div>
-                        <div class="iconosCard">
-                            <div class="iconText">
-                                <img src="../public/images/icons/perro-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Perro</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/casa-verde.svg" alt="">
-                                <p class="f-bm c-primario">Casa</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/jardin-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Jardin</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/cerco-verde.svg" alt="">
-                                <p class="f-bm c-primario">Cercado</p>
-                            </div>
-                        </div>
-                        <p class="f-bm c-texto-gris" >
-                            Write an amazing description in this dedicated card section. Each word counts.
-                        </p>
-                    </div>
-                    <div class="precioCard">
-                        <div>
-                            <span class="f-tlb">$50.000</span>
-                            <p class="f-ll">AR/noche</p>
-                        </div>
-                        <div>
-                            <button class="btt-1">Label</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!-- cuarta card -->
-            <div class="paraTiCard bg-blanco-1 br-8">
-                <img src="../public/images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
-                
-                <div class="cuerpoCard">
-                    <div class="esp">
-                        <div class="nombreCard">
                             <div>
-                                <p class="f-hsb" >Nombre Anfitrión</p>
-                                <p class="f-bm">Texto Ubicación</p>
-                            </div>
-                            <div class="clasif">
-                                <img src="../public/images/icons/estrella.svg" alt="">
-                                <span class="f-bm">5.0</span>
+                                <button class="btt-1">Label</button>
                             </div>
                         </div>
-                        <div class="iconosCard">
-                            <div class="iconText">
-                                <img src="../public/images/icons/perro-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Perro</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/casa-verde.svg" alt="">
-                                <p class="f-bm c-primario">Casa</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/jardin-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Jardin</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/cerco-verde.svg" alt="">
-                                <p class="f-bm c-primario">Cercado</p>
-                            </div>
-                        </div>
-                        <p class="f-bm c-texto-gris" >
-                            Write an amazing description in this dedicated card section. Each word counts.
-                        </p>
                     </div>
-                    <div class="precioCard">
-                        <div>
-                            <span class="f-tlb">$50.000</span>
-                            <p class="f-ll">AR/noche</p>
+                </div>
+                <!-- cuarta card -->
+                <div class="paraTiCard bg-blanco-1 br-8">
+                    <img src="images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
+
+                    <div class="cuerpoCard">
+                        <div class="esp">
+                            <div class="nombreCard">
+                                <div>
+                                    <p class="f-hsb">Nombre Anfitrión</p>
+                                    <p class="f-bm">Texto Ubicación</p>
+                                </div>
+                                <div class="clasif">
+                                    <img src="images/icons/estrella.svg" alt="">
+                                    <span class="f-bm">5.0</span>
+                                </div>
+                            </div>
+                            <div class="iconosCard">
+                                <div class="iconText">
+                                    <img src="images/icons/perro-verde.svg" alt="">
+                                    <p class="f-bm c-primario">1 Perro</p>
+                                </div>
+                                <div class="iconText">
+                                    <img src="images/icons/casa-verde.svg" alt="">
+                                    <p class="f-bm c-primario">Casa</p>
+                                </div>
+                                <div class="iconText">
+                                    <img src="images/icons/jardin-verde.svg" alt="">
+                                    <p class="f-bm c-primario">1 Jardin</p>
+                                </div>
+                                <div class="iconText">
+                                    <img src="images/icons/cerco-verde.svg" alt="">
+                                    <p class="f-bm c-primario">Cercado</p>
+                                </div>
+                            </div>
+                            <p class="f-bm c-texto-gris">
+                                Write an amazing description in this dedicated card section. Each word counts.
+                            </p>
                         </div>
-                        <div>
-                            <button class="btt-1">Label</button>
+                        <div class="precioCard">
+                            <div>
+                                <span class="f-tlb">$50.000</span>
+                                <p class="f-ll">AR/noche</p>
+                            </div>
+                            <div>
+                                <button class="btt-1">Label</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- QUIENES NOS ELIGEN -->
+        <!-- QUIENES NOS ELIGEN -->
 
-    <section class="testimonial bg-fondo">
-        <h3 class="f-dsb c-texto">Quiénes nos eligen</h3>
-        <div class="cardTestimonial">
-            <article>
-                <figure>
-                    <img src="../public/images/quienesNosEligen1.png" alt="Foto de perfil">
-                </figure>
-                <p class="f-bl">"¡Excelente experiencia! Recibí actualizaciones diarias y fotos de mi mascota mientras viajaba. Altamente recomendado."</p>
-                <p class="f-hsm c-primario">Laura G.</p>
-            </article>
-            <article>
-                <figure>
-                    <img src="../public/images/quienesNosEligen2.png" alt="Foto de perfil">
-                </figure>
-                <p class="f-bl">"Encontré un anfitrión cercano que cuidó a mi gato como si fuera suyo. ¡Gran alivio mientras estaba fuera!"</p>
-                <p class="f-hsm c-primario">Martín R.</p>
-            </article>
-            <article>
-                <figure>
-                    <img src="../public/images/quienesNosEligen3.png" alt="Foto de perfil">
-                </figure>
-                <p class="f-bl">"Encontré personas que se preocuparon por el bienestar de mis mascotas. ¡Increíble servicio!"</p>
-                <p class="f-hsm c-primario">María L.</p>
-            </article>
-        </div>
-    </section>
-
-    <!-- PREGUNTAS FRECUENTES -->
-
-    <section class="pgtsFrecuentes bg-blanco-1" >
-        <h3 class="f-dsb c-texto">Preguntas frecuentes</h3>
-        <div class="preguntas">
-            <details>
-                <summary class="question f-bl c-texto">¿pregunta 1?</summary>
-                <div class="answer f-bl c-texto">respuesta 1</div>
-            </details>
-    
-            <details>
-                <summary class="question f-bl c-texto">¿pregunta 2?</summary>
-                <div class="answer f-bl c-texto">respuesta 2</div>
-            </details>
-
-            <details>
-                <summary class="question f-bl c-texto">¿pregunta 3?</summary>
-                <div class="answer f-bl c-texto">respuesta 3</div>
-            </details>
-
-            <details>
-                <summary class="question f-bl c-texto">¿pregunta 4?</summary>
-                <div class="answer f-bl c-texto">respuesta 4</div>
-            </details>
-
-            <details>
-                <summary class="question f-bl c-texto">¿pregunta 5?</summary>
-                <div class="answer f-bl c-texto">respuesta 5</div>
-            </details>
-
-        </div>
-    </section>
-
-    <!-- MARCAS -->
-
-    <section class="brands bg-blanco-2">
-        <h3 class="f-dsb c-texto">Marcas que nos apoyan</h3>
-        <div class="contenedorBrands">
-            <div class="brand">
-                <img src="../public/images/marcas-royal-canin-logo-ps 1.png" alt="Logo 1">
+        <section class="testimonial bg-fondo">
+            <h3 class="f-dsb c-texto">Quiénes nos eligen</h3>
+            <div class="cardTestimonial">
+                <article>
+                    <figure>
+                        <img src="images/quienesNosEligen1.png" alt="Foto de perfil">
+                    </figure>
+                    <p class="f-bl">"¡Excelente experiencia! Recibí actualizaciones diarias y fotos de mi mascota
+                        mientras viajaba. Altamente recomendado."</p>
+                    <p class="f-hsm c-primario">Laura G.</p>
+                </article>
+                <article>
+                    <figure>
+                        <img src="images/quienesNosEligen2.png" alt="Foto de perfil">
+                    </figure>
+                    <p class="f-bl">"Encontré un anfitrión cercano que cuidó a mi gato como si fuera suyo. ¡Gran alivio
+                        mientras estaba fuera!"</p>
+                    <p class="f-hsm c-primario">Martín R.</p>
+                </article>
+                <article>
+                    <figure>
+                        <img src="images/quienesNosEligen3.png" alt="Foto de perfil">
+                    </figure>
+                    <p class="f-bl">"Encontré personas que se preocuparon por el bienestar de mis mascotas. ¡Increíble
+                        servicio!"</p>
+                    <p class="f-hsm c-primario">María L.</p>
+                </article>
             </div>
-            <div class="brand">
-                <img src="../public/images/marcas-ken-l-logo-ps 1.png" alt="Logo 2">
-            </div>
-            <div class="brand">
-                <img src="../public/images/marcas-club-performance-logo-ps 1.png" alt="Logo 3">
-            </div>
-            <div class="brand">
-                <img src="../public/images/marcas-old-prince-logo-ps 1.png" alt="Logo 1">
-            </div>
-            <div class="brand">
-                <img src="../public/images/marcas-eukanuba-logo-ps 1.png" alt="Logo 2">
-            </div>
-            <div class="brand">
-                <img src="../public/images/marcas-top-nutrition-logo-ps 1.png" alt="Logo 3">
-            </div>
-        </div>
-   </section>
+        </section>
 
-</main>
+        <!-- PREGUNTAS FRECUENTES -->
 
-<!-- FOOTER -->
-<footer class="bg-p-oscuro">
-    <h3 class="f-dsb c-secundario">Contacto</h3>
-    
-    <section class="footer c-blanco-2">
-        <div class="footer-info">
-            <h4 class="f-hsm c-a-dark-mode" >Estamos aquí para ayudarte!</h4>
-            <p class="f-bl">Ponete en contacto con nosotros si tienes alguna pregunta, comentario o sugerencia.</p>
-            <div class="footer-redes">
-                <a href=""><img src="../public/images/icons/facebook.svg" alt=""></a>
-                <a href=""><img src="../public/images/icons/twitter.svg" alt=""></a>
-                <a href=""><img src="../public/images/icons/instagram.svg" alt=""></a>
+        <section class="pgtsFrecuentes bg-blanco1">
+            <h3 class="f-dsb c-texto">Preguntas frecuentes</h3>
+            <div class="preguntas">
+                <details>
+                    <summary class="question f-bl c-texto">¿pregunta 1?</summary>
+                    <div class="answer f-bl c-texto">respuesta 1</div>
+                </details>
+
+                <details>
+                    <summary class="question f-bl c-texto">¿pregunta 2?</summary>
+                    <div class="answer f-bl c-texto">respuesta 2</div>
+                </details>
+
+                <details>
+                    <summary class="question f-bl c-texto">¿pregunta 3?</summary>
+                    <div class="answer f-bl c-texto">respuesta 3</div>
+                </details>
+
+                <details>
+                    <summary class="question f-bl c-texto">¿pregunta 4?</summary>
+                    <div class="answer f-bl c-texto">respuesta 4</div>
+                </details>
+
+                <details>
+                    <summary class="question f-bl c-texto">¿pregunta 5?</summary>
+                    <div class="answer f-bl c-texto">respuesta 5</div>
+                </details>
+
             </div>
-            <ul class="footer-contacto ">
-                <li class="f-bl">
-                    <img src="../public/images/icons/telefono.svg" alt="">
-                    123 456 789
-                </li>
-                <li class="f-bl">
-                    <img src="../public/images/icons/sobre.svg" alt="">
-                    wasi@info.com
-                </li>
-                <li class="f-bl">
-                    <img src="../public/images/icons/mundo.svg" alt="">
-                    Dirección 123 - Argentina
-                </li>
-            </ul>
-        </div>
-        <div class="footer-form c-blanco-1">
-            <form action="">
-                <label class="f-bm" for="">E-mail</label>
-                <input class="footerEmail br-8 c-texto" type="email" placeholder="email@email.com">
+        </section>
 
-                <label class="f-bm" for="">Tu consulta</label>
-                <textarea class="br-8 c-texto" id="" cols="20" rows="10"></textarea>
-            
-                <input class="enviar f-tm btt-1" type="submit" value="Enviar">
-            </form>
-        </div>
-    </section>
-</footer>
+        <!-- MARCAS -->
+
+        <section class="brands bg-blanco-2">
+            <h3 class="f-dsb c-texto">Marcas que nos apoyan</h3>
+            <div class="contenedorBrands">
+                <div class="brand">
+                    <img src="images/marcas-royal-canin-logo-ps 1.png" alt="Logo 1">
+                </div>
+                <div class="brand">
+                    <img src="images/marcas-ken-l-logo-ps 1.png" alt="Logo 2">
+                </div>
+                <div class="brand">
+                    <img src="images/marcas-club-performance-logo-ps 1.png" alt="Logo 3">
+                </div>
+                <div class="brand">
+                    <img src="images/marcas-old-prince-logo-ps 1.png" alt="Logo 1">
+                </div>
+                <div class="brand">
+                    <img src="images/marcas-eukanuba-logo-ps 1.png" alt="Logo 2">
+                </div>
+                <div class="brand">
+                    <img src="images/marcas-top-nutrition-logo-ps 1.png" alt="Logo 3">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-p-oscuro">
+        <h3 class="f-dsb c-secundario">Contacto</h3>
+
+        <section class="footer c-blanco-2">
+            <div class="footer-info">
+                <h4 class="f-hsm c-a-dark-mode">Estamos aquí para ayudarte!</h4>
+                <p class="f-bl">Ponete en contacto con nosotros si tienes alguna pregunta, comentario o sugerencia.</p>
+                <div class="footer-redes">
+                    <a href=""><img src="images/icons/facebook.svg" alt=""></a>
+                    <a href=""><img src="images/icons/twitter.svg" alt=""></a>
+                    <a href=""><img src="images/icons/instagram.svg" alt=""></a>
+                </div>
+                <ul class="footer-contacto ">
+                    <li class="f-bl">
+                        <img src="images/icons/telefono.svg" alt="">
+                        123 456 789
+                    </li>
+                    <li class="f-bl">
+                        <img src="images/icons/sobre.svg" alt="">
+                        wasi@info.com
+                    </li>
+                    <li class="f-bl">
+                        <img src="images/icons/mundo.svg" alt="">
+                        Dirección 123 - Argentina
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-form c-blanco-1">
+                <form action="">
+                    <label class="f-bm" for="">E-mail</label>
+                    <input class="footerEmail br-8 c-texto" type="email" placeholder="email@email.com">
+
+                    <label class="f-bm" for="">Tu consulta</label>
+                    <textarea class="br-8 c-texto" id="" cols="20" rows="10"></textarea>
+
+                    <input class="enviar f-tm btt-1" type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+    </footer>
+
+    <script src="js/search.js"></script>
 </body>
+
 </html>
