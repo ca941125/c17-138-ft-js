@@ -175,14 +175,14 @@
         <div id="cards" class="cards">
 <!-- primera card -->
             <div class="paraTiCard bg-blanco-1 br-8">
-                <img src="images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
+                <img src="images/images_perfil/<%= alojamientos[0].usuarioid %>/<%= alojamientos[0].foto_url %>" alt="">
                 
                 <div class="cuerpoCard">
                     <div class="esp">
                         <div class="nombreCard">
                             <div>
-                                <p class="f-hsb" >Nombre Anfitrión</p>
-                                <p class="f-bm">Texto Ubicación</p>
+                                <p class="f-hsb" ><%= alojamientos[0].nombres %> <br><%= alojamientos[0].apellidos %></p>
+                                <p class="f-bm"><%= alojamientos[0].ciudad %>, <%= alojamientos[0].provincia %></p>
                             </div>
                             <div class="clasif">
                                 <img src="images/icons/estrella.svg" alt="">
@@ -191,20 +191,32 @@
                         </div>
                         <div class="iconosCard">
                             <div class="iconText">
-                                <img src="images/icons/perro-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Perro</p>
+                                <% if(alojamientos[0].mascotas[0].tipo_mascota === 'Perro') {%>
+                                    <img src="images/icons/perro-verde.svg" alt="">
+                                <% } else {%>
+                                    <img src="images/icons/gato.svg" alt="">
+                                <% } %>    
+                                <p class="f-bm c-primario"><%= alojamientos[0].mascotas.length %> <%= alojamientos[0].mascotas[0].tipo_mascota %></p>
                             </div>
                             <div class="iconText">
-                                <img src="images/icons/casa-verde.svg" alt="">
-                                <p class="f-bm c-primario">Casa</p>
+                                <% if(alojamientos[0].tipo_alojamiento === 'Casa') {%>
+                                    <img src="images/icons/casa-verde.svg" alt="">
+                                <%} else {%>
+                                    <img src="images/icons/edificio.svg" alt="">
+                                <% } %>    
+                                <p class="f-bm c-primario"><%= alojamientos[0].tipo_alojamiento %></p>
                             </div>
                             <div class="iconText">
                                 <img src="images/icons/jardin-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Jardin</p>
+                                <p class="f-bm c-primario">1 <%= alojamientos[0].aire_libre %></p>
                             </div>
                             <div class="iconText">
                                 <img src="images/icons/cerco-verde.svg" alt="">
-                                <p class="f-bm c-primario">Cercado</p>
+                                <% if(alojamientos[0].cercado === 'Si') { %>
+                                    <p class="f-bm c-primario">Cercado</p>
+                                <% } else {%>
+                                    <p class="f-bm c-primario">Sin Cercado</p>
+                                <% } %>    
                             </div>
                         </div>
                         <p class="f-bm c-texto-gris" >
@@ -213,8 +225,8 @@
                     </div>
                     <div class="precioCard">
                         <div class="izq">
-                            <span class="f-tlb">$50.000</span>
-                            <p class="f-ll">AR/noche</p>
+                            <span class="f-tlb">$<%= alojamientos[0].costo_alojamiento %></span>
+                            <p class="f-ll"><%= alojamientos[0].moneda %>/noche</p>
                         </div>
                         <div class="der">
                             <button class="btt-1">Label</button>

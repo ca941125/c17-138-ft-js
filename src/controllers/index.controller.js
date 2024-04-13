@@ -4,7 +4,7 @@ import { db } from '@vercel/postgres'
 export const getIndex = async (req, res) => {
     const client = await db.connect()
     
-    const {rows} = await client.sql`SELECT perfiles.usuarioid, nombres, apellidos, direccion, ciudad, provincia, costo_alojamiento, tipo_alojamiento, aire_libre, cercado, moneda FROM alojamientos INNER JOIN perfiles ON alojamientos.usuarioid = perfiles.usuarioid LIMIT 4 OFFSET 0;`
+    const {rows} = await client.sql`SELECT perfiles.usuarioid, nombres, foto_url, apellidos, direccion, ciudad, provincia, costo_alojamiento, tipo_alojamiento, aire_libre, cercado, moneda FROM alojamientos INNER JOIN perfiles ON alojamientos.usuarioid = perfiles.usuarioid LIMIT 4 OFFSET 0;`
     //console.log(rows[0].usuarioid)
     /* let alojamientos = rows.map(async (data) => {
         console.log(data.nombres)
