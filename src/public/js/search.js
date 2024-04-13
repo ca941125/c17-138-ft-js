@@ -6,7 +6,7 @@ function searchApi() {
         .then(data => data.json())
         .then(data1 => {
 
-            console.log(data1.provincias)
+            //console.log(data1.provincias)
             data1.provincias.map((data) => {
                 document.getElementById("ubicacion").innerHTML += `
                     <option value="${data.nombre}">
