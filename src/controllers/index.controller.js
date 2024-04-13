@@ -4,6 +4,8 @@ import { db } from '@vercel/postgres'
 export const getIndex = async (req, res) => {
     const client = await db.connect()
     
+    const {rows} = await client.sql`SELECT * FROM alojamientos;`
+
     if(req.session.loggedin){
         res.render('index', {
          login: true,

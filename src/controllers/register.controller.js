@@ -28,4 +28,13 @@ export const postRegister = async (req, res) => {
 
     /* const result2 = await client.sql`INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) VALUES ('1', 'jesse-schoff.jpg');`;
     console.log(result2.rowCount) */
+
+    /* const result3 = await client.sql`INSERT INTO alojamientos (costo_alojamiento, usuarioid, tipo_alojamiento, aire_libre, cercado, parque_cerca, descripcion, condiciones, moneda, link_ubicacion, fecha_disponible) VALUES (35000, 3, 'Casa', 'Jardin', 'Si', 'No', 'Mi casa con jardín ofrece una variedad de comodidades para el disfrute de mi mascota. El jardín proporciona un espacio seguro y al aire libre donde puede correr, explorar y jugar libremente. Hay áreas sombreadas y soleadas donde puede descansar y tomar siestas tranquilas bajo la sombra de los árboles. Además, disponemos de juguetes y equipamiento adecuado para su entretenimiento, como pelotas, juguetes interactivos y obstáculos para jugar. El jardín está vallado para garantizar su seguridad y evitar que se escape. También contamos con un área designada para sus necesidades fisiológicas, como un espacio con césped o tierra para que pueda hacer sus necesidades cómodamente. En resumen, nuestro jardín ofrece un ambiente estimulante y seguro donde mi mascota puede disfrutar de la naturaleza y mantenerse activa y feliz.', 'No recibimos mascotas muestren signos de agresividad hacia las personas o otros animales', 'AR', 'https://www.google.com/maps/place/Terrazas+de+La+Falda+2/@-31.0861151,-64.5145304,17z/data=!4m10!1m2!2m1!1sBarrio+Terrazas+de+la+Falda!3m6!1s0x942d835fef711cd5:0xd8c4afd5d1b75f3d!8m2!3d-31.0863883!4d-64.5060468!15sChtCYXJyaW8gVGVycmF6YXMgZGUgbGEgRmFsZGGSARNob3VzaW5nX2RldmVsb3BtZW504AEA!16s%2Fg%2F11q255f020?entry=ttu', '2024/04/25');`;
+    console.log(result3.rowCount) */
+
+    
+    /* const result4 = await client.sql`INSERT INTO imagenes_alojamientos (alojamientosid, url_imagen_alojamiento) VALUES ('1', 'd2.jpg');`;
+    console.log(result4.rowCount)
+    res.send('ok') */
+    
 }
