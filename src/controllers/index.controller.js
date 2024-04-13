@@ -2,7 +2,8 @@ import pool from '../db.js'
 import { db } from '@vercel/postgres'
 
 export const getIndex = async (req, res) => {
-    /* const client = await db.connect() */
+    const client = await db.connect()
+    
     if(req.session.loggedin){
         res.render('index', {
          login: true,
