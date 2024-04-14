@@ -174,15 +174,18 @@
         <h3 class="f-dsb c-texto">Recomendado para ti</h3>
         <div id="cards" class="cards">
 <!-- primera card -->
+
+            <% alojamientos.map((alojamientos) => { %>
+
             <div class="paraTiCard bg-blanco-1 br-8">
-                <img src="images/images_perfil/<%= alojamientos[0].usuarioid %>/<%= alojamientos[0].foto_url %>" alt="">
+                <img src="images/images_perfil/<%= alojamientos.usuarioid %>/<%= alojamientos.foto_url %>" alt="">
                 
                 <div class="cuerpoCard">
                     <div class="esp">
                         <div class="nombreCard">
                             <div>
-                                <p class="f-hsb" ><%= alojamientos[0].nombres %> <br><%= alojamientos[0].apellidos %></p>
-                                <p class="f-bm"><%= alojamientos[0].ciudad %>, <%= alojamientos[0].provincia %></p>
+                                <p class="f-hsb" ><%= alojamientos.nombres %> <br><%= alojamientos.apellidos %></p>
+                                <p class="f-bm"><%= alojamientos.ciudad %>, <%= alojamientos.provincia %></p>
                             </div>
                             <div class="clasif">
                                 <img src="images/icons/estrella.svg" alt="">
@@ -191,31 +194,38 @@
                         </div>
                         <div class="iconosCard">
                             <div class="iconText">
-                                <% if(alojamientos[0].mascotas[0].tipo_mascota === 'Perro') {%>
+                                <% if(alojamientos.mascotas[0].tipo_mascota === 'Perro') {%>
                                     <img src="images/icons/perro-verde.svg" alt="">
                                 <% } else {%>
                                     <img src="images/icons/gato.svg" alt="">
                                 <% } %>    
-                                <p class="f-bm c-primario"><%= alojamientos[0].mascotas.length %> <%= alojamientos[0].mascotas[0].tipo_mascota %></p>
+                                <p class="f-bm c-primario"><%= alojamientos.mascotas.length %> <%= alojamientos.mascotas[0].tipo_mascota %></p>
                             </div>
                             <div class="iconText">
-                                <% if(alojamientos[0].tipo_alojamiento === 'Casa') {%>
+                                <% if(alojamientos.tipo_alojamiento === 'Casa') {%>
                                     <img src="images/icons/casa-verde.svg" alt="">
                                 <%} else {%>
                                     <img src="images/icons/edificio.svg" alt="">
                                 <% } %>    
-                                <p class="f-bm c-primario"><%= alojamientos[0].tipo_alojamiento %></p>
+                                <p class="f-bm c-primario"><%= alojamientos.tipo_alojamiento %></p>
                             </div>
                             <div class="iconText">
-                                <img src="images/icons/jardin-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 <%= alojamientos[0].aire_libre %></p>
+                                <% if(alojamientos.aire_libre === 'Jardin' || alojamientos.aire_libre === 'Patio') {%>
+                                    <img src="images/icons/jardin-verde.svg" alt="">
+                                    <p class="f-bm c-primario"><%= alojamientos.aire_libre %></p>
+                                <%} else if(alojamientos.parque_cerca === 'Si'){%>
+                                    <img src="images/icons/plaza-cerca.svg" alt="">  
+                                    <p class="f-bm c-primario">Parque cerca</p>                               
+                                <% } %>
+                                
                             </div>
                             <div class="iconText">
-                                <img src="images/icons/cerco-verde.svg" alt="">
-                                <% if(alojamientos[0].cercado === 'Si') { %>
+                                
+                                <% if(alojamientos.cercado === 'Si') { %>
+                                    <img src="images/icons/cerco-verde.svg" alt="">
                                     <p class="f-bm c-primario">Cercado</p>
                                 <% } else {%>
-                                    <p class="f-bm c-primario">Sin Cercado</p>
+                                    
                                 <% } %>    
                             </div>
                         </div>
@@ -225,8 +235,8 @@
                     </div>
                     <div class="precioCard">
                         <div class="izq">
-                            <span class="f-tlb">$<%= alojamientos[0].costo_alojamiento %></span>
-                            <p class="f-ll"><%= alojamientos[0].moneda %>/noche</p>
+                            <span class="f-tlb">$<%= alojamientos.costo_alojamiento %></span>
+                            <p class="f-ll"><%= alojamientos.moneda %>/noche</p>
                         </div>
                         <div class="der">
                             <button class="btt-1">Label</button>
@@ -234,8 +244,13 @@
                     </div>
                 </div>
             </div>
+
+            <% }) %>
+
+        </div>    
+           
 <!-- segunda card -->
-            <div class="paraTiCard bg-blanco-1 br-8">
+            <!-- <div class="paraTiCard bg-blanco-1 br-8">
                 <img src="images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
                 
                 <div class="cuerpoCard">
@@ -282,9 +297,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 <!-- tercer card -->
-            <div class="paraTiCard bg-blanco-1 br-8">
+            <!-- <div class="paraTiCard bg-blanco-1 br-8">
                 <img src="images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
                 
                 <div class="cuerpoCard">
@@ -331,9 +346,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 <!-- cuarta card -->
-            <div class="paraTiCard bg-blanco-1 br-8">
+            <!-- <div class="paraTiCard bg-blanco-1 br-8">
                 <img src="images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
                 
                 <div class="cuerpoCard">
@@ -381,7 +396,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <!-- QUIENES NOS ELIGEN -->
