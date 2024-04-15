@@ -181,8 +181,16 @@ header{
     justify-content: space-between;
     text-align: center;
 }
+.recomendadosParaTi .paraTiCard .esp .iconosCard .iconText{
+    max-width: 51px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .recomendadosParaTi .paraTiCard .esp .iconosCard img{
-    padding: 6px 8px;
+    width: 25px;
+    height: 25px;
+    margin: 8px;
 }
 .recomendadosParaTi .paraTiCard .precioCard{
     display: flex;
