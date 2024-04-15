@@ -167,6 +167,7 @@ header{
 .recomendadosParaTi .paraTiCard .esp .nombreCard{
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
 }
 .recomendadosParaTi .paraTiCard .esp .nombreCard .clasif{
     display: flex;
