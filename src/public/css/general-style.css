@@ -56,7 +56,12 @@ body {
     min-height: 100vh;
 }
 
-/* HEADER  */
+main{
+    grid-row: 1;
+}
+
+
+/* HEADER  
 
 header{
     width: 100%;
@@ -86,11 +91,11 @@ header nav .nav-button{
     display: flex;
     justify-content: space-between;
 }
-
+ */
 /* -------------------------------------------- */
 /* FOOTER STYLE */
 /* -------------------------------------------- */
-
+/* 
 footer{
     padding: 24px 0 64px 0;
     width: 100%;
@@ -165,3 +170,4 @@ footer .enviar{
     width: 100%;
     margin-top: 10px;
 }
+-- */
