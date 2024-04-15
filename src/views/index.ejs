@@ -6,36 +6,17 @@
     
     <!-- style -->
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/general-style.css">
     <link rel="stylesheet" href="css/index.css">
+
 
     <title>Home Wasi</title>
 </head>
 <body>
     <!-- HEADER -->
-    <header>
-        <nav class="nav bg-oscuro80">
-            <div class="nav-bar c-fondo">
-                <a href="#"><img src="images/logo-orange.png" alt="logo"></a>
-                <a class="f-tm c-secundario" href="#quienesSomos">Quiénes somos</a>
-                <a class="f-tm c-secundario" href="#contacto">Contacto</a>
-            </div>
-    
-             <!-- ICÓNOS DE SESIÓN INICIADA -->
-    
-            <!-- <div class="nav-icon">
-                <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
-                <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
-                <a href=""><img src="../public/images/icon-minus.svg" alt=""></a>
-            </div> -->
-    
-            <div class="nav-button">
-                <button class="f-tm c-a-dark-mode">Inicia sesión</button>
-                <button class="f-tm btt-2">Registrate</button>
-            </div>
-        </nav>
-    </header>
-<!-- MAIN -->
+<%- include('partials/header.ejs'); -%>
 <!-- MAIN -->
 
 <main>
@@ -475,46 +456,7 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="bg-p-oscuro">
-    <h3 class="f-dsb c-secundario">Contacto</h3>
-    
-    <section class="footer c-blanco-2">
-        <div class="footer-info">
-            <h4 class="f-hsm c-a-dark-mode" >Estamos aquí para ayudarte!</h4>
-            <p class="f-bl">Ponete en contacto con nosotros si tienes alguna pregunta, comentario o sugerencia.</p>
-            <div class="footer-redes">
-                <a href=""><img src="images/icons/facebook.svg" alt=""></a>
-                <a href=""><img src="images/icons/twitter.svg" alt=""></a>
-                <a href=""><img src="images/icons/instagram.svg" alt=""></a>
-            </div>
-            <ul class="footer-contacto ">
-                <li class="f-bl">
-                    <img src="images/icons/telefono.svg" alt="">
-                    123 456 789
-                </li>
-                <li class="f-bl">
-                    <img src="images/icons/sobre.svg" alt="">
-                    wasi@info.com
-                </li>
-                <li class="f-bl">
-                    <img src="images/icons/mundo.svg" alt="">
-                    Dirección 123 - Argentina
-                </li>
-            </ul>
-        </div>
-        <div class="footer-form c-blanco-1">
-            <form action="">
-                <label class="f-bm" for="">E-mail</label>
-                <input class="footerEmail br-8 c-texto" type="email" placeholder="email@email.com">
-
-                <label class="f-bm" for="">Tu consulta</label>
-                <textarea class="br-8 c-texto" id="" cols="20" rows="10"></textarea>
-            
-                <input class="enviar f-tm btt-1" type="submit" value="Enviar">
-            </form>
-        </div>
-    </section>
-</footer>
+<%- include('partials/footer.ejs'); -%>
 
 <script src="js/search.js"></script>
 </body>
