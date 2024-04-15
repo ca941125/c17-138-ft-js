@@ -1,0 +1,78 @@
+/* -------------------------------------------- */
+/* FOOTER STYLE */
+/* -------------------------------------------- */
+
+footer{
+    padding: 24px 0 64px 0;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+footer section{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+footer .footer-info{
+    padding: 0 30px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer .footer-redes{
+    padding-left: 10px ;
+}
+footer .footer-redes img{
+    margin: 20px 35px 20px 0;
+}
+
+footer .footer-contacto {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+footer .footer-contacto img{
+    width: 25px;
+    height: 25px;
+    margin-right: 25px;
+}
+footer .footer-contacto li{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+footer .footer-form{
+    padding: 0 30px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+footer form{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+}
+footer form label{
+    margin-bottom: 15px;
+}
+footer .footerEmail{
+    padding: 15px;
+    margin-bottom: 15px;
+}
+footer textarea{
+    resize: none;
+    height: 100px;
+    padding: 13px 16px;
+}
+footer .enviar{
+    width: 100%;
+    margin-top: 10px;
+}
