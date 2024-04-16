@@ -108,7 +108,6 @@ header{
     padding: 24px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     gap: 15px;
 }
 .comoFunciona .cards .card{
@@ -206,19 +205,26 @@ header{
 /* -------------------------------------------- */
 .testimonial{
     padding: 24px 0 32px 0;
-    gap: 24px;
     text-align: center;
 }
 .testimonial .cardTestimonial{
     margin: 20px auto;
     width: 80%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.testimonial article{
+.testimonial .informacion{
+    width: 30%;
     padding: 47px 32px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     gap: 18px;
+}
+.testimonial .informacion img{
+    width: 123px;
 }
 
 /* -------------------------------------------- */
