@@ -5,6 +5,7 @@ import morgan from 'morgan'
 import session from 'express-session'
 import cookieParser from 'cookie-parser'
 import {CLAVE} from './config.js'
+import cors from "cors"
 
 import indexRoutes from './routes/index.routes.js'
 import loginRoutes from './routes/login.routes.js'
@@ -14,20 +15,35 @@ import registerRoutes from './routes/register.routes.js'
 const app = express()
 const __dirname = dirname(fileURLToPath(import.meta.url))
 //console.log(__dirname)
-const expiryDate = new Date( Date.now() + 60 * 60 * 4000 )
 app.use(morgan('dev'))
 app.use(express.static(join(__dirname, 'public')))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+
+app.use(
+	cors({
+		origin: ["https://wasi-zeta.vercel.app/", "http://localhost:8080"],
+		methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+		credentials: true,
+	})
+)
+
 app.use(cookieParser())
+
 app.use(session({
-    secret: CLAVE,
-    resave: true,
-    saveUninitialized: 'true',
-    expires: expiryDate,
-    path: 'foo/bar',
-    domain: 'https://wasi-zeta.vercel.app/'
-}))
+        secret: CLAVE || "perro-gato",
+        resave: false,
+        saveUninitialized: false,
+        /* cookie: {
+            secure: true,//use this when the code is in production for https cookie request
+            httpOnly:true,
+            sameSite: 'lax' //dealing with cross-site requests and the usage of third-party cookies
+        } */
+       
+    })
+)
+
+
 
 app.set('view engine', 'ejs')
 app.set('views', join(__dirname, 'views'))
@@ -38,7 +54,7 @@ app.use(registerRoutes)
 
 app.get('/logout', (req, res) => {
     req.session.destroy(() => {
-        res.render('index')
+        res.redirect('/')
     })
 })
 

@@ -33,6 +33,7 @@ export const postLogin = async (req, res) => {
             res.render('inicioDeSesion', {msg: 'Usuario y/o contraseña incorrectas'})       
         }else{
             const result1 = await client.sql`SELECT nombres, apellidos, foto_url FROM perfiles WHERE usuarioid = ${rows[0].usuarioid};`
+            
             req.session.loggedin = true
             req.session.name = rows[0].nombreusuario
             req.session.idUser = rows[0].usuarioid
