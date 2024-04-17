@@ -2,7 +2,7 @@ html{
     background-color: var(--fondo);
     width: 100%;
 }
-.search {
+main {
    width: 80%;
    margin: 0.5% auto;
 }
@@ -45,7 +45,34 @@ html{
     width: 100%;
     margin-top: 6px;
 }
+/* -------------------------------------------- */
+/* BUSCADOR  */
+/* -------------------------------------------- */
 
+.buscadorPerfiles .buscador{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.buscadorPerfiles .buscador .filtro{
+    display: flex;
+    align-items: center;
+}
+.buscadorPerfiles .buscador .filtro form{
+    text-decoration: none;
+    width: 80%;
+}
+.buscadorPerfiles .resultadosBusqueda{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.buscadorPerfiles .resultadosBusqueda .resultados{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 10px;
+}
 /* -------------------------------------------- */
 /* RECOMENDADOOS PARA TI */
 /* -------------------------------------------- */
@@ -53,7 +80,7 @@ html{
 .recomendadosParaTi{
     width: 80%;
     margin: 20px auto;
-    padding: 16px 24px 32pp 16px
+     
 }
 h3{
     text-align: center;
@@ -62,16 +89,17 @@ h3{
 .recomendadosParaTi .buscadorPerfiles{
     width: 100%;
     display: flex;
+    gap: 32px;
 }
 .recomendadosParaTi .buscador{
     width: 25%;
     margin-right: 15px ;
 }
 .recomendadosParaTi .cards{
-    width: 75%;
+    width: 71%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 24px;
 }
 
@@ -81,6 +109,12 @@ h3{
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+.recomendadosParaTi .imgCard img{
+    width: 264px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: none;
 }
 .recomendadosParaTi .paraTiCard .cuerpoCard{
     padding: 0 16px;
@@ -96,6 +130,7 @@ h3{
 .recomendadosParaTi .paraTiCard .esp .nombreCard{
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
 }
 .recomendadosParaTi .paraTiCard .esp .nombreCard .clasif{
     display: flex;
@@ -109,8 +144,16 @@ h3{
     justify-content: space-between;
     text-align: center;
 }
+.recomendadosParaTi .paraTiCard .esp .iconosCard .iconText{
+    max-width: 51px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .recomendadosParaTi .paraTiCard .esp .iconosCard img{
-    padding: 6px 8px;
+    width: 25px;
+    height: 25px;
+    margin: 8px;
 }
 .recomendadosParaTi .paraTiCard .precioCard{
     display: flex;
@@ -121,3 +164,16 @@ h3{
 .recomendadosParaTi .paraTiCard .precioCard button{
     width: 112px;
 } 
+
+/* -------------------------------------------- */
+/* PAGINACIÓN */
+/* -------------------------------------------- */
+
+.paginas{
+ 
+    margin: 0 auto;
+    padding: 24px 0 48px 0;
+}
+.paginas button{
+    width: 133px;float: right;
+}
