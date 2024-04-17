@@ -98,7 +98,10 @@
 }
 /* title small */
 .f-ts{
-    font-size: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.1px;
 }
 
 
