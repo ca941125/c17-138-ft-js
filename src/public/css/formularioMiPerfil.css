@@ -170,6 +170,7 @@ border:1px solid #7AA088;
    height:60vh;
    border:1px solid #7AA088;
    border-radius: 8px;
+   resize: none;
 }
  
  
