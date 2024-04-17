@@ -29,11 +29,12 @@ app.use(
 )
 
 app.use(cookieParser())
-
+/* app.set('trust proxy', 1) */
 app.use(session({
-        secret: CLAVE || "perro-gato",
+        secret: 'perro-gato',
         resave: false,
         saveUninitialized: false,
+        name: "session"
         /* cookie: { maxAge: (5 * 60 * 60 * 1000)} // 5 horas */
         /* cookie: {
             secure: true,//use this when the code is in production for https cookie request
@@ -49,9 +50,10 @@ app.use(session({
 app.set('view engine', 'ejs')
 app.set('views', join(__dirname, 'views'))
 
-app.use(indexRoutes)
 app.use(loginRoutes)
 app.use(registerRoutes)
+app.use(indexRoutes)
+
 
 app.get('/logout', (req, res) => {
     req.session.destroy(() => {

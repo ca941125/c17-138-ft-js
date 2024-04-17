@@ -35,9 +35,9 @@ export const postLogin = async (req, res) => {
             const result1 = await client.sql`SELECT nombres, apellidos, foto_url FROM perfiles WHERE usuarioid = ${rows[0].usuarioid};`
             
             req.session.loggedin = true
-            req.session.name = rows[0].nombreusuario
+            /* req.session.name = rows[0].nombreusuario */
             req.session.idUser = rows[0].usuarioid
-            req.session.rol = rows[0].rol
+            /* req.session.rol = rows[0].rol */
             req.session.usuarioSesion = {
                 nombres: result1.rows[0].nombres,
                 apellidos: result1.rows[0].apellidos,

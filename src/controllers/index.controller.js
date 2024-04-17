@@ -24,9 +24,9 @@ export const getIndex = async (req, res) => {
     if(req.session.loggedin){
         res.render('index', {
          login: true,
-         name: req.session.name,
+         /* name: req.session.name, */
          id: req.session.idUser,
-         rol: req.session.rol,
+         /* rol: req.session.rol, */
          alojamientos,
          usuarioSesion : req.session.usuarioSesion  
         })
