@@ -10,32 +10,33 @@ export const getLogin = async (req, res) => {
     res.render('index', {data: data[0]}) */
     /* const users = await client.sql`SELECT * FROM mascotas;`; */
     /* res.json({users: users.rows}) */
-    res.render('index')
+    res.render('inicioDeSesion')
 }
 
 export const postLogin = async (req, res) => {
-    const {user, pass} = req.body
+    const {email, pass} = req.body
+    console.log(email)
     let passwordHaash = await bcryptjs.hash(pass, 8)
     const client = await db.connect()
 
     try {
-        const {rows} = await client.sql`SELECT * FROM usuarios WHERE nombreusuario = ${user};`;
+        const {rows} = await client.sql`SELECT * FROM usuarios WHERE correo_electronico = ${email};`;
         console.log(rows[0])
         if(rows[0].length == 0 || !(await bcryptjs.compare(pass, rows[0].contraseña))){
-            res.render('login', {msg: 'Usuario y/o contraseña incorrectas'})
+            res.render('inicioDeSesion', {msg: 'Usuario y/o contraseña incorrectas'})
         }else{
             req.session.loggedin = true
             req.session.name = rows[0].nombreusuario
             req.session.idUser = rows[0].usuarioid
             req.session.rol= rows[0].rol
-            res.render('login', {
-                ruta: '/index',
+            res.render('inicioDeSesion', {
+                ruta: '/',
                 id: rows[0].usuarioid
             })
         }
 
     } catch (error) {
-        res.render('login', {
+        res.render('inicioDeSesion', {
             msg: 'No se pudo iniciar sesión',
             error
         })

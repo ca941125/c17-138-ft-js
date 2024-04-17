@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general-style.css">
+    <link rel="stylesheet" href="css/inicioDeSesion.css">
+    <title>Inicio de sesión</title>
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <%- include('partials/header.ejs'); -%>
+
+
+    <!-- MAIN -->
+    <main class="main">
+        <section class="inicio bg-blanco-1 br-8">
+            <div class="logo-titulo">
+                <img src="images/logo-orange.png" alt="">
+                <p class="f-tlb">Deja que tu mascota se sienta como en casa mientras te vas de viaje.</p>
+            </div>
+            <div class="inicioDeSesion">
+                <p class="f-tm">Iniciar sesión</p>
+                <form action="#" method="POST">
+                    <label for="email" class="f-bm c-texto-gris">E-mail *</label>
+                    <input type="text" id="email" name="email" class="br-8 bg-blanco-1" required>
+                    <label for="password" class="f-bm c-texto-gris">Contraseña *</label>
+                    <input type="password" id="password" name="password" class="br-8 bg-blanco-1" required>
+                    <a href="" class="f-bm c-texto-gris">Supporting text</a>
+                </form>
+            </div>
+            <div class="botones">
+                <button class="btt-2">Cancelar</button>
+                <button class="btt-1" id="submit">Iniciar Sesión</button>
+            </div>
+        </section>
+        <% if(typeof id !=='undefined' ){ %>
+            <p>Sesión iniciada</p>
+            <script>
+              setTimeout(function () {
+                window.location = '<%= ruta %>'
+              }, 2000)
+    
+            </script>
+        <% }else if(typeof msg !=='undefined'){ %>
+                <p><%= msg %></p>
+        <% } %>  
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs'); -%>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
