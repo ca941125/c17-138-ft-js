@@ -1,0 +1,45 @@
+html{
+    background-color: var(--fondo);
+}
+h3{
+    text-align: center;
+    margin: 24px 156px 16px 156px;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+.tiposDePlanes{
+    width: 552px;
+    margin: 20px auto;
+    display: flex;
+    gap: 24px;
+}
+.tiposDePlanes .plan{
+    width: 264px;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.tiposDePlanes .plan .clasico{
+    border-top: 1px solid var(--primario-claro);
+    border-bottom: 1px solid var(--primario-claro);
+    padding: 10px 0;
+}
+.tiposDePlanes .plan .premium{
+    border-top: 1px solid var(--primario);
+    border-bottom: 1px solid var(--primario);
+    padding: 10px 0;
+}
+.tiposDePlanes .plan span{
+    padding: 0 4px 0 0;
+}
+.tiposDePlanes button{
+    width: 100%;
+}
+
+.descripcion{
+    padding: 30px 0;
+}
