@@ -206,17 +206,29 @@ align-items: center;
     width: 80%;
    margin-bottom: 24px;
  }
- .mascota{
+ .mascota__card{
   min-height: 410px;
   width:25%;
-  background-color: var(--blanco-1);
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:16px
  }
- .mascota__avartar{
+ .mascota__avatar{
    border-radius: 50%;
-   height: 64px;
+   height: 130px;
+   width: 134px;
    object-fit: cover;
    object-position: center;
-   width: 64px;
  }
-
+ .mascota__detalle{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ }
+.mascota__dato{
+display: flex;
+flex-direction: row;
+}
