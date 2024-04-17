@@ -34,6 +34,7 @@ app.use(session({
         secret: CLAVE || "perro-gato",
         resave: false,
         saveUninitialized: false,
+        /* cookie: { maxAge: (5 * 60 * 60 * 1000)} // 5 horas */
         /* cookie: {
             secure: true,//use this when the code is in production for https cookie request
             httpOnly:true,
