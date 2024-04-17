@@ -1,5 +1,6 @@
 @import url(colores.css);
 @import url(fuentes.css);
+@import url(search.css);
 
 /*
 BORDER RADIUS
@@ -56,18 +57,13 @@ body {
     min-height: 100vh;
 }
 
-main{
-    grid-row: 1;
-}
-
-
-/* HEADER  
+/* HEADER  */
 
 header{
     width: 100%;
     margin: 20px auto;
 }
-
+/* sin iniciar sesión */
 header nav{
     width: 80%;
     height: 72px;
@@ -82,20 +78,45 @@ header nav{
 header nav .nav-bar{
     display: flex;
     align-items: center;
+    gap: 16px;
 }
-header nav a{
+header nav .nav-bar a{
     padding: 0 8px 0 8px;
+}
+header nav .nav-bar img{
+    width: 80px;
 }
 header nav .nav-button{
     width: 291px;
     display: flex;
     justify-content: space-between;
 }
- */
+/* con sesión iniciada */
+header nav .nav-icon{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav .nav-icon a{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+header nav .nav-icon a .icon {
+    width: 40px;
+    height: 40px;
+}
+header nav .nav-icon .foto-perfil{
+    border-radius: 50%;
+}
+
+
 /* -------------------------------------------- */
 /* FOOTER STYLE */
 /* -------------------------------------------- */
-/* 
+
 footer{
     padding: 24px 0 64px 0;
     width: 100%;
@@ -113,7 +134,7 @@ footer section{
 }
 footer .footer-info{
     padding: 0 30px;
-    width: 35%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -144,7 +165,7 @@ footer .footer-contacto li{
 }
 footer .footer-form{
     padding: 0 30px;
-    width: 35%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -170,4 +191,3 @@ footer .enviar{
     width: 100%;
     margin-top: 10px;
 }
--- */
