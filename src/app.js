@@ -3,6 +3,7 @@ import {dirname, join} from 'path'
 import {fileURLToPath} from 'url'
 import morgan from 'morgan'
 import session from 'express-session'
+import cookieParser from 'cookie-parser'
 
 import indexRoutes from './routes/index.routes.js'
 import loginRoutes from './routes/login.routes.js'
@@ -17,6 +18,7 @@ app.use(morgan('dev'))
 app.use(express.static(join(__dirname, 'public')))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+app.use(cookieParser())
 app.use(session({
     secret: 'secret',
     resave: true,
