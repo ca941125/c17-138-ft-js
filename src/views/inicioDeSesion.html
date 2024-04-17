@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <link rel="stylesheet" href="../public/css/general-style.css">
+    <link rel="stylesheet" href="../public/css/inicioDeSesion.css">
+    <title>Inicio de sesión</title>
+</head>
+<body>
+    <!-- HEADER -->
+        <!-- modelo sin iniciar sesión -->
+        <header>
+            <nav class="nav">
+                <div class="nav-bar c-fondo">
+                    <a href="#"><img src="../public/images/logo-header.png" alt="logo"></a>
+                    <a class="f-tm c-blanco-1" href="">Quiénes somos</a>
+                    <a class="f-tm c-blanco-1" href="">Planes y precios</a>
+                </div>
+    
+                 <!-- ICÓNOS DE SESIÓN INICIADA -->
+    
+                <!-- <div class="nav-icon">
+                    <a href=""><img class="icon" src="../public/images/icons/header/state-layer.svg" alt=""></a>
+                    <a href=""><img class="icon" src="../public/images/icons/header/container.svg" alt=""></a>
+                    <a href=""><img class="foto-perfil" src="../public/images/usuarios/usuario-1/perfil_usuario_1.jpg" alt=""></a>
+                </div>  -->
+    
+                <div class="nav-button">
+                    <button class="f-tm c-a-dark-mode">Inicia sesión</button>
+                    <button class="f-tm btt-2">Registrate</button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <section class="inicio bg-blanco-1 br-8">
+                <div class="logo-titulo">
+                    <img src="../public/images/logo-inicio-de-sesion.png" alt="">
+                    <p class="f-tlb">Deja que tu mascota se sienta como en casa mientras te vas de viaje.</p>
+                </div>
+                <div class="inicioDeSesion">
+                    <p class="f-tm">Iniciar sesión</p>
+                    <form action="#" method="POST">
+                        <label for="email" class="f-bm c-texto-gris">E-mail *</label>
+                        <input type="text" id="email" name="email" class="br-8 bg-blanco-1" required>
+                        <label for="password" class="f-bm c-texto-gris">Contraseña *</label>
+                        <input type="password" id="password" name="password" class="br-8 bg-blanco-1" required>
+                        <a href="" class="f-bm c-texto-gris">Supporting text</a>
+                    </form>
+                </div>
+                <div class="botones">
+                    <button class="btt-2">Regístrate</button>
+                    <button class="btt-1">Iniciar Sesión</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-p-oscuro">
+            <h3 class="f-dsb c-secundario">Contacto</h3> 
+            <section class="footer c-blanco-2">
+                <div class="footer-info">
+                    <h4 class="f-hsm c-a-dark-mode" >Estamos aquí para ayudarte!</h4>
+                    <p class="f-bl">Ponete en contacto con nosotros si tienes alguna pregunta, comentario o sugerencia.</p>
+                    <div class="footer-redes">
+                        <a href=""><img src="../public/images/icons/footer/facebook.svg" alt=""></a>
+                        <a href=""><img src="../public/images/icons/footer/twitter.svg" alt=""></a>
+                        <a href=""><img src="../public/images/icons/footer/instagram.svg" alt=""></a>
+                    </div>
+                    <ul class="footer-contacto ">
+                        <li class="f-bl">
+                            <img src="../public/images/icons/footer/telefono.svg" alt="">
+                            123 456 789
+                        </li>
+                        <li class="f-bl">
+                            <img src="../public/images/icons/footer/sobre.svg" alt="">
+                            wasi@info.com
+                        </li>
+                        <li class="f-bl">
+                            <img src="../public/images/icons/footer/mundo.svg" alt="">
+                            Dirección 123 - Argentina
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-form c-blanco-1">
+                    <form action="">
+                        <label class="f-bm" for="">E-mail</label>
+                        <input class="footerEmail br-8 c-texto" type="email" placeholder="email@email.com">
+        
+                        <label class="f-bm" for="">Tu consulta</label>
+                        <textarea class="br-8 c-texto" id="" cols="20" rows="10"></textarea>
+                    
+                        <input class="enviar f-tm btt-1" type="submit" value="Enviar">
+                    </form>
+                </div>
+            </section>
+        </footer>
+</body>
+</html>
