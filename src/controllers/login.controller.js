@@ -14,15 +14,15 @@ export const getLogin = async (req, res) => {
 }
 
 export const postLogin = async (req, res) => {
-    const {email, pass} = req.body
+    const {email, password} = req.body
     console.log(email)
-    let passwordHaash = await bcryptjs.hash(pass, 8)
+    let passwordHaash = await bcryptjs.hash(password, 8)
     const client = await db.connect()
 
     try {
         const {rows} = await client.sql`SELECT * FROM usuarios WHERE correo_electronico = ${email};`;
         console.log(rows[0])
-        if(typeof rows[0] ==='undefined' || !(await bcryptjs.compare(pass, rows[0].contraseña))){
+        if(typeof rows[0] ==='undefined' || !(await bcryptjs.compare(password, rows[0].contraseña))){
             res.render('inicioDeSesion', {msg: 'Usuario y/o contraseña incorrectas'})       
         }else{
             req.session.loggedin = true
