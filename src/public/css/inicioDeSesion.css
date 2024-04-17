@@ -41,7 +41,7 @@ html{
     gap: 8px;
 }
 .main .inicio .inicioDeSesion input{
-    padding: 12px 12px 12px 0;
+    padding: 12px ;
     border: 1px solid var(--primario);
 }
 
