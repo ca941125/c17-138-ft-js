@@ -80,7 +80,7 @@ html{
 .recomendadosParaTi{
     width: 80%;
     margin: 20px auto;
-    padding: 16px 24px 32pp 16px
+     
 }
 h3{
     text-align: center;
@@ -89,16 +89,17 @@ h3{
 .recomendadosParaTi .buscadorPerfiles{
     width: 100%;
     display: flex;
+    gap: 32px;
 }
 .recomendadosParaTi .buscador{
     width: 25%;
     margin-right: 15px ;
 }
 .recomendadosParaTi .cards{
-    width: 75%;
+    width: 71%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 24px;
 }
 
@@ -163,3 +164,16 @@ h3{
 .recomendadosParaTi .paraTiCard .precioCard button{
     width: 112px;
 } 
+
+/* -------------------------------------------- */
+/* PAGINACIÓN */
+/* -------------------------------------------- */
+
+.paginas{
+ 
+    margin: 0 auto;
+    padding: 24px 0 48px 0;
+}
+.paginas button{
+    width: 133px;float: right;
+}
