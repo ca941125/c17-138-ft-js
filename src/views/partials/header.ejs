@@ -9,19 +9,20 @@
                 <a class="f-tm c-blanco-1" href="">Planes y precios</a>
             </div>
 
-            <!-- <% if(login){}%> -->
+            <% if(login){%>
              <!-- ICÓNOS DE SESIÓN INICIADA -->
 
-            <!-- <div class="nav-icon">
-                <a href=""><img class="icon" src="../public/images/icons/header/state-layer.svg" alt=""></a>
-                <a href=""><img class="icon" src="../public/images/icons/header/container.svg" alt=""></a>
-                <a href=""><img class="foto-perfil" src="../public/images/usuarios/usuario-1/perfil_usuario_1.jpg" alt=""></a>
-            </div>  -->
-
+            <div class="nav-icon">
+                <a href=""><img class="icon" src="images/icons/header/state-layer.svg" alt=""></a>
+                <a href=""><img class="icon" src="images/icons/header/container.svg" alt=""></a>
+                <a href=""><img class="foto-perfil" src="images/images_perfil/<%= id %>/<%= usuarioSesion.foto_url %>" alt=""></a>
+            </div>
+            <% } else {%>
             <div class="nav-button">
                 <button class="f-tm c-a-dark-mode"><a href="/login">Inicia sesión</a></button>
                 <button class="f-tm btt-2">Registrate</button>
             </div>
+            <% } %>
         </nav>
     </header>
 

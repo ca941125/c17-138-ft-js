@@ -22,12 +22,14 @@ export const getIndex = async (req, res) => {
     
     console.log(alojamientos)
     if(req.session.loggedin){
+        
         res.render('index', {
          login: true,
          name: req.session.name,
-         id: req.session.id,
+         id: req.session.idUser,
          rol: req.session.rol,
-         alojamientos   
+         alojamientos,
+         usuarioSesion : req.session.usuarioSesion  
         })
     } else {
         res.render('index', {
