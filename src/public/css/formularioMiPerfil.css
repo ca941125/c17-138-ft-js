@@ -1,3 +1,5 @@
+@import url(colores.css);
+@import url(fuentes.css);
 
 body {
     display:flex;
@@ -6,6 +8,170 @@ body {
 }
  main{
      grid-row: 1;
+     background-color: var(--fondo) ;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
  }
  
+ /* ESTILOS FORMULARIO MI PERFIL */
+ .formularioPerfil{
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   justify-content: center;
+   gap:24px;
+   width: 80%;
+ }
+
+ .title__formularioPerfil{
+    color: var(--textos);
+    font-size: 2.25 rem;
+    font-weight: 900;
+    padding: 24px;
+    text-align: center;
+ }
+ .miPerfil{
+   width:35%;
+   height: 780px;
+   background-color: var(--blanco-1);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 8px;
+ }
  
+
+ .miPerfil__avatar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+ }
+ .avatar-label{
+   
+    display: inline-block;
+    width: 264px; /* ajusta el tamaño del círculo según sea necesario */
+    height: 260px;
+    border-radius: 50%; /* esto hace que el borde sea redondeado, creando un círculo */
+    background-color: #c4c4c4; /* color de fondo del círculo */
+    text-align: center; /* alinea el contenido en el centro del círculo */
+    line-height: 300px; /* centra verticalmente el contenido */
+    cursor: pointer;
+
+    
+ }
+ .avatar-default{
+    width: 64px; /* ajusta el tamaño del SVG según sea necesario */
+    height: 64px;
+    fill:var(--textos); /* color del icono */
+ }
+
+ .avatar-input{
+    display: none; /* oculta el input */
+ }
+
+
+.form-group{
+
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    width: 80%;
+}
+
+.form-group__label{
+   width: 100%;
+   height: 24px;
+   font-size: 14px;
+
+    
+}
+.form-group__input{
+width: 100%;
+height: 48px;
+border:1px solid #7AA088;
+border-radius: 8px;
+
+}
+.form-group__password-box{
+ width: 100%;
+height: 48px;
+border:1px solid #7AA088;
+   border-radius: 8px;
+   display:flex;
+   align-items: center;
+}
+.form-group__password-box input{
+   width: 100%;
+   border:0;
+   outline: 0;
+   font-size: 16px   ;
+    color:var(--textos)
+}
+.form-group__password-box img{
+   width: 48px;
+   cursor: pointer;
+}
+
+
+ .miPerfil__ubicacion{
+   width:65%;
+   height: 780px;
+   background-color: var(--blanco-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    
+ }
+ 
+ .title__miPerfil__ubicacion{
+   color: var(--textos);
+   font-size: 2.25 rem;
+   font-weight: 900;
+
+ }
+ .miPerfil__ubicacion-group{
+   width:90% ;
+   height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    gap: 8px;
+ }
+
+ 
+ .form-group__fila{
+   width: 100%;
+   height: 80px;
+   display: flex;
+   gap: 24px;
+
+ }
+ .miPerfil__ubicacionTexarea{
+   width:90% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+ }
+ .miPerfil__ubicacionTexarea-subgroup{
+   width:100% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: left; 
+}
+.form-group__textarea{
+   width:100% ;
+   height:60vh;
+   border:1px solid #7AA088;
+   border-radius: 8px;
+}
+ 
+ 
+
+
