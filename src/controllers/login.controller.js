@@ -22,8 +22,8 @@ export const postLogin = async (req, res) => {
     try {
         const {rows} = await client.sql`SELECT * FROM usuarios WHERE correo_electronico = ${email};`;
         console.log(rows[0])
-        if(rows[0].length == 0 || !(await bcryptjs.compare(pass, rows[0].contraseña))){
-            res.render('inicioDeSesion', {msg: 'Usuario y/o contraseña incorrectas'})
+        if(typeof rows[0] ==='undefined' || !(await bcryptjs.compare(pass, rows[0].contraseña))){
+            res.render('inicioDeSesion', {msg: 'Usuario y/o contraseña incorrectas'})       
         }else{
             req.session.loggedin = true
             req.session.name = rows[0].nombreusuario

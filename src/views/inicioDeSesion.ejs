@@ -35,8 +35,7 @@
                 <button class="btt-2">Cancelar</button>
                 <button class="btt-1" id="submit">Iniciar Sesión</button>
             </div>
-        </section>
-        <% if(typeof id !=='undefined' ){ %>
+            <% if(typeof id !== 'undefined' ){ %>
             <p>Sesión iniciada</p>
             <script>
               setTimeout(function () {
@@ -44,9 +43,12 @@
               }, 2000)
     
             </script>
-        <% }else if(typeof msg !=='undefined'){ %>
+            <% }else if(typeof msg !== 'undefined'){ %>
                 <p><%= msg %></p>
-        <% } %>  
+            <% } %>
+              
+        </section>
+        
     </main>
 
     <!-- FOOTER -->
