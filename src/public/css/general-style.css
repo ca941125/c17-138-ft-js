@@ -23,7 +23,9 @@ FOOTER
 /* -------------------------------------------- */
 /* BOTTON STYLE */
 /* -------------------------------------------- */
-
+button{
+    cursor: pointer;
+}
 /* boton principal  */
 
 .btt-1{
@@ -83,8 +85,8 @@ header nav .nav-bar{
 header nav .nav-bar a{
     padding: 0 8px 0 8px;
 }
-header nav .nav-bar img{
-    width: 80px;
+header nav .nav-bar a:hover{
+    color: var(--acento-dark-mode);
 }
 header nav .nav-button{
     width: 291px;
