@@ -2,8 +2,12 @@
     
     <!-- modelo sin iniciar sesión -->
     <header>
-        <nav class="nav">
-            <div class="nav-bar c-fondo">
+        <% if(typeof index !=='undefined' ){ %>
+            <nav class="nav bg-oscuro80">
+        <% } else { %>
+            <nav class="nav">
+        <% } %>    
+            <div class="nav-bar c-fondo">               
                 <a href="/"><img src="images/logo-header.png" alt="logo"></a>
                 <a class="f-tm c-blanco-1" href="">Quiénes somos</a>
                 <a class="f-tm c-blanco-1" href="">Planes y precios</a>
@@ -19,7 +23,7 @@
             </div>
             <% } else {%>
             <div class="nav-button">
-                <button class="f-tm c-a-dark-mode"><a href="/login">Iniciar sesión</a></button>
+                <button class="f-tm c-a-dark-mode"><a href="/login">Inicia sesión</a></button>
                 <button class="f-tm btt-2">Registrate</button>
             </div>
             <% } %>

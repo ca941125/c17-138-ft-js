@@ -20,26 +20,29 @@ export const getIndex = async (req, res) => {
         i++
     }
     
-    console.log(alojamientos)
-    if(req.cookies.loggedin){
+    /* console.log(alojamientos) */
+    /* console.log(req.signedCookies) */
+    if(req.signedCookies['loggedin']){
         const usuarioSesion = {
-            nombres: req.cookies.nombres,
-            apellidos: req.cookies.apellidos,
-            foto_url: req.cookies.foto_url 
+            nombres: req.signedCookies['nombres'],
+            apellidos: req.signedCookies['apellidos'],
+            foto_url: req.signedCookies['foto_url'] 
         }
 
         res.render('index', {
          login: true,
          /* name: req.session.name, */
-         id: req.cookies.idUser,
+         id: req.signedCookies['idUser'],
          /* rol: req.session.rol, */
          alojamientos,
-         usuarioSesion
+         usuarioSesion,
+         index: true
         })
     } else {
         res.render('index', {
             login: false,
-            alojamientos
+            alojamientos,
+            index: true
         })
     }
 
