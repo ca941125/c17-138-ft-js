@@ -28,7 +28,8 @@ app.use(
 	})
 )
 
-app.use(cookieParser())
+app.use(cookieParser('gato-perro'))
+
 /* app.set('trust proxy', 1) */
 app.use(session({
         secret: 'perro-gato',
