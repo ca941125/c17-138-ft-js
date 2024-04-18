@@ -56,9 +56,15 @@ app.use(indexRoutes)
 
 
 app.get('/logout', (req, res) => {
-    req.session.destroy(() => {
+    /* req.session.destroy(() => {
         res.redirect('/')
-    })
+    }) */
+    res.clearCookie("loggedin");
+    res.clearCookie("idUser");
+    res.clearCookie("nombres");
+    res.clearCookie("apellidos");
+    res.clearCookie("foto_url");
+    res.redirect('/')
 })
 
 app.use((req, res, next)=> {
