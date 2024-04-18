@@ -42,18 +42,28 @@
                 <img  class="miPerfil__foto" src="/src/public/images/usuarios/usuario-1/perfil_usuario_1.jpg" class="avatar-label">
                 <div class="section-group">
                     <h3 class=" f-hsb c-texto"> Gabriela Hernández</h3>
-                    <p>Bs. As, Argentina</p>
+                    <p class="f-tlr c-texto-gris">Bs. As, Argentina</p>
                 </div>
                 <div class="section-group">
-                    <p>369 258 147</p>
-                    <p>nombre@email.com</p>
+                    <div class="section-group__dato">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <path d="M7.71778 10.9244C8.99778 13.44 11.06 15.4933 13.5756 16.7822L15.5311 14.8267C15.7711 14.5867 16.1267 14.5067 16.4378 14.6133C17.4333 14.9422 18.5089 15.12 19.6111 15.12C20.1 15.12 20.5 15.52 20.5 16.0089V19.1111C20.5 19.6 20.1 20 19.6111 20C11.2644 20 4.5 13.2356 4.5 4.88889C4.5 4.4 4.9 4 5.38889 4H8.5C8.98889 4 9.38889 4.4 9.38889 4.88889C9.38889 6 9.56667 7.06667 9.89556 8.06222C9.99333 8.37333 9.92222 8.72 9.67333 8.96889L7.71778 10.9244Z" fill="#1D2621"/>
+                            </svg>
+                        <p class="f-tlr c-texto-gris">369 258 147</p>
+                    </div>
+                    <div class="section-group__dato">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <path d="M22.5 6C22.5 4.9 21.6 4 20.5 4H4.5C3.4 4 2.5 4.9 2.5 6V18C2.5 19.1 3.4 20 4.5 20H20.5C21.6 20 22.5 19.1 22.5 18V6ZM20.5 6L12.5 11L4.5 6H20.5ZM20.5 18H4.5V8L12.5 13L20.5 8V18Z" fill="#1D2621"/>
+                            </svg>
+                        <p class="f-tlr c-texto-gris">nombre@email.com</p>
+                   </div>
                 </div>
                 <button class="btt-2">Editar mi perfil</button>
             </section>
             <!--SECTION DETALLE MI  PERFIL-->
             <section class="sectionMiPerfil__detalle br-8 ">
                 <section  class="sectionMiPerfil__descripcion bg-blanco-1 br-8">
-                    <p class="f-bl c-texto-gris">Lorem ipsum dolor sit amet, consectetur 
+                    <p class="sectionMiPerfil__parrafo  f-bl c-texto-gris">Lorem ipsum dolor sit amet, consectetur 
                         adipiscing elit. Duis faucibus, leo ac ultricies pulvinar, urna ipsum facilisis
                         mi, sit amet dapibus ligula leo eget mauris. Quisque auctor ultricies augue, 
                         nec bibendum justo tincidunt ac. Vestibulum ante ipsum primis in faucibus orci 
@@ -83,16 +93,16 @@
                             </div>
                     </section>
                     <section class="mascota__cardDetalle">
-                        <p class="f-bl c-texto-gris"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus,
+                        <div class="f-bl c-texto-gris"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus,
                             leo ac ultricies pulvinar, urna ipsum facilisis mi, sit amet dapibus ligula
                             leo ac ultricies pulvinar, urna ipsum facilisis mi, sit amet dapibus
                             ligula leo eget mauris. Quisque auctor ultricies augue, nec bibendum 
                             justo tincidunt ac. 
                             acilisis mi, sit amet dapibus ligula leo eget mauris. Quisque auctor ultricies augue, nec bibendum justo
                             tincidunt ac.
-                        </p>
-                        <p class="f-bl c-texto-gris"> <strong class="f-blb c-texto-gris">Condiciones de salud:</strong> Castrado, cadera débil</p>
-                        <p class="f-bl c-texto-gris"> <strong class="f-blb c-texto-gris">Alergias:</strong>Plumas, leche</p>
+                        </div>
+                        <div class="f-bl c-texto-gris"> <strong class="f-blb c-texto-gris">Condiciones de salud:</strong> Castrado, cadera débil</div>
+                        <div class="f-bl c-texto-gris"> <strong class="f-blb c-texto-gris">Alergias:</strong>Plumas, leche</div>
                     </section>
                    
                 </section>
@@ -101,16 +111,18 @@
         </section>
 
         <section class="sectionAnfitrion bg-secundario  br-8">
-            <img  class="sectionAnfitrion__img" src="/src/public/images/usuarios/usuario-1/casa_usuario_1/casa_A_usuario_1.jpg" alt="foto de la casa de alojamiento">
+            <div class="sectionAnfitrion__group">
+            <img  class="sectionAnfitrion__img br-8" src="/src/public/images/usuarios/usuario-1/casa_usuario_1/casa_A_usuario_1.jpg" alt="foto de la casa de alojamiento">
             <div class="sectionAnfitrion__detalle">
                 <h3 class="c-texto f-hsb">Se anfitrión</h3>
-                <p class="f-bl c-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus, 
+                <p class=" f-bl c-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus, 
                     leo ac ultricies pulvinar, urna ipsum facilisis mi, sit amet dapibus
                     ligula leo eget mauris. Quisque auctor ultricies augue, nec bibendum
                     justo tincidunt ac. Vestibulum ante ipsum primis in faucibus orci 
                     uctus et ultrices posuere cubilia Curae.</p>
                 <button class="btt-1"> Publica tu alojamiento</button>
            </div>
+        </div>
 
         </section>
     </main>
