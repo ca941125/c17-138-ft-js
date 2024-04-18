@@ -11,6 +11,7 @@ import indexRoutes from './routes/index.routes.js'
 import loginRoutes from './routes/login.routes.js'
 import registerRoutes from './routes/register.routes.js'
 import quienesSomosRoutes from './routes/quienesSomos.routes.js'
+import planesYPreciosRoutes from './routes/planesYPrecios.routes.js'
 
 
 const app = express()
@@ -38,10 +39,11 @@ app.use(loginRoutes)
 app.use(registerRoutes)
 app.use(indexRoutes)
 app.use(quienesSomosRoutes)
+app.use(planesYPreciosRoutes)
 
 
 app.get('/logout', (req, res) => {
-    
+
     res.clearCookie("loggedin");
     res.clearCookie("idUser");
     res.clearCookie("nombres");

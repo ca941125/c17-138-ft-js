@@ -1,8 +1,7 @@
 import pool from '../db.js'
 import { db } from '@vercel/postgres'
 
-export const getQuienesSomos = async (req, res) => {
-    const client = await db.connect()
+export const getPlanesYPrecios = async (req, res) => {
 
     if(req.signedCookies['loggedin']){
         const usuarioSesion = {
@@ -11,7 +10,7 @@ export const getQuienesSomos = async (req, res) => {
             foto_url: req.signedCookies['foto_url'] 
         }
 
-        res.render('quienesSomos', {
+        res.render('planesYPrecios', {
          login: true,
          /* name: req.session.name, */
          id: req.signedCookies['idUser'],
@@ -19,7 +18,7 @@ export const getQuienesSomos = async (req, res) => {
          usuarioSesion
         })
     } else {
-        res.render('quienesSomos', {
+        res.render('planesYPrecios', {
             login: false
         })
     }

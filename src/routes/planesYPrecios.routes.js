@@ -1,9 +1,9 @@
 import {Router} from 'express'
-import {getQuienesSomos} from '../controllers/quienesSomos.controller.js'
+import {getPlanesYPrecios} from '../controllers/planesYPrecios.controller.js'
 
 const router = Router()
 
-router.get('/quienes-somos', getQuienesSomos)
+router.get('/planes-y-precios', getPlanesYPrecios)
 
 router.post('/', )
 
