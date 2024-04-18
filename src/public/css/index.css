@@ -1,0 +1,264 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--primario);
+}
+h3{
+    text-align: center;
+    margin: 48px auto;
+}
+
+/* header */
+header{
+    position: absolute;
+}
+/* -------------------------------------------- */
+/* CONTAINER  */
+/* -------------------------------------------- */
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/Encabezado.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+}
+.container .titulo-principal{
+    width: 80%;
+    margin: 5% auto;
+    text-align: right;
+}
+.searchMetricas {
+   width: 80%;
+   margin: 1% auto;
+   position: relative;
+   top: -50px;
+}
+
+.searchMetricas .container-search{
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+.searchMetricas .title-form{
+    padding: 0 0 0 5px;
+}
+.searchMetricas form{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.searchMetricas .row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 5px;
+}
+.searchMetricas input[type="date"], select, textarea {
+    width: 100%;
+    padding: 12px;
+}
+.searchMetricas input[type=submit]{
+    width: 100%;
+}
+.searchMetricas label {
+    padding: 12px 12px 12px 0;
+}
+.searchMetricas .col-25 {
+    float: left;
+    margin-top: 6px;
+}
+.searchMetricas .col-75 {
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+}
+/* metricas */
+.searchMetricas .container-metricas{
+    margin: 0 auto;
+    width: 90%;
+    padding: 45px 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchMetricas .container-metricas .metrica{
+    text-align: center;
+    width: 25%;
+}
+
+
+/* -------------------------------------------- */
+/* COMO FUNCIONA  */
+/* -------------------------------------------- */
+
+.comoFunciona{
+    width: 100%;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.comoFunciona .cards{
+    width: 80%;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.comoFunciona .cards .card{
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+/* -------------------------------------------- */
+/* RECOMENDADOOS PARA TI */
+/* -------------------------------------------- */
+
+.recomendadosParaTi{
+    margin: 0 auto;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.recomendadosParaTi .cards{
+    margin: auto;
+    width: 80%;
+    padding: 16px 0 32px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+.recomendadosParaTi .paraTiCard{
+    width: 264px;
+    padding: 0 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.recomendadosParaTi .imgCard img{
+    width: 264px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: none;
+}
+.recomendadosParaTi .paraTiCard .cuerpoCard{
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.recomendadosParaTi .paraTiCard .esp{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.recomendadosParaTi .paraTiCard .esp .nombreCard{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.recomendadosParaTi .paraTiCard .esp .nombreCard .clasif{
+    display: flex;
+    align-items: center;
+}
+.recomendadosParaTi .paraTiCard .esp .iconosCard{
+    border-top: 1px solid var(--primario) ;
+    border-bottom: 1px solid var(--primario) ;
+    padding: 8px 0 16px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.recomendadosParaTi .paraTiCard .esp .iconosCard .iconText{
+    max-width: 51px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.recomendadosParaTi .paraTiCard .esp .iconosCard img{
+    width: 25px;
+    height: 25px;
+    margin: 8px;
+}
+.recomendadosParaTi .paraTiCard .precioCard{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+.recomendadosParaTi .paraTiCard .precioCard button{
+    width: 112px;
+}
+
+/* -------------------------------------------- */
+/* QUIENES NOS ELIGEN  */
+/* -------------------------------------------- */
+.testimonial{
+    padding: 24px 0 32px 0;
+    gap: 24px;
+    text-align: center;
+}
+.testimonial .cardTestimonial{
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+}
+.testimonial article{
+    padding: 47px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* -------------------------------------------- */
+/* PREGUNTAS FRECUENTES */
+/* -------------------------------------------- */
+
+.pgtsFrecuentes{
+    padding: 48px 24px;
+}
+.pgtsFrecuentes .preguntas{
+    padding: 0 0 48px 0;
+    width: 80%;
+    margin: auto;
+}
+
+.pgtsFrecuentes summary{
+    margin: 10px auto;
+    border-radius: 8px;
+    border: 3px solid var(--primario);
+    padding: 16px;
+    cursor: pointer;
+}
+.pgtsFrecuentes .answer{
+    margin: 10px auto;
+    border-radius: 8px;
+    background-color:  var(--fondo);
+    padding: 10px 16px;
+}
+
+/* -------------------------------------------- */
+/* MARCAS  */
+/* -------------------------------------------- */
+
+.brands{
+    padding: 48px 0 64px 0;
+}
+.brands .contenedorBrands{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}

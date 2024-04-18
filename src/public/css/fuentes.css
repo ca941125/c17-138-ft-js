@@ -1,0 +1,148 @@
+@font-face {
+    font-family: Lato;
+    src: url('../fonts/Lato-Regular.ttf'), 
+         url('../fonts/Lato-Bold.ttf'), 
+}
+/* -------------------------------------------- */
+/* FUENTES */
+/* -------------------------------------------- */
+
+*{
+    font-family: 'Lato';
+}
+
+/* display large */
+.f-dl{ 
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+    text-align: center;
+}
+/* display medium */
+.f-dm{
+    font-size: 48px;
+}
+/* display medium bold*/
+.f-dmb{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-align: right;
+}
+/* display small */
+.f-ds{
+    font-size: 36px;
+}
+/* display small bold */
+.f-dsb{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+}
+
+
+/* headline large  */
+.f-hl{
+    font-size: 0;
+}
+/* headline medium  */
+.f-hm{
+    font-size: 0;
+}
+/* headline medium bold  */
+.f-hmb{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+}
+/* headline small regular  */
+.f-hmr{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+}
+/* headline small medium  */
+.f-hsm{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+}
+/* headline small bold  */
+.f-hsb{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+
+/* title large regular  */
+.f-tlr{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+}
+/* title large bold*/
+.f-tlb{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    initial-letter: 0.15px;
+}
+/* title medium */
+.f-tm{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+}
+/* title small */
+.f-ts{
+    font-size: 0;
+}
+
+
+/* label large  */
+.f-ll{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+}
+/* label small */
+.f-ls{
+    font-size: 0;
+}
+
+
+/* body large*/
+.f-bl{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+/* body large bold*/
+.f-blb{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+/* body medium*/
+.f-bm{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+/* body medium bold*/
+.f-bmb{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+/* body small*/
+.f-bs{
+    font-size: 0;
+}
