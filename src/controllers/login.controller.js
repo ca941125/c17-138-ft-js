@@ -34,13 +34,13 @@ export const postLogin = async (req, res) => {
         }else{
             const result1 = await client.sql`SELECT nombres, apellidos, foto_url FROM perfiles WHERE usuarioid = ${rows[0].usuarioid};`
             
-            res.cookie('loggedin', true)
+            res.cookie('loggedin', true, { maxAge: 900000, httpOnly: true })
             /* req.session.name = rows[0].nombreusuario */
-            res.cookie('idUser', rows[0].usuarioid)
+            res.cookie('idUser', rows[0].usuarioid, { maxAge: 900000, httpOnly: true })
             /* req.session.rol = rows[0].rol */
-            res.cookie('nombres', result1.rows[0].nombres)
-            res.cookie('apellidos', result1.rows[0].apellidos)
-            res.cookie('foto_url', result1.rows[0].foto_url)
+            res.cookie('nombres', result1.rows[0].nombres, { maxAge: 900000, httpOnly: true })
+            res.cookie('apellidos', result1.rows[0].apellidos, { maxAge: 900000, httpOnly: true })
+            res.cookie('foto_url', result1.rows[0].foto_url, { maxAge: 900000, httpOnly: true })
             /* req.session. */const usuarioSesion = {
                 nombres: result1.rows[0].nombres,
                 apellidos: result1.rows[0].apellidos,
