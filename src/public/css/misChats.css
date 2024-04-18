@@ -1,0 +1,205 @@
+html{
+    width: 100%;
+}
+body{
+    background-color: var(--fondo);
+}
+h3{
+    text-align: center;
+    margin: 24px 156px 16px 156px;
+}
+.contenedor{
+    width: 80%;
+    margin: 0 auto;
+    padding: 36px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+/* CHAT IZQUIERDA */
+.contenedor .usuarioChat{
+    padding: 24px 0;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.contenedor .usuarioChat .usuario{
+    padding: 0 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+.contenedor .usuarioChat .usuario img{
+    border-radius: 50%;
+    width: 70px;
+}
+.contenedor .buscadorChat{
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.contenedor .buscadorChat .contenedorChat{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contenedor .buscadorChat .buscador{
+    border: 1px solid var(--primario);
+    display: flex;
+    flex-direction: row;
+}
+.contenedor .buscadorChat .chats{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contenedor .buscadorChat .chats .cardChat{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+}
+.contenedor .buscadorChat .chats .cardChat .img{
+    width: 56px;
+    border-radius: 50%;
+}
+.contenedor .buscadorChat .chats .cardChat .cardBody{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+.contenedor .buscadorChat .chats .cardChat .cardBody .contenedorNumHora{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 0;
+}
+.contenedor .buscadorChat .chats .cardChat .cardBody .contenedorNumHora img{
+    width: 25pxpx;
+}
+
+
+/* CHAT DERECHA */
+.contenedor .contenedorChat2{
+    width: 60%;
+    padding: 24px 0 0;
+    display: flex;
+    flex-direction: column;   
+}
+.contenedor .contenedorChat2 .encabezadoChat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 0 24px 24px;
+}
+.contenedor .contenedorChat2 .encabezadoChat img{
+    width: 70px;
+    border-radius: 50%;
+}
+
+.contenedor .contenedorChat2 .fecha{
+    display: flex;
+    justify-content: center;
+}
+.contenedor .contenedorChat2 .fecha p{
+    width: 155px;
+    padding: 16px;
+    margin: 16px auto;
+    text-align: center;
+}
+
+.contenedor .contenedorChat2 .chatUsuarioAnfitrion{
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* chat usuario */
+.chatUsuarioAnfitrion .chatUsuario{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+.chatUsuarioAnfitrion .chatUsuario .textoChat {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.chatUsuarioAnfitrion .chatUsuario .textoChat .areaTexto {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.chatUsuarioAnfitrion .chatUsuario .textoChat .areaTexto .msj{
+    width: 360px;
+    padding: 13px 16px;
+}
+.chatUsuarioAnfitrion .chatUsuario .textoChat .areaTexto .supporting{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.chatUsuarioAnfitrion .chatUsuario .textoChat .img img{
+    width: 56px;
+    border-radius: 50%;
+}
+
+
+/* chat anfitrion*/
+.chatUsuarioAnfitrion .chatAnfitrion{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.chatUsuarioAnfitrion .chatAnfitrion .textoChat {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.chatUsuarioAnfitrion .chatAnfitrion .textoChat .areaTexto {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.chatUsuarioAnfitrion .chatAnfitrion .textoChat .areaTexto .msj{
+    width: 360px;
+    padding: 13px 16px;
+}
+
+.chatUsuarioAnfitrion .chatAnfitrion .textoChat .img img{
+    width: 56px;
+    border-radius: 50%;
+}
+
+    
+.contenedorAreaTextoChat .areaTextoChat {
+    width: 552px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    margin: 24px;
+    height: 76px;
+}
+.contenedorAreaTextoChat .areaTextoChat .adjuntar{
+    width: 45px;
+}
+.contenedorAreaTextoChat .areaTextoChat .emoji {
+    width: 45px;
+}
+.contenedorAreaTextoChat .areaTextoChat input{
+    width: 285px;
+}
+.contenedorAreaTextoChat .areaTextoChat .enviar {
+    width: 53px;
+}
