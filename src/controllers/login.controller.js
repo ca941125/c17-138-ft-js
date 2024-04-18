@@ -10,7 +10,7 @@ export const getLogin = async (req, res) => {
     res.render('index', {data: data[0]}) */
     /* const users = await client.sql`SELECT * FROM mascotas;`; */
     /* res.json({users: users.rows}) */
-    if(req.session.loggedin){
+    if(req.signedCookies['loggedin']){
         res.redirect('/')
     } else {
         res.render('inicioDeSesion', {

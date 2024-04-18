@@ -10,6 +10,7 @@ import cors from "cors"
 import indexRoutes from './routes/index.routes.js'
 import loginRoutes from './routes/login.routes.js'
 import registerRoutes from './routes/register.routes.js'
+import quienesSomosRoutes from './routes/quienesSomos.routes.js'
 
 
 const app = express()
@@ -30,36 +31,17 @@ app.use(
 
 app.use(cookieParser('gato-perro'))
 
-/* app.set('trust proxy', 1) */
-app.use(session({
-        secret: 'perro-gato',
-        resave: false,
-        saveUninitialized: false,
-        name: "session"
-        /* cookie: { maxAge: (5 * 60 * 60 * 1000)} // 5 horas */
-        /* cookie: {
-            secure: true,//use this when the code is in production for https cookie request
-            httpOnly:true,
-            sameSite: 'lax' //dealing with cross-site requests and the usage of third-party cookies
-        } */
-       
-    })
-)
-
-
-
 app.set('view engine', 'ejs')
 app.set('views', join(__dirname, 'views'))
 
 app.use(loginRoutes)
 app.use(registerRoutes)
 app.use(indexRoutes)
+app.use(quienesSomosRoutes)
 
 
 app.get('/logout', (req, res) => {
-    /* req.session.destroy(() => {
-        res.redirect('/')
-    }) */
+    
     res.clearCookie("loggedin");
     res.clearCookie("idUser");
     res.clearCookie("nombres");

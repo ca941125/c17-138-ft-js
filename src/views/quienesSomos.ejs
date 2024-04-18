@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general-style.css">
+    <link rel="stylesheet" href="css/quienesSomos.css">
+    <title>Quiénes somos</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <%- include('partials/header.ejs'); -%>
+
+    <!-- MAIN -->
+    <main>
+        <section class="quienesSomos">
+            <h3 class="f-dsb c-texto">Quiénes Somos</h3>
+            <p class="texto f-bl c-texto-gris">
+                Somos un equipo de profesionales del mundo IT que nos enfocamos día a día a lograr una aplicación WEB que conecte dueños de mascotas dispuestos a brindar alojamiento temporal, permitiendo que gatos o perros se queden en hogares familiares recomendados y calificados por los propios usuarios, donde recibirán atención personalizada y estarán rodeados de personas. Este enfoque proporciona un valor diferencial al producto al priorizar el bienestar y la comodidad de las mascotas durante la ausencia de sus dueños.
+            </p>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/quienes-somos/carolina.png" alt="">
+                    <div class="info">
+                        <h5 class="f-hsm c-primario">Carolina Aguirre</h5>
+                        <p class="f-tm c-texto">Desarrollo Front-end</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/quienes-somos/melania.png" alt="">
+                    <div class="info">
+                        <h5 class="f-hsm c-primario">Melania Palomino</h5>
+                        <p class="f-tm c-texto">Desarrollo Front-end</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/quienes-somos/maria.png" alt="">
+                    <div class="info">
+                        <h5 class="f-hsm c-primario">María de los Ángeles Roldán</h5>
+                        <p class="f-tm c-texto">Desarrollo Front-end</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/quienes-somos/leandro.png" alt="">
+                    <div class="info">
+                        <h5 class="f-hsm c-primario">Leandro Andreani</h5>
+                        <p class="f-tm c-texto">Desarrollo Back-end</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/quienes-somos/natalia.png" alt="">
+                    <div class="info">
+                        <h5 class="f-hsm c-primario">Natalia Caniza Toral</h5>
+                        <p class="f-tm c-texto">Diseño UX/UI</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/quienes-somos/ximena.png" alt="">
+                    <div class="info">
+                        <h5 class="f-hsm c-primario">Ximena Ellis</h5>
+                        <p class="f-tm c-texto">Diseño UX/UI</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs'); -%>
+
+</body>
+</html>    
