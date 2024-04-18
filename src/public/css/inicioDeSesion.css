@@ -1,0 +1,52 @@
+html{
+    background-color: var(--fondo);
+}
+.main{
+    width: 80%;
+    margin: 0 auto;
+}
+.main .inicio{
+    width: 552px;
+    height: 697px;
+    margin: 50px auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.main .inicio .logo-titulo{
+    width: 360px;
+    height: 172px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 24px
+}
+.main img{
+    width: 180px;
+}
+
+.main .inicio .inicioDeSesion{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 16px;
+}
+.main .inicio .inicioDeSesion form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.main .inicio .inicioDeSesion input{
+    padding: 12px 12px 12px 0;
+    border: 1px solid var(--primario);
+}
+
+.main .inicio .botones{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
