@@ -26,14 +26,22 @@ body {
    width: 80%;
  }
 
-
+ .title__formularioPerfil{
+    color: var(--textos);
+    font-size: 2.25 rem;
+    font-weight: 900;
+    padding-top: 24px;
+    text-align: center;
+ }
  .miPerfil{
    width:35%;
    height: 780px;
+   background-color: var(--blanco-1);
    display: flex;
    flex-direction: column;
-   justify-content: space-evenly;
+   justify-content: center;
    align-items: center;
+   border-radius: 8px;
  }
  
 
@@ -41,31 +49,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
- }
- .miPerfil__avatar {
-   text-align: center;
+  
  }
  .avatar-label{
    
-   display: inline-block;
-   border-radius: 50%;
-   width: 260px; /* Tamaño normal del círculo */
-   height: 260px; /* Tamaño normal del círculo */
-   line-height: 260px; /* Alinea verticalmente el SVG */
-   overflow: hidden;
-   background-color:#C4C4C4; 
-   position: relative; /* Establece una posición relativa */
-}
+    display: inline-block;
+    width: 264px; /* ajusta el tamaño del círculo según sea necesario */
+    height: 260px;
+    border-radius: 50%; /* esto hace que el borde sea redondeado, creando un círculo */
+    background-color: #c4c4c4; /* color de fondo del círculo */
+    text-align: center; /* alinea el contenido en el centro del círculo */
+    line-height: 300px; /* centra verticalmente el contenido */
+    cursor: pointer;
+
     
- 
+ }
  .avatar-default{
-   position: absolute; /* Establece una posición absoluta */
-   top: 50%; /* Centra verticalmente */
-   left: 50%; /* Centra horizontalmente */
-   transform: translate(-50%, -50%); /* Centra exactamente */
-    width: 64px; 
-    fill:var(--textos); 
+    width: 64px; /* ajusta el tamaño del SVG según sea necesario */
+    height: 64px;
+    fill:var(--textos); /* color del icono */
  }
 
  .avatar-input{
@@ -74,6 +76,7 @@ body {
 
 
 .form-group{
+
     display: flex;
     flex-direction: column;
     height: 80px;
@@ -83,24 +86,29 @@ body {
 .form-group__label{
    width: 100%;
    height: 24px;
+   font-size: 14px;
 }
 .form-group__input{
 width: 100%;
 height: 48px;
 border:1px solid #7AA088;
+border-radius: 8px;
 
 }
 .form-group__password-box{
  width: 100%;
 height: 48px;
 border:1px solid #7AA088;
-display:flex;
-align-items: center;
+   border-radius: 8px;
+   display:flex;
+   align-items: center;
 }
 .form-group__password-box input{
    width: 100%;
    border:0;
    outline: 0;
+   font-size: 16px   ;
+    color:var(--textos)
 }
 .form-group__password-box img{
    width: 48px;
@@ -111,14 +119,22 @@ align-items: center;
  .miPerfil__ubicacion{
    width:65%;
    height: 780px;
+   background-color: var(--blanco-1);
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
     align-items: center;
+    border-radius: 8px;
+   
     
  }
  
+ .title__miPerfil__ubicacion{
+   color: var(--textos);
+   font-size: 2.25 rem;
+   font-weight: 900;
 
+ }
  .miPerfil__ubicacion-group{
    width:90% ;
    height: 120px;
@@ -153,12 +169,10 @@ align-items: center;
    width:100% ;
    height:60vh;
    border:1px solid #7AA088;
+   border-radius: 8px;
    resize: none;
 }
-.span{
-  padding:4px 0 ;
-}
- /*ESTILOS A LOS BOTONES */
+ 
 .formularioBoton{
    height: 104px;
    width: 80%;
@@ -168,9 +182,7 @@ align-items: center;
    justify-content: space-between;
    background-color: var(--blanco-1);
    align-items: center;
-}
-.formularioBoton--transparente{
- background-color: transparent;
+   border-radius: 8px;
 }
 .formularioBoton-btn{
    display:flex;
@@ -195,28 +207,4 @@ align-items: center;
    background-color:#C2C2C2;
 
 }
- /*ESTILO A LOS CARD RESUMEN */
-
- .card-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap:24px;
-    width: 80%;
-   margin-bottom: 24px;
- }
- .mascota{
-  min-height: 410px;
-  width:25%;
-  background-color: var(--blanco-1);
-  border-radius: 8px;
- }
- .mascota__avartar{
-   border-radius: 50%;
-   height: 64px;
-   object-fit: cover;
-   object-position: center;
-   width: 64px;
- }
-
+ 
