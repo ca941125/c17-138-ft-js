@@ -12,9 +12,7 @@ export const getPlanesYPrecios = async (req, res) => {
 
         res.render('planesYPrecios', {
          login: true,
-         /* name: req.session.name, */
          id: req.signedCookies['idUser'],
-         /* rol: req.session.rol, */
          usuarioSesion
         })
     } else {

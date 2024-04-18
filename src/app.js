@@ -12,6 +12,7 @@ import loginRoutes from './routes/login.routes.js'
 import registerRoutes from './routes/register.routes.js'
 import quienesSomosRoutes from './routes/quienesSomos.routes.js'
 import planesYPreciosRoutes from './routes/planesYPrecios.routes.js'
+import alojamientoElegidoRoutes from './routes/alojamientoElegido.routes.js'
 
 
 const app = express()
@@ -40,6 +41,7 @@ app.use(registerRoutes)
 app.use(indexRoutes)
 app.use(quienesSomosRoutes)
 app.use(planesYPreciosRoutes)
+app.use(alojamientoElegidoRoutes)
 
 
 app.get('/logout', (req, res) => {

@@ -201,18 +201,19 @@
                                 <% } %>
                                 
                             </div>
-                            <div class="iconText">
+                            
                                 
-                                <% if(alojamientos.cercado === 'Si') { %>
+                            <% if(alojamientos.cercado === 'Si') { %>
+                                <div class="iconText">
                                     <img src="images/icons/cerco-verde.svg" alt="">
                                     <p class="f-bm c-primario">Cercado</p>
-                                <% } else {%>
-                                    
-                                <% } %>    
-                            </div>
+                                </div>    
+                            <% } %>
+                                     
+                            
                         </div>
                         <p class="f-bm c-texto-gris" >
-                            Write an amazing description in this dedicated card section. Each word counts.
+                            <%= alojamientos.resumen_card %>
                         </p>
                     </div>
                     <div class="precioCard">
@@ -221,7 +222,7 @@
                             <p class="f-ll"><%= alojamientos.moneda %>/noche</p>
                         </div>
                         <div class="der">
-                            <button class="btt-1">Label</button>
+                            <button class="btt-1"><a href="/alojamientos/<%= alojamientos.usuarioid %>">Ver más</a></button>
                         </div>
                     </div>
                 </div>
