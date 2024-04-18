@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style -->
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <link rel="stylesheet" href="../public/css/general-style.css">
+    <link rel="stylesheet" href="../public/css/formularioMiPerfil.css">
+
+    <title>Home Wasi</title>
+
+</head>
+
+<body>
+        <!-- HEADER -->
+        <header>
+            <nav class="nav">
+                <div class="nav-bar c-fondo">
+                    <a href="#"><img src="../public/images/logo-orange.png" alt="logo"></a>
+                    <a class="f-tm c-blanco-1" href="">Quiénes somos</a>
+                    <a class="f-tm c-blanco-1" href="">Planes y precios</a>
+                </div>
+    
+                 <!-- ICÓNOS DE SESIÓN INICIADA -->
+    
+                <!-- <div class="nav-icon">
+                    <a href=""><img class="icon" src="../public/images/icons/header/state-layer.svg" alt=""></a>
+                    <a href=""><img class="icon" src="../public/images/icons/header/container.svg" alt=""></a>
+                    <a href=""><img class="foto-perfil" src="../public/images/usuarios/usuario-1/perfil_usuario_1.jpg" alt=""></a>
+                </div>  -->
+    
+                <div class="nav-button">
+                    <button class="f-tm c-a-dark-mode">Inicia sesión</button>
+                    <button class="f-tm btt-2">Registrate</button>
+                </div>
+            </nav>
+        </header>
+    
+    <main>
+        <h3 class=" f-dsb c-texto">Mi perfil</h3>
+        <!-- SECCION MI PERFIL -->
+        <form class="formularioPerfil"  id="formularioMiPerfil">
+            <!--SECTION 1 DATOS PERSONALES-->
+            <section class="miPerfil br-8 bg-blanco-1">
+
+                <section class="miPerfil__avatar">
+                    <label for="avatar-input" class="avatar-label">
+                        <svg class="avatar-default" width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_82_14639)">
+                            <path d="M50.9375 15.4062H44.5489L41.4076 10.6955C41.2393 10.4432 41.0114 10.2364 40.7441 10.0933C40.4767 9.95015 40.1782 9.87518 39.875 9.875H25.125C24.8218 9.87518 24.5233 9.95015 24.2559 10.0933C23.9886 10.2364 23.7607 10.4432 23.5924 10.6955L20.4488 15.4062H14.0625C12.5955 15.4062 11.1886 15.989 10.1513 17.0263C9.11401 18.0636 8.53125 19.4705 8.53125 20.9375V46.75C8.53125 48.217 9.11401 49.6239 10.1513 50.6612C11.1886 51.6985 12.5955 52.2812 14.0625 52.2812H50.9375C52.4045 52.2812 53.8114 51.6985 54.8487 50.6612C55.886 49.6239 56.4687 48.217 56.4688 46.75V20.9375C56.4687 19.4705 55.886 18.0636 54.8487 17.0263C53.8114 15.989 52.4045 15.4062 50.9375 15.4062ZM52.7812 46.75C52.7812 47.239 52.587 47.708 52.2412 48.0537C51.8955 48.3995 51.4265 48.5938 50.9375 48.5938H14.0625C13.5735 48.5938 13.1045 48.3995 12.7588 48.0537C12.413 47.708 12.2188 47.239 12.2188 46.75V20.9375C12.2188 20.4485 12.413 19.9795 12.7588 19.6338C13.1045 19.288 13.5735 19.0938 14.0625 19.0938H21.4375C21.7411 19.0939 22.0401 19.0192 22.3079 18.876C22.5756 18.7329 22.8039 18.5259 22.9724 18.2733L26.1114 13.5625H38.8863L42.0276 18.2733C42.1961 18.5259 42.4244 18.7329 42.6921 18.876C42.9599 19.0192 43.2589 19.0939 43.5625 19.0938H50.9375C51.4265 19.0938 51.8955 19.288 52.2412 19.6338C52.587 19.9795 52.7812 20.4485 52.7812 20.9375V46.75ZM32.5 22.7812C30.4944 22.7812 28.5338 23.376 26.8662 24.4903C25.1986 25.6045 23.8988 27.1883 23.1313 29.0412C22.3638 30.8942 22.1629 32.9331 22.5542 34.9002C22.9455 36.8673 23.9113 38.6742 25.3295 40.0924C26.7477 41.5106 28.5546 42.4764 30.5217 42.8677C32.4888 43.2589 34.5277 43.0581 36.3806 42.2906C38.2336 41.5231 39.8174 40.2233 40.9316 38.5557C42.0459 36.8881 42.6406 34.9275 42.6406 32.9219C42.6376 30.2334 41.5682 27.6558 39.6671 25.7547C37.7661 23.8537 35.1885 22.7843 32.5 22.7812ZM32.5 39.375C31.2237 39.375 29.976 38.9965 28.9148 38.2875C27.8536 37.5784 27.0265 36.5705 26.5381 35.3914C26.0497 34.2122 25.9219 32.9147 26.1709 31.6629C26.4199 30.4111 27.0345 29.2613 27.937 28.3588C28.8394 27.4563 29.9893 26.8417 31.2411 26.5927C32.4928 26.3437 33.7903 26.4715 34.9695 26.96C36.1487 27.4484 37.1565 28.2755 37.8656 29.3367C38.5747 30.3979 38.9531 31.6456 38.9531 32.9219C38.9531 34.6334 38.2732 36.2747 37.063 37.4849C35.8529 38.6951 34.2115 39.375 32.5 39.375Z" fill="#1D2621"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_82_14639">
+                            <rect width="59" height="59" fill="white" transform="translate(3 2.5)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                            
+                        <input  class="avatar-input" type="file" id="avatar-input" accept="image/*">
+                    </label>
+                </section>
+
+                <h3 class=" f-hsb c-texto"> Datos personales</h3>
+
+                <div class="form-group">
+                <label class="form-group__label c-texto-gris f-bm" for="nombre">Nombre completo</label>
+                <input class="form-group__input f-bl c-texto br-8" type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                <label class="form-group__label c-texto-gris f-bm " for="email">E-mail</label>
+                <input  class="form-group__input f-bl c-texto br-8" type="email" id="email" name="email" required>
+                </div>
+                
+
+                <div class="form-group">
+                    <label class="form-group__label c-texto-gris f-bm" for="password">Contraseña</label>
+                    <div class="form-group__password-box  br-8">
+                        <input class="f-bl c-texto " type="password" id="password" name="password" required>
+                        <img src="/src/public/images/icons/ojo-cerrado.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label  class ="form-group__label c-texto-gris f-bm" for="confirmPassword">Confirmar contraseña</label>
+                    <div class="form-group__password-box br-8">
+                        <input class="f-bl c-texto "type="password" id="confirmPassword" name="confirmPassword" required>
+                        <img src="/src/public/images/icons/ojo-cerrado.svg" alt="">
+                    </div>
+                </div>
+                    
+            </section>
+             <!--SECTION 2 DATOS UBICACION-->
+            <section class="miPerfil__ubicacion br-8 bg-blanco-1">
+                <div class ="miPerfil__ubicacion-group">
+                    <h3 class=" f-hsb c-texto"> Ubicación</h3>
+                    <div class="form-group__fila">
+                        <div class="form-group">
+                            <label class ="form-group__label c-texto-gris f-bm"  for="opcionProvincia">Provincia</label>
+                            <select  class="form-group__input f-bl c-texto br-8" id="opcionProvincia" name="opcionProvincia">
+                                <option value="opcion1">Opción 1</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class ="form-group__label c-texto-gris f-bm"  for="opcionCiudad">Ciudad</label>
+                            <select  class="form-group__input f-bl c-texto br-8"  id="opcionCiudad" name="opcionCiudad">
+                                <option value="opcion1">Opción 1</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class ="miPerfil__ubicacion-group">
+                    <h3 class="f-hsb c-texto">Datos de contacto</h3>
+                    <div class="form-group__fila">
+                        <div class="form-group">
+                            <label class ="form-group__label c-texto-gris f-bm"  for="telefono">Teléfono</label>
+                            <input  class="form-group__input f-bl c-texto br-8"  type="tel" id="telefono" name="telefono" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class ="form-group__label c-texto-gris f-bm"  for="celular">Celular</label>
+                            <input   class="form-group__input f-bl c-texto br-8" type="tel" id="celular" name="celular" required>
+                        </div>
+                    </div>
+                </div>
+                <div class ="miPerfil__ubicacionTexarea">
+                    <h3 class="f-hsb c-texto"> Sobre mí</h3>
+                    <div class ="miPerfil__ubicacionTexarea-subgroup">
+                        <label  class ="form-group__label c-texto-gris f-bm" for="sobreMi">Descripción</label>
+                        <textarea  class="form-group__textarea br-8" name="sobreMi" id="sobreMi" ></textarea>
+                        <span class="c-texto-gris f-bm span">Detalla tus caracteristicas  hasta 300 caracteres</span>
+                    </div>
+                </div>
+            
+            </section>
+        </form>
+        <!-- SECCION  MI MASCOTA -->
+        <h3 class=" f-dsb c-texto">Mis mascotas</h3>
+        <form class="formularioPerfil" id="formularioMiMascota">
+            <!-- section 1 -->
+            <section class="miPerfil br-8 bg-blanco-1">
+                <section class="miPerfil__avatar">
+                    <label for="avatar-input" class="avatar-label">
+                        <svg class="avatar-default" width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_82_14639)">
+                            <path d="M50.9375 15.4062H44.5489L41.4076 10.6955C41.2393 10.4432 41.0114 10.2364 40.7441 10.0933C40.4767 9.95015 40.1782 9.87518 39.875 9.875H25.125C24.8218 9.87518 24.5233 9.95015 24.2559 10.0933C23.9886 10.2364 23.7607 10.4432 23.5924 10.6955L20.4488 15.4062H14.0625C12.5955 15.4062 11.1886 15.989 10.1513 17.0263C9.11401 18.0636 8.53125 19.4705 8.53125 20.9375V46.75C8.53125 48.217 9.11401 49.6239 10.1513 50.6612C11.1886 51.6985 12.5955 52.2812 14.0625 52.2812H50.9375C52.4045 52.2812 53.8114 51.6985 54.8487 50.6612C55.886 49.6239 56.4687 48.217 56.4688 46.75V20.9375C56.4687 19.4705 55.886 18.0636 54.8487 17.0263C53.8114 15.989 52.4045 15.4062 50.9375 15.4062ZM52.7812 46.75C52.7812 47.239 52.587 47.708 52.2412 48.0537C51.8955 48.3995 51.4265 48.5938 50.9375 48.5938H14.0625C13.5735 48.5938 13.1045 48.3995 12.7588 48.0537C12.413 47.708 12.2188 47.239 12.2188 46.75V20.9375C12.2188 20.4485 12.413 19.9795 12.7588 19.6338C13.1045 19.288 13.5735 19.0938 14.0625 19.0938H21.4375C21.7411 19.0939 22.0401 19.0192 22.3079 18.876C22.5756 18.7329 22.8039 18.5259 22.9724 18.2733L26.1114 13.5625H38.8863L42.0276 18.2733C42.1961 18.5259 42.4244 18.7329 42.6921 18.876C42.9599 19.0192 43.2589 19.0939 43.5625 19.0938H50.9375C51.4265 19.0938 51.8955 19.288 52.2412 19.6338C52.587 19.9795 52.7812 20.4485 52.7812 20.9375V46.75ZM32.5 22.7812C30.4944 22.7812 28.5338 23.376 26.8662 24.4903C25.1986 25.6045 23.8988 27.1883 23.1313 29.0412C22.3638 30.8942 22.1629 32.9331 22.5542 34.9002C22.9455 36.8673 23.9113 38.6742 25.3295 40.0924C26.7477 41.5106 28.5546 42.4764 30.5217 42.8677C32.4888 43.2589 34.5277 43.0581 36.3806 42.2906C38.2336 41.5231 39.8174 40.2233 40.9316 38.5557C42.0459 36.8881 42.6406 34.9275 42.6406 32.9219C42.6376 30.2334 41.5682 27.6558 39.6671 25.7547C37.7661 23.8537 35.1885 22.7843 32.5 22.7812ZM32.5 39.375C31.2237 39.375 29.976 38.9965 28.9148 38.2875C27.8536 37.5784 27.0265 36.5705 26.5381 35.3914C26.0497 34.2122 25.9219 32.9147 26.1709 31.6629C26.4199 30.4111 27.0345 29.2613 27.937 28.3588C28.8394 27.4563 29.9893 26.8417 31.2411 26.5927C32.4928 26.3437 33.7903 26.4715 34.9695 26.96C36.1487 27.4484 37.1565 28.2755 37.8656 29.3367C38.5747 30.3979 38.9531 31.6456 38.9531 32.9219C38.9531 34.6334 38.2732 36.2747 37.063 37.4849C35.8529 38.6951 34.2115 39.375 32.5 39.375Z" fill="#1D2621"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_82_14639">
+                            <rect width="59" height="59" fill="white" transform="translate(3 2.5)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                            
+                        <input  class="avatar-input" type="file" id="avatar-input" accept="image/*">
+                    </label>
+                </section>
+
+                <h3 class="f-hsb c-texto"> Datos personales</h3>
+        
+            
+                <div class="form-group">
+                <label  class ="form-group__label c-texto-gris f-bm" for="nombreMascota">Nombre </label>
+                <input  class="form-group__input f-bl c-texto br-8" type="text" id="nombreMascota" name="nombreMascota" required>
+                </div>
+
+                <div class="form-group">
+                <label  class ="form-group__label c-texto-gris f-bm" for="raza">Raza</label>
+                <input  class="form-group__input f-bl c-texto br-8" type="text" id="raza" name="raza" required>
+                </div>
+
+                <div class="form-group">
+                    <label  class ="form-group__label c-texto-gris f-bm" for="sexo">Sexo</label>
+                    <select  class="form-group__input f-bl c-texto br-8" id="sexo" name="sexo">
+                        <option value="Hembra">Hembra</option>
+                        <option value="Macho">Macho</option>
+                    </select>
+                </div>
+        
+            </section>
+            <!-- section 2 -->
+            <section class="miPerfil__ubicacion br-8 bg-blanco-1 ">
+                <div class ="miPerfil__ubicacion-group">
+                    <h3 class="f-hsb c-texto"> Salud y Alergia</h3>
+                    <div class="form-group__fila">
+                        <div class="form-group">
+                            <label   class ="form-group__label c-texto-gris f-bm" for="salud">Condición de salud</label>
+                            <select class="form-group__input f-bl c-texto br-8" id="salud" name="salud">
+                                <option value="opcion1">Opción 1</option>
+
+                            </select>
+                        </div>
+                
+                        <div class="form-group">
+                            <label  class ="form-group__label c-texto-gris f-bm" for="alergia">Alergia</label>
+                            <select  class="form-group__input f-bl c-texto br-8"id="alergia" name="alergia">
+                                <option value="opcion1">Opción 1</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class ="miPerfil__ubicacionTexarea">
+                    <h3 class="f-hsb c-texto">Sobre mí mascota</h3>
+                    <div class ="miPerfil__ubicacionTexarea-subgroup">
+                        <label  class ="form-group__label c-texto-gris f-bm" for="sobreMiMascota">Descripción</label>
+                        <textarea  class="form-group__textarea br-8" name="sobreMiMascota" id="sobreMiMascota" ></textarea>
+                        <span class="c-texto-gris f-bm span">Detalla tus caracteristicas  hasta 300 caracteres</span>
+                    </div>
+                </div>
+                <div class=" miPerfil__ubicacion-group formularioBoton-btn">
+                    <div class="block-btn">
+                        <button class="btt-2 ">Editar datos</button>
+                        <button class="btt-1 ">Guardar datos</button>
+                    </div>
+                </div>
+               
+            </section>
+        </form>
+        <!-- BOTON ELIMINAR PERFIL MASCOTA  -->
+
+        <div class="formularioBoton formularioBoton--transparente">
+            <button class="btt-2">Editar datos</button>
+        </div>
+
+        <!-- BOTONES  -->
+        <section class="formularioBoton br-8">
+            <h3 class="f-hsb c-texto">Confirmar tus datos</h3>
+            <div class="formularioBoton-btn">
+                <button class="btt-2 btt-2--blanco">Editar datos</button>
+                <button class="btt-1 btt-1--gris">Guardar datos</button>
+            </div>
+        </section>
+        <!--  card perfil mascota resumem -->
+        <section class="card-container">
+            <article class="mascota__card bg-blanco-1 br-8">
+                <img class="mascota__avatar" src="/src/public/images/usuarios/usuario-1/perfil_mascota_1.jpg"  alt="imagen del perl de la mascota">
+                <div class="mascota__detalle">
+                    <h3 class="f-hsb c-texto">Nombre</h3>
+                    <section class="mascota__dato">
+                        <h3 class="f-bmb c-texto-gris">Raza:</h3>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoRaza">Golden</p>
+                    </section>
+                    <section class="mascota__dato">
+                        <h3 class="f-bmb c-texto-gris">Edad:</h3>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoEdad">8 años</p>
+                    </section>
+                    <section class="mascota__dato">
+                        <h3  class="f-bmb c-texto-gris">Sexo:</h3>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoSexo">Macho</p>
+                    </section>
+                    <section class="mascota__dato" >
+                        <h3 class="f-bmb c-texto-gris">Alergia:</h3>
+                        <p class="f-bm c-texto-gris " id="mastotaDatoAlergia">Pluma</p>
+                    </section>
+                </div>
+                <button class="btt-2">Editar</button>
+            </article>
+
+              <!-- CARD DEFAULT -->
+            <article class="mascota__card bg-blanco-1 br-8" >
+                <button id="btn__agregarMascota">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" viewBox="0 0 65 64" fill="none">
+                        <path d="M32.5 0C14.827 0 0.5 14.327 0.5 32C0.5 49.674 14.827 64 32.5 64C50.174 64 64.5 49.674 64.5 32C64.5 14.327 50.174 0 32.5 0ZM32.5 60.063C17.061 60.063 4.5 47.439 4.5 31.9999C4.5 16.5609 17.061 3.99988 32.5 3.99988C47.939 3.99988 60.5 16.5609 60.5 31.9999C60.5 47.4388 47.939 60.063 32.5 60.063ZM46.5 30H34.5V18C34.5 16.896 33.604 16 32.5 16C31.396 16 30.5 16.896 30.5 18V30H18.5C17.396 30 16.5 30.896 16.5 32C16.5 33.104 17.396 34 18.5 34H30.5V46C30.5 47.104 31.396 48 32.5 48C33.604 48 34.5 47.104 34.5 46V34H46.5C47.604 34 48.5 33.104 48.5 32C48.5 30.896 47.604 30 46.5 30Z" fill="#1D2621"/>
+                        </svg>
+                </button>
+            </article>
+
+        </section>
+        
+    </main>
+        <!-- FOOTER -->
+        <footer class="bg-p-oscuro">
+            <h3 class="f-dsb c-secundario">Contacto</h3>
+            
+            <section class="footer c-blanco-2">
+                <div class="footer-info">
+                    <h4 class="f-hsm c-a-dark-mode" >Estamos aquí para ayudarte!</h4>
+                    <p class="f-bl">Ponete en contacto con nosotros si tienes alguna pregunta, comentario o sugerencia.</p>
+                    <div class="footer-redes">
+                        <a href=""><img src="../public/images/icons/footer/facebook.svg" alt=""></a>
+                        <a href=""><img src="../public/images/icons/footer/twitter.svg" alt=""></a>
+                        <a href=""><img src="../public/images/icons/footer/instagram.svg" alt=""></a>
+                    </div>
+                    <ul class="footer-contacto ">
+                        <li class="f-bl">
+                            <img src="../public/images/icons/footer/telefono.svg" alt="">
+                            123 456 789
+                        </li>
+                        <li class="f-bl">
+                            <img src="../public/images/icons/footer/sobre.svg" alt="">
+                            wasi@info.com
+                        </li>
+                        <li class="f-bl">
+                            <img src="../public/images/icons/footer/mundo.svg" alt="">
+                            Dirección 123 - Argentina
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-form c-blanco-1">
+                    <form action="">
+                        <label class="f-bm" for="">E-mail</label>
+                        <input class="footerEmail br-8 c-texto" type="email" placeholder="email@email.com">
+        
+                        <label class="f-bm" for="">Tu consulta</label>
+                        <textarea class="br-8 c-texto" id="" cols="20" rows="10"></textarea>
+                    
+                        <input class="enviar f-tm btt-1" type="submit" value="Enviar">
+                    </form>
+                </div>
+            </section>
+        </footer>
+    
+</body>
+</html>
