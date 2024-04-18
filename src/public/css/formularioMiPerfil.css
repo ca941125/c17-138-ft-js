@@ -12,7 +12,6 @@ body {
      display: flex;
      flex-direction: column;
      align-items: center;
-     gap:24px
 
  }
  
@@ -30,7 +29,7 @@ body {
     color: var(--textos);
     font-size: 2.25 rem;
     font-weight: 900;
-    padding-top: 24px;
+    padding: 24px;
     text-align: center;
  }
  .miPerfil{
@@ -87,6 +86,8 @@ body {
    width: 100%;
    height: 24px;
    font-size: 14px;
+
+    
 }
 .form-group__input{
 width: 100%;
@@ -122,10 +123,9 @@ border:1px solid #7AA088;
    background-color: var(--blanco-1);
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content: center;
     align-items: center;
     border-radius: 8px;
-   
     
  }
  
@@ -173,38 +173,6 @@ border:1px solid #7AA088;
    resize: none;
 }
  
-.formularioBoton{
-   height: 104px;
-   width: 80%;
-   padding: 0 32px 0 32px;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   background-color: var(--blanco-1);
-   align-items: center;
-   border-radius: 8px;
-}
-.formularioBoton-btn{
-   display:flex;
-   justify-content:space-evenly;
-   gap: 8px;
-}
-.block-btn{
-   width: 100%;
-   display: flex;
-   gap:8px;
-   justify-content:flex-end;
-}
-
-.btt-2--blanco{
-   color:#c2c2c2;
-   background-color: none;
-   border: 2px solid #c2c2c2;
-
-}
-.btt-1--gris{
-   color: var(--blanco-1);
-   background-color:#C2C2C2;
-
-}
  
+
+
