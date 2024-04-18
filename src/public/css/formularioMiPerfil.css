@@ -152,7 +152,7 @@ align-items: center;
 .form-group__textarea{
    width:100% ;
    height:60vh;
-   border:1px solid #7AA088;
+   border:1px solid var(--primario);
    resize: none;
 }
 .span{
