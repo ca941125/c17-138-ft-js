@@ -216,7 +216,6 @@ header{
 .testimonial{
     padding: 24px 0 32px 0;
     text-align: center;
-    
 }
 .testimonial .cardTestimonial{
     margin: 0 auto;
@@ -233,6 +232,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 16px;
 }
 .testimonial .informacion img{
@@ -253,14 +253,15 @@ header{
 }
 .pgtsFrecuentes .preguntas{
     padding: 32px 0 48px 0;
-    min-width: 360px;
     max-width: 1128px;
+    min-width: 360px;
     margin: 8px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 details{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -283,11 +284,16 @@ details{
 
 .brands{
     padding: 48px 0 64px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 .brands .contenedorBrands{
     margin: 0 auto;
-
     display: flex;
     justify-content: center;
     gap: 16px;
+}
+.brand{
+    width: 145px;
 }
