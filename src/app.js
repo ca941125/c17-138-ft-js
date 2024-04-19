@@ -13,6 +13,7 @@ import registerRoutes from './routes/register.routes.js'
 import quienesSomosRoutes from './routes/quienesSomos.routes.js'
 import planesYPreciosRoutes from './routes/planesYPrecios.routes.js'
 import alojamientoElegidoRoutes from './routes/alojamientoElegido.routes.js'
+import miPerfilRoutes from './routes/miPerfil.routes.js'
 
 
 const app = express()
@@ -42,6 +43,7 @@ app.use(indexRoutes)
 app.use(quienesSomosRoutes)
 app.use(planesYPreciosRoutes)
 app.use(alojamientoElegidoRoutes)
+app.use(miPerfilRoutes)
 
 
 app.get('/logout', (req, res) => {
