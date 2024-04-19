@@ -252,16 +252,9 @@ header{
     gap: 24px;
 }
 .pgtsFrecuentes .preguntas{
+    width: 1128px;
     padding: 32px 0 48px 0;
-    max-width: 1128px;
-    min-width: 360px;
-    margin: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-details{
-    width: 100%;
+    margin: 8px auto;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -274,7 +267,6 @@ details{
 .pgtsFrecuentes .answer{
     margin: 8px auto;
     border-radius: 8px;
-    background-color:  var(--fondo);
     padding: 8px 16px;
 }
 
@@ -296,4 +288,16 @@ details{
 }
 .brand{
     width: 145px;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    
+}
+/* Celular */
+@media only screen and (max-width: 375px){
+
 }
