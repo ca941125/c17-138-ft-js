@@ -10,7 +10,27 @@ export const getRegister = async (req, res) => {
     res.render('index', {data: data[0]}) */
     /* const users = await client.sql`SELECT * FROM mascotas;`; */
     /* res.json({users: users.rows}) */
-    res.render('login')
+
+    if(req.signedCookies['loggedin']){
+        const usuarioSesion = {
+            nombres: req.signedCookies['nombres'],
+            apellidos: req.signedCookies['apellidos'],
+            foto_url: req.signedCookies['foto_url'] 
+        }
+
+        res.render('formularioMiPerfil', {
+         login: true,
+         id: req.signedCookies['idUser'],
+         usuarioSesion,
+         index: true
+        })
+    } else {
+        res.render('formularioMiPerfil', {
+            login: false,
+            index: true
+        })
+    }
+
 }
 
 export const postRegister = async (req, res) => {
