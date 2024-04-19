@@ -120,7 +120,6 @@ header nav .nav-icon .foto-perfil{
 /* -------------------------------------------- */
 
 footer{
-    padding: 24px 0 64px 0;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -128,27 +127,27 @@ footer{
     flex-direction: column;
     align-items: center;
 }
-footer section{
-    width: 80%;
+footer .footer{
+    max-width: 1128px;
+    min-height: 310px;
     display: flex;
     justify-content: center;
-    margin: 20px;
+    gap: 48px;
+    padding: 48px 0;
 }
 footer .footer-info{
-    padding: 0 30px;
-    width: 40%;
+    max-width: 360px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 8px;
 }
-
 footer .footer-redes{
     padding-left: 10px ;
 }
 footer .footer-redes img{
     margin: 20px 35px 20px 0;
 }
-
 footer .footer-contacto {
     padding-left: 10px;
     display: flex;
@@ -166,11 +165,10 @@ footer .footer-contacto li{
     align-items: center;
 }
 footer .footer-form{
-    padding: 0 30px;
-    width: 40%;
+    min-width: 368px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 8px;
 }
 footer form{
     width: 100%;
