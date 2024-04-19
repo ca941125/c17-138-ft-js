@@ -7,6 +7,8 @@ export const getAlojamientoElegido = async (req, res) => {
     
     const result = await client.sql`SELECT * FROM perfiles WHERE usuarioid = ${id};`
 
+    //agregar si no existe id redireccionar a pagina error
+
     const result3 = await client.sql`SELECT correo_electronico FROM usuarios WHERE usuarioid = ${id};`
 
     const {rows} = await client.sql`SELECT * FROM alojamientos WHERE usuarioid = ${id};`
