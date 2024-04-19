@@ -1,14 +1,27 @@
 html{
     background-color: var(--fondo);
 }
+
+/* medias para nav responsive */
+header nav{
+    max-width: 1128px;
+    min-width: 768px;
+    margin: 24px auto;
+}
+h3{
+    text-align: center;
+    margin: 24px 156px 16px 156px;
+}
+
+/* MAIN */
 .main{
-    width: 80%;
+    max-width: 96%;
     margin: 0 auto;
 }
 .main .inicio{
-    width: 552px;
+    min-width: 552px;
     height: 697px;
-    margin: 50px auto;
+    margin: 80px auto;
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -28,7 +41,6 @@ html{
 .main img{
     width: 180px;
 }
-
 .main .inicio .inicioDeSesion{
     display: flex;
     flex-direction: column;
@@ -40,13 +52,43 @@ html{
     flex-direction: column;
     gap: 8px;
 }
-.main .inicio .inicioDeSesion input{
-    padding: 12px ;
+.main .inicio .inicioDeSesion #email{
+    padding: 16px ;
     border: 1px solid var(--primario);
+    margin-bottom: 8px;
 }
-
+input{
+    border: 0;
+    outline: 0;
+}
+.main .inicio .inicioDeSesion .inputPassword {
+    padding: 4px 0 4px 16px;
+    border: 1px solid var(--primario);
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+}
+.main .inicio .inicioDeSesion .inputPassword img{
+    width: 43px;
+}
 .main .inicio .botones{
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    padding-top: 40px;
+}
+.main .inicio .botones button{
+    width: 47%;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    
+}
+/* Celular */
+@media only screen and (max-width: 375px){
+
 }
