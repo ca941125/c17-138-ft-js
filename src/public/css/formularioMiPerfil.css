@@ -1,6 +1,10 @@
 @import url(colores.css);
 @import url(fuentes.css);
 
+html{
+   background-color: var(--fondo);
+}
+
 body {
     display:flex;
     flex-direction: column;
