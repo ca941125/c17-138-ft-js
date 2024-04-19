@@ -34,7 +34,6 @@ button{
     border-radius: 8px;
     padding: 4px;
     height: 48px;
-    width: 164px;
 }
 
 /* boton secundario */
@@ -46,7 +45,16 @@ button{
     border-radius: 8px;
     padding: 4px;
     height: 48px;
-    width: 164px;
+}
+
+/* boton terciario */
+.btt-3{
+    color: var(--acento);
+    background-color: none;
+    border: 2px solid var(--acento);
+    border-radius: 8px;
+    padding: 4px;
+    height: 48px;
 }
 
 /* -------------------------------------------- */
