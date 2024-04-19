@@ -6,7 +6,7 @@ html{
 }
 h3{
     text-align: center;
-    margin: 48px auto;
+    margin: 24px 156px 16px 156px;
 }
 
 /* header */
@@ -98,25 +98,35 @@ header{
 
 .comoFunciona{
     width: 100%;
-    padding: 48px 24px;
+    padding: 24px 0;
+    gap: 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .comoFunciona .cards{
-    width: 80%;
+    max-width: 1128px;
+    min-width: 370px;
     padding: 24px 0;
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
+  
+    gap: 8px;
 }
 .comoFunciona .cards .card{
+    width: 252px;
+    height: 360px;
     padding: 16px 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
     text-align: center;
+}
+.comoFunciona .cards .card img{
+    width: 137px;
+}
+.comoFunciona .cards .card .icono{
+    width: 22px;
 }
 
 /* -------------------------------------------- */
@@ -132,7 +142,7 @@ header{
 }
 .recomendadosParaTi .cards{
     margin: auto;
-    width: 80%;
+    width: 1128px;
     padding: 16px 0 32px 0;
     display: flex;
     flex-wrap: wrap;
@@ -206,22 +216,24 @@ header{
 .testimonial{
     padding: 24px 0 32px 0;
     text-align: center;
+    
 }
 .testimonial .cardTestimonial{
-    margin: 20px auto;
-    width: 80%;
+    margin: 0 auto;
+    width: 1128px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 24px 0;
 }
 .testimonial .informacion{
-    width: 30%;
+    width: 359px;
+    height: 381px;
     padding: 47px 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 18px;
+    gap: 16px;
 }
 .testimonial .informacion img{
     width: 123px;
@@ -239,7 +251,6 @@ header{
     width: 80%;
     margin: auto;
 }
-
 .pgtsFrecuentes summary{
     margin: 10px auto;
     border-radius: 8px;

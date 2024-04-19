@@ -1,43 +1,46 @@
 .search {
-    width: 80%;
-    margin: 0.5% auto;
- }
+    max-width: 1128px;
+    min-height: 144px;
+}
   
- .search .container-search{
-     width: 100%;
-     margin: 0 auto;
-     padding: 10px;
- }
- .search .title-form{
-     padding: 0 0 0 5px;
- }
- .search form{
-     display: flex;
-     justify-content: space-between;
-     align-items: flex-end;
- }
- .search .row{
-     display: flex;
-     flex-direction: column;
-     width: 100%;
-     margin: 5px;
- }
- .search input[type="date"], select, textarea {
-     width: 100%;
-     padding: 12px;
- }
- .search input[type=submit]{
-     width: 100%;
- }
- .search label {
-     padding: 12px 12px 12px 0;
- }
- .search .col-25 {
-     float: left;
-     margin-top: 6px;
- }
- .search .col-75 {
-     float: left;
-     width: 100%;
-     margin-top: 6px;
- }
+.search .container-search{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    gap: 8px;
+}
+.search .container-form{
+    max-width: 1100px;
+}
+.search .title-form{
+    padding: 0 0 0 8px;
+}
+.search form{
+    display: flex;
+    gap: 4px;
+}
+.search .row{
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    height: 80px;
+    gap: 4px;
+}
+.search .col-25{
+    padding: 0 4px 4px 4px;
+}
+.search .row button{
+    min-width: 180px;
+    height: 80px;
+}
+
+.search input[type="date"], select, textarea {
+    width: 100%;
+    padding: 12px;
+}
+.search input[type=submit]{
+    width: 100%;
+}
+.search label {
+    padding: 12px 12px 12px 0;
+}
