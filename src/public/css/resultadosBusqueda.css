@@ -6,6 +6,10 @@ main {
    width: 80%;
    margin: 0.5% auto;
 }
+h3{
+    text-align: center;
+    margin: 24px 156px 16px 156px;
+}
  
 .search .container-search{
     width: 100%;
@@ -82,10 +86,7 @@ main {
     margin: 20px auto;
      
 }
-h3{
-    text-align: center;
-    margin: 48px auto;
-}
+
 .recomendadosParaTi .buscadorPerfiles{
     width: 100%;
     display: flex;
