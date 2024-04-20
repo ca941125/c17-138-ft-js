@@ -1,7 +1,7 @@
 
 const url = '../json/provincias.json'
 function searchApi() {
-    document.getElementById("ubicacion").innerHTML = "<option value=''></option>"
+    document.getElementById("ubicacion1").innerHTML = "<option value=''></option>"
     fetch(url)
         .then(data => data.json())
         .then(data1 => {
