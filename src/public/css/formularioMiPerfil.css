@@ -137,7 +137,7 @@ align-items: center;
 
  }
  .miPerfil__ubicacionTexarea{
-   width:90% ;
+   width:80% ;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -231,4 +231,91 @@ align-items: center;
 .mascota__dato{
 display: flex;
 flex-direction: row;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1127px) {
+
+}
+@media only screen and (max-width:767px) {
+   .form-group__fila .form-group {
+
+      width: 100%;
+  }
+
+   .form-group__fila{
+      flex-direction: column;
+    
+    }
+
+
+}
+@media only screen and (max-width: 507px){
+
+   .avatar-label {
+
+      margin-bottom: 24px;
+  }
+ .formularioPerfil{
+   flex-direction: column;
+ }
+ .miPerfil {
+   width: 100%;
+   justify-content: center;
+   height: auto;
+   padding: 24px 0 24px;
+}
+
+
+ .miPerfil__ubicacion {
+   width: 100%;
+   height: auto;
+   padding: 24px 0 24px;
+}
+
+
+ .form-group__fila{
+   flex-direction: column;
+   gap: 8px;
+ }
+ .miPerfil__ubicacion-group{
+   width: 80%;
+   height: 200px;
+ }
+ .form-group__fila .form-group{
+   width: 100%;
+
+ }
+ .form-group__textarea {
+   height: 40vh;
+}
+
+
+.formularioBoton {
+
+   flex-direction: column;
+   justify-content: center;
+
+}
+
+.card-container {
+
+   flex-direction: column;
+
+}
+.mascota__card {
+
+   width: 100%;
+
+}
+.btt-1--gris {
+   width: 20vh;
+}
+.btt-2--blanco {
+
+   width: 20vh;
+}
+
 }
