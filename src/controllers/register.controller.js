@@ -22,12 +22,10 @@ export const getRegister = async (req, res) => {
          login: true,
          id: req.signedCookies['idUser'],
          usuarioSesion,
-         index: true
         })
     } else {
         res.render('formularioMiPerfil', {
             login: false,
-            index: true
         })
     }
 
