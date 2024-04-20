@@ -8,7 +8,7 @@ function searchApi() {
 
             //console.log(data1.provincias)
             data1.provincias.map((data) => {
-                document.getElementById("ubicacion").innerHTML += `
+                document.getElementById("ubicacion1").innerHTML += `
                     <option value="${data.nombre}">
                         ${data.nombre} 
                     </option>
