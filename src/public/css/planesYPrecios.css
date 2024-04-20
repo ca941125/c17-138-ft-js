@@ -3,16 +3,21 @@ html{
 }
 h3{
     text-align: center;
-    margin: 24px 156px 16px 156px;
+    margin: 24px 0 16px 0;
 }
-
 main{
-    width: 80%;
+    max-width: 1128px;
     margin: 0 auto;
+}
+.planes{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 0 36px 0;
 }
 .tiposDePlanes{
     width: 552px;
-    margin: 20px auto;
+    margin: 0 auto;
     display: flex;
     gap: 24px;
 }
@@ -21,17 +26,27 @@ main{
     padding: 48px 24px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+.tiposDePlanes .arriba, .abajo{
+    display: flex;
+    flex-direction: column;
     gap: 16px;
 }
 .tiposDePlanes .plan .clasico{
     border-top: 1px solid var(--primario-claro);
     border-bottom: 1px solid var(--primario-claro);
-    padding: 10px 0;
+    padding: 16px ;
+}
+.tiposDePlanes .plan li{
+    list-style: disc;
+    margin: 0 0 0 16px;
 }
 .tiposDePlanes .plan .premium{
     border-top: 1px solid var(--primario);
     border-bottom: 1px solid var(--primario);
-    padding: 10px 0;
+    padding: 16px;
 }
 .tiposDePlanes .plan span{
     padding: 0 4px 0 0;
@@ -39,7 +54,6 @@ main{
 .tiposDePlanes button{
     width: 100%;
 }
-
 .descripcion{
     padding: 30px 0;
 }
