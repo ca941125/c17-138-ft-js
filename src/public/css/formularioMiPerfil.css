@@ -184,17 +184,29 @@ align-items: center;
    justify-content:flex-end;
 }
 
-.btt-2--blanco{
+.btt-3--blanco{
    color:#c2c2c2;
    background-color: none;
    border: 2px solid #c2c2c2;
+   width: 164px;
 
 }
 .btt-1--gris{
    color: var(--blanco-1);
    background-color:#C2C2C2;
+   width: 164px;
 
 }
+.btt-3 {
+   width: 164px;
+}
+.btt-1{
+   width: 164px;
+}
+.btt-198 .btt-198{
+   width: 198px;
+}
+
  /*ESTILO A LOS CARD RESUMEN */
 
  .card-container{
