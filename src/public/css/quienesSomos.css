@@ -3,37 +3,38 @@ html{
 }
 h3{
     text-align: center;
-    margin: 24px 156px 16px 156px;
+    margin: 24px 0 16px 0;
 }
 main{
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    
 }
-.texto{
-    padding: 32px 0;
+.quienesSomos{
+    max-width: 1128px;
+    margin: 0 auto;
 }
 .cards{
     display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 48px 0;
+}
+.cards .wasi{
+    display: flex;
     flex-direction: row;
-    justify-content: center;
-    height: 368px;
-    gap: 16px;
-}
-.card{
-    width: 264px;
-    height: 336px;
-    padding: 48px 16px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 18px;
+    gap: 48px;
+    padding: 32px;
 }
-.card img{
-    width: 168px;
+.cards .wasi img{
+    width: 134px;
 }
-.info{
+.misionVision{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 24px;
+    padding:  24px 32px;
+}
+h5{
+    padding: 24px 0;
 }

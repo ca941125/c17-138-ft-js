@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../public/css/general-style.css">
     <link rel="stylesheet" href="../public/css/index.css">
 
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="../public/images/icons/w.svg" />
+
     <title>Home Wasi</title>
 </head>
 <body>
@@ -45,86 +48,92 @@
     </section>
 
     <!--  SEARCH Y METRICAS-->
-    <section class="searchMetricas bg-primario br-8">
+    <section class="searchMetricas   br-8">
         <!-- SEARCH -->
-        <div class="container-search bg-p-claro br-8">
-            <p class="title-form f-tm">Elige la fecha que desearías reservar un alojamiento para tu mascota.</p>
-            <div class="container-form br-8">
-                <form action="">
-                    <div class="row">
-                        <div class="col-25">
-                            <label class="f-bm c-texto-gris" for="fname" placeholder=" " >Fecha de ingreso</label>
+        <section class="search">
+            <div class="container-search bg-p-claro br-8">
+                <p class="title-form f-tm">Elige la fecha que desearías reservar un alojamiento para tu mascota.</p>
+                <div class="container-form">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-25">
+                                <label class="f-bm c-texto-gris" for="fname" placeholder=" " >Fecha de ingreso</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="date" id="" name="" class="br-8 bg-blanco-1">
+                            </div>
                         </div>
-                        <div class="col-75">
-                            <input type="date" id="" name="" class="br-8 bg-blanco-1">
+        
+                        <div class="row">
+                            <div class="col-25">
+                                <label class="f-bm c-texto-gris" for="lname">Fecha de salida</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="date" id="" name="" class="br-8 bg-blanco-1">
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-25">
-                            <label class="f-bm c-texto-gris" for="lname">Fecha de salida</label>
+        
+                        <div class="row">
+                            <div class="col-25">
+                                <label class="f-bm c-texto-gris" for="">Ubicación</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="" name="" class="br-8 bg-blanco-1">
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col-75">
-                            <input type="date" id="" name="" class="br-8 bg-blanco-1">
+        
+                        <div class="row">
+                            <div class="col-25">
+                                <label class="f-bm c-texto-gris" for="">Tipo de mascota</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="" name="" class="br-8 bg-blanco-1">
+                                    <option value=""></option>
+                                    <option value="">Perro</option>
+                                    <option value="">Gato</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-25">
-                            <label class="f-bm c-texto-gris" for="">Ubicación</label>
+        
+                        <div class="row">
+                            <div class="col-25">
+                                <label class="f-bm c-texto-gris" for="">Cantidad</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="" name="" class="br-8 bg-blanco-1">
+                                    <option value=""></option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col-75">
-                            <select id="" name="" class="br-8 bg-blanco-1">
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
+                        <div class="row">
+                            <div >
+                                <input class="col-75 btt-1" type="submit" value="Enviar">
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-25">
-                            <label class="f-bm c-texto-gris" for="">Tipo de mascota</label>
-                        </div>
-                        <div class="col-75">
-                            <select id="" name="" class="br-8 bg-blanco-1">
-                                <option value=""></option>
-                                <option value="">Perro</option>
-                                <option value="">Gato</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-25">
-                            <label class="f-bm c-texto-gris" for="">Cantidad</label>
-                        </div>
-                        <div class="col-75">
-                            <select id="" name="" class="br-8 bg-blanco-1">
-                                <option value=""></option>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                                <option value="">4</option>
-                                <option value="">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div >
-                            <input class="col-75 btt-1" type="submit" value="Enviar">
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
+        </section>
 
     <!--  METRICAS -->
         <div class="container-metricas c-texto">
-            <p class="metrica f-hsm">Nuestros números hablan por si solos</p>
-            <p class="metrica f-tm"><span class="f-dl">3000</span><br>Anfitriones</p>
-            <p class="metrica f-tm"><span class="f-dl">437</span><br>Ciudades registradas</p>
-            <p class="metrica f-tm"><span class="f-dl">826</span><br>Mascotas alojadas con éxito</p>
+            <div class="texto">
+                <p class="metrica f-hsm">Nuestros números hablan por si solos</p>
+            </div>
+            <div class="numeros">
+                <p class="metrica f-tm"><span class="f-dl">3000</span><br>Anfitriones</p>
+                <p class="metrica f-tm"><span class="f-dl">437</span><br>Ciudades registradas</p>
+                <p class="metrica f-tm"><span class="f-dl">826</span><br>Mascotas alojadas con éxito</p>
+            </div>
         </div>
     </section>
 

@@ -1,6 +1,9 @@
 html{
-    background-color: var(--fondo);
+ 
     width: 100%;
+}
+body{
+    background-color: var(--fondo);
 }
 main {
    width: 80%;
@@ -8,56 +11,36 @@ main {
 }
 h3{
     text-align: center;
-    margin: 24px 156px 16px 156px;
+    margin: 24px 0 16px 0;
 }
- 
-.search .container-search{
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px;
-}
-.search .title-form{
-    padding: 0 0 0 5px;
-}
-.search form{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-.search .row{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 5px;
-}
-.search input[type="date"], select, textarea {
-    width: 100%;
-    padding: 12px;
-}
-.search input[type=submit]{
-    width: 100%;
-}
-.search label {
-    padding: 12px 12px 12px 0;
-}
-.search .col-25 {
-    float: left;
-    margin-top: 6px;
-}
-.search .col-75 {
-    float: left;
-    width: 100%;
-    margin-top: 6px;
-}
-/* -------------------------------------------- */
-/* BUSCADOR  */
-/* -------------------------------------------- */
 
-.buscadorPerfiles .buscador{
+/* -------------------------------------------- */
+/* RECOMENDADOS PARA TI */
+/* -------------------------------------------- */
+.recomendadosParaTi{
+    max-width: 1128px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
+
+/* -------------------------------------------- */
+/* CONTENEDOR BUSCADOR Y CARDS  */
+/* -------------------------------------------- */
+.recomendadosParaTi .buscadorPerfiles{
+    width: 100%;
+    display: flex;
+    gap: 32px;
+}
+/* BUSCADOR */
+.buscadorPerfiles .buscador{
+    width: 264px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 .buscadorPerfiles .buscador .filtro{
     display: flex;
     align-items: center;
@@ -66,6 +49,7 @@ h3{
     text-decoration: none;
     width: 80%;
 }
+
 .buscadorPerfiles .resultadosBusqueda{
     display: flex;
     flex-direction: column;
@@ -77,33 +61,15 @@ h3{
     gap: 16px;
     margin-bottom: 10px;
 }
-/* -------------------------------------------- */
-/* RECOMENDADOOS PARA TI */
-/* -------------------------------------------- */
 
-.recomendadosParaTi{
-    width: 80%;
-    margin: 20px auto;
-     
-}
-
-.recomendadosParaTi .buscadorPerfiles{
-    width: 100%;
-    display: flex;
-    gap: 32px;
-}
-.recomendadosParaTi .buscador{
-    width: 25%;
-    margin-right: 15px ;
-}
+/* CARDS */
 .recomendadosParaTi .cards{
-    width: 71%;
+    max-width: 840px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 24px;
 }
-
 .recomendadosParaTi .paraTiCard{
     width: 264px;
     padding: 0 0 16px 0;
@@ -161,7 +127,6 @@ h3{
     justify-content: space-between;
     gap: 8px;
 }
-
 .recomendadosParaTi .paraTiCard .precioCard button{
     width: 112px;
 } 
@@ -171,10 +136,9 @@ h3{
 /* -------------------------------------------- */
 
 .paginas{
- 
-    margin: 0 auto;
     padding: 24px 0 48px 0;
 }
 .paginas button{
-    width: 133px;float: right;
+    width: 133px;
+    float: right;
 }
