@@ -1,4 +1,5 @@
 html{
+    min-width: 100vw;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,9 +7,8 @@ html{
 }
 h3{
     text-align: center;
-    margin: 24px 156px 16px 156px;
+    margin: 24px 0 16px 0
 }
-
 /* header */
 header{
     position: absolute;
@@ -28,69 +28,40 @@ header{
     flex-direction: row-reverse;
 }
 .container .titulo-principal{
-    width: 80%;
+    width: 1128px;
+    padding: 48px 16px 80px 0;
     margin: 5% auto;
     text-align: right;
 }
-.searchMetricas {
-   width: 80%;
-   margin: 1% auto;
-   position: relative;
-   top: -50px;
-}
 
-.searchMetricas .container-search{
+/* -------------------------------------------- */
+/* SEARCH Y METRICAS */
+/* -------------------------------------------- */
+
+.searchMetricas{
     width: 100%;
-    margin: 0 auto;
-    padding: 10px;
+    position: relative;
+    top: -50px;
 }
-.searchMetricas .title-form{
-    padding: 0 0 0 5px;
-}
-.searchMetricas form{
+.container-metricas{
+    margin: auto;
+    max-width: 1128px;
+    padding: 45px 24px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-.searchMetricas .row{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 5px;
-}
-.searchMetricas input[type="date"], select, textarea {
-    width: 100%;
-    padding: 12px;
-}
-.searchMetricas input[type=submit]{
-    width: 100%;
-}
-.searchMetricas label {
-    padding: 12px 12px 12px 0;
-}
-.searchMetricas .col-25 {
-    float: left;
-    margin-top: 6px;
-}
-.searchMetricas .col-75 {
-    float: left;
-    width: 100%;
-    margin-top: 6px;
-}
-/* metricas */
-.searchMetricas .container-metricas{
-    margin: 0 auto;
-    width: 90%;
-    padding: 45px 24px 0;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 }
-.searchMetricas .container-metricas .metrica{
+.container-metricas .texto{
     text-align: center;
-    width: 25%;
 }
-
+.container-metricas .numeros{
+    width: 70%;
+    display: flex;
+}
+.container-metricas p{
+    text-align: center;
+    width: 265px;
+}
 
 /* -------------------------------------------- */
 /* COMO FUNCIONA  */
@@ -109,7 +80,8 @@ header{
     min-width: 370px;
     padding: 24px 0;
     display: flex;
-  
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;
 }
 .comoFunciona .cards .card{
@@ -142,7 +114,7 @@ header{
 }
 .recomendadosParaTi .cards{
     margin: auto;
-    width: 1128px;
+    max-width: 1128px;
     padding: 16px 0 32px 0;
     display: flex;
     flex-wrap: wrap;
@@ -219,10 +191,11 @@ header{
 }
 .testimonial .cardTestimonial{
     margin: 0 auto;
-    width: 1128px;
+    max-width: 1128px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 24px 0;
 }
 .testimonial .informacion{
@@ -244,15 +217,13 @@ header{
 /* -------------------------------------------- */
 
 .pgtsFrecuentes{
-    width: 100%;
     padding: 48px 24px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 24px;
 }
 .pgtsFrecuentes .preguntas{
-    width: 1128px;
+    max-width: 1128px;
     padding: 32px 0 48px 0;
     margin: 8px auto;
     display: flex;
@@ -284,20 +255,47 @@ header{
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 16px;
 }
 .brand{
     width: 145px;
 }
 
-
 /* MEDIA QUERIES */
-
 /* Tablet */
-@media only screen and (max-width: 768px) {
-    
+@media only screen and (max-width:768px) {
+    /* CONTAINER */
+
+    /* SEARCH Y METRICAS  */
+
+    .container-metricas{
+        flex-direction: column;
+        gap: 16px;
+    }
+    .container-metricas .numeros{
+        width: 100%;
+    }
+
+    /* RECOMENDADO PARA TI */
+    .recomendadosParaTi .cards{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
+
+@media only screen and (max-width: 507px){
+    .container-metricas .numeros{
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
 /* Celular */
 @media only screen and (max-width: 375px){
-
+    /* CONTAINER */
+    .titulo-principal{
+        font-size: 32px;
+    }
 }

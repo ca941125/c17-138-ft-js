@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../public/css/general-style.css">
     <link rel="stylesheet" href="../public/css/index.css">
 
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="../public/images/icons/w.svg" />
+
     <title>Home Wasi</title>
 </head>
 <body>
@@ -45,94 +48,92 @@
     </section>
 
     <!--  SEARCH Y METRICAS-->
-    <section class="searchMetricas bg-primario br-8">
+    <section class="searchMetricas   br-8">
         <!-- SEARCH -->
-        <div class="container-search bg-p-claro br-8">
-            <p class="title-form f-tm">Elige la fecha que desearías reservar un alojamiento para tu mascota.</p>
-            <div class="container-form br-8">
-                <form action="">
-                    <div class="row">
-                        <div class="col-25">
-                            <label class="f-bm c-texto-gris" for="fname" placeholder=" " >Fecha de ingreso</label>
+        <section class="search">
+            <div class="container-search bg-p-claro br-8">
+                <p class="title-form f-tm">Elige la fecha que desearías reservar un alojamiento para tu mascota.</p>
+                <div class="container-form">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-25">
+                                <label class="f-bm c-texto-gris" for="fname" placeholder=" " >Fecha de ingreso</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="date" id="" name="" class="br-8 bg-blanco-1">
+                            </div>
                         </div>
-                        <div class="col-75">
-                            <input type="date" id="" name="" class="br-8 bg-blanco-1">
+        
+                        <div class="row">
+                            <div class="col-25">
+                                <label class="f-bm c-texto-gris" for="lname">Fecha de salida</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="date" id="" name="" class="br-8 bg-blanco-1">
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-25">
-                            <label class="f-bm c-texto-gris" for="lname">Fecha de salida</label>
+        
+                        <div class="row">
+                            <div class="col-25">
+                                <label class="f-bm c-texto-gris" for="">Ubicación</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="" name="" class="br-8 bg-blanco-1">
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col-75">
-                            <input type="date" id="" name="" class="br-8 bg-blanco-1">
+        
+                        <div class="row">
+                            <div class="col-25">
+                                <label class="f-bm c-texto-gris" for="">Tipo de mascota</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="" name="" class="br-8 bg-blanco-1">
+                                    <option value=""></option>
+                                    <option value="">Perro</option>
+                                    <option value="">Gato</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-25">
-                            <label class="f-bm c-texto-gris" for="">Ubicación</label>
+        
+                        <div class="row">
+                            <div class="col-25">
+                                <label class="f-bm c-texto-gris" for="">Cantidad</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="" name="" class="br-8 bg-blanco-1">
+                                    <option value=""></option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col-75">
-                            <select id="" name="" class="br-8 bg-blanco-1">
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
+                        <div class="row">
+                            <div >
+                                <input class="col-75 btt-1" type="submit" value="Enviar">
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="col-75">
-                        <select id="ubicacion" name="" class="br-8 bg-blanco-1">
-
-                        </select>
-                    </div>
+                    </form>
                 </div>
-
-
-                    <div class="row">
-                        <div class="col-25">
-                            <label class="f-bm c-texto-gris" for="">Tipo de mascota</label>
-                        </div>
-                        <div class="col-75">
-                            <select id="" name="" class="br-8 bg-blanco-1">
-                                <option value=""></option>
-                                <option value="">Perro</option>
-                                <option value="">Gato</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-25">
-                            <label class="f-bm c-texto-gris" for="">Cantidad</label>
-                        </div>
-                        <div class="col-75">
-                            <select id="" name="" class="br-8 bg-blanco-1">
-                                <option value=""></option>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                                <option value="">4</option>
-                                <option value="">5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div >
-                            <input class="col-75 btt-1" type="submit" value="Enviar">
-                        </div>
-                    </div>
-                </form>
             </div>
-        </div>
+        </section>
 
     <!--  METRICAS -->
         <div class="container-metricas c-texto">
-            <p class="metrica f-hsm">Nuestros números hablan por si solos</p>
-            <p class="metrica f-tm"><span class="f-dl">3000</span><br>Anfitriones</p>
-            <p class="metrica f-tm"><span class="f-dl">437</span><br>Ciudades registradas</p>
-            <p class="metrica f-tm"><span class="f-dl">826</span><br>Mascotas alojadas con éxito</p>
+            <div class="texto">
+                <p class="metrica f-hsm">Nuestros números hablan por si solos</p>
+            </div>
+            <div class="numeros">
+                <p class="metrica f-tm"><span class="f-dl">3000</span><br>Anfitriones</p>
+                <p class="metrica f-tm"><span class="f-dl">437</span><br>Ciudades registradas</p>
+                <p class="metrica f-tm"><span class="f-dl">826</span><br>Mascotas alojadas con éxito</p>
+            </div>
         </div>
     </section>
 
@@ -183,11 +184,9 @@
         <div id="cards" class="cards">
         <!-- primera card -->
             <div class="paraTiCard bg-blanco-1 br-8">
-
                 <div class="imgCard br-8">
                     <img src="../public/images/usuarios/usuario-1/perfil_usuario_1.jpg" alt="">
                 </div>
-
                 <div class="cuerpoCard">
                     <div class="esp">
                         <div class="nombreCard">
@@ -235,61 +234,9 @@
             </div>
         <!-- segunda card -->
             <div class="paraTiCard bg-blanco-1 br-8">
-
-                <img src="images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
-                
-                <div class="cuerpoCard">
-                    <div class="esp">
-                        <div class="nombreCard">
-                            <div>
-                                <p class="f-hsb" >Nombre Anfitrión</p>
-                                <p class="f-bm">Texto Ubicación</p>
-                            </div>
-                            <div class="clasif">
-                                <img src="images/icons/estrella.svg" alt="">
-                                <span class="f-bm">5.0</span>
-                            </div>
-                        </div>
-                        <div class="iconosCard">
-                            <div class="iconText">
-                                <img src="images/icons/perro-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Perro</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="images/icons/casa-verde.svg" alt="">
-                                <p class="f-bm c-primario">Casa</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="images/icons/jardin-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Jardin</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="images/icons/cerco-verde.svg" alt="">
-                                <p class="f-bm c-primario">Cercado</p>
-                            </div>
-                        </div>
-                        <p class="f-bm c-texto-gris" >
-                            Write an amazing description in this dedicated card section. Each word counts.
-                        </p>
-                    </div>
-                    <div class="precioCard">
-                        <div>
-                            <span class="f-tlb">$50.000</span>
-                            <p class="f-ll">AR/noche</p>
-                        </div>
-                        <div>
-                            <button class="btt-1">Label</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!-- tercer card -->
-            <div class="paraTiCard bg-blanco-1 br-8">
-
                 <div class="imgCard">
                     <img src="../public/images/usuarios/usuario-2/perfil_usuario_2.jpg" alt="">
                 </div>
-
                 <div class="cuerpoCard">
                     <div class="esp">
                         <div class="nombreCard">
@@ -304,56 +251,6 @@
                         </div>
                         <div class="iconosCard">
                             <div class="iconText">
-                                <img src="../public/images/icons/perro-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Perro</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/casa-verde.svg" alt="">
-                                <p class="f-bm c-primario">Casa</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/jardin-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Jardin</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/cerco-verde.svg" alt="">
-                                <p class="f-bm c-primario">Cercado</p>
-                            </div>
-                        </div>
-                        <p class="f-bm c-texto-gris" >
-                            Write an amazing description in this dedicated card section. Each word counts.
-                        </p>
-                    </div>
-                    <div class="precioCard">
-                        <div>
-                            <span class="f-tlb">$50.000</span>
-                            <p class="f-ll">AR/noche</p>
-                        </div>
-                        <div>
-                            <button class="btt-1">Label</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!-- cuarta card -->
-            <div class="paraTiCard bg-blanco-1 br-8">
-                <div class="imgCard br-8">
-                    <img src="../public/images/usuarios/usuario-3/perfil_usuario_3.jpg" alt="">
-                </div>
-                <div class="cuerpoCard">
-                    <div class="esp">
-                        <div class="nombreCard">
-                            <div>
-                                <p class="f-hsb" >Nombre Anfitrión</p>
-                                <p class="f-bm">Texto Ubicación</p>
-                            </div>
-                            <div class="clasif">
-                                <img src="../public/images/icons/estrella.svg" alt="">
-                                <span class="f-bm">5.0</span>
-                            </div>
-                        </div>
-                        <div class="iconosCard">
-                            <div class="iconText">                        
                                 <img src="../public/images/icons/gato-verde.svg" alt="">
                                 <p class="f-bm c-primario">1 Gato</p>
                             </div>
@@ -364,7 +261,6 @@
                             <div class="iconText">
                                 <img src="../public/images/icons/plaza-cerca-verde.svg" alt="">
                                 <p class="f-bm c-primario">Parque cerca</p>
-
                             </div>
                             <div class="iconText">
                                 <img src="../public/images/icons/cerco-verde.svg" alt="">
@@ -386,256 +282,6 @@
                     </div>
                 </div>
             </div>
-    <!-- cuarta card -->
-            <div class="paraTiCard bg-blanco-1 br-8">
-                <div class="imgCard br-8">
-                    <img src="../public/images/usuarios/usuario-4/perfil_usuario_4.jpg" alt="">
-                </div>
-                <div class="cuerpoCard">
-                    <div class="esp">
-                        <div class="nombreCard">
-                            <div>
-                                <p class="f-hsb" >Nombre Anfitrión</p>
-                                <p class="f-bm">Texto Ubicación</p>
-                            </div>
-                            <div class="clasif">
-                                <img src="../public/images/icons/estrella.svg" alt="">
-                                <span class="f-bm">5.0</span>
-                            </div>
-                        </div>
-                        <div class="iconosCard">
-                            <div class="iconText">
-                                <img src="../public/images/icons/perro-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Perro</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/casa-verde.svg" alt="">
-                                <p class="f-bm c-primario">Casa</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/jardin-verde.svg" alt="">
-                                <p class="f-bm c-primario">1 Jardin</p>
-                            </div>
-                            <div class="iconText">
-                                <img src="../public/images/icons/cerco-verde.svg" alt="">
-                                <p class="f-bm c-primario">Cercado</p>
-                            </div>
-                        </div>
-                        <p class="f-bm c-texto-gris" >
-                            Write an amazing description in this dedicated card section. Each word counts.
-                        </p>
-                    </div>
-                    <div class="precioCard">
-                        <div>
-                            <span class="f-tlb">$50.000</span>
-                            <p class="f-ll">AR/noche</p>
-                        </div>
-                        <div>
-                            <button class="btt-1">Label</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    <!-- quinta card -->
-        <div class="paraTiCard bg-blanco-1 br-8">
-            <div class="imgCard br-8">
-                <img src="../public/images/usuarios/usuario-5/perfil_usuario_5.jpg" alt="">
-            </div>
-            <div class="cuerpoCard">
-                <div class="esp">
-                    <div class="nombreCard">
-                        <div>
-                            <p class="f-hsb" >Nombre Anfitrión</p>
-                            <p class="f-bm">Texto Ubicación</p>
-                        </div>
-                        <div class="clasif">
-                            <img src="../public/images/icons/estrella.svg" alt="">
-                            <span class="f-bm">5.0</span>
-                        </div>
-                    </div>
-                    <div class="iconosCard">
-                        <div class="iconText">
-                            <img src="../public/images/icons/perro-verde.svg" alt="">
-                            <p class="f-bm c-primario">1 Perro</p>
-                        </div>
-                        <div class="iconText">
-                            <img src="../public/images/icons/casa-verde.svg" alt="">
-                            <p class="f-bm c-primario">Casa</p>
-                        </div>
-                        <div class="iconText">
-                            <img src="../public/images/icons/jardin-verde.svg" alt="">
-                            <p class="f-bm c-primario">1 Jardin</p>
-                        </div>
-                        <div class="iconText">
-                            <img src="../public/images/icons/cerco-verde.svg" alt="">
-                            <p class="f-bm c-primario">Cercado</p>
-                        </div>
-                    </div>
-                    <p class="f-bm c-texto-gris" >
-                       Write an amazing description in this dedicated card section. Each word counts.
-                    </p>
-                </div>
-                <div class="precioCard">
-                    <div class="izq">
-                        <span class="f-tlb">$50.000</span>
-                        <p class="f-ll">AR/noche</p>
-                    </div>
-                    <div class="der">
-                        <button class="btt-1">Label</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- sexta card -->
-        <div class="paraTiCard bg-blanco-1 br-8">
-            <div class="imgCard">
-                <img src="../public/images/usuarios/usuario-6/perfil_usuario_6.jpg" alt="">
-            </div>
-            <div class="cuerpoCard">
-                <div class="esp">
-                    <div class="nombreCard">
-                        <div>
-                            <p class="f-hsb" >Nombre Anfitrión</p>
-                            <p class="f-bm">Texto Ubicación</p>
-                        </div>
-                        <div class="clasif">
-                            <img src="../public/images/icons/estrella.svg" alt="">
-                            <span class="f-bm">5.0</span>
-                        </div>
-                    </div>
-                    <div class="iconosCard">
-                        <div class="iconText">
-                            <img src="../public/images/icons/perro-verde.svg" alt="">
-                            <p class="f-bm c-primario">1 Perro</p>
-                        </div>
-                        <div class="iconText">
-                            <img src="../public/images/icons/casa-verde.svg" alt="">
-                            <p class="f-bm c-primario">Casa</p>
-                        </div>
-                        <div class="iconText">
-                            <img src="../public/images/icons/jardin-verde.svg" alt="">
-                            <p class="f-bm c-primario">1 Jardin</p>
-                        </div>
-                        <div class="iconText">
-                            <img src="../public/images/icons/cerco-verde.svg" alt="">
-                            <p class="f-bm c-primario">Cercado</p>
-                        </div>
-                    </div>
-                    <p class="f-bm c-texto-gris" >
-                        Write an amazing description in this dedicated card section. Each word counts.
-                    </p>
-                </div>
-                <div class="precioCard">
-                    <div>
-                        <span class="f-tlb">$50.000</span>
-                        <p class="f-ll">AR/noche</p>
-                    </div>
-                    <div>
-                        <button class="btt-1">Label</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- septima card -->
-        <div class="paraTiCard bg-blanco-1 br-8">
-            <div class="imgCard br-8">
-                <img src="../public/images/usuarios/usuario-7/perfil_usuario_7.jpg" alt="">
-            </div>
-            <div class="cuerpoCard">
-                <div class="esp">
-                    <div class="nombreCard">
-                        <div>
-                            <p class="f-hsb" >Nombre Anfitrión</p>
-                            <p class="f-bm">Texto Ubicación</p>
-                        </div>
-                        <div class="clasif">
-                            <img src="../public/images/icons/estrella.svg" alt="">
-                            <span class="f-bm">5.0</span>
-                        </div>
-                    </div>
-                    <div class="iconosCard">
-                        <div class="iconText">
-                            <img src="../public/images/icons/perro-verde.svg" alt="">
-                            <p class="f-bm c-primario">1 Perro</p>
-                        </div>
-                        <div class="iconText">
-                            <img src="../public/images/icons/casa-verde.svg" alt="">
-                            <p class="f-bm c-primario">Casa</p>
-                        </div>
-                        <div class="iconText">
-                            <img src="../public/images/icons/jardin-verde.svg" alt="">
-                            <p class="f-bm c-primario">1 Jardin</p>
-                        </div>
-                        <div class="iconText">
-                            <img src="../public/images/icons/cerco-verde.svg" alt="">
-                            <p class="f-bm c-primario">Cercado</p>
-                        </div>
-                    </div>
-                    <p class="f-bm c-texto-gris" >
-                        Write an amazing description in this dedicated card section. Each word counts.
-                    </p>
-                </div>
-                <div class="precioCard">
-                    <div>
-                        <span class="f-tlb">$50.000</span>
-                        <p class="f-ll">AR/noche</p>
-                    </div>
-                    <div>
-                        <button class="btt-1">Label</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- octava card -->
-        <div class="paraTiCard bg-blanco-1 br-8">
-            <div class="imgCard br-8">
-                <img src="../public/images/usuarios/usuario-8/perfil_usuario_8.jpg" alt="">
-            </div>
-            <div class="cuerpoCard">
-                <div class="esp">
-                    <div class="nombreCard">
-                        <div>
-                            <p class="f-hsb" >Nombre Anfitrión</p>
-                            <p class="f-bm">Texto Ubicación</p>
-                        </div>
-                        <div class="clasif">
-                            <img src="../public/images/icons/estrella.svg" alt="">
-                            <span class="f-bm">5.0</span>
-                        </div>
-                    </div>
-                    <div class="iconosCard">
-                        <div class="iconText">
-                            <img src="../public/images/icons/perro-verde.svg" alt="">
-                            <p class="f-bm c-primario">1 Perro</p>
-                        </div>
-                        <div class="iconText">
-                            <img src="../public/images/icons/casa-verde.svg" alt="">
-                            <p class="f-bm c-primario">Casa</p>
-                        </div>
-                        <div class="iconText">
-                            <img src="../public/images/icons/jardin-verde.svg" alt="">
-                            <p class="f-bm c-primario">1 Jardin</p>
-                        </div>
-                        <div class="iconText">
-                            <img src="../public/images/icons/cerco-verde.svg" alt="">
-                            <p class="f-bm c-primario">Cercado</p>
-                        </div>
-                    </div>
-                    <p class="f-bm c-texto-gris" >
-                        Write an amazing description in this dedicated card section. Each word counts.
-                    </p>
-                </div>
-                <div class="precioCard">
-                    <div>
-                        <span class="f-tlb">$50.000</span>
-                        <p class="f-ll">AR/noche</p>
-                    </div>
-                    <div>
-                        <button class="btt-1">Label</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
 
@@ -768,12 +414,10 @@
             <h4 class="f-hsm c-a-dark-mode" >Estamos aquí para ayudarte!</h4>
             <p class="f-bl">Ponete en contacto con nosotros si tienes alguna pregunta, comentario o sugerencia.</p>
             <div class="footer-redes">
-                <a href=""><img src="../public/images/icons/facebook.svg" alt=""></a>
-                <a href=""><img src="../public/images/icons/twitter.svg" alt=""></a>
-                <a href=""><img src="../public/images/icons/instagram.svg" alt=""></a>
-
+                <a href=""><img src="../public/images/icons/footer/facebook.svg" alt=""></a>
+                <a href=""><img src="../public/images/icons/footer/twitter.svg" alt=""></a>
+                <a href=""><img src="../public/images/icons/footer/instagram.svg" alt=""></a>
             </div>
-            
             <ul class="footer-contacto ">
                 <li class="f-bl">
                     <img src="../public/images/icons/footer/telefono.svg" alt="">
@@ -784,7 +428,7 @@
                     wasi@info.com
                 </li>
                 <li class="f-bl">
-                    <img src="../public/images/icons/mundo.svg" alt="">
+                    <img src="../public/images/icons/footer/mundo.svg" alt="">
                     Dirección 123 - Argentina
                 </li>
             </ul>
@@ -802,9 +446,6 @@
         </div>
     </section>
 </footer>
-
-
-<script src="js/search.js"></script>
 
 </body>
 </html>

@@ -75,12 +75,12 @@ header{
 }
 /* sin iniciar sesión */
 header nav{
-    width: 80%;
+    max-width: 1128px;
     height: 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px auto;
+    margin: 24px auto;
     padding: 0 24px 0 24px;
     border-radius: 8px;
     background-color: var(--primario-oscuro);
@@ -100,6 +100,9 @@ header nav .nav-button{
     width: 291px;
     display: flex;
     justify-content: space-between;
+}
+header nav .nav-button button{
+    width: 141px;
 }
 /* con sesión iniciada */
 header nav .nav-icon{
@@ -173,13 +176,13 @@ footer .footer-contacto li{
     align-items: center;
 }
 footer .footer-form{
-    min-width: 368px;
+    width: 360px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 footer form{
-    width: 100%;
+   
     display: flex;
     flex-direction:column;
 }
@@ -198,4 +201,19 @@ footer textarea{
 footer .enviar{
     width: 100%;
     margin-top: 10px;
+}
+
+/* MEDIA QUERIES */
+/* Tablet */
+@media only screen and (max-width:768px) {
+    footer .footer{
+        margin: 8px;
+        flex-direction: column;
+    }
+}
+/* Celular */
+@media only screen and(max-width: 375px){
+    header nav{
+        flex-direction: column;
+    }
 }
