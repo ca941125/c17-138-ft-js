@@ -33,14 +33,12 @@ export const getResultadoBusqueda = async (req, res) => {
          id: req.signedCookies['idUser'],
          /* rol: req.session.rol, */
          alojamientos,
-         usuarioSesion,
-         index: true
+         usuarioSesion
         })
     } else {
         res.render('resultadoBusqueda', {
             login: false,
-            alojamientos,
-            index: true
+            alojamientos
         })
     }
 
