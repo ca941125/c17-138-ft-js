@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="../public/css/reset.css">
     <link rel="stylesheet" href="../public/css/general-style.css">
     <link rel="stylesheet" href="../public/css/formularioMiPerfil.css">
+    <link rel="icon" type="image/x-icon" href="../public/images/icons/w.svg" />
 
-    <title>Home Wasi</title>
+    <title>Registro Wasi</title>
 
 </head>
 
@@ -18,7 +19,7 @@
         <header>
             <nav class="nav">
                 <div class="nav-bar c-fondo">
-                    <a href="#"><img src="../public/images/logo-orange.png" alt="logo"></a>
+                    <a href="#"><img src="../public/images/logo-header.png" alt="logo"></a>
                     <a class="f-tm c-blanco-1" href="">Quiénes somos</a>
                     <a class="f-tm c-blanco-1" href="">Planes y precios</a>
                 </div>
@@ -65,18 +66,23 @@
                 <h3 class=" f-hsb c-texto"> Datos personales</h3>
 
                 <div class="form-group">
-                <label class="form-group__label c-texto-gris f-bm" for="nombre">Nombre completo</label>
+                <label class="form-group__label c-texto-gris f-bm" for="nombre">Nombre *</label>
                 <input class="form-group__input f-bl c-texto br-8" type="text" id="nombre" name="nombre" required>
                 </div>
 
                 <div class="form-group">
-                <label class="form-group__label c-texto-gris f-bm " for="email">E-mail</label>
+                    <label class="form-group__label c-texto-gris f-bm" for="apellido">Apellidos *</label>
+                    <input class="form-group__input f-bl c-texto br-8" type="text" id="apellido" name="apellido" required>
+                </div>
+
+                <div class="form-group">
+                <label class="form-group__label c-texto-gris f-bm " for="email">E-mail *</label>
                 <input  class="form-group__input f-bl c-texto br-8" type="email" id="email" name="email" required>
                 </div>
                 
 
                 <div class="form-group">
-                    <label class="form-group__label c-texto-gris f-bm" for="password">Contraseña</label>
+                    <label class="form-group__label c-texto-gris f-bm" for="password">Contraseña *</label>
                     <div class="form-group__password-box  br-8">
                         <input class="f-bl c-texto " type="password" id="password" name="password" required>
                         <img src="/src/public/images/icons/ojo-cerrado.svg" alt="">
@@ -84,7 +90,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label  class ="form-group__label c-texto-gris f-bm" for="confirmPassword">Confirmar contraseña</label>
+                    <label  class ="form-group__label c-texto-gris f-bm" for="confirmPassword">Confirmar contraseña *</label>
                     <div class="form-group__password-box br-8">
                         <input class="f-bl c-texto "type="password" id="confirmPassword" name="confirmPassword" required>
                         <img src="/src/public/images/icons/ojo-cerrado.svg" alt="">

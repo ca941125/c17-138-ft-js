@@ -216,7 +216,6 @@ header{
 .testimonial{
     padding: 24px 0 32px 0;
     text-align: center;
-    
 }
 .testimonial .cardTestimonial{
     margin: 0 auto;
@@ -233,6 +232,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 16px;
 }
 .testimonial .informacion img{
@@ -244,25 +244,30 @@ header{
 /* -------------------------------------------- */
 
 .pgtsFrecuentes{
+    width: 100%;
     padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 }
 .pgtsFrecuentes .preguntas{
-    padding: 0 0 48px 0;
-    width: 80%;
-    margin: auto;
+    width: 1128px;
+    padding: 32px 0 48px 0;
+    margin: 8px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 .pgtsFrecuentes summary{
-    margin: 10px auto;
-    border-radius: 8px;
-    border: 3px solid var(--primario);
+    border: 2px solid var(--primario);
     padding: 16px;
     cursor: pointer;
 }
 .pgtsFrecuentes .answer{
-    margin: 10px auto;
+    margin: 8px auto;
     border-radius: 8px;
-    background-color:  var(--fondo);
-    padding: 10px 16px;
+    padding: 8px 16px;
 }
 
 /* -------------------------------------------- */
@@ -271,11 +276,28 @@ header{
 
 .brands{
     padding: 48px 0 64px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 .brands .contenedorBrands{
     margin: 0 auto;
-    width: 80%;
     display: flex;
     justify-content: center;
     gap: 16px;
+}
+.brand{
+    width: 145px;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    
+}
+/* Celular */
+@media only screen and (max-width: 375px){
+
 }

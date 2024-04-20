@@ -1,39 +1,46 @@
 .search {
     max-width: 1128px;
     min-height: 144px;
+
 }
-  
 .search .container-search{
     display: flex;
     flex-direction: column;
     padding: 8px;
+    max-width: 1128px;
     gap: 8px;
 }
 .search .container-form{
-    max-width: 1100px;
+    max-width: 100%;
 }
 .search .title-form{
     padding: 0 0 0 8px;
 }
 .search form{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
     gap: 4px;
 }
 .search .row{
     display: flex;
     flex-direction: column;
-    min-width: 180px;
-    height: 80px;
+    justify-content: flex-end;
+    min-width: 16%;
+    min-height: 80px;
     gap: 4px;
 }
 .search .col-25{
     padding: 0 4px 4px 4px;
 }
+.search .row .col-75{
+    max-width: 100%;
+}
 .search .row button{
     min-width: 180px;
     height: 80px;
 }
-
 .search input[type="date"], select, textarea {
     width: 100%;
     padding: 12px;
@@ -43,4 +50,22 @@
 }
 .search label {
     padding: 12px 12px 12px 0;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1127px) {
+    .search .row{
+        min-width: 32%;
+    }
+}
+@media only screen and (max-width:767px) {
+    .search .row{
+        min-width: 49%;
+    }
+}
+@media only screen and (max-width: 507px){
+    .search .row{
+        min-width: 100%;
+    }
 }
