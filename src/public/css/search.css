@@ -1,7 +1,11 @@
-
+.containerSearch{
+    width: 100%;
+    
+}
 .search {
     max-width: 1128px;
     min-height: 144px;
+    margin: 0 auto;
 }
 .search .container-search{
     display: flex;
