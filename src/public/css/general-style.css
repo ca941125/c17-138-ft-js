@@ -176,13 +176,13 @@ footer .footer-contacto li{
     align-items: center;
 }
 footer .footer-form{
-
+    width: 360px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 footer form{
-    max-width: 360px;
+   
     display: flex;
     flex-direction:column;
 }
