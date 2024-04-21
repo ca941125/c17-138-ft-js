@@ -18,7 +18,7 @@ export const getRegister = async (req, res) => {
             foto_url: req.signedCookies['foto_url'] 
         }
 
-        res.render('formularioMiPerfil', {
+        res.render('index', {
          login: true,
          id: req.signedCookies['idUser'],
          usuarioSesion,
