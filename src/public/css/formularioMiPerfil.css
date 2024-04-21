@@ -261,6 +261,28 @@ flex-direction: row;
       width: 200px;
       height: 200px;
       }
+
+     .miPerfil {
+      width: 50%;
+
+  }
+  .miPerfil__ubicacion {
+   width: 50%;
+   padding: 24px 0 24px;
+
+}
+.form-group__textarea {
+
+   height: 30vh;
+
+}
+
+
+
+.miPerfil__ubicacion-group{
+   height: 200px;
+   gap:0px;
+}
       
    .form-group__fila .form-group {
 
@@ -271,9 +293,16 @@ flex-direction: row;
       flex-direction: column;
     
     }
+
     .miPerfil__ubicacion .formularioBoton-btn{
       padding: 0;
     }
+   
+
+
+
+
+
 
 
 }
@@ -315,6 +344,7 @@ flex-direction: row;
    width: 100%;
 
  }
+ 
  .form-group__textarea {
    height: 40vh;
 }
@@ -332,9 +362,7 @@ flex-direction: row;
    width: 100%;
 }
 
-.btt-2--blanco {
-   width: 20vh;
-}
+
 .formularioBoton-btn {
    flex-direction: column;
    align-items: center;
@@ -342,9 +370,10 @@ flex-direction: row;
 .formularioBoton-btn .block-btn {
    width: 100%
 }
-.miPerfil__ubicacion .formularioBoton-btn { 
-   padding: 0;
-}
+
+.miPerfil__ubicacion .formularioBoton-btn{
+   padding: 24px 0 0 0;
+ }
 
 .block-btn {
    align-items: center;
@@ -352,9 +381,6 @@ flex-direction: row;
 
 
 }
-.miPerfil__ubicacion .formularioBoton-btn{
-   padding: 0;
- }
 
 
 
