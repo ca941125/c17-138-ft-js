@@ -224,7 +224,8 @@ align-items: center;
  }
  .mascota__card{
   min-height: 410px;
-  width:25%;
+  width:264px
+  ;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -271,6 +272,10 @@ flex-direction: row;
    padding: 24px 0 24px;
 
 }
+.miPerfil__ubicacion .formularioBoton-btn{
+   padding: 0;
+ }
+
 .form-group__textarea {
 
    height: 30vh;
@@ -294,13 +299,13 @@ flex-direction: row;
     
     }
 
-    .miPerfil__ubicacion .formularioBoton-btn{
-      padding: 0;
-    }
-   
 
+    .card-container {
 
+      flex-wrap: wrap;
+  }
 
+ 
 
 
 
