@@ -269,6 +269,7 @@ flex-direction: row;
   }
   .miPerfil__ubicacion {
    width: 50%;
+   height: auto;
    padding: 24px 0 24px;
 
 }
