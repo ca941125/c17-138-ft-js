@@ -32,17 +32,32 @@ export const getRegister = async (req, res) => {
 }
 
 export const postRegister = async (req, res) => {
-    /* const {user, pass} = req.body */
+    const user = req.body
     const client = await db.connect()
 
-    const pass = '12345678'
-    let passwordHaash = await bcryptjs.hash(pass, 8)
+    
+    let passwordHaash = await bcryptjs.hash(user.pass, 8)
 
-    /* const {rows} = await client.sql`INSERT INTO usuarios (nombreusuario, correo_electronico, contraseña, rol) VALUES ('Sofía', 'sofia.rodriguez@example.com', ${passwordHaash}, 'user');`; */
+    const verifiEmail = await client.sql`SELECT usuarioid FROM usuarios WHERE correo_electronico = ${user.email}`
+    if(!verifiEmail.rows[0].usuarioid){
+        
+        const {rows} = await client.sql`INSERT INTO usuarios (nombreusuario, correo_electronico, contraseña, rol) VALUES ('${user.nombres}', '${user.email}', ${passwordHaash}, 'user');`;
 
-    /* const result = await client.sql`INSERT INTO perfiles (usuarioid, usuario_perfil, foto_url, nombres, apellidos, direccion, ciudad, provincia, barrio, numero_telefono, numero_telefono_secundario, sobre_mi) VALUES ('6', 'Sofía', 'perfil_usuario_4.jpg', 'Sofía', 'Rodríguez', 'algo', 'Mendoza', 'Mendoza', 'Área Fundacional', '542612345678', '542612345678', 'Mi pasión por la fotografía me lleva a explorar nuevos lugares y capturar momentos únicos que reflejen la belleza del mundo que me rodea. En casa, comparto mi vida con Luna, una gata curiosa y cariñosa que se ha convertido en mi musa y compañera de aventuras. Juntas disfrutamos de largos paseos por el parque y momentos de relajación en el hogar, donde encuentro inspiración en su compañía y en los pequeños detalles de la vida.');`; */
+        const idUsuario = await client.sql`SELECT usuarioid FROM usuarios WHERE correo_electronico = ${user.email}`
 
-    /* const result1 = await client.sql`INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) VALUES (6, 'Luna', 'Gato', 'Mestiza', 'Pequeño', 5, 'Hembra', 'Sordera', 'No tiene', 'Luna tiene un pelaje atigrado y brillante que contrasta con sus ojos amarillos penetrantes. Es elegante y tranquila, pero también tiene momentos de pura energía donde corre por toda la casa persiguiendo juguetes. Aunque disfruta de su tiempo a solas, Luna es una compañera cariñosa que adora las caricias y los mimos. Pasar las tardes tomando siestas al sol es una de sus actividades favoritas, y siempre está lista para compartir su amor con su familia.');`; */
+        const result = await client.sql`INSERT INTO perfiles (usuarioid, foto_url, nombres, apellidos, direccion, ciudad, provincia, barrio, numero_telefono, numero_telefono_secundario, sobre_mi) VALUES (${idUsuario.rows[0].usuarioid}, 'perfil_usuario_4.jpg', '${user.nombres}', '${user.apellidos}', 'algo', '${user.ciudad}', '${user.provincia}', 'algo', '${user.telefono}', '${user.celular}', '${user.sobre_mi}');`;
+
+        const result1 = await client.sql`INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) VALUES (${idUsuario.rows[0].usuarioid}, 'Luna', 'Gato', 'Mestiza', 'Pequeño', 5, 'Hembra', 'Sordera', 'No tiene', 'Luna tiene un pelaje atigrado y brillante que contrasta con sus ojos amarillos penetrantes. Es elegante y tranquila, pero también tiene momentos de pura energía donde corre por toda la casa persiguiendo juguetes. Aunque disfruta de su tiempo a solas, Luna es una compañera cariñosa que adora las caricias y los mimos. Pasar las tardes tomando siestas al sol es una de sus actividades favoritas, y siempre está lista para compartir su amor con su familia.');`;
+
+        
+
+
+    }
+    
+
+    
+
+    
 
     /* const result2 = await client.sql`INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) VALUES ('4', 'perfil_mascota_4.jpg');`;
     console.log(result2.rowCount) */

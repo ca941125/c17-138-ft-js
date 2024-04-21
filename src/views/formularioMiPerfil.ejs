@@ -66,7 +66,7 @@
                     <label class="form-group__label c-texto-gris f-bm" for="password">Contraseña *</label>
                     <div class="form-group__password-box  br-8">
                         <input class="f-bl c-texto " type="password" id="password" name="password" required>
-                        <img src="/src/public/images/icons/ojo-cerrado.svg" alt="">
+                        <img src="images/icons/ojo-cerrado.svg" alt="">
                     </div>
                 </div>
 
@@ -74,7 +74,7 @@
                     <label  class ="form-group__label c-texto-gris f-bm" for="confirmPassword">Confirmar contraseña *</label>
                     <div class="form-group__password-box br-8">
                         <input class="f-bl c-texto "type="password" id="confirmPassword" name="confirmPassword" required>
-                        <img src="/src/public/images/icons/ojo-cerrado.svg" alt="">
+                        <img src="images/icons/ojo-cerrado.svg" alt="">
                     </div>
                 </div>
                     
@@ -129,7 +129,7 @@
             <!-- section 1 -->
             <section class="miPerfil br-8 bg-blanco-1">
                 <section class="miPerfil__avatar">
-                    <label for="avatar-input" class="avatar-label">
+                    <label for="foto-mascota" class="avatar-label">
                         <svg class="avatar-default" width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_82_14639)">
                             <path d="M50.9375 15.4062H44.5489L41.4076 10.6955C41.2393 10.4432 41.0114 10.2364 40.7441 10.0933C40.4767 9.95015 40.1782 9.87518 39.875 9.875H25.125C24.8218 9.87518 24.5233 9.95015 24.2559 10.0933C23.9886 10.2364 23.7607 10.4432 23.5924 10.6955L20.4488 15.4062H14.0625C12.5955 15.4062 11.1886 15.989 10.1513 17.0263C9.11401 18.0636 8.53125 19.4705 8.53125 20.9375V46.75C8.53125 48.217 9.11401 49.6239 10.1513 50.6612C11.1886 51.6985 12.5955 52.2812 14.0625 52.2812H50.9375C52.4045 52.2812 53.8114 51.6985 54.8487 50.6612C55.886 49.6239 56.4687 48.217 56.4688 46.75V20.9375C56.4687 19.4705 55.886 18.0636 54.8487 17.0263C53.8114 15.989 52.4045 15.4062 50.9375 15.4062ZM52.7812 46.75C52.7812 47.239 52.587 47.708 52.2412 48.0537C51.8955 48.3995 51.4265 48.5938 50.9375 48.5938H14.0625C13.5735 48.5938 13.1045 48.3995 12.7588 48.0537C12.413 47.708 12.2188 47.239 12.2188 46.75V20.9375C12.2188 20.4485 12.413 19.9795 12.7588 19.6338C13.1045 19.288 13.5735 19.0938 14.0625 19.0938H21.4375C21.7411 19.0939 22.0401 19.0192 22.3079 18.876C22.5756 18.7329 22.8039 18.5259 22.9724 18.2733L26.1114 13.5625H38.8863L42.0276 18.2733C42.1961 18.5259 42.4244 18.7329 42.6921 18.876C42.9599 19.0192 43.2589 19.0939 43.5625 19.0938H50.9375C51.4265 19.0938 51.8955 19.288 52.2412 19.6338C52.587 19.9795 52.7812 20.4485 52.7812 20.9375V46.75ZM32.5 22.7812C30.4944 22.7812 28.5338 23.376 26.8662 24.4903C25.1986 25.6045 23.8988 27.1883 23.1313 29.0412C22.3638 30.8942 22.1629 32.9331 22.5542 34.9002C22.9455 36.8673 23.9113 38.6742 25.3295 40.0924C26.7477 41.5106 28.5546 42.4764 30.5217 42.8677C32.4888 43.2589 34.5277 43.0581 36.3806 42.2906C38.2336 41.5231 39.8174 40.2233 40.9316 38.5557C42.0459 36.8881 42.6406 34.9275 42.6406 32.9219C42.6376 30.2334 41.5682 27.6558 39.6671 25.7547C37.7661 23.8537 35.1885 22.7843 32.5 22.7812ZM32.5 39.375C31.2237 39.375 29.976 38.9965 28.9148 38.2875C27.8536 37.5784 27.0265 36.5705 26.5381 35.3914C26.0497 34.2122 25.9219 32.9147 26.1709 31.6629C26.4199 30.4111 27.0345 29.2613 27.937 28.3588C28.8394 27.4563 29.9893 26.8417 31.2411 26.5927C32.4928 26.3437 33.7903 26.4715 34.9695 26.96C36.1487 27.4484 37.1565 28.2755 37.8656 29.3367C38.5747 30.3979 38.9531 31.6456 38.9531 32.9219C38.9531 34.6334 38.2732 36.2747 37.063 37.4849C35.8529 38.6951 34.2115 39.375 32.5 39.375Z" fill="#1D2621"/>
@@ -141,7 +141,7 @@
                             </defs>
                         </svg>
                             
-                        <input  class="avatar-input" type="file" id="avatar-input" accept="image/*">
+                        <input  class="avatar-input" type="file" name="foto-mascota" id="foto-mascota" accept="image/*" />
                     </label>
                 </section>
 
@@ -174,17 +174,12 @@
                     <div class="form-group__fila">
                         <div class="form-group">
                             <label   class ="form-group__label c-texto-gris f-bm" for="salud">Condición de salud</label>
-                            <select class="form-group__input f-bl c-texto br-8" id="salud" name="salud">
-                                <option value="opcion1">Opción 1</option>
-
-                            </select>
+                            <input type="text" class="form-group__input f-bl c-texto br-8" id="salud" name="salud">
                         </div>
                 
                         <div class="form-group">
                             <label  class ="form-group__label c-texto-gris f-bm" for="alergia">Alergia</label>
-                            <select  class="form-group__input f-bl c-texto br-8"id="alergia" name="alergia">
-                                <option value="opcion1">Opción 1</option>
-                            </select>
+                            <input  class="form-group__input f-bl c-texto br-8" type="text" id="alergia" name="alergia">
                         </div>
                     </div>
                 </div>
@@ -199,7 +194,7 @@
                 <div class=" miPerfil__ubicacion-group formularioBoton-btn">
                     <div class="block-btn">
                         <button class="btt-2 ">Editar datos</button>
-                        <button class="btt-1 ">Guardar datos</button>
+                        <button class="btt-1 " id="guardarMascota">Guardar datos</button>
                     </div>
                 </div>
                
@@ -222,7 +217,7 @@
         <!--  card perfil mascota resumem -->
         <section class="card-container">
             <article class="mascota__card bg-blanco-1 br-8">
-                <img class="mascota__avatar" src="/src/public/images/usuarios/usuario-1/perfil_mascota_1.jpg"  alt="imagen del perl de la mascota">
+                <img class="mascota__avatar" src="images/usuarios/usuario-1/perfil_mascota_1.jpg"  alt="imagen del perl de la mascota">
                 <div class="mascota__detalle">
                     <h3 class="f-hsb c-texto">Nombre</h3>
                     <section class="mascota__dato">
@@ -260,5 +255,6 @@
 
     <!-- FOOTER -->
     <%- include('partials/footer.ejs'); -%>
+    <script src="js/formularioMiPerfil.js"></script>
 </body>
 </html>
