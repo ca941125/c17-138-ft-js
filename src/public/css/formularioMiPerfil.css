@@ -120,7 +120,7 @@ align-items: center;
  
 
  .miPerfil__ubicacion-group{
-   width:90% ;
+   width:80% ;
    height: 120px;
     display: flex;
     flex-direction: column;
@@ -174,8 +174,12 @@ align-items: center;
 }
 .formularioBoton-btn{
    display:flex;
-   justify-content:space-evenly;
    gap: 8px;
+   width: 80%;
+   background-color: var(--blanco-1);
+   align-items: center;
+   padding: 24px 32px 24px 32px;
+   
 }
 .block-btn{
    width: 100%;
@@ -252,6 +256,12 @@ flex-direction: row;
 
 }
 @media only screen and (max-width:767px) {
+   .avatar-label {
+     
+      width: 200px;
+      height: 200px;
+      }
+      
    .form-group__fila .form-group {
 
       width: 100%;
@@ -261,6 +271,9 @@ flex-direction: row;
       flex-direction: column;
     
     }
+    .miPerfil__ubicacion .formularioBoton-btn{
+      padding: 0;
+    }
 
 
 }
@@ -269,6 +282,8 @@ flex-direction: row;
    .avatar-label {
 
       margin-bottom: 24px;
+      height: 240px;
+        width: 240px;
   }
  .formularioPerfil{
    flex-direction: column;
@@ -306,28 +321,41 @@ flex-direction: row;
 
 
 .formularioBoton {
-
    flex-direction: column;
    justify-content: center;
-
 }
 
 .card-container {
-
    flex-direction: column;
-
 }
 .mascota__card {
-
    width: 100%;
+}
 
-}
-.btt-1--gris {
-   width: 20vh;
-}
 .btt-2--blanco {
-
    width: 20vh;
 }
+.formularioBoton-btn {
+   flex-direction: column;
+   align-items: center;
+}
+.formularioBoton-btn .block-btn {
+   width: 100%
+}
+.miPerfil__ubicacion .formularioBoton-btn { 
+   padding: 0;
+}
+
+.block-btn {
+   align-items: center;
+   justify-content: center;
+
+
+}
+.miPerfil__ubicacion .formularioBoton-btn{
+   padding: 0;
+ }
+
+
 
 }
