@@ -125,6 +125,44 @@
         </form>
         <!-- SECCION  MI MASCOTA -->
         <h3 class=" f-dsb c-texto">Mis mascotas</h3>
+
+        <!--  card perfil mascota resumem -->
+        <section class="card-container">
+            <article class="mascota__card bg-blanco-1 br-8">
+                <img class="mascota__avatar" src="images/usuarios/usuario-1/perfil_mascota_1.jpg"  alt="imagen del perl de la mascota">
+                <div class="mascota__detalle">
+                    <h3 class="f-hsb c-texto">Nombre</h3>
+                    <section class="mascota__dato">
+                        <h3 class="f-bmb c-texto-gris">Raza:</h3>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoRaza">Golden</p>
+                    </section>
+                    <section class="mascota__dato">
+                        <h3 class="f-bmb c-texto-gris">Edad:</h3>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoEdad">8 años</p>
+                    </section>
+                    <section class="mascota__dato">
+                        <h3  class="f-bmb c-texto-gris">Sexo:</h3>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoSexo">Macho</p>
+                    </section>
+                    <section class="mascota__dato" >
+                        <h3 class="f-bmb c-texto-gris">Alergia:</h3>
+                        <p class="f-bm c-texto-gris " id="mastotaDatoAlergia">Pluma</p>
+                    </section>
+                </div>
+                <button class="btt-3">Editar</button>
+            </article>
+
+              <!-- CARD DEFAULT -->
+            <article class="mascota__card bg-blanco-1 br-8" >
+                <button id="btn__agregarMascota">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" viewBox="0 0 65 64" fill="none">
+                        <path d="M32.5 0C14.827 0 0.5 14.327 0.5 32C0.5 49.674 14.827 64 32.5 64C50.174 64 64.5 49.674 64.5 32C64.5 14.327 50.174 0 32.5 0ZM32.5 60.063C17.061 60.063 4.5 47.439 4.5 31.9999C4.5 16.5609 17.061 3.99988 32.5 3.99988C47.939 3.99988 60.5 16.5609 60.5 31.9999C60.5 47.4388 47.939 60.063 32.5 60.063ZM46.5 30H34.5V18C34.5 16.896 33.604 16 32.5 16C31.396 16 30.5 16.896 30.5 18V30H18.5C17.396 30 16.5 30.896 16.5 32C16.5 33.104 17.396 34 18.5 34H30.5V46C30.5 47.104 31.396 48 32.5 48C33.604 48 34.5 47.104 34.5 46V34H46.5C47.604 34 48.5 33.104 48.5 32C48.5 30.896 47.604 30 46.5 30Z" fill="#1D2621"/>
+                        </svg>
+                </button>
+            </article>
+
+        </section>
+
         <form class="formularioPerfil" id="formularioMiMascota">
             <!-- section 1 -->
             <section class="miPerfil br-8 bg-blanco-1">
@@ -191,10 +229,10 @@
                         <span class="c-texto-gris f-bm span">Detalla tus caracteristicas  hasta 300 caracteres</span>
                     </div>
                 </div>
-                <div class=" miPerfil__ubicacion-group formularioBoton-btn">
+                <div class="formularioBoton-btn">
                     <div class="block-btn">
-                        <button class="btt-2 ">Editar datos</button>
-                        <button class="btt-1 " id="guardarMascota">Guardar datos</button>
+                        <button class="btt-3 ">Editar datos</button>
+                        <button class="btt-1 ">Guardar datos</button>
                     </div>
                 </div>
                
@@ -203,53 +241,18 @@
         <!-- BOTON ELIMINAR PERFIL MASCOTA  -->
 
         <div class="formularioBoton formularioBoton--transparente">
-            <button class="btt-2">Editar datos</button>
+            <button class="btt-3 btt-198">Editar datos</button>
         </div>
 
         <!-- BOTONES  -->
-        <section class="formularioBoton br-8">
+        <section class="formularioBoton-btn br-8">
             <h3 class="f-hsb c-texto">Confirmar tus datos</h3>
-            <div class="formularioBoton-btn">
-                <button class="btt-2 btt-2--blanco">Editar datos</button>
+            <div class="block-btn">
+                <button class="btt-3 btt-3--blanco">Editar datos</button>
                 <button class="btt-1 btt-1--gris">Guardar datos</button>
             </div>
         </section>
-        <!--  card perfil mascota resumem -->
-        <section class="card-container">
-            <article class="mascota__card bg-blanco-1 br-8">
-                <img class="mascota__avatar" src="images/usuarios/usuario-1/perfil_mascota_1.jpg"  alt="imagen del perl de la mascota">
-                <div class="mascota__detalle">
-                    <h3 class="f-hsb c-texto">Nombre</h3>
-                    <section class="mascota__dato">
-                        <h3 class="f-bmb c-texto-gris">Raza:</h3>
-                        <p  class="f-bm c-texto-gris " id="mastotaDatoRaza">Golden</p>
-                    </section>
-                    <section class="mascota__dato">
-                        <h3 class="f-bmb c-texto-gris">Edad:</h3>
-                        <p  class="f-bm c-texto-gris " id="mastotaDatoEdad">8 años</p>
-                    </section>
-                    <section class="mascota__dato">
-                        <h3  class="f-bmb c-texto-gris">Sexo:</h3>
-                        <p  class="f-bm c-texto-gris " id="mastotaDatoSexo">Macho</p>
-                    </section>
-                    <section class="mascota__dato" >
-                        <h3 class="f-bmb c-texto-gris">Alergia:</h3>
-                        <p class="f-bm c-texto-gris " id="mastotaDatoAlergia">Pluma</p>
-                    </section>
-                </div>
-                <button class="btt-2">Editar</button>
-            </article>
-
-              <!-- CARD DEFAULT -->
-            <article class="mascota__card bg-blanco-1 br-8" >
-                <button id="btn__agregarMascota">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" viewBox="0 0 65 64" fill="none">
-                        <path d="M32.5 0C14.827 0 0.5 14.327 0.5 32C0.5 49.674 14.827 64 32.5 64C50.174 64 64.5 49.674 64.5 32C64.5 14.327 50.174 0 32.5 0ZM32.5 60.063C17.061 60.063 4.5 47.439 4.5 31.9999C4.5 16.5609 17.061 3.99988 32.5 3.99988C47.939 3.99988 60.5 16.5609 60.5 31.9999C60.5 47.4388 47.939 60.063 32.5 60.063ZM46.5 30H34.5V18C34.5 16.896 33.604 16 32.5 16C31.396 16 30.5 16.896 30.5 18V30H18.5C17.396 30 16.5 30.896 16.5 32C16.5 33.104 17.396 34 18.5 34H30.5V46C30.5 47.104 31.396 48 32.5 48C33.604 48 34.5 47.104 34.5 46V34H46.5C47.604 34 48.5 33.104 48.5 32C48.5 30.896 47.604 30 46.5 30Z" fill="#1D2621"/>
-                        </svg>
-                </button>
-            </article>
-
-        </section>
+        
         
     </main>
 
