@@ -1,11 +1,11 @@
 import {Router} from 'express'
-import {getResultadoBusqueda} from '../controllers/resultadoBusqueda.controller.js'
+import {getResultadoBusqueda, postResultadoBusqueda} from '../controllers/resultadoBusqueda.controller.js'
 
 const router = Router()
 
 router.get('/resultado-busqueda', getResultadoBusqueda)
 
-router.post('/', )
+router.post('/resultado-busqueda', postResultadoBusqueda)
 
 router.put('/', )
 
