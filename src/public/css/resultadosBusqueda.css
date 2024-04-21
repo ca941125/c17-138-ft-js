@@ -55,6 +55,9 @@ h3{
     flex-direction: column;
     gap: 10px;
 }
+.buscadorPerfiles .resultadosBusqueda p{
+    cursor: pointer;
+}
 .buscadorPerfiles .resultadosBusqueda .resultados{
     display: flex;
     flex-direction: column;
