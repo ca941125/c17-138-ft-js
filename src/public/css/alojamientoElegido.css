@@ -39,6 +39,7 @@ h3{
 .imagenes .imgSecundarias{
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 24px;
 }
 .imagenes .imgSecundarias .img{
