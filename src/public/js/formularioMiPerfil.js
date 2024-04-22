@@ -78,15 +78,16 @@ document.getElementById('guardarMascota').addEventListener('click', () => {
         sobre_mascota: sobre,
         id_mascota: m
     }
-   
     
+    objectURL = URL.createObjectURL(foto)
+    /* images/usuarios/usuario-1/perfil_mascota_1.jpg */
     mascotas.push(mascota)
-    console.log(mascotas)
+    /* console.log(mascotas) */
     document.getElementById('cardMascotas').innerHTML = ''
     mascotas.map((mascota) =>{
         document.getElementById('cardMascotas').innerHTML += `
         <article class="mascota__card bg-blanco-1 br-8" id="card${mascota.id_mascota}">
-                <img class="mascota__avatar" src="images/usuarios/usuario-1/perfil_mascota_1.jpg"  alt="imagen del perl de la mascota">
+                <img class="mascota__avatar" src="${objectURL}"  alt="imagen del perl de la mascota">
                 <div class="mascota__detalle">
                     <h3 class="f-hsb c-texto">${mascota.nombre_mascota}</h3>
                     <section class="mascota__dato">
