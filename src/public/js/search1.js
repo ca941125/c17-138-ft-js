@@ -4,10 +4,12 @@ function searchApi() {
     document.getElementById("ubicacion1").innerHTML = "<option value=''></option>"
     fetch(url)
         .then(data => data.json())
-        .then(data1 => {
+        .then(data => {
 
             //console.log(data1.provincias)
-            data1.provincias.map((data) => {
+            let oData = data.provincias.sort((a,b)=> (a.nombre > b.nombre ? 1 : -1))
+            //console.log(data1.provincias)
+            oData.map((data) => {
                 document.getElementById("ubicacion1").innerHTML += `
                     <option value="${data.nombre}">
                         ${data.nombre} 
