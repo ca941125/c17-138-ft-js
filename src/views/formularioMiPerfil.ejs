@@ -73,7 +73,7 @@
                 <div class="form-group">
                     <label  class ="form-group__label c-texto-gris f-bm" for="confirmPassword">Confirmar contraseña *</label>
                     <div class="form-group__password-box br-8">
-                        <input class="f-bl c-texto "type="password" id="confirmPassword" name="confirmPassword" required>
+                        <input class="f-bl c-texto " type="password" id="confirmPassword" name="confirmPassword" required>
                         <img src="images/icons/ojo-cerrado.svg" alt="">
                     </div>
                 </div>
@@ -127,8 +127,8 @@
         <h3 class=" f-dsb c-texto">Mis mascotas</h3>
 
         <!--  card perfil mascota resumem -->
-        <section class="card-container">
-            <article class="mascota__card bg-blanco-1 br-8">
+        <section class="card-container" id="cardMascotas">
+            <!-- <article class="mascota__card bg-blanco-1 br-8">
                 <img class="mascota__avatar" src="images/usuarios/usuario-1/perfil_mascota_1.jpg"  alt="imagen del perl de la mascota">
                 <div class="mascota__detalle">
                     <h3 class="f-hsb c-texto">Nombre</h3>
@@ -150,16 +150,16 @@
                     </section>
                 </div>
                 <button class="btt-3">Editar</button>
-            </article>
+            </article> -->
 
               <!-- CARD DEFAULT -->
-            <article class="mascota__card bg-blanco-1 br-8" >
+            <!-- <article class="mascota__card bg-blanco-1 br-8" >
                 <button id="btn__agregarMascota">
                     <svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" viewBox="0 0 65 64" fill="none">
                         <path d="M32.5 0C14.827 0 0.5 14.327 0.5 32C0.5 49.674 14.827 64 32.5 64C50.174 64 64.5 49.674 64.5 32C64.5 14.327 50.174 0 32.5 0ZM32.5 60.063C17.061 60.063 4.5 47.439 4.5 31.9999C4.5 16.5609 17.061 3.99988 32.5 3.99988C47.939 3.99988 60.5 16.5609 60.5 31.9999C60.5 47.4388 47.939 60.063 32.5 60.063ZM46.5 30H34.5V18C34.5 16.896 33.604 16 32.5 16C31.396 16 30.5 16.896 30.5 18V30H18.5C17.396 30 16.5 30.896 16.5 32C16.5 33.104 17.396 34 18.5 34H30.5V46C30.5 47.104 31.396 48 32.5 48C33.604 48 34.5 47.104 34.5 46V34H46.5C47.604 34 48.5 33.104 48.5 32C48.5 30.896 47.604 30 46.5 30Z" fill="#1D2621"/>
                         </svg>
                 </button>
-            </article>
+            </article> -->
 
         </section>
 
@@ -203,6 +203,11 @@
                         <option value="Macho">Macho</option>
                     </select>
                 </div>
+
+                <div class="form-group">
+                    <label  class ="form-group__label c-texto-gris f-bm" for="edad">Edad</label>
+                    <input  class="form-group__input f-bl c-texto br-8" type="text" id="edad" name="edad" required>
+                    </div>
         
             </section>
             <!-- section 2 -->
