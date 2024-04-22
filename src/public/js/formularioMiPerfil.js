@@ -1,3 +1,4 @@
+
 const url = 'json/provincias.json'
 function searchApi() {
     document.getElementById("opcionProvincia").innerHTML = "<option value=''></option>"
@@ -101,9 +102,26 @@ document.getElementById('submit').addEventListener('click', () => {
     }
 
     if(mascotas.length > 0){
-        
+        postFetch()
     }
 })
+
+function postFetch() {
+    const url = '/register';
+    let body = {
+        user,
+        mascotas,
+    }
+    var request = new Request(url, {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+    fetch(request)
+}
+
 
 function validarContraseña(){
     return true

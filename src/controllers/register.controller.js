@@ -32,13 +32,18 @@ export const getRegister = async (req, res) => {
 }
 
 export const postRegister = async (req, res) => {
-    const user = req.body
+    const {user} = req.body
+    const {mascotas} = req.body
+
+    console.log(user)
+    console.log(mascotas.foto_mascota)
+
     const client = await db.connect()
 
     
-    let passwordHaash = await bcryptjs.hash(user.pass, 8)
+    /* let passwordHaash = await bcryptjs.hash(user.pass, 8) */
 
-    const verifiEmail = await client.sql`SELECT usuarioid FROM usuarios WHERE correo_electronico = ${user.email}`
+    /* const verifiEmail = await client.sql`SELECT usuarioid FROM usuarios WHERE correo_electronico = ${user.email}`
     if(!verifiEmail.rows[0].usuarioid){
         
         const {rows} = await client.sql`INSERT INTO usuarios (nombreusuario, correo_electronico, contraseña, rol) VALUES ('${user.nombres}', '${user.email}', ${passwordHaash}, 'user');`;
@@ -49,10 +54,7 @@ export const postRegister = async (req, res) => {
 
         const result1 = await client.sql`INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) VALUES (${idUsuario.rows[0].usuarioid}, 'Luna', 'Gato', 'Mestiza', 'Pequeño', 5, 'Hembra', 'Sordera', 'No tiene', 'Luna tiene un pelaje atigrado y brillante que contrasta con sus ojos amarillos penetrantes. Es elegante y tranquila, pero también tiene momentos de pura energía donde corre por toda la casa persiguiendo juguetes. Aunque disfruta de su tiempo a solas, Luna es una compañera cariñosa que adora las caricias y los mimos. Pasar las tardes tomando siestas al sol es una de sus actividades favoritas, y siempre está lista para compartir su amor con su familia.');`;
 
-        
-
-
-    }
+    } */
     
 
     
