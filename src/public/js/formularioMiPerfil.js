@@ -91,39 +91,7 @@ document.getElementById('guardarMascota').addEventListener('click', () => {
     mascotas.push(mascota)
     actualizarCardsMascotas()
     /* console.log(mascotas) */
-    /* document.getElementById('cardMascotas').innerHTML = ''
-    mascotas.map((mascota) =>{
-        document.getElementById('cardMascotas').innerHTML += `
-        <article class="mascota__card bg-blanco-1 br-8" id="card${mascota.id_mascota}">
-                <img class="mascota__avatar" src="${mascota.foto_url}"  alt="imagen del perl de la mascota">
-                <div class="mascota__detalle">
-                    <h3 class="f-hsb c-texto">${mascota.nombre_mascota}</h3>
-                    <section class="mascota__dato">
-                        <h3 class="f-bmb c-texto-gris">Raza:</h3>
-                        <p  class="f-bm c-texto-gris " id="mastotaDatoRaza">${mascota.raza_mascota}</p>
-                    </section>
-                    <section class="mascota__dato">
-                        <h3 class="f-bmb c-texto-gris">Edad:</h3>
-                        <p  class="f-bm c-texto-gris " id="mastotaDatoEdad">${mascota.edad_mascota} años</p>
-                    </section>
-                    <section class="mascota__dato">
-                        <h3  class="f-bmb c-texto-gris">Sexo:</h3>
-                        <p  class="f-bm c-texto-gris " id="mastotaDatoSexo">${mascota.sexo_mascota}</p>
-                    </section>
-                </div>
-                <button class="btt-3" onclick="editarCard(${mascota.id_mascota})">Editar</button>
-            </article>
-        `
-    })
-    document.getElementById('cardMascotas').innerHTML += `
-            <article class="mascota__card bg-blanco-1 br-8" >
-                <button id="btn__agregarMascota">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" viewBox="0 0 65 64" fill="none">
-                        <path d="M32.5 0C14.827 0 0.5 14.327 0.5 32C0.5 49.674 14.827 64 32.5 64C50.174 64 64.5 49.674 64.5 32C64.5 14.327 50.174 0 32.5 0ZM32.5 60.063C17.061 60.063 4.5 47.439 4.5 31.9999C4.5 16.5609 17.061 3.99988 32.5 3.99988C47.939 3.99988 60.5 16.5609 60.5 31.9999C60.5 47.4388 47.939 60.063 32.5 60.063ZM46.5 30H34.5V18C34.5 16.896 33.604 16 32.5 16C31.396 16 30.5 16.896 30.5 18V30H18.5C17.396 30 16.5 30.896 16.5 32C16.5 33.104 17.396 34 18.5 34H30.5V46C30.5 47.104 31.396 48 32.5 48C33.604 48 34.5 47.104 34.5 46V34H46.5C47.604 34 48.5 33.104 48.5 32C48.5 30.896 47.604 30 46.5 30Z" fill="#1D2621"/>
-                        </svg>
-                </button>
-            </article>
-    ` */
+    
     m++
 
     document.getElementById('formularioMiMascota').setAttribute('style', 'display: none')
@@ -131,17 +99,6 @@ document.getElementById('guardarMascota').addEventListener('click', () => {
     document.getElementById('img').removeAttribute('src')
     }
 
-    /* document.getElementById('agregarMascota').addEventListener('click', () => {
-        document.getElementById('formularioMiMascota').removeAttribute('style')
-        document.getElementById('foto-mascota').value = ''
-        document.getElementById('nombreMascota').value = ''
-        document.getElementById('raza').value = ''
-        document.getElementById('sexo').value = ''
-        document.getElementById('edad').value = ''
-        document.getElementById('salud').value = ''
-        document.getElementById('alergia').value = ''
-        document.getElementById('sobreMiMascota').value = ''
-    }) */
 
 })
 
