@@ -1,7 +1,10 @@
 html{
     background-color: var(--fondo);
 }
-
+h3{
+    text-align: center;
+    margin: 24px 0 16px 0
+}
 /* MAIN */
 .main{
     max-width: 1128px;
