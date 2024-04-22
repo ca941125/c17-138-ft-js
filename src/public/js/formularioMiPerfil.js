@@ -69,7 +69,45 @@ document.getElementById('avatar-input').addEventListener('change', () => {
 
 let user
 
+document.getElementById('submit').addEventListener('click', () => {
+    if(validarContraseña()){
+        
+        let nombres = document.getElementById('nombre').value
+        let apellidos = document.getElementById('apellido').value
+        let email = document.getElementById('email').value
+        let pass = document.getElementById('password').value
+        let provincia = document.getElementById('opcionProvincia').value
+        let ciudad = document.getElementById('opcionCiudad').value
+        let telefono = document.getElementById('telefono').value
+        let celular = document.getElementById('celular').value
+        let sobre_mi = document.getElementById('sobreMi').value
 
+        if(foto1.name !== '' && nombres !== '' && apellidos !== '' && email !== '' && pass !== '' && provincia !== '' && ciudad !== '' && telefono !== '' && celular !== '' && sobre_mi !== ''){
+            
+            user = {
+                nombres_user: nombres,
+                apellidos_user: apellidos,
+                email_user: email,
+                pass_user: pass,
+                provincia_user: provincia,
+                ciudad_user: ciudad,
+                telefono_user: telefono,
+                celular_user: celular,
+                sobre_mi_user: sobre_mi, 
+                foto_user: foto1
+            }
+        }
+
+    }
+
+    if(mascotas.length > 0){
+        
+    }
+})
+
+function validarContraseña(){
+    return true
+}
 
 let mascotas = []
 let m = 0
