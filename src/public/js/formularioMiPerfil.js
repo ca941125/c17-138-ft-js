@@ -41,14 +41,7 @@ document.getElementById('opcionProvincia').addEventListener('change', () => {
                 }
 
             })
-            
-            /* departamentos.map((data) => {
-                document.getElementById("opcionCiudad").innerHTML += `
-                    <option value="${data.nombre}">
-                        ${data.nombre} 
-                    </option>
-                  `
-            }) */
+
         })
 })
 
