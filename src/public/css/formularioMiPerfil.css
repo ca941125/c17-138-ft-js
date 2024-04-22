@@ -243,6 +243,13 @@ align-items: center;
    object-fit: cover;
    object-position: center;
  }
+ .mascota__avatar1{
+   border-radius: 50%;
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   object-position: center;
+ }
  .mascota__detalle{
  display: flex;
  flex-direction: column;
