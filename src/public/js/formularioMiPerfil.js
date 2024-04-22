@@ -58,6 +58,19 @@ document.getElementById('foto-mascota').addEventListener('change', () => {
     document.getElementById('img').setAttribute('src', `${objectURL}`)
 })
 
+let foto1
+
+document.getElementById('avatar-input').addEventListener('change', () => {
+    foto1 = document.getElementById('avatar-input').files[0]
+    objectURL1 = URL.createObjectURL(foto1)
+    document.getElementById('svg1').setAttribute('style', 'display: none')
+    document.getElementById('img1').setAttribute('src', `${objectURL1}`)
+})
+
+let user
+
+
+
 let mascotas = []
 let m = 0
 document.getElementById('guardarMascota').addEventListener('click', () => {
