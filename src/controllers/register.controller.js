@@ -32,12 +32,14 @@ export const getRegister = async (req, res) => {
 }
 
 export const postRegister = async (req, res) => {
-    const {user} = req.body
-    const {mascotas} = req.body
+    const body = req.body
+    const {nombres_user} = req.body
+    console.log(body[0])
+    console.log(body[1])
+    console.log(body.foto_user)
+    console.log(nombres_user)
 
-    console.log(user)
-    console.log(mascotas.foto_mascota)
-
+    
     const client = await db.connect()
 
     

@@ -22,8 +22,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 //console.log(__dirname)
 app.use(morgan('dev'))
 app.use(express.static(join(__dirname, 'public')))
-app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+app.use(express.json({limit: '50mb'}))
+app.use(express.urlencoded({extended: true, limit: '50mb', parameterLimit:50000}))
 
 app.use(
 	cors({

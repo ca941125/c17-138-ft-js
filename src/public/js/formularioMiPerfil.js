@@ -108,16 +108,31 @@ document.getElementById('submit').addEventListener('click', () => {
 
 function postFetch() {
     const url = '/register';
-    let body = {
+    /* let body = {
         user,
         mascotas,
-    }
+    } */
+    let fd = new FormData();
+        fd.append("nombres_user", user.nombres_user);
+        fd.append("apellidos_user", user.apellidos_user);
+        fd.append("email_user", user.email_user);
+        fd.append("pass_user", user.pass_user);
+        fd.append("provincia_user", user.provincia_user);
+        fd.append("ciudad_user", user.ciudad_user);
+        fd.append("telefono_user", user.telefono_user);
+        fd.append("celular_user", user.celular_user);
+        fd.append("sobre_mi_user", user.sobre_mi_user_user);
+        fd.append("foto_user", user.foto_user);
+        fd.append("mascotas_user", mascotas.length);
+        
+        const formData = new URLSearchParams(fd)
+
     var request = new Request(url, {
         method: 'POST',
-        body: JSON.stringify(body),
+        body: formData,
         headers: {
-            "Content-Type": "application/json",
-        },
+            "Content-Type": "application/x-www-form-urlencoded",
+        }, 
     });
     fetch(request)
 }
