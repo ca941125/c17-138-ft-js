@@ -1,6 +1,7 @@
 import pool from '../db.js'
 import { db } from '@vercel/postgres'
 import bcryptjs from 'bcryptjs'
+import fs from 'node:fs'
 
 export const getRegister = async (req, res) => {
     /* const client = await db.connect() */
@@ -32,14 +33,16 @@ export const getRegister = async (req, res) => {
 }
 
 export const postRegister = async (req, res) => {
-    const body = req.body
-    const {nombres_user} = req.body
-    console.log(body[0])
-    console.log(body[1])
-    console.log(body.foto_user)
-    console.log(nombres_user)
 
+    const files = req.files
+    const body = req.body
+
+    console.log(body)
+    console.log(files)
     
+    /* const newPath = `./src/public/images/upload/${file.originalname}`
+    fs.renameSync(file.path, newPath) */
+
     const client = await db.connect()
 
     

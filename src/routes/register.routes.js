@@ -1,11 +1,13 @@
 import {Router} from 'express'
+import multer from 'multer'
 import {getRegister, postRegister} from '../controllers/register.controller.js'
 
 const router = Router()
+const upload = multer({dest: 'src/public/images/'})
 
 router.get('/register', getRegister)
 
-router.post('/register', postRegister)
+router.post('/register', upload.any(), postRegister)
 
 router.put('/register', )
 

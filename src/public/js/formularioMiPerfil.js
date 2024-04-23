@@ -1,4 +1,6 @@
 
+
+
 const url = 'json/provincias.json'
 function searchApi() {
     document.getElementById("opcionProvincia").innerHTML = "<option value=''></option>"
@@ -54,7 +56,7 @@ let foto
 let k = 0
 document.getElementById('foto-mascota').addEventListener('change', () => {
     foto = document.getElementById('foto-mascota').files[0]
-    objectURL = URL.createObjectURL(foto)
+    objectURL = (window.URL || window.webkitURL).createObjectURL(foto)
     document.getElementById('svg').setAttribute('style', 'display: none')
     document.getElementById('img').setAttribute('src', `${objectURL}`)
 })
@@ -63,7 +65,7 @@ let foto1
 
 document.getElementById('avatar-input').addEventListener('change', () => {
     foto1 = document.getElementById('avatar-input').files[0]
-    objectURL1 = URL.createObjectURL(foto1)
+    objectURL1 = (window.URL || window.webkitURL).createObjectURL(foto1)
     document.getElementById('svg1').setAttribute('style', 'display: none')
     document.getElementById('img1').setAttribute('src', `${objectURL1}`)
 })
@@ -95,7 +97,8 @@ document.getElementById('submit').addEventListener('click', () => {
                 telefono_user: telefono,
                 celular_user: celular,
                 sobre_mi_user: sobre_mi, 
-                foto_user: foto1
+                foto_user: foto1,
+                foto: objectURL1
             }
         }
 
@@ -112,6 +115,16 @@ function postFetch() {
         user,
         mascotas,
     } */
+
+    var newfile  = {
+        'lastModified'     : user.foto_user.lastModified,
+        'lastModifiedDate' : user.foto_user.lastModifiedDate,
+        'name'             : user.foto_user.name,
+        'size'             : user.foto_user.size,
+        'type'             : user.foto_user.type,
+        'path'             : user.foto
+     };  
+ 
     let fd = new FormData();
         fd.append("nombres_user", user.nombres_user);
         fd.append("apellidos_user", user.apellidos_user);
@@ -121,17 +134,18 @@ function postFetch() {
         fd.append("ciudad_user", user.ciudad_user);
         fd.append("telefono_user", user.telefono_user);
         fd.append("celular_user", user.celular_user);
-        fd.append("sobre_mi_user", user.sobre_mi_user_user);
+        fd.append("sobre_mi_user", user.sobre_mi_user);
         fd.append("foto_user", user.foto_user);
         fd.append("mascotas_user", mascotas.length);
-        
-        const formData = new URLSearchParams(fd)
+        fd.append("foto_mascota", mascotas[0].foto_mascota)
+        /* const formData = new URLSearchParams(fd) */
 
     var request = new Request(url, {
         method: 'POST',
-        body: formData,
+        body: fd,
         headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+            /* "Content-Type": "multipart/form-data", */
+            /* "Content-Type": "application/x-www-form-urlencoded", */
         }, 
     });
     fetch(request)
