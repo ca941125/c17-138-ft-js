@@ -14,6 +14,7 @@ main{
     flex-direction: column;
     gap: 24px;
     padding: 0 0 36px 0;
+    margin: 24px;
 }
 .tiposDePlanes{
     margin: 0 auto;
@@ -56,6 +57,6 @@ main{
     width: 100%;
 }
 .descripcion{
-    padding: 30px 24px;
+    padding: 32px 0;
 }
 
