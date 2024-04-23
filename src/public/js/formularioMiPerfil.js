@@ -137,8 +137,20 @@ function postFetch() {
         fd.append("sobre_mi_user", user.sobre_mi_user);
         fd.append("foto_user", user.foto_user);
         fd.append("mascotas_user", mascotas.length);
-        fd.append("foto_mascota", mascotas[0].foto_mascota)
         /* const formData = new URLSearchParams(fd) */
+        let m = 0
+        mascotas.map( (mascota) => {
+            fd.append(`nombre_mascota_${m}`, mascota.nombre_mascota)
+            fd.append(`raza_mascota_${m}`, mascota.raza_mascota)
+            fd.append(`sexo_mascota_${m}`, mascota.sexo_mascota)
+            fd.append(`edad_mascota_${m}`, mascota.edad_mascota)
+            fd.append(`condicion_mascota_${m}`, mascota.condicion_mascota)
+            fd.append(`alergia_mascota_${m}`, mascota.alergia_mascota)
+            fd.append(`sobre_mascota_${m}`, mascota.sobre_mascota)
+            fd.append(`foto_mascota_${m}`, mascota.foto_mascota)
+            fd.append(`tipo_mascota_${m}`, mascota.tipo_mascota)
+            m++
+        })
 
     var request = new Request(url, {
         method: 'POST',
@@ -149,6 +161,10 @@ function postFetch() {
         }, 
     });
     fetch(request)
+    .then(response => response.json())
+    .then( data => {
+        console.log(data)
+    })
 }
 
 
@@ -181,7 +197,8 @@ document.getElementById('guardarMascota').addEventListener('click', () => {
         alergia_mascota: alergia,
         sobre_mascota: sobre,
         id_mascota: m,
-        foto_url: objectURL
+        foto_url: objectURL,
+        tipo_mascota: 'Perro'
     }
     const url = window.URL || window.webkitURL;
     objectURL = url.createObjectURL(foto)

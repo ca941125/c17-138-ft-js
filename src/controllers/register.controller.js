@@ -37,37 +37,58 @@ export const postRegister = async (req, res) => {
     const files = req.files
     const body = req.body
 
-    console.log(body)
-    console.log(files)
-    
-    /* const newPath = `./src/public/images/upload/${file.originalname}`
-    fs.renameSync(file.path, newPath) */
+    /* console.log(body)
+    console.log(files.length) */
 
     const client = await db.connect()
 
     
-    /* let passwordHaash = await bcryptjs.hash(user.pass, 8) */
+    let passwordHaash = await bcryptjs.hash(body.pass_user, 8)
 
-    /* const verifiEmail = await client.sql`SELECT usuarioid FROM usuarios WHERE correo_electronico = ${user.email}`
+    const verifiEmail = await client.sql`SELECT usuarioid FROM usuarios WHERE correo_electronico = ${body.email_user}`
     if(!verifiEmail.rows[0].usuarioid){
         
-        const {rows} = await client.sql`INSERT INTO usuarios (nombreusuario, correo_electronico, contraseña, rol) VALUES ('${user.nombres}', '${user.email}', ${passwordHaash}, 'user');`;
+        const {rows} = await client.sql`INSERT INTO usuarios (nombreusuario, correo_electronico, contraseña, rol) VALUES ('${body.nombres_user}', '${body.email_user}', ${passwordHaash}, 'user');`;
 
-        const idUsuario = await client.sql`SELECT usuarioid FROM usuarios WHERE correo_electronico = ${user.email}`
+        const idUsuario = await client.sql`SELECT usuarioid FROM usuarios WHERE correo_electronico = ${body.email_user}`
 
-        const result = await client.sql`INSERT INTO perfiles (usuarioid, foto_url, nombres, apellidos, direccion, ciudad, provincia, barrio, numero_telefono, numero_telefono_secundario, sobre_mi) VALUES (${idUsuario.rows[0].usuarioid}, 'perfil_usuario_4.jpg', '${user.nombres}', '${user.apellidos}', 'algo', '${user.ciudad}', '${user.provincia}', 'algo', '${user.telefono}', '${user.celular}', '${user.sobre_mi}');`;
+        const newPath1 = `./src/public/images/images_perfil/${idUsuario.rows[0].usuarioid}/${files[0].originalname}`
+        fs.renameSync(files[0].path, newPath1)
 
-        const result1 = await client.sql`INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) VALUES (${idUsuario.rows[0].usuarioid}, 'Luna', 'Gato', 'Mestiza', 'Pequeño', 5, 'Hembra', 'Sordera', 'No tiene', 'Luna tiene un pelaje atigrado y brillante que contrasta con sus ojos amarillos penetrantes. Es elegante y tranquila, pero también tiene momentos de pura energía donde corre por toda la casa persiguiendo juguetes. Aunque disfruta de su tiempo a solas, Luna es una compañera cariñosa que adora las caricias y los mimos. Pasar las tardes tomando siestas al sol es una de sus actividades favoritas, y siempre está lista para compartir su amor con su familia.');`;
+        const result = await client.sql`INSERT INTO perfiles (usuarioid, foto_url, nombres, apellidos, direccion, ciudad, provincia, barrio, numero_telefono, numero_telefono_secundario, sobre_mi) VALUES (${idUsuario.rows[0].usuarioid}, '${files[0].originalname}', '${body.nombres_user}', '${body.apellidos_user}', 'algo', '${body.ciudad_user}', '${body.provincia_user}', 'algo', '${body.telefono_user}', '${body.celular_user}', '${body.sobre_mi_user}');`;
 
-    } */
+        if(body.nombre_mascota_0){
+
+             const mascota_0 = await client.sql`INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) VALUES (${idUsuario.rows[0].usuarioid}, '${body.nombre_mascota_0}', '${body.tipo_mascota_0}', '${body.raza_mascota_0}', 'algo', ${body.edad_mascota_0}, '${body.sexo_mascota_0}', '${body.condicion_mascota_0}', '${body.alergia_mascota_0}', '${body.sobre_mascota_0}');`;
+
+            const idMascota_0 = await client.sql`SELECT mascotaid FROM mascotas WHERE usuarioid = ${idUsuario.rows[0].usuarioid}`
+
+            const newPath = `./src/public/images/images_mascotas/${idMascota_0.rows[0].mascotaid}/${files[1].originalname}`
+            fs.renameSync(files.path, newPath)
     
+            const foto_mascota_0 = await client.sql`INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) VALUES ('${idMascota_0.rows[0].mascotaid}', '${files[1].originalname}');`;
+            console.log(foto_mascota_0.rowCount)
+
+        }
+         
+        if(body.nombre_mascota_1){
+
+            const mascota_1 = await client.sql`INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) VALUES (${idUsuario.rows[0].usuarioid}, '${body.nombre_mascota_1}', '${body.tipo_mascota_1}', '${body.raza_mascota_1}', 'algo', ${body.edad_mascota_1}, '${body.sexo_mascota_1}', '${body.condicion_mascota_1}', '${body.alergia_mascota_1}', '${body.sobre_mascota_1}');`;
+
+            const idMascota_1 = await client.sql`SELECT mascotaid FROM mascotas WHERE usuarioid = ${idUsuario.rows[0].usuarioid}`
+
+            const newPath = `./src/public/images/images_mascotas/${idMascota_1.rows[0].mascotaid}/${files[2].originalname}`
+            fs.renameSync(files.path, newPath)
+    
+            const foto_mascota_1 = await client.sql`INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) VALUES ('${idMascota_1.rows[0].mascotaid}', '${files[2].originalname}');`;
+            console.log(foto_mascota_1.rowCount)
+    
+        }
+    
+        
+    }
 
     
-
-    
-
-    /* const result2 = await client.sql`INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) VALUES ('4', 'perfil_mascota_4.jpg');`;
-    console.log(result2.rowCount) */
 
     /* const result3 = await client.sql`INSERT INTO alojamientos (costo_alojamiento, usuarioid, tipo_alojamiento, aire_libre, cercado, parque_cerca, descripcion, condiciones, moneda, link_ubicacion, fecha_disponible) VALUES (38.000, 6, 'Casa', 'Patio', 'Si', 'Si', 'Mi casa con patio ofrece un entorno acogedor y seguro para mi mascota. El patio trasero es un espacio al aire libre donde mi mascota puede jugar, explorar y relajarse cómodamente. Contamos con áreas sombreadas y soleadas donde puede descansar y tomar el sol. Además, disponemos de juguetes y equipamiento adecuado para su entretenimiento, como pelotas, cuerdas para tirar y juegos de inteligencia. El patio está vallado para garantizar su seguridad y prevenir cualquier escape. También tenemos un área designada para sus necesidades fisiológicas, con superficies adecuadas para que pueda hacer sus necesidades de manera cómoda y limpia. En resumen, nuestro patio ofrece un espacio tranquilo y agradable donde mi mascota puede disfrutar del aire libre y mantenerse activa y feliz.', 'No recibo mascotas que pueden experimentar reacciones adversas al estrés, como ansiedad extrema, ataques de pánico o comportamiento autodestructivo.', 'AR', 'https://www.google.com/maps/place/Museo+del+%C3%81rea+Fundacional/@-32.879746,-68.830551,17.01z/data=!4m6!3m5!1s0x967e09275a9e6c89:0x2f50e603cd8afee2!8m2!3d-32.8797909!4d-68.8279529!16s%2Fg%2F120m0nj1?entry=ttu', '2024/04/30');`;
     console.log(result3.rowCount) */
@@ -76,6 +97,6 @@ export const postRegister = async (req, res) => {
     /* const result4 = await client.sql`INSERT INTO imagenes_alojamientos (alojamientosid, url_imagen_alojamiento) VALUES ('4', 'casa_E_usuario_4.jpg');`;
     console.log(result4.rowCount) */
 
-    res.send('ok')
+    res.send({msg: 'registro correcto', ruta: '/login'})
     
 }
