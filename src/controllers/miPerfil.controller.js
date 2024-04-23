@@ -17,7 +17,7 @@ export const getMiPerfil = async (req, res) => {
         mascotas[i].imagenes_mascotas = result2.rows
         i++
     }
-
+    client.release();
     if(req.signedCookies['loggedin']){
         const usuarioSesion = {
             nombres: req.signedCookies['nombres'],

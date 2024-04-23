@@ -19,7 +19,7 @@ export const getIndex = async (req, res) => {
         alojamientos[i].mascotas = result.rows
         i++
     }
-    
+    client.release();
     /* console.log(alojamientos) */
     /* console.log(req.signedCookies) */
     if(req.signedCookies['loggedin']){

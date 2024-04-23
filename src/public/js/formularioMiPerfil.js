@@ -162,7 +162,7 @@ function postFetch() {
     });
     fetch(request)
     .then(response => response.json())
-    .then( data => {
+    .then( (data) => {
         console.log(data)
     })
 }

@@ -33,7 +33,7 @@ export const postLogin = async (req, res) => {
             res.render('inicioDeSesion', {msg: 'Usuario y/o contraseña incorrectas', login: false})       
         }else{
             const result1 = await client.sql`SELECT nombres, apellidos, foto_url FROM perfiles WHERE usuarioid = ${rows[0].usuarioid};`
-            
+            client.release();
             res.cookie('loggedin', true, { maxAge: 900000, httpOnly: true, secure: true, signed: true })
             /* req.signedCookies.loggedin = true */
             /* req.session.name = rows[0].nombreusuario */

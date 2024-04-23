@@ -60,7 +60,7 @@ export const postResultadoBusqueda = async (req, res) => {
         alojamientos[i].mascotas = result.rows
         i++
     }
-    
+    client.release();
     res.send(alojamientos)
 
 }
