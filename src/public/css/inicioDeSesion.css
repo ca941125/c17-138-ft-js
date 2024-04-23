@@ -8,10 +8,10 @@ h3{
 /* MAIN */
 .main{
     max-width: 1128px;
-    margin: 0 auto;
+    margin: 0 24px;
 }
 .main .inicio{
-    min-width: 552px;
+    max-width: 552px;
     height: 697px;
     margin: 40px auto;
     padding: 50px;
@@ -21,7 +21,7 @@ h3{
     gap: 40px;
 }
 .main .inicio .logo-titulo{
-    width: 360px;
+    max-width: 360px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -77,9 +77,20 @@ input{
 
 /* Tablet */
 @media only screen and (max-width: 768px) {
-    
+    .main .inicio{
+        height: 650px;
+        margin: 20px auto;
+        padding: 30px;
+    }
+
 }
 /* Celular */
-@media only screen and (max-width: 375px){
-
+@media only screen and (max-width: 390px){
+    .main .inicio{
+        min-width: 360px;
+        min-height: 360px;
+    }
+    .main .inicio .inicioDeSesion {
+        width: 100%;
+    }
 }
