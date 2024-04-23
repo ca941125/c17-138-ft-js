@@ -7,13 +7,13 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 8px;
+    padding: 16px 24px;
     gap: 8px;
 }
 .search .form{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
     gap: 4px;
 }
