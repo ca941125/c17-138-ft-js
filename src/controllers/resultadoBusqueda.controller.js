@@ -7,7 +7,7 @@ export const getResultadoBusqueda = async (req, res) => {
 
     const client = await db.connect()
     
-    const {rows} = await client.sql`SELECT perfiles.usuarioid, resumen_card, nombres, foto_url, apellidos, direccion, ciudad, provincia, costo_alojamiento, tipo_alojamiento, aire_libre, parque_cerca, cercado, moneda FROM alojamientos INNER JOIN perfiles ON alojamientos.usuarioid = perfiles.usuarioid LIMIT 8 OFFSET 0;`
+    const {rows} = await client.sql`SELECT perfiles.usuarioid, resumen_card, nombres, foto_url, apellidos, direccion, ciudad, provincia, costo_alojamiento, tipo_alojamiento, aire_libre, parque_cerca, cercado, moneda FROM alojamientos INNER JOIN perfiles ON alojamientos.usuarioid = perfiles.usuarioid LIMIT 9 OFFSET 0;`
     //console.log(rows[0].usuarioid)
 
     let alojamientos = rows
@@ -50,7 +50,7 @@ export const postResultadoBusqueda = async (req, res) => {
     const {indice} = req.body
     console.log(indice)
 
-    const {rows} = await client.sql`SELECT perfiles.usuarioid, resumen_card, nombres, foto_url, apellidos, direccion, ciudad, provincia, costo_alojamiento, tipo_alojamiento, aire_libre, parque_cerca, cercado, moneda FROM alojamientos INNER JOIN perfiles ON alojamientos.usuarioid = perfiles.usuarioid LIMIT 8 OFFSET ${indice};`
+    const {rows} = await client.sql`SELECT perfiles.usuarioid, resumen_card, nombres, foto_url, apellidos, direccion, ciudad, provincia, costo_alojamiento, tipo_alojamiento, aire_libre, parque_cerca, cercado, moneda FROM alojamientos INNER JOIN perfiles ON alojamientos.usuarioid = perfiles.usuarioid LIMIT 9 OFFSET ${indice};`
     //console.log(rows[0].usuarioid)
 
     let alojamientos = rows
