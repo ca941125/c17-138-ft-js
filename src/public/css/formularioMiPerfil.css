@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
 }
  main{
-     grid-row: 1;
+    flex-grow:  1;
      background-color: var(--fondo) ;
      display: flex;
      flex-direction: column;
