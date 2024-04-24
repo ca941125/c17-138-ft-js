@@ -20,7 +20,7 @@ export const getIndex = async (req, res) => {
         i++
     }
     client.release();
-    /* console.log(alojamientos) */
+    console.log(alojamientos)
     /* console.log(req.signedCookies) */
     if(req.signedCookies['loggedin']){
         const usuarioSesion = {

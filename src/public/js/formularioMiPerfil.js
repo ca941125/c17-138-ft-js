@@ -163,7 +163,11 @@ function postFetch() {
     fetch(request)
     .then(response => response.json())
     .then( (data) => {
-        console.log(data)
+        
+              setTimeout(function () {
+                window.location = '/login'
+              }, 2000)
+    
     })
 }
 
