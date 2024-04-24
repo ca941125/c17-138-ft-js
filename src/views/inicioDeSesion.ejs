@@ -9,6 +9,9 @@
 
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="images/icons/w.svg" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.min.css" rel="stylesheet">
     
     <title>Inicio de sesión</title>
 </head>
@@ -47,9 +50,15 @@
             <% if(typeof id !== 'undefined' ){ %>
             <p>Sesión iniciada</p>
             <script>
+                Swal.fire({
+                icon: "success", 
+                title: 'Has iniciado sesión correctamente',
+                footer: '<a href="/" style="text-decoration: none">Home</a>',
+                showConfirmButton: false    
+                })
               setTimeout(function () {
                 window.location = '<%= ruta %>'
-              }, 2000)
+              }, 3000)
     
             </script>
             <% }else if(typeof msg !== 'undefined'){ %>

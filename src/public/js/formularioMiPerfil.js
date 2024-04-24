@@ -20,6 +20,28 @@ function searchApi() {
         })
 }
 
+window.onbeforeunload = function() {
+    swal.fire({
+        title: "Aviso",
+        text: "Esta seguro que desea salir?",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonClass: "btn-danger",
+        confirmButtonText: "Salir",
+        cancelButtonText: "Cancelar",
+        closeOnConfirm: false,
+        closeOnCancel: false
+      },
+      function(isConfirm) {
+        if (isConfirm) {
+          location.href ="http://www.pagina1.com";
+        } else {
+          swal("Cancelado", "Usted esta aqui", "error");
+        }
+      });
+}
+
+
 searchApi()
 
 const url1 = 'json/departamentos.json'
@@ -158,10 +180,27 @@ function postFetch() {
     fetch(request)
     .then(response => response.json())
     .then( (data) => {
+        if(data.msg === 'correcto'){
+
+            Swal.fire({
+            icon: "success", 
+            title: 'Se ha registrado correctamente',
+            footer: '<a href="/login" style="text-decoration: none">Iniciar sesión</a>',
+            showConfirmButton: false    
+            })
+          setTimeout(function () {
+            window.location = data.ruta
+          }, 4000)
+
+        } else if(data.msg === 'email'){
+            Swal.fire({
+                icon: "error", 
+                title: 'Email ya registrado',
+                text: 'Vuelva a intentar con otro email o si ya se ha registrado inicie sesión '
+                })
+        }
         
-              setTimeout(function () {
-                window.location = data.ruta
-              }, 2000)
+
     
     })
 }
