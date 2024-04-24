@@ -9,6 +9,7 @@
 
 *{
     font-family: 'Lato';
+    letter-spacing: .25px;
 }
 
 /* display large */
@@ -80,7 +81,6 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0.15px;
 }
 /* title large bold*/
 .f-tlb{
@@ -94,23 +94,19 @@
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    letter-spacing: 0.15px;
 }
 /* title small */
 .f-ts{
     font-size: 14px;
     font-weight: 700;
     line-height: 20px;
-    letter-spacing: 0.1px;
 }
-
 
 /* label large  */
 .f-ll{
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
-    letter-spacing: 0.1px;
 }
 /* label small */
 .f-ls{
@@ -129,21 +125,18 @@
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    letter-spacing: 0.5px;
 }
 /* body medium*/
 .f-bm{
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: 0.25px;
 }
 /* body medium bold*/
 .f-bmb{
     font-size: 14px;
     font-weight: 700;
     line-height: 20px;
-    letter-spacing: 0.25px;
 }
 /* body small*/
 .f-bs{

@@ -11,7 +11,7 @@ h3{
 .contenedor{
     width: 1128px;
     margin: 0 auto;
-    padding: 36px 24px;
+    padding: 36px 0 48px 0;
     display: flex;
     flex-direction: row;
     gap: 24px;
@@ -103,6 +103,8 @@ h3{
     align-items: center;
     gap: 16px;
     padding: 24px 24px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 .contenedor .contenedorChat2 .encabezadoChat img{
     width: 70px;
