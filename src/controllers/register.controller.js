@@ -153,7 +153,7 @@ export const postRegister = async (req, res) => {
 
             const newPath = `./src/public/images/upload/${files[1].originalname}`
             fs.renameSync(files[1].path, newPath)
-            const truePath = `./src/public/images/images_mascotas/${idMascota_0.rows[0].mascotaid}/${files[0].originalname}` 
+            const truePath = `./src/public/images/images_mascotas/${idMascota_0.rows[0].mascotaid}/${files[1].originalname}` 
             fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_0.rows[0].mascotaid}`, {recursive: true}) 
             fs.copyFileSync(newPath, truePath)
             fs.unlinkSync(newPath)
@@ -219,14 +219,11 @@ export const postRegister = async (req, res) => {
                   
                 });
 
-            /* const mascota_1 = await client.sql`INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) 
-            VALUES (${idUsuario.rows[0].usuarioid}, '${body.nombre_mascota_1}', '${body.tipo_mascota_1}', '${body.raza_mascota_1}', 'algo', ${body.edad_mascota_1}, '${body.sexo_mascota_1}', '${body.condicion_mascota_1}', '${body.alergia_mascota_1}', '${body.sobre_mascota_1}');`; */
-
             const idMascota_1 = await client.sql`SELECT mascotaid FROM mascotas WHERE usuarioid = ${idUsuario.rows[0].usuarioid};`;
 
             const newPath3 = `./src/public/images/upload/${files[2].originalname}`
             fs.renameSync(files[2].path, newPath3)
-            const truePath3 = `./src/public/images/images_mascotas/${idMascota_1.rows[0].mascotaid}/${files[0].originalname}` 
+            const truePath3 = `./src/public/images/images_mascotas/${idMascota_1.rows[0].mascotaid}/${files[2].originalname}` 
             fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_1.rows[0].mascotaid}`, {recursive: true}) 
             fs.copyFileSync(newPath3, truePath3)
             fs.unlinkSync(newPath3)
@@ -252,13 +249,208 @@ export const postRegister = async (req, res) => {
                 .finally(() => {
                   // Cerrar la conexión a la base de datos
                   client.end();
-                });
-
-            /* const foto_mascota_1 = await client.sql`INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) 
-            VALUES (${idMascota_1.rows[0].mascotaid}, '${files[2].originalname}');`; */
-            
+                });      
     
         }   
+
+        
+        if(body.nombre_mascota_2){
+
+          const query5 = {
+              text: `INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) 
+                        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
+              values: [
+                idUsuario.rows[0].usuarioid,
+                body.nombre_mascota_1,
+                body.tipo_mascota_1,
+                body.raza_mascota_1,
+                'algo', // No tengo información sobre el tamaño, así que he dejado 'algo' como marcador de posición
+                body.edad_mascota_1,
+                body.sexo_mascota_1,
+                body.condicion_mascota_1,
+                body.alergia_mascota_1,
+                body.sobre_mascota_1,
+              ],
+            };
+            
+            // Ejecutar la consulta
+            client.query(query5)
+              .then(res => {
+                console.log('Filas afectadas:', res.rowCount);
+              })
+              .catch(err => {
+                console.error('Error al ejecutar la consulta:', err);
+              })
+              .finally(() => {
+                // Cerrar la conexión a la base de datos
+                
+              });
+
+          const idMascota_2 = await client.sql`SELECT mascotaid FROM mascotas WHERE usuarioid = ${idUsuario.rows[0].usuarioid};`;
+
+          const newPath4 = `./src/public/images/upload/${files[3].originalname}`
+          fs.renameSync(files[3].path, newPath4)
+          const truePath4 = `./src/public/images/images_mascotas/${idMascota_2.rows[0].mascotaid}/${files[3].originalname}` 
+          fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_2.rows[0].mascotaid}`, {recursive: true}) 
+          fs.copyFileSync(newPath4, truePath4)
+          fs.unlinkSync(newPath4)
+          fs.unlinkSync(files[3].path)
+  
+          const query6 = {
+              text: `INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) 
+                        VALUES ($1, $2)`,
+              values: [
+                idMascota_2.rows[0].mascotaid,
+                files[3].originalname,
+              ],
+            };
+            
+            // Ejecutar la consulta
+            client.query(query6)
+              .then(res => {
+                console.log('Filas afectadas:', res.rowCount);
+              })
+              .catch(err => {
+                console.error('Error al ejecutar la consulta:', err);
+              })
+              .finally(() => {
+                // Cerrar la conexión a la base de datos
+                client.end();
+              });      
+  
+      }  
+
+      if(body.nombre_mascota_3){
+
+        const query4 = {
+            text: `INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) 
+                      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
+            values: [
+              idUsuario.rows[0].usuarioid,
+              body.nombre_mascota_1,
+              body.tipo_mascota_1,
+              body.raza_mascota_1,
+              'algo', // No tengo información sobre el tamaño, así que he dejado 'algo' como marcador de posición
+              body.edad_mascota_1,
+              body.sexo_mascota_1,
+              body.condicion_mascota_1,
+              body.alergia_mascota_1,
+              body.sobre_mascota_1,
+            ],
+          };
+          
+          // Ejecutar la consulta
+          client.query(query4)
+            .then(res => {
+              console.log('Filas afectadas:', res.rowCount);
+            })
+            .catch(err => {
+              console.error('Error al ejecutar la consulta:', err);
+            })
+            .finally(() => {
+              // Cerrar la conexión a la base de datos
+              
+            });
+
+        const idMascota_3 = await client.sql`SELECT mascotaid FROM mascotas WHERE usuarioid = ${idUsuario.rows[0].usuarioid};`;
+
+        const newPath3 = `./src/public/images/upload/${files[4].originalname}`
+        fs.renameSync(files[4].path, newPath3)
+        const truePath3 = `./src/public/images/images_mascotas/${idMascota_3.rows[0].mascotaid}/${files[4].originalname}` 
+        fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_3.rows[0].mascotaid}`, {recursive: true}) 
+        fs.copyFileSync(newPath3, truePath3)
+        fs.unlinkSync(newPath3)
+        fs.unlinkSync(files[4].path)
+
+        const query5 = {
+            text: `INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) 
+                      VALUES ($1, $2)`,
+            values: [
+              idMascota_3.rows[0].mascotaid,
+              files[4].originalname,
+            ],
+          };
+          
+          // Ejecutar la consulta
+          client.query(query5)
+            .then(res => {
+              console.log('Filas afectadas:', res.rowCount);
+            })
+            .catch(err => {
+              console.error('Error al ejecutar la consulta:', err);
+            })
+            .finally(() => {
+              // Cerrar la conexión a la base de datos
+              client.end();
+            });      
+
+    }  
+
+    if(body.nombre_mascota_4){
+
+      const query4 = {
+          text: `INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) 
+                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
+          values: [
+            idUsuario.rows[0].usuarioid,
+            body.nombre_mascota_1,
+            body.tipo_mascota_1,
+            body.raza_mascota_1,
+            'algo', // No tengo información sobre el tamaño, así que he dejado 'algo' como marcador de posición
+            body.edad_mascota_1,
+            body.sexo_mascota_1,
+            body.condicion_mascota_1,
+            body.alergia_mascota_1,
+            body.sobre_mascota_1,
+          ],
+        };
+        
+        // Ejecutar la consulta
+        client.query(query4)
+          .then(res => {
+            console.log('Filas afectadas:', res.rowCount);
+          })
+          .catch(err => {
+            console.error('Error al ejecutar la consulta:', err);
+          })
+          .finally(() => {
+            // Cerrar la conexión a la base de datos
+            
+          });
+
+      const idMascota_1 = await client.sql`SELECT mascotaid FROM mascotas WHERE usuarioid = ${idUsuario.rows[0].usuarioid};`;
+
+      const newPath3 = `./src/public/images/upload/${files[5].originalname}`
+      fs.renameSync(files[5].path, newPath3)
+      const truePath3 = `./src/public/images/images_mascotas/${idMascota_1.rows[0].mascotaid}/${files[5].originalname}` 
+      fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_1.rows[0].mascotaid}`, {recursive: true}) 
+      fs.copyFileSync(newPath3, truePath3)
+      fs.unlinkSync(newPath3)
+      fs.unlinkSync(files[5].path)
+
+      const query5 = {
+          text: `INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) 
+                    VALUES ($1, $2)`,
+          values: [
+            idMascota_1.rows[0].mascotaid,
+            files[5].originalname,
+          ],
+        };
+        
+        // Ejecutar la consulta
+        client.query(query5)
+          .then(res => {
+            console.log('Filas afectadas:', res.rowCount);
+          })
+          .catch(err => {
+            console.error('Error al ejecutar la consulta:', err);
+          })
+          .finally(() => {
+            // Cerrar la conexión a la base de datos
+            client.end();
+          });      
+
+  }  
         
         }
         
