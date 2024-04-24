@@ -100,13 +100,16 @@ document.getElementById('submit').addEventListener('click', () => {
                 foto_user: foto1,
                 foto: objectURL1
             }
+
+            
+
+    }
+    if(mascotas.length > 0 && user){
+                postFetch()
+            }
         }
 
-    }
-
-    if(mascotas.length > 0){
-        postFetch()
-    }
+    
 })
 
 function postFetch() {
@@ -115,15 +118,7 @@ function postFetch() {
         user,
         mascotas,
     } */
-
-    var newfile  = {
-        'lastModified'     : user.foto_user.lastModified,
-        'lastModifiedDate' : user.foto_user.lastModifiedDate,
-        'name'             : user.foto_user.name,
-        'size'             : user.foto_user.size,
-        'type'             : user.foto_user.type,
-        'path'             : user.foto
-     };  
+  
  
     let fd = new FormData();
         fd.append("nombres_user", user.nombres_user);
@@ -165,7 +160,7 @@ function postFetch() {
     .then( (data) => {
         
               setTimeout(function () {
-                window.location = '/login'
+                window.location = data.ruta
               }, 2000)
     
     })
@@ -202,7 +197,7 @@ document.getElementById('guardarMascota').addEventListener('click', () => {
         sobre_mascota: sobre,
         id_mascota: m,
         foto_url: objectURL,
-        tipo_mascota: 'Perro'
+        tipo_mascota: 'Gato'
     }
     const url = window.URL || window.webkitURL;
     objectURL = url.createObjectURL(foto)
@@ -216,6 +211,12 @@ document.getElementById('guardarMascota').addEventListener('click', () => {
     document.getElementById('formularioMiMascota').setAttribute('style', 'display: none')
     document.getElementById('svg').removeAttribute('style')
     document.getElementById('img').removeAttribute('src')
+
+
+    document.getElementById('cancelar').classList.remove('btt-3--blanco')
+    document.getElementById('submit').classList.remove('btt-1--gris')
+
+
     }
 
 

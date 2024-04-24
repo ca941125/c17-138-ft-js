@@ -51,8 +51,8 @@ export const postRegister = async (req, res) => {
         if(verifiEmail.rowCount === 0){
         
             const query = {
-                text: 'INSERT INTO usuarios (nombreusuario, correo_electronico, contraseña, rol) VALUES ($1, $2, $3, $4)',
-                values: [body.nombres_user, body.email_user, passwordHaash, 'user'],
+                text: 'INSERT INTO usuarios (correo_electronico, contraseña, rol) VALUES ($1, $2, $3)',
+                values: [body.email_user, passwordHaash, 'user'],
               };
               
               // Ejecutar la consulta
@@ -450,11 +450,12 @@ export const postRegister = async (req, res) => {
             client.end();
           });      
 
-  }  
+    }  
+
+     res.send({msg: 'registro correcto', ruta: '/login'}) 
+  }
         
-        }
-        
-    res.send({msg: 'registro correcto', ruta: '/login'})
+    
     
     
 
