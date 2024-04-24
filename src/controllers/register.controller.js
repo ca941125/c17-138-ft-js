@@ -78,7 +78,7 @@ export const postRegister = async (req, res) => {
         fs.mkdirSync(`./src/public/images/images_perfil/${idUsuario.rows[0].usuarioid}`, {recursive: true}) 
         fs.copyFileSync(newPath1, truePath1)
         fs.unlinkSync(newPath1)
-        fs.unlinkSync(files[0].path)
+    
 
         const query1 = {
             text: `INSERT INTO perfiles (usuarioid, foto_url, nombres, apellidos, direccion, ciudad, provincia, barrio, numero_telefono, numero_telefono_secundario, sobre_mi) 
@@ -157,7 +157,7 @@ export const postRegister = async (req, res) => {
             fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_0.rows[0].mascotaid}`, {recursive: true}) 
             fs.copyFileSync(newPath, truePath)
             fs.unlinkSync(newPath)
-            fs.unlinkSync(files[1].path)
+           
 
             const query3 = {
                 text: `INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) 
@@ -223,17 +223,17 @@ export const postRegister = async (req, res) => {
 
             const newPath3 = `./src/public/images/upload/${files[2].originalname}`
             fs.renameSync(files[2].path, newPath3)
-            const truePath3 = `./src/public/images/images_mascotas/${idMascota_1.rows[0].mascotaid}/${files[2].originalname}` 
-            fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_1.rows[0].mascotaid}`, {recursive: true}) 
+            const truePath3 = `./src/public/images/images_mascotas/${idMascota_1.rows[1].mascotaid}/${files[2].originalname}` 
+            fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_1.rows[1].mascotaid}`, {recursive: true}) 
             fs.copyFileSync(newPath3, truePath3)
             fs.unlinkSync(newPath3)
-            fs.unlinkSync(files[2].path)
+            
     
             const query5 = {
                 text: `INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) 
                           VALUES ($1, $2)`,
                 values: [
-                  idMascota_1.rows[0].mascotaid,
+                  idMascota_1.rows[1].mascotaid,
                   files[2].originalname,
                 ],
               };
@@ -290,17 +290,17 @@ export const postRegister = async (req, res) => {
 
           const newPath4 = `./src/public/images/upload/${files[3].originalname}`
           fs.renameSync(files[3].path, newPath4)
-          const truePath4 = `./src/public/images/images_mascotas/${idMascota_2.rows[0].mascotaid}/${files[3].originalname}` 
-          fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_2.rows[0].mascotaid}`, {recursive: true}) 
+          const truePath4 = `./src/public/images/images_mascotas/${idMascota_2.rows[2].mascotaid}/${files[3].originalname}` 
+          fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_2.rows[2].mascotaid}`, {recursive: true}) 
           fs.copyFileSync(newPath4, truePath4)
           fs.unlinkSync(newPath4)
-          fs.unlinkSync(files[3].path)
+          
   
           const query6 = {
               text: `INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) 
                         VALUES ($1, $2)`,
               values: [
-                idMascota_2.rows[0].mascotaid,
+                idMascota_2.rows[2].mascotaid,
                 files[3].originalname,
               ],
             };
@@ -356,17 +356,17 @@ export const postRegister = async (req, res) => {
 
         const newPath3 = `./src/public/images/upload/${files[4].originalname}`
         fs.renameSync(files[4].path, newPath3)
-        const truePath3 = `./src/public/images/images_mascotas/${idMascota_3.rows[0].mascotaid}/${files[4].originalname}` 
-        fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_3.rows[0].mascotaid}`, {recursive: true}) 
+        const truePath3 = `./src/public/images/images_mascotas/${idMascota_3.rows[3].mascotaid}/${files[4].originalname}` 
+        fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_3.rows[3].mascotaid}`, {recursive: true}) 
         fs.copyFileSync(newPath3, truePath3)
         fs.unlinkSync(newPath3)
-        fs.unlinkSync(files[4].path)
+        
 
         const query5 = {
             text: `INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) 
                       VALUES ($1, $2)`,
             values: [
-              idMascota_3.rows[0].mascotaid,
+              idMascota_3.rows[3].mascotaid,
               files[4].originalname,
             ],
           };
@@ -422,17 +422,17 @@ export const postRegister = async (req, res) => {
 
       const newPath3 = `./src/public/images/upload/${files[5].originalname}`
       fs.renameSync(files[5].path, newPath3)
-      const truePath3 = `./src/public/images/images_mascotas/${idMascota_1.rows[0].mascotaid}/${files[5].originalname}` 
-      fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_1.rows[0].mascotaid}`, {recursive: true}) 
+      const truePath3 = `./src/public/images/images_mascotas/${idMascota_1.rows[4].mascotaid}/${files[5].originalname}` 
+      fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_1.rows[4].mascotaid}`, {recursive: true}) 
       fs.copyFileSync(newPath3, truePath3)
       fs.unlinkSync(newPath3)
-      fs.unlinkSync(files[5].path)
+      
 
       const query5 = {
           text: `INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) 
                     VALUES ($1, $2)`,
           values: [
-            idMascota_1.rows[0].mascotaid,
+            idMascota_1.rows[4].mascotaid,
             files[5].originalname,
           ],
         };

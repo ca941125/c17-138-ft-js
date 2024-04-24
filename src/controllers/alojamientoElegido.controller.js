@@ -26,6 +26,7 @@ export const getAlojamientoElegido = async (req, res) => {
         i++
     }
     client.release();
+    console.log(mascotas)
     if(req.signedCookies['loggedin']){
         const usuarioSesion = {
             nombres: req.signedCookies['nombres'],

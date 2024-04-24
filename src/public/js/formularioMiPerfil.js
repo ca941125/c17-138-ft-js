@@ -56,7 +56,7 @@ let foto
 let k = 0
 document.getElementById('foto-mascota').addEventListener('change', () => {
     foto = document.getElementById('foto-mascota').files[0]
-    objectURL = (window.URL || window.webkitURL).createObjectURL(foto)
+    objectURL = URL.createObjectURL(foto)
     document.getElementById('svg').setAttribute('style', 'display: none')
     document.getElementById('img').setAttribute('src', `${objectURL}`)
 })
@@ -65,7 +65,7 @@ let foto1
 
 document.getElementById('avatar-input').addEventListener('change', () => {
     foto1 = document.getElementById('avatar-input').files[0]
-    objectURL1 = (window.URL || window.webkitURL).createObjectURL(foto1)
+    objectURL1 = URL.createObjectURL(foto1)
     document.getElementById('svg1').setAttribute('style', 'display: none')
     document.getElementById('img1').setAttribute('src', `${objectURL1}`)
 })

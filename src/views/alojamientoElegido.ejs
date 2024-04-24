@@ -199,11 +199,11 @@
                     <section  class="sectionMiPerfil__descripcion bg-blanco-1 br-8">
                         <p class="sectionMiPerfil__parrafo  f-bl c-texto-gris"><%= perfil.sobre_mi %></p>
                     </section>
-
+                   
                     <% mascotas.map((m) => { %>
                     <section class="sectionMiPerfil__mascota bg-blanco-1 br-8">
                         <section class="mascota__card ">
-                                <img class="mascota__avatar" src="../images/images_mascotas/<%= m.mascotaid %>/<%= m.imagenes_mascotas[0].url_imagen_mascota%>"  alt="imagen del perl de la mascota">
+                                <img class="mascota__avatar" src='../images/images_mascotas/<%= m.mascotaid %>/<%= m.imagenes_mascotas[0].url_imagen_mascota %>'  alt="imagen del perl de la mascota">
                                 <div class="mascota__detalle">
                                     <h4 class="f-hsb c-texto"><%= m.nombre_mascota %></h4>
                                     <section class="mascota__dato">
