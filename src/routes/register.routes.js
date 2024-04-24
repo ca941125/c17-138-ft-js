@@ -3,7 +3,7 @@ import multer from 'multer'
 import {getRegister, postRegister} from '../controllers/register.controller.js'
 
 const router = Router()
-const upload = multer({dest: 'src/public/images/upload'})
+const upload = multer({ dest: 'src/public/images/upload/'} )
 
 router.get('/register', getRegister)
 

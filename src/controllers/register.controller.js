@@ -50,46 +50,203 @@ export const postRegister = async (req, res) => {
         console.log(verifiEmail.rowCount)
         if(verifiEmail.rowCount === 0){
         
-        const result = await client.sql`INSERT INTO usuarios (nombreusuario, correo_electronico, contraseña, rol) 
-        VALUES ("${body.nombres_user}", "${body.email_user}", "${passwordHaash}", 'user');`;
+            const query = {
+                text: 'INSERT INTO usuarios (nombreusuario, correo_electronico, contraseña, rol) VALUES ($1, $2, $3, $4)',
+                values: [body.nombres_user, body.email_user, passwordHaash, 'user'],
+              };
+              
+              // Ejecutar la consulta
+              client.query(query)
+              .then(res => {
+                console.log('Filas afectadas:', res.rowCount);
+              })
+              .catch(err => {
+                console.error('Error al ejecutar la consulta:', err);
+              })
+              .finally(() => {
+                // Cerrar la conexión a la base de datos
+              });
+
+        /* const result = await client.sql`INSERT INTO usuarios (nombreusuario, correo_electronico, contraseña, rol) 
+        VALUES ('${body.nombres_user}', '${body.email_user}', '${passwordHaash}', 'user');`; */
 
         const idUsuario = await client.sql`SELECT usuarioid FROM usuarios WHERE correo_electronico = ${body.email_user};`;
-        console.log(idUsuario)
-        const newPath1 = `./src/public/images/images_perfil/${idUsuario.rows[0].usuarioid}/${files[0].originalname}`
+        
+        const newPath1 = `./src/public/images/upload/${files[0].originalname}`
         fs.renameSync(files[0].path, newPath1)
 
-        const result1 = await client.sql`INSERT INTO perfiles (usuarioid, foto_url, nombres, apellidos, direccion, ciudad, provincia, barrio, numero_telefono, numero_telefono_secundario, sobre_mi) VALUES (${idUsuario.rows[0].usuarioid}, "${files[0].originalname}", "${body.nombres_user}", "${body.apellidos_user}", 'algo', "${body.ciudad_user}", "${body.provincia_user}", 'algo', ${body.telefono_user}, ${body.celular_user}, "${body.sobre_mi_user}");`;
+        const query1 = {
+            text: `INSERT INTO perfiles (usuarioid, foto_url, nombres, apellidos, direccion, ciudad, provincia, barrio, numero_telefono, numero_telefono_secundario, sobre_mi) 
+                  VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
+            values: [
+              idUsuario.rows[0].usuarioid,
+              files[0].originalname,
+              body.nombres_user,
+              body.apellidos_user,
+              'algo',
+              body.ciudad_user,
+              body.provincia_user,
+              'algo',
+              body.telefono_user,
+              body.celular_user,
+              body.sobre_mi_user,
+            ],
+          };
+          
+          // Ejecutar la consulta
+          client.query(query1)
+            .then(res => {
+              console.log('Filas afectadas:', res.rowCount);
+            })
+            .catch(err => {
+              console.error('Error al ejecutar la consulta:', err);
+            })
+            .finally(() => {
+              // Cerrar la conexión a la base de datos
+              
+            });
+
+        /* const result1 = await client.sql`INSERT INTO perfiles (usuarioid, foto_url, nombres, apellidos, direccion, ciudad, provincia, barrio, numero_telefono, numero_telefono_secundario, sobre_mi) 
+        VALUES (${idUsuario.rows[0].usuarioid}, '${files[0].originalname}', '${body.nombres_user}', '${body.apellidos_user}', 'algo', '${body.ciudad_user}', '${body.provincia_user}', 'algo', ${body.telefono_user}, ${body.celular_user}, '${body.sobre_mi_user}');`; */
 
         if(body.nombre_mascota_0){
 
-             const mascota_0 = await client.sql`INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) VALUES (${idUsuario.rows[0].usuarioid}, "${body.nombre_mascota_0}", "${body.tipo_mascota_0}", "${body.raza_mascota_0}", 'algo', ${body.edad_mascota_0}, "${body.sexo_mascota_0}", "${body.condicion_mascota_0}", "${body.alergia_mascota_0}", "${body.sobre_mascota_0}");`;
+            const query2 = {
+                text: `INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) 
+                          VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
+                values: [
+                  idUsuario.rows[0].usuarioid,
+                  body.nombre_mascota_0,
+                  body.tipo_mascota_0,
+                  body.raza_mascota_0,
+                  'algo', // No tengo información sobre el tamaño, así que he dejado 'algo' como marcador de posición
+                  body.edad_mascota_0,
+                  body.sexo_mascota_0,
+                  body.condicion_mascota_0,
+                  body.alergia_mascota_0,
+                  body.sobre_mascota_0,
+                ],
+              };
+              
+              // Ejecutar la consulta
+              client.query(query2)
+                .then(res => {
+                  console.log('Filas afectadas:', res.rowCount);
+                })
+                .catch(err => {
+                  console.error('Error al ejecutar la consulta:', err);
+                })
+                .finally(() => {
+                  // Cerrar la conexión a la base de datos
+                  
+                });
+
+            /* const mascota_0 = await client.sql`INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) 
+            VALUES (${idUsuario.rows[0].usuarioid}, '${body.nombre_mascota_0}', '${body.tipo_mascota_0}', '${body.raza_mascota_0}', 'algo', ${body.edad_mascota_0}, '${body.sexo_mascota_0}', '${body.condicion_mascota_0}', '${body.alergia_mascota_0}', '${body.sobre_mascota_0}');`; */
 
             const idMascota_0 = await client.sql`SELECT mascotaid FROM mascotas WHERE usuarioid = ${idUsuario.rows[0].usuarioid};`;
 
-            const newPath = `./src/public/images/images_mascotas/${idMascota_0.rows[0].mascotaid}/${files[1].originalname}`
+            const newPath = `./src/public/images/upload/${files[1].originalname}`
             fs.renameSync(files.path, newPath)
+
+            const query3 = {
+                text: `INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) 
+                          VALUES ($1, $2)`,
+                values: [
+                  idMascota_0.rows[0].mascotaid,
+                  files[1].originalname,
+                ],
+              };
+              
+              // Ejecutar la consulta
+              client.query(query3)
+                .then(res => {
+                  console.log('Filas afectadas:', res.rowCount);
+                })
+                .catch(err => {
+                  console.error('Error al ejecutar la consulta:', err);
+                })
+                .finally(() => {
+                  // Cerrar la conexión a la base de datos
+                  
+                });
     
-            const foto_mascota_0 = await client.sql`INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) VALUES (${idMascota_0.rows[0].mascotaid}, "${files[1].originalname}");`;
-            console.log(foto_mascota_0.rowCount)
+            /* const foto_mascota_0 = await client.sql`INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) 
+            VALUES (${idMascota_0.rows[0].mascotaid}, '${files[1].originalname}');`; */
+            
 
         }
          
         if(body.nombre_mascota_1){
 
-            const mascota_1 = await client.sql`INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) VALUES (${idUsuario.rows[0].usuarioid}, "${body.nombre_mascota_1}", "${body.tipo_mascota_1}", "${body.raza_mascota_1}", 'algo', ${body.edad_mascota_1}, "${body.sexo_mascota_1}", "${body.condicion_mascota_1}", "${body.alergia_mascota_1}", "${body.sobre_mascota_1}");`;
+            const query4 = {
+                text: `INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) 
+                          VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
+                values: [
+                  idUsuario.rows[0].usuarioid,
+                  body.nombre_mascota_1,
+                  body.tipo_mascota_1,
+                  body.raza_mascota_1,
+                  'algo', // No tengo información sobre el tamaño, así que he dejado 'algo' como marcador de posición
+                  body.edad_mascota_1,
+                  body.sexo_mascota_1,
+                  body.condicion_mascota_1,
+                  body.alergia_mascota_1,
+                  body.sobre_mascota_1,
+                ],
+              };
+              
+              // Ejecutar la consulta
+              client.query(query4)
+                .then(res => {
+                  console.log('Filas afectadas:', res.rowCount);
+                })
+                .catch(err => {
+                  console.error('Error al ejecutar la consulta:', err);
+                })
+                .finally(() => {
+                  // Cerrar la conexión a la base de datos
+                  
+                });
+
+            /* const mascota_1 = await client.sql`INSERT INTO mascotas (usuarioid, nombre_mascota, tipo_mascota, raza, tamaño, edad, genero, condicion, alergias, info_mascota) 
+            VALUES (${idUsuario.rows[0].usuarioid}, '${body.nombre_mascota_1}', '${body.tipo_mascota_1}', '${body.raza_mascota_1}', 'algo', ${body.edad_mascota_1}, '${body.sexo_mascota_1}', '${body.condicion_mascota_1}', '${body.alergia_mascota_1}', '${body.sobre_mascota_1}');`; */
 
             const idMascota_1 = await client.sql`SELECT mascotaid FROM mascotas WHERE usuarioid = ${idUsuario.rows[0].usuarioid};`;
 
-            const newPath = `./src/public/images/images_mascotas/${idMascota_1.rows[0].mascotaid}/${files[2].originalname}`
+            const newPath = `./src/public/images/upload/${files[2].originalname}`
             fs.renameSync(files.path, newPath)
     
-            const foto_mascota_1 = await client.sql`INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) VALUES (${idMascota_1.rows[0].mascotaid}, "${files[2].originalname}");`;
-            console.log(foto_mascota_1.rowCount)
+            const query5 = {
+                text: `INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) 
+                          VALUES ($1, $2)`,
+                values: [
+                  idMascota_1.rows[0].mascotaid,
+                  files[2].originalname,
+                ],
+              };
+              
+              // Ejecutar la consulta
+              client.query(query5)
+                .then(res => {
+                  console.log('Filas afectadas:', res.rowCount);
+                })
+                .catch(err => {
+                  console.error('Error al ejecutar la consulta:', err);
+                })
+                .finally(() => {
+                  // Cerrar la conexión a la base de datos
+                  client.end();
+                });
+
+            /* const foto_mascota_1 = await client.sql`INSERT INTO imagenes_mascotas (mascotaid, url_imagen_mascota) 
+            VALUES (${idMascota_1.rows[0].mascotaid}, '${files[2].originalname}');`; */
+            
     
         }   
         
         }
-        client.release();
+        
     res.send({msg: 'registro correcto', ruta: '/login'})
     
     
