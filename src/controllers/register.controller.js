@@ -455,7 +455,7 @@ export const postRegister = async (req, res) => {
      res.send({msg: 'correcto', ruta: '/login'}) 
   }
         
-  res.send({msg: 'email', ruta: '/login'}) 
+  res.send({msg: 'email', ruta: ''}) 
     
     
 

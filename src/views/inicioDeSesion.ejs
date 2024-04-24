@@ -48,7 +48,6 @@
             </div>
 
             <% if(typeof id !== 'undefined' ){ %>
-            <p>Sesión iniciada</p>
             <script>
                 Swal.fire({
                 icon: "success", 
@@ -62,7 +61,14 @@
     
             </script>
             <% }else if(typeof msg !== 'undefined'){ %>
-                <p><%= msg %></p>
+                <script>
+                    Swal.fire({
+                        icon: "error", 
+                        title: 'Se ha producido un error',
+                        text: 'Vuelva a intentar'
+                    })
+        
+                </script>
             <% } %>
 
         </section>
