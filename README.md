@@ -2,16 +2,17 @@
 
 
 # Bienvenidos a Wasi 
+[img src=""]
 
 Enlace del Proyecto
 
 ## Tabla de Contenidos
 1. [Información del Proyecto](#Información-General)
-2. [Colaboradores](#Colaboradores)
-3. [Tecnologías](#Tecnologías)
-4. [Instalación](#Instalación)
-5. [Galeria](#Galeria)
-6.
+2. [Funcionalidades](#funcionalidades)
+3. [Colaboradores](#Colaboradores)
+4. [Tecnologías](#Tecnologías)
+5. [Instalación](#Instalación)
+6. [Galeria](#Galeria)
 7.
 
 ## Información del Proyecto 
@@ -31,6 +32,13 @@ Enlace del Proyecto
 
 *Una aplicación WEB que conecta dueños de mascotas dispuestos a brindar alojamiento temporal, permitiendo que gatos o perros se queden en hogares familiares, donde recibirán atención personalizada y estarán rodeados de personas. Este enfoque proporciona un valor diferencial al producto al priorizar el bienestar y la comodidad de las mascotas durante la ausencia de sus dueños.*
 
+## Funcionalidades
+
+*  Registro de perfil de usuario (con su mascota)
+*  Log-in de usuario
+*  Buscador con filtros
+*  Reserva de fecha
+*  Mensajería con el usuario anfitrión
 
 ## Colaboradores
 ***
@@ -47,7 +55,7 @@ Enlace del Proyecto
 
 ### Desarrolladoras Frontend
 
-| [<img src="https://avatars.githubusercontent.com/u/20302054?v=4" width=130><br><sub>Melania Palomino</sub>](https://www.linkedin.com/in/aniapalominoq/) | [<img src="https://avatars.githubusercontent.com/u/123136200?u=c1a15f8744d28234fcd245ae64746242baebb2ae&v=4" width=130><br><sub>Carolina Aguirre</sub>](https://www.linkedin.com/in/carolina-aguirre-b9546021a/?trk=opento_sprofile_pfeditor) | [<img src="https://avatars.githubusercontent.com/u/108700444?v=4" width=130><br><sub>Maria de los Angeles Roldan</sub>](https://www.linkedin.com/in/mar%C3%ADa-de-los-%C3%A1ngeles-rold%C3%A1n-full-stack/) |
+| [<img src="https://avatars.githubusercontent.com/u/20302054?v=4" width=130><br><sub>Melania Palomino</sub>](https://www.linkedin.com/in/aniapalominoq/) | [<img src="https://avatars.githubusercontent.com/u/123136200?u=c1a15f8744d28234fcd245ae64746242baebb2ae&v=4" width=130><br><sub>Carolina Aguirre</sub>](https://www.linkedin.com/in/carolina-aguirre-b9546021a/?trk=opento_sprofile_pfeditor) ||
 | :---: | :---: | :---: |
 
 ### Team Leader 

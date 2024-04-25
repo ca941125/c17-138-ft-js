@@ -7,13 +7,16 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 8px;
+    padding: 16px 24px;
     gap: 8px;
+}
+.search .title-form{
+    padding: 0 0 0 4px;
 }
 .search .form{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
     gap: 4px;
 }
@@ -44,6 +47,9 @@
 }
 .search label {
     padding: 12px 12px 12px 0;
+}
+.search .btt-1{
+    height: 43px;
 }
 
 

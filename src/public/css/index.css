@@ -7,12 +7,13 @@ html{
 }
 h3{
     text-align: center;
-    margin: 24px 0 16px 0
+    margin: 24px 24px 16px 24px;
 }
 /* header */
 header{
     position: absolute;
 }
+
 /* -------------------------------------------- */
 /* CONTAINER  */
 /* -------------------------------------------- */
@@ -26,10 +27,11 @@ header{
     display: flex;
     align-items: flex-end;
     flex-direction: row-reverse;
+    margin: 0 auto;
 }
 .container .titulo-principal{
     width: 1128px;
-    padding: 48px 16px 80px 0;
+    padding: 48px 24px 80px 0;
     margin: 5% auto;
     text-align: right;
 }
@@ -42,6 +44,7 @@ header{
     width: 100%;
     position: relative;
     top: -50px;
+    padding: 0 24px;
 }
 .container-metricas{
     margin: auto;

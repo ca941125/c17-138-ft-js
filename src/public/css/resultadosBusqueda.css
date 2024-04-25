@@ -1,14 +1,17 @@
-html{
- 
-    width: 100%;
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
+
 body{
     background-color: var(--fondo);
 }
 main {
-   width: 80%;
-   margin: 0.5% auto;
+    margin: 0 24px;
 }
+
 h3{
     text-align: center;
     margin: 24px 0 16px 0;
@@ -36,6 +39,7 @@ h3{
 /* BUSCADOR */
 .buscadorPerfiles .buscador{
     width: 264px;
+    min-width: 165px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -70,7 +74,6 @@ h3{
     max-width: 840px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 24px;
 }
 .recomendadosParaTi .paraTiCard{
@@ -145,3 +148,24 @@ h3{
     width: 133px;
     float: right;
 }
+
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    .recomendadosParaTi .buscadorPerfiles{
+        flex-direction: column;
+    }
+    /* .buscadorPerfiles .buscador{
+        width: 80%;
+    } */
+    /* .buscadorPerfiles .resultadosBusqueda {
+         flex-direction: row;
+    } */
+}
+/* Celular */
+@media only screen and (max-width: 390px){
+
+}
+
