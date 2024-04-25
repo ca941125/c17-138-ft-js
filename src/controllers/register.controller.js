@@ -453,9 +453,11 @@ export const postRegister = async (req, res) => {
     }  
 
      res.send({msg: 'correcto', ruta: '/login'}) 
+  } else {
+      res.send({msg: 'email', ruta: ''}) 
   }
         
-  res.send({msg: 'email', ruta: ''}) 
+  
     
     
 
