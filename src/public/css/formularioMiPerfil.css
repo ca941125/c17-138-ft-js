@@ -23,8 +23,9 @@ body {
    flex-direction: row;
    justify-content: center;
    gap:24px;
-   width: 80%;
+   width: 100%;
    max-width: 1128px;
+   padding: 24px;
 
  }
 
