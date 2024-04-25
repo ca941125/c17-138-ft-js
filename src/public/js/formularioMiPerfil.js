@@ -151,10 +151,7 @@ function postFetch() {
     var request = new Request(url, {
         method: 'POST',
         body: fd,
-        headers: {
-            /* "Content-Type": "multipart/form-data", */
-            /* "Content-Type": "application/x-www-form-urlencoded", */
-        }, 
+        
     });
     fetch(request)
     .then(response => response.json())
