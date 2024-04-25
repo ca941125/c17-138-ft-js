@@ -25,7 +25,7 @@ body {
    gap:24px;
    width: 100%;
    max-width: 1128px;
-   padding: 24px;
+    margin: 0 auto;
 
  }
 
@@ -165,30 +165,18 @@ align-items: center;
   padding:4px 0 ;
 }
  /*ESTILOS A LOS BOTONES */
-.formularioBoton{
-   height: 104px;
-   width: 80%;
-   padding: 0 32px 0 32px;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   background-color: var(--blanco-1);
-   align-items: center;
-}
-.formularioBoton--transparente{
- background-color: transparent;
-}
+
 .formularioBoton-btn{
    display:flex;
    gap: 8px;
    width: 80%;
    background-color: var(--blanco-1);
    align-items: center;
-   padding: 24px 32px 24px 32px;
+   max-width: 1128px;
+   padding: 24px;
    
 }
 .block-btn{
-   width: 100%;
    display: flex;
    gap:8px;
    justify-content:flex-end;
@@ -260,6 +248,11 @@ flex-direction: row;
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 1127px) {
+
+   .formularioPerfil{
+
+ padding: 24px;
+    }
 
 }
 
@@ -362,10 +355,6 @@ flex-direction: row;
 }
 
 
-.formularioBoton {
-   flex-direction: column;
-   justify-content: center;
-}
 
 .card-container {
    flex-direction: column;
