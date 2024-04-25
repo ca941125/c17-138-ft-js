@@ -18,7 +18,11 @@
 <body>
     
     <!-- HEADER -->
-    <%- include('partials/header.ejs'); -%>
+    <% if(login){%>
+        <%- include('partials/headerSesionIniciada.ejs'); -%>
+    <% } else {%>
+        <%- include('partials/header.ejs'); -%> 
+    <% } %>   
 
 
     <!-- MAIN -->
@@ -41,7 +45,7 @@
                     </div>
                     <a href="" class="f-bm c-texto-gris">Supporting text</a>
                     <div class="botones">
-                        <button class="btt-2 f-tm">Regístrate</button>
+                        <button class="btt-3 f-tm">Regístrate</button>
                         <button class="btt-1 f-tm">Iniciar Sesión</button>
                     </div>
                 </form>

@@ -12,40 +12,90 @@
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="../images/icons/w.svg" />
 
-    <title>Resultados Búsquedas</title>
+    <title>Alojamiento Elejido</title>
 </head>
 
 <body>
 
     <!-- modelo sin iniciar sesión -->
+    
+    <% if(login) {%>
+
+        <header>
+            <nav class="nav">  
+                <!-- nav bar con logo y quienes somos y planes -->
+                <div class="nav-bar c-fondo">
+                    <a href="/"><img src="../images/logo-header.png" alt="logo"></a>
+                    <a class="f-tm c-blanco-1" href="/quienes-somos">Quiénes somos</a>
+                    <a class="f-tm c-blanco-1" href="/planes-y-precios">Planes y precios</a>
+                </div>
+                <!-- nav bar mobile -->
+                <div class="nav-bar-mobile">
+                    <div class="menu-container">
+                        <img src="../images/icons/header/menuDesplegable.svg" alt="Menu desplegable" class="menu-desplegable" id="menu-desplegable">
+                        <div class="dropdown-menu" id="dropdown-menu">
+                          <a class="f-hs c-blanco-1" href="/quienes-somos">Quiénes somos</a>
+                          <a class="f-hs c-blanco-1" href="/planes-y-precios">Planes y precios</a>
+                        </div>
+                    </div>
+        
+                    <div class="logo-perfil">
+                        <img class="logo" src="../images/logo-header.png" alt="">
+                    </div>
+                </div>
+                <!-- sesion iniciada desktop -->
+               <div class="nav-icon">
+                    <a href=""><img class="icon" src="../images/icons/header/state-layer.svg" alt=""></a>
+                    <a href=""><img class="icon" src="../images/icons/header/container.svg" alt=""></a>
+                    <div class="menu-container">
+                        <img src="../images/images_perfil/<%= id %>/<%= usuarioSesion.foto_url %>" alt="Imagen de perfil" class="profile-image" id="profile-image">
+                        <div class="dropdown-perfil" id="dropdown-perfil">
+                          <a class="f-hs c-blanco-1" href="/logout">Cerrar Sesión</a>
+                          <a class="f-hs c-blanco-1" href="/mi-perfil">Mi Perfil</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+    <% } else {%>
     <header>
-        <% if(typeof index !=='undefined' ){ %>
-            <nav class="nav bg-oscuro80">
-        <% } else { %>
             <nav class="nav">
-        <% } %>    
-            <div class="nav-bar c-fondo">               
+            <!-- nav bar con logo y quienes somos y planes -->
+            <div class="nav-bar c-fondo">
                 <a href="/"><img src="../images/logo-header.png" alt="logo"></a>
                 <a class="f-tm c-blanco-1" href="/quienes-somos">Quiénes somos</a>
                 <a class="f-tm c-blanco-1" href="/planes-y-precios">Planes y precios</a>
             </div>
-
-            <% if(login){%>
-             <!-- ICÓNOS DE SESIÓN INICIADA -->
-
-            <div class="nav-icon">
-                <a href=""><img class="icon" src="../images/icons/header/state-layer.svg" alt=""></a>
-                <a href=""><img class="icon" src="../images/icons/header/container.svg" alt=""></a>
-                <a href="/mi-perfil"><img class="foto-perfil" src="../images/images_perfil/<%= id %>/<%= usuarioSesion.foto_url %>" alt=""></a>
+            <!-- nav bar mobile -->
+            <div class="nav-bar-mobile">
+                <div class="menu-container">
+                    <img src="../images/icons/header/menuDesplegable.svg" alt="Menu desplegable" class="menu-desplegable" id="menu-desplegable">
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <a class="f-hs c-blanco-1" href="/quienes-somos">Quiénes somos</a>
+                      <a class="f-hs c-blanco-1" href="/planes-y-precios">Planes y precios</a>
+                    </div>
+                </div>
+                <div class="logo-perfil">
+                    <img class="logo" src="../images/logo-header.png" alt="">
+                    <div class="menu-container">
+                        <img src="../images/icons/header/perfil.svg" alt="Imagen de perfil" class="profile-image" id="profile-image">
+                        <div class="dropdown-perfil" id="dropdown-perfil">
+                          <a class="f-hs c-blanco-1" href="/login">Iniciar Sesión</a>
+                          <a class="f-hs c-blanco-1" href="/register">Registrate</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <% } else {%>
+            <!-- botones para iniciar sesion desktop -->
             <div class="nav-button">
-                <button class="f-tm c-a-dark-mode"><a href="/login">Inicia sesión</a></button>
-                <button class="f-tm btt-2">Registrate</button>
+                <button class="f-tm c-a-dark-mode"><a href="/login">Iniciar sesión</a></button>
+                <button class="f-tm btt-2"><a href="/register">Registrate</a></button>
             </div>
-            <% } %>
-        </nav>
+        </nav>  
     </header>
+    <% } %>
+
     <main>
 
         <!-- SEARCH -->
@@ -202,32 +252,29 @@
                    
                     <% mascotas.map((m) => { %>
                     <section class="sectionMiPerfil__mascota bg-blanco-1 br-8">
-                        <section class="mascota__card ">
+                        <div class="mascota__card ">
                                 <img class="mascota__avatar" src='../images/images_mascotas/<%= m.mascotaid %>/<%= m.imagenes_mascotas[0].url_imagen_mascota %>'  alt="imagen del perl de la mascota">
                                 <div class="mascota__detalle">
                                     <h4 class="f-hsb c-texto"><%= m.nombre_mascota %></h4>
-                                    <section class="mascota__dato">
-                                        <h4 class="f-bmb c-texto-gris">Raza: </h4>
-                                        <p  class="f-bm c-texto-gris " id="mastotaDatoRaza" ><%= m.raza %></p>
-                                    </section>
-                                    <section class="mascota__dato">
-                                        <h4 class="f-bmb c-texto-gris">Edad: </h4>
-                                        <p  class="f-bm c-texto-gris " id="mastotaDatoEdad"> <%= m.edad %> años</p>
-                                    </section>
-                                    <section class="mascota__dato">
-                                        <h4  class="f-bmb c-texto-gris">Sexo: </h4>
-                                        <p  class="f-bm c-texto-gris " id="mastotaDatoSexo"> <%= m.genero %></p>
-                                    </section>
+                                    <div class="mascota__dato">                                      
+                                        <p  class="f-bmb c-texto-gris " >Raza: <span class="f-bm c-texto-gris " id="mastotaDatoRaza"><%= m.raza %></span></p>
+                                        <p  class="f-bmb c-texto-gris " >Edad: <span class="f-bm c-texto-gris " id="mastotaDatoEdad"><%= m.edad %> años</span></p>
+                                        <p  class="f-bmb c-texto-gris " >Sexo: <span class="f-bm c-texto-gris " id="mastotaDatoSexo"><%= m.genero %></span></p>
+                                    </div>
                                 </div>
-                        </section>
+                            </div>
 
-                        <section class="mascota__cardDetalle">
+                        <div class="mascota__cardDetalle">
                             <div class="f-bl c-texto-gris"> 
                                 <%= m.info_mascota %>
                             </div>
-                            <div class="f-bl c-texto-gris"> <strong class="f-blb c-texto-gris">Condiciones de salud:</strong> <%= m.condicion %></div>
-                            <div class="f-bl c-texto-gris"> <strong class="f-blb c-texto-gris">Alergias:</strong><%= m.alergias %></div>
-                        </section>
+                            <div> 
+                                <p class="f-blb c-texto-gris">Condiciones de salud: <span class="f-bl c-texto-gris"><%= m.condicion %></span></p>
+                            </div>
+                            <div> 
+                                <p class="f-blb c-texto-gris">Alergias:<span class="f-bl c-texto-gris"><%= m.alergias %></span></p>
+                            </div>
+                        </div>
                     </section>
                     <% }) %>
                     
@@ -278,6 +325,7 @@
         </section>
     </footer>
     <script src="../js/search1.js"></script>
+    <script src="../js/header.js"></script>
 </body>
 
 </html>

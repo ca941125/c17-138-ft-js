@@ -18,8 +18,13 @@
 <body>
 
     <!-- HEADER -->
-    <%- include('partials/header.ejs'); -%>
-
+    <% if(login){%>
+        <%- include('partials/headerSesionIniciada.ejs'); -%>
+    <% } else {%>
+        <%- include('partials/header.ejs'); -%> 
+    <% } %>   
+    
+<main>
     <!-- SEARCH -->
     <%- include('partials/search.ejs'); -%>
 
@@ -162,7 +167,7 @@
         </div>
 
     </section>
-
+</main>
 
     <!-- FOOTER -->
     <%- include('partials/footer.ejs'); -%>
