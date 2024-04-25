@@ -183,6 +183,7 @@ align-items: center;
    background-color: var(--blanco-1);
    align-items: center;
    padding: 24px 32px 24px 32px;
+   margin-bottom: 48px;
    
 }
 .block-btn{
