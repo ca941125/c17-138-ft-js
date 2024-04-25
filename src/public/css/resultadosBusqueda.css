@@ -1,86 +1,93 @@
-html{
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
     background-color: var(--fondo);
-    width: 100%;
 }
-.search {
-   width: 80%;
-   margin: 0.5% auto;
-}
- 
-.search .container-search{
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px;
-}
-.search .title-form{
-    padding: 0 0 0 5px;
-}
-.search form{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-.search .row{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 5px;
-}
-.search input[type="date"], select, textarea {
-    width: 100%;
-    padding: 12px;
-}
-.search input[type=submit]{
-    width: 100%;
-}
-.search label {
-    padding: 12px 12px 12px 0;
-}
-.search .col-25 {
-    float: left;
-    margin-top: 6px;
-}
-.search .col-75 {
-    float: left;
-    width: 100%;
-    margin-top: 6px;
+main {
+    margin: 0 24px;
 }
 
-/* -------------------------------------------- */
-/* RECOMENDADOOS PARA TI */
-/* -------------------------------------------- */
-
-.recomendadosParaTi{
-    width: 80%;
-    margin: 20px auto;
-    padding: 16px 24px 32pp 16px
-}
 h3{
     text-align: center;
-    margin: 48px auto;
+    margin: 24px 0 16px 0;
 }
-.recomendadosParaTi .buscadorPerfiles{
-    width: 100%;
+
+/* -------------------------------------------- */
+/* RECOMENDADOS PARA TI */
+/* -------------------------------------------- */
+.recomendadosParaTi{
+    max-width: 1128px;
+    margin: 0 auto;
     display: flex;
-}
-.recomendadosParaTi .buscador{
-    width: 25%;
-    margin-right: 15px ;
-}
-.recomendadosParaTi .cards{
-    width: 75%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     gap: 24px;
 }
 
+/* -------------------------------------------- */
+/* CONTENEDOR BUSCADOR Y CARDS  */
+/* -------------------------------------------- */
+.recomendadosParaTi .buscadorPerfiles{
+    width: 100%;
+    display: flex;
+    gap: 32px;
+}
+/* BUSCADOR */
+.buscadorPerfiles .buscador{
+    width: 264px;
+    min-width: 165px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.buscadorPerfiles .buscador .filtro{
+    display: flex;
+    align-items: center;
+}
+.buscadorPerfiles .buscador .filtro form{
+    text-decoration: none;
+    width: 80%;
+}
+
+.buscadorPerfiles .resultadosBusqueda{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.buscadorPerfiles .resultadosBusqueda p{
+    cursor: pointer;
+}
+.buscadorPerfiles .resultadosBusqueda .resultados{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+/* CARDS */
+.recomendadosParaTi .cards{
+    max-width: 840px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
 .recomendadosParaTi .paraTiCard{
     width: 264px;
     padding: 0 0 16px 0;
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+.recomendadosParaTi .imgCard img{
+    width: 264px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: none;
 }
 .recomendadosParaTi .paraTiCard .cuerpoCard{
     padding: 0 16px;
@@ -96,6 +103,7 @@ h3{
 .recomendadosParaTi .paraTiCard .esp .nombreCard{
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
 }
 .recomendadosParaTi .paraTiCard .esp .nombreCard .clasif{
     display: flex;
@@ -109,15 +117,55 @@ h3{
     justify-content: space-between;
     text-align: center;
 }
+.recomendadosParaTi .paraTiCard .esp .iconosCard .iconText{
+    max-width: 51px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .recomendadosParaTi .paraTiCard .esp .iconosCard img{
-    padding: 6px 8px;
+    width: 25px;
+    height: 25px;
+    margin: 8px;
 }
 .recomendadosParaTi .paraTiCard .precioCard{
     display: flex;
     justify-content: space-between;
     gap: 8px;
 }
-
 .recomendadosParaTi .paraTiCard .precioCard button{
     width: 112px;
 } 
+
+/* -------------------------------------------- */
+/* PAGINACIÓN */
+/* -------------------------------------------- */
+
+.paginas{
+    padding: 24px 0 48px 0;
+}
+.paginas button{
+    width: 133px;
+    float: right;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    .recomendadosParaTi .buscadorPerfiles{
+        flex-direction: column;
+    }
+    /* .buscadorPerfiles .buscador{
+        width: 80%;
+    } */
+    /* .buscadorPerfiles .resultadosBusqueda {
+         flex-direction: row;
+    } */
+}
+/* Celular */
+@media only screen and (max-width: 390px){
+
+}
+

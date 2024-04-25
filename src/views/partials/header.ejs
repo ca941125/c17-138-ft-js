@@ -1,0 +1,43 @@
+
+    
+    <!-- modelo sin iniciar sesión -->
+    <header>
+        <% if(typeof index !=='undefined' ){ %>
+            <nav class="nav bg-oscuro80">
+        <% } else { %>
+            <nav class="nav">
+        <% } %>
+            <!-- nav bar con logo y quienes somos y planes -->
+            <div class="nav-bar c-fondo">
+                <a href="/"><img src="images/logo-header.png" alt="logo"></a>
+                <a class="f-tm c-blanco-1" href="/quienes-somos">Quiénes somos</a>
+                <a class="f-tm c-blanco-1" href="/planes-y-precios">Planes y precios</a>
+            </div>
+            <!-- nav bar mobile -->
+            <div class="nav-bar-mobile">
+                <div class="menu-container">
+                    <img src="images/icons/header/menuDesplegable.svg" alt="Menu desplegable" class="menu-desplegable" id="menu-desplegable">
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <a class="f-hs c-blanco-1" href="/quienes-somos">Quiénes somos</a>
+                      <a class="f-hs c-blanco-1" href="/planes-y-precios">Planes y precios</a>
+                    </div>
+                </div>
+                <div class="logo-perfil">
+                    <a href="/"><img class="logo" src="images/logo-header.png" alt=""></a>
+                    <div class="menu-container">
+                        <img src="images/icons/header/perfil.svg" alt="Imagen de perfil" class="profile-image" id="profile-image">
+                        <div class="dropdown-perfil" id="dropdown-perfil">
+                          <a class="f-hs c-blanco-1" href="/login">Iniciar Sesión</a>
+                          <a class="f-hs c-blanco-1" href="/register">Registrate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- botones para iniciar sesion desktop -->
+            <div class="nav-button">
+                <button class="f-tm c-a-dark-mode"><a href="/login">Iniciar sesión</a></button>
+                <button class="f-tm btt-2"><a href="/register">Registrate</a></button>
+            </div>
+        </nav>  
+    </header>
+

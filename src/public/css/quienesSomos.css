@@ -1,0 +1,56 @@
+html{
+    background-color: var(--fondo);
+}
+h3{
+    text-align: center;
+    margin: 24px 0 16px 0;
+}
+main{
+    max-width: 1128px;
+    margin: 0 auto;
+}
+.quienesSomos{
+    max-width: 100%;
+
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 48px 0;
+}
+.cards .wasi{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+    padding: 32px;
+}
+.cards .wasi img{
+    width: 134px;
+}
+.misionVision{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding:  24px 0;
+}
+h5{
+    padding: 24px 0;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    .quienesSomos{
+        margin: 0 24px;
+    }
+}
+/* Celular */
+@media only screen and (max-width: 390px){
+    .cards .wasi{
+        flex-direction: column;
+    }
+}

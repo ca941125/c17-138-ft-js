@@ -1,4 +1,5 @@
 html{
+    min-width: 100vw;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,91 +7,64 @@ html{
 }
 h3{
     text-align: center;
-    margin: 48px auto;
+    margin: 24px 24px 16px 24px;
 }
-
 /* header */
 header{
     position: absolute;
 }
+
 /* -------------------------------------------- */
 /* CONTAINER  */
 /* -------------------------------------------- */
 .container{
     width: 100%;
     height: 100vh;
-    background-image: url(../images/Encabezado.png);
+    background-image: url(../images/Encabezado.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: flex-end;
     flex-direction: row-reverse;
+    margin: 0 auto;
 }
 .container .titulo-principal{
-    width: 80%;
+    width: 1128px;
+    padding: 48px 24px 80px 0;
     margin: 5% auto;
     text-align: right;
 }
-.searchMetricas {
-   width: 80%;
-   margin: 1% auto;
-   position: relative;
-   top: -50px;
-}
 
-.searchMetricas .container-search{
+/* -------------------------------------------- */
+/* SEARCH Y METRICAS */
+/* -------------------------------------------- */
+
+.searchMetricas{
     width: 100%;
-    margin: 0 auto;
-    padding: 10px;
+    position: relative;
+    top: -50px;
+    padding: 0 24px;
 }
-.searchMetricas .title-form{
-    padding: 0 0 0 5px;
-}
-.searchMetricas form{
+.container-metricas{
+    margin: auto;
+    max-width: 1128px;
+    padding: 45px 24px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-.searchMetricas .row{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 5px;
-}
-.searchMetricas input[type="date"], select, textarea {
-    width: 100%;
-    padding: 12px;
-}
-.searchMetricas input[type=submit]{
-    width: 100%;
-}
-.searchMetricas label {
-    padding: 12px 12px 12px 0;
-}
-.searchMetricas .col-25 {
-    float: left;
-    margin-top: 6px;
-}
-.searchMetricas .col-75 {
-    float: left;
-    width: 100%;
-    margin-top: 6px;
-}
-/* metricas */
-.searchMetricas .container-metricas{
-    margin: 0 auto;
-    width: 90%;
-    padding: 45px 24px 0;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 }
-.searchMetricas .container-metricas .metrica{
+.container-metricas .texto{
     text-align: center;
-    width: 25%;
 }
-
+.container-metricas .numeros{
+    width: 70%;
+    display: flex;
+}
+.container-metricas p{
+    text-align: center;
+    width: 265px;
+}
 
 /* -------------------------------------------- */
 /* COMO FUNCIONA  */
@@ -98,26 +72,36 @@ header{
 
 .comoFunciona{
     width: 100%;
-    padding: 48px 24px;
+    padding: 24px 0;
+    gap: 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .comoFunciona .cards{
-    width: 80%;
+    max-width: 1128px;
+    min-width: 370px;
     padding: 24px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
 }
 .comoFunciona .cards .card{
+    width: 252px;
+    height: 360px;
     padding: 16px 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
     text-align: center;
+}
+.comoFunciona .cards .card img{
+    width: 137px;
+}
+.comoFunciona .cards .card .icono{
+    width: 22px;
 }
 
 /* -------------------------------------------- */
@@ -133,7 +117,7 @@ header{
 }
 .recomendadosParaTi .cards{
     margin: auto;
-    width: 80%;
+    max-width: 1128px;
     padding: 16px 0 32px 0;
     display: flex;
     flex-wrap: wrap;
@@ -206,19 +190,29 @@ header{
 /* -------------------------------------------- */
 .testimonial{
     padding: 24px 0 32px 0;
-    gap: 24px;
     text-align: center;
 }
 .testimonial .cardTestimonial{
-    margin: 20px auto;
-    width: 80%;
+    margin: 0 auto;
+    max-width: 1128px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 24px 0;
 }
-.testimonial article{
+.testimonial .informacion{
+    width: 359px;
+    height: 381px;
     padding: 47px 32px;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+.testimonial .informacion img{
+    width: 123px;
 }
 
 /* -------------------------------------------- */
@@ -227,25 +221,27 @@ header{
 
 .pgtsFrecuentes{
     padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 .pgtsFrecuentes .preguntas{
-    padding: 0 0 48px 0;
-    width: 80%;
-    margin: auto;
+    max-width: 1128px;
+    padding: 32px 0 48px 0;
+    margin: 8px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
-
 .pgtsFrecuentes summary{
-    margin: 10px auto;
-    border-radius: 8px;
-    border: 3px solid var(--primario);
+    border: 2px solid var(--primario);
     padding: 16px;
     cursor: pointer;
 }
 .pgtsFrecuentes .answer{
-    margin: 10px auto;
+    margin: 8px auto;
     border-radius: 8px;
-    background-color:  var(--fondo);
-    padding: 10px 16px;
+    padding: 8px 16px;
 }
 
 /* -------------------------------------------- */
@@ -254,11 +250,55 @@ header{
 
 .brands{
     padding: 48px 0 64px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 .brands .contenedorBrands{
     margin: 0 auto;
-    width: 80%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 16px;
+}
+.brand{
+    width: 145px;
+}
+
+/* MEDIA QUERIES */
+/* Tablet */
+@media only screen and (max-width:768px) {
+    /* CONTAINER */
+
+    /* SEARCH Y METRICAS  */
+
+    .container-metricas{
+        flex-direction: column;
+        gap: 16px;
+    }
+    .container-metricas .numeros{
+        width: 100%;
+    }
+
+    /* RECOMENDADO PARA TI */
+    .recomendadosParaTi .cards{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 507px){
+    .container-metricas .numeros{
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+/* Celular */
+@media only screen and (max-width: 375px){
+    /* CONTAINER */
+    .titulo-principal{
+        font-size: 32px;
+    }
 }

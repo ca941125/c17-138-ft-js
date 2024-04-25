@@ -1,0 +1,75 @@
+.containerSearch{
+    width: 100%;
+}
+.search {
+    max-width: 1128px;
+    min-height: 144px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px;
+    gap: 8px;
+}
+.search .title-form{
+    padding: 0 0 0 4px;
+}
+.search .form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 4px;
+}
+.search .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 16%;
+    min-height: 80px;
+    gap: 4px;
+}
+.search .col-25{
+    padding: 0 4px 4px 4px;
+}
+.search .row .col-75{
+    max-width: 100%;
+}
+.search .row button{
+    min-width: 180px;
+    height: 80px;
+}
+.search input[type="date"], select, textarea {
+    width: 100%;
+    padding: 12px;
+}
+.search input[type=submit]{
+    width: 100%;
+}
+.search label {
+    padding: 12px 12px 12px 0;
+}
+.search .btt-1{
+    height: 43px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1153px) {
+    .search .row{
+        min-width: 32%;
+    }
+}
+@media only screen and (max-width:768px) {
+    .search .row{
+        min-width: 49%;
+    }
+
+}
+@media only screen and (max-width: 507px){
+    .search .row{
+        min-width: 100%;
+    }
+
+}

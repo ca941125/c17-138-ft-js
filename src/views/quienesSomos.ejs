@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general-style.css">
+    <link rel="stylesheet" href="css/quienesSomos.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="images/icons/w.svg" />
+
+    <title>Quiénes somos</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <% if(login){%>
+        <%- include('partials/headerSesionIniciada.ejs'); -%>
+    <% } else {%>
+        <%- include('partials/header.ejs'); -%> 
+    <% } %>   
+
+    <!-- MAIN -->
+    <main>
+        <section class="quienesSomos">
+            <h3 class="f-dsb c-texto">Quiénes Somos</h3>
+            <div class="cards">
+                <div class="wasi br-8 bg-blanco-1">
+                    <img src="images/logo-inicio-de-sesion.png" alt="">
+                    <p class="f-tlb c-texto-gris">Wasi quiere decir, en la lengua quechua, “casa” y wayra, “viento”, pero para el mundo andino este último término tiene un significado más profundo.</p>
+                </div>
+                <div class="misionVision">
+                    <div class="info">
+                        <h5 class="f-hsb c-texto-gris">Misión</h5>
+                        <p class="f-bl c-texto-gris">
+                            Nuestra misión es proporcionar una plataforma tecnológica innovadora que conecte a dueños de mascotas con hogares de acogida de confianza, ofreciendo una solución segura y confiable para el cuidado temporal de gatos y perros. Nos comprometemos a garantizar el bienestar y la felicidad de las mascotas, facilitando experiencias de alojamiento familiar que promuevan la tranquilidad y la tranquilidad tanto para los dueños como para sus queridos compañeros peludos.
+                        </p>
+                    </div>
+                    <div class="info">
+                        <h5 class="f-hsb c-texto-gris">Visión</h5>
+                        <p class="f-bl c-texto-gris">
+                            Nos esforzamos por ser líderes en la industria de servicios para mascotas, siendo reconocidos como la principal plataforma de alojamiento temporal de mascotas a nivel global. Buscamos transformar la manera en que se cuidan y se hospedan los animales de compañía, estableciendo un estándar de excelencia en el cuidado animal y proporcionando una experiencia inigualable tanto para los dueños como para sus mascotas. Nuestra visión es crear un mundo donde cada mascota pueda disfrutar de un hogar temporal amoroso y seguro mientras sus dueños están ausentes, contribuyendo así al bienestar y la felicidad de todas las familias de mascotas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs'); -%>
+
+</body>
+</html>    

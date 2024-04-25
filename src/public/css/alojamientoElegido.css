@@ -1,121 +1,150 @@
-html{
-    background-color: var(--fondo);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+html{
+  background-color: var(--fondo);
+}
+main{
+  margin: 0 24px;
+}
+h3{
+  text-align: center;
+  margin: 24px 0 16px 0;
+}
+
 /* ALOJAMIENTO */
 
 .alojamiento{
-    width: 80%;
-    margin: 0 auto;
+  max-width: 1128px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
-h3{
-    text-align: center;
-    margin: 24px 156px 16px 156px;
-}
+
 /* CONTENEDOR */
 .contenedor{
-    margin: 24px auto;
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
+  margin: 24px auto;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
 }
 /* IMAGENES Y MAPA */
 .imagenes {
-    width: 50%;
-    padding: 32px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  width: 50%;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .imagenes .seccionImagenes{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .imagenes .imgPrincipal{
-    width: 100%;
+  width: 100%;
 }
 .imagenes .imgSecundarias{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 8px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 .imagenes .imgSecundarias .img{
-    width: 80px;
-    height: 72px;
+  width: 80px;
+  height: 72px;
 }
-
+.imagenes .imgSecundarias .img img{
+  height: 100%;
+  object-fit:cover;
+}
+.ubicacion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ubicacion img{
+  width: 100%;
+}
 
 /* INFORMACIÓN */
 .informacion{
-    width: 50%;
-    padding: 32px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-.iconosCard{
-    border-top: 1px solid var(--primario) ;
-    border-bottom: 1px solid var(--primario) ;
-    padding: 8px 0 16px 0;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-}
- .iconosCard .iconText{
-    max-width: 51px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.iconosCard img{
-    width: 25px;
-    height: 25px;
-    margin: 8px;
-}
-.descripcion, .condiciones{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 0 0 24px 0;
-}
-.precio{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 16px;
-}
-.precio span{
-    padding: 0 4px 0 0;
-}
-.precio .btt-1{
-    width: 232px;
-}
-
-/* perfil anfitrion */
-.sectionMiPerfil{
-  margin: 20px auto;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-  gap:24px;
-  width: 80%;
-} 
-.miPerfil{
-  width:35%;
-  height: 694px;
+  width: 50%;
+  padding: 32px 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  gap: 24px;
+}
+.iconosCard{
+  border-top: 1px solid var(--primario) ;
+  border-bottom: 1px solid var(--primario) ;
+  padding: 8px 0 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  text-align: center;
+}
+.iconosCard .iconText{
+  max-width: 51px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+}
+.iconosCard img{
+  width: 25px;
+  height: 25px;
+  margin: 8px;
+}
+.descripcion, .condiciones{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 0 24px 0;
+}
+.precio{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.precio span{
+  padding: 0 4px 0 0;
+}
+.precio .btt-1{
+  width: 232px;
+}
+
+
+/* perfil anfitrion */
+.perfil{
+  max-width: 1128px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sectionMiPerfil{
+  padding: 0 0 36px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap:24px;
+} 
+.miPerfil{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 32px 24px 56px 24px;
 }
 .miPerfil__foto{
   border-radius: 50%;
-  height: 260px;
-  width: 260px;
+  min-width: 240px;
   object-fit: cover;
-  object-position: center;
 }
 .section-group{
   display: flex;
@@ -131,56 +160,92 @@ h3{
   align-items: center;
   gap:8px;
 }
+
 .sectionMiPerfil__detalle{
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap:24px;
-  width: 65%;
-  height: 694px;
 }
+
 .sectionMiPerfil__descripcion{
   padding: 32px;
   width: 100%;
-  height: 256px;
 }
+/* MASCOTA */
 .sectionMiPerfil__mascota{
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap:24px;
-  width: 100%;
-  height: 328px;
+  gap:32px;
   padding: 32px;
 }
 
 .mascota__card{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap:16px
+  gap:16px;
+  padding-bottom: 16px;
 }
+
 .mascota__avatar{
   border-radius: 50%;
-  height: 130px;
-  width: 134px;
+  width: 132px;
   object-fit: cover;
-  object-position: center;
 }
+
 .mascota__detalle{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .mascota__dato{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .mascota__cardDetalle{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap:16px
+  gap:24px;
+}
+
+/* MEDIA QUERIES */
+.menuDesplegable{
+  display: none;
+}
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .contenedor{
+    flex-direction: column;
+  }
+  .informacion{
+    width: 100%;
+  }
+  .imagenes{
+    width: 100%;
+  }
+  .sectionMiPerfil{
+    flex-direction: column;
+  } 
+}
+/* Celular */
+
+@media only screen and (max-width: 390px){
+  .iconosCard{
+    gap: 8px;
+  }
+  .sectionMiPerfil__mascota{
+    flex-direction: column;
+  }
+  .mascota__card{
+    flex-direction: row;
+  }
+  #navBar{
+    display: none;
+  }
+  .menuDesplegable{
+    display: flex;
+  }
+  header nav{
+    flex-wrap: wrap;
+  }
 }

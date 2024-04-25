@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- style -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general-style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="images/icons/w.svg" />
+
+    <title>Home Wasi</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <% if(login){%>
+        <%- include('partials/headerSesionIniciada.ejs'); -%>
+    <% } else {%>
+        <%- include('partials/header.ejs'); -%> 
+    <% } %>   
+<!-- MAIN -->
+
+<main>
+    <!-- CONTAINER -->
+
+    <section class="container">
+        <h1 class="titulo-principal f-dmb c-blanco-1">Deja que tu mascota se <br>sienta como en casa <br> mientras te vas de viaje.</h1>
+    </section>
+
+    <!--  SEARCH Y METRICAS-->
+    <section class="searchMetricas   br-8">
+        <!-- SEARCH -->
+        <%- include('partials/search.ejs'); -%>
+
+    <!--  METRICAS -->
+        <div class="container-metricas c-texto">
+            <div class="texto">
+                <p class="metrica f-hsm">Nuestros números hablan por si solos</p>
+            </div>
+            <div class="numeros">
+                <p class="metrica f-tm"><span class="f-dl">3000</span><br>Anfitriones</p>
+                <p class="metrica f-tm"><span class="f-dl">437</span><br>Ciudades registradas</p>
+                <p class="metrica f-tm"><span class="f-dl">826</span><br>Mascotas alojadas con éxito</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    
+    <section class="comoFunciona bg-blanco-1">
+        <h3 class="f-dsb c-texto">Cómo funciona</h3>
+        <div class="cards">
+            <div class="card">
+                <img src="images/home-cards/Ellipse68.png" alt="">
+                <img class="icono" src="images/home-cards/Number1.png" alt="">
+                <p class="f-hsm">Buscar</p>
+                <p class="f-bl c-texto-gris">
+                    Encuentra anfitriones cercanos y disponibles para hospedad a tus mascotas.
+                </p>
+            </div>
+            <div class="card">
+                <img src="images/home-cards/Ellipse69.png" alt="">
+                <img class="icono" src="images/home-cards/Number2.png" alt="">
+                <p class="f-hsm">Elegir</p>
+                <p class="f-bl c-texto-gris">
+                    Selecciona el anfitrión que mejor se adapte a tus necesidades y preferencias.
+                </p>
+            </div>
+            <div class="card">
+                <img src="images/home-cards/Ellipse67.png" alt="">
+                <img class="icono" src="images/home-cards/Number3.png" alt="">
+                <p class="f-hsm">Contactar</p>
+                <p class="f-bl c-texto-gris">
+                    Comunícate con el anfitrión para coordinar detalles y reservar el alojamiento.
+                </p>
+            </div>
+            <div class="card">
+                <img src="images/home-cards/Ellipse66.png" alt="">
+                <img class="icono" src="images/home-cards/Number4.png" alt="">
+                <p class="f-hsm">Disfrutar</p>
+                <p class="f-bl c-texto-gris">
+                    Deja a tus mascotas en buenas manos y disfruta de tu viaje con tranquilidad.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECOMENDADOS PARA TI -->
+
+    <section class="recomendadosParaTi bg-fondo">
+        <h3 class="f-dsb c-texto">Recomendado para ti</h3>
+        <div id="cards" class="cards">
+<!-- primera card -->
+
+            <% alojamientos.map((alojamientos) => { %>
+
+            <div class="paraTiCard bg-blanco-1 br-8">
+                <div class="imgCard br-8">
+                    <img src="images/images_perfil/<%= alojamientos.usuarioid %>/<%= alojamientos.foto_url %>" alt="">
+                </div>
+                <div class="cuerpoCard">
+                    <div class="esp">
+                        <div class="nombreCard">
+                            <div>
+                                <p class="f-hsb" ><%= alojamientos.nombres %> <br><%= alojamientos.apellidos %></p>
+                                <p class="f-bm"><%= alojamientos.ciudad %>, <%= alojamientos.provincia %></p>
+                            </div>
+                            <div class="clasif">
+                                <img src="images/icons/estrella.svg" alt="">
+                                <span class="f-bm">5.0</span>
+                            </div>
+                        </div>
+                        <div class="iconosCard">
+                            <div class="iconText">
+                                <% if(alojamientos.mascotas[0].tipo_mascota === 'Perro') {%>
+                                    <img src="images/icons/perro-verde.svg" alt="">
+                                <% } else {%>
+                                    <img src="images/icons/gato-verde.svg" alt="">
+                                <% } %>    
+                                <p class="f-bm c-primario"><%= alojamientos.mascotas.length %> <%= alojamientos.mascotas[0].tipo_mascota %></p>
+                            </div>
+                            <div class="iconText">
+                                <% if(alojamientos.tipo_alojamiento === 'Casa') {%>
+                                    <img src="images/icons/casa-verde.svg" alt="">
+                                <%} else {%>
+                                    <img src="images/icons/edificio-verde.svg" alt="">
+                                <% } %>    
+                                <p class="f-bm c-primario"><%= alojamientos.tipo_alojamiento %></p>
+                            </div>
+                            <div class="iconText">
+                                <% if(alojamientos.aire_libre === 'Jardin' || alojamientos.aire_libre === 'Patio') {%>
+                                    <img src="images/icons/jardin-verde.svg" alt="">
+                                    <p class="f-bm c-primario"><%= alojamientos.aire_libre %></p>
+                                <%} else if(alojamientos.parque_cerca === 'Si'){%>
+                                    <img src="images/icons/plaza-cerca-verde.svg" alt="">  
+                                    <p class="f-bm c-primario">Parque <br>cerca</p>                               
+                                <% } %>
+                                
+                            </div>
+                            
+                                
+                            <% if(alojamientos.cercado === 'Si') { %>
+                                <div class="iconText">
+                                    <img src="images/icons/cerco-verde.svg" alt="">
+                                    <p class="f-bm c-primario">Cercado</p>
+                                </div>    
+                            <% } %>
+                                     
+                            
+                        </div>
+                        <p class="f-bm c-texto-gris" >
+                            <%= alojamientos.resumen_card %>
+                        </p>
+                    </div>
+                    <div class="precioCard">
+                        <div class="izq">
+                            <span class="f-tlb">$<%= alojamientos.costo_alojamiento %></span>
+                            <p class="f-ll"><%= alojamientos.moneda %>/noche</p>
+                        </div>
+                        <div class="der">
+                            <button class="btt-1"><a href="/alojamientos/<%= alojamientos.usuarioid %>">Entrar</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <% }) %>
+
+        </div>    
+           
+<!-- segunda card -->
+            <!-- <div class="paraTiCard bg-blanco-1 br-8">
+                <img src="images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
+                
+                <div class="cuerpoCard">
+                    <div class="esp">
+                        <div class="nombreCard">
+                            <div>
+                                <p class="f-hsb" >Nombre Anfitrión</p>
+                                <p class="f-bm">Texto Ubicación</p>
+                            </div>
+                            <div class="clasif">
+                                <img src="images/icons/estrella.svg" alt="">
+                                <span class="f-bm">5.0</span>
+                            </div>
+                        </div>
+                        <div class="iconosCard">
+                            <div class="iconText">
+                                <img src="images/icons/perro-verde.svg" alt="">
+                                <p class="f-bm c-primario">1 Perro</p>
+                            </div>
+                            <div class="iconText">
+                                <img src="images/icons/casa-verde.svg" alt="">
+                                <p class="f-bm c-primario">Casa</p>
+                            </div>
+                            <div class="iconText">
+                                <img src="images/icons/jardin-verde.svg" alt="">
+                                <p class="f-bm c-primario">1 Jardin</p>
+                            </div>
+                            <div class="iconText">
+                                <img src="images/icons/cerco-verde.svg" alt="">
+                                <p class="f-bm c-primario">Cercado</p>
+                            </div>
+                        </div>
+                        <p class="f-bm c-texto-gris" >
+                            Write an amazing description in this dedicated card section. Each word counts.
+                        </p>
+                    </div>
+                    <div class="precioCard">
+                        <div>
+                            <span class="f-tlb">$50.000</span>
+                            <p class="f-ll">AR/noche</p>
+                        </div>
+                        <div>
+                            <button class="btt-1">Label</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+<!-- tercer card -->
+            <!-- <div class="paraTiCard bg-blanco-1 br-8">
+                <img src="images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
+                
+                <div class="cuerpoCard">
+                    <div class="esp">
+                        <div class="nombreCard">
+                            <div>
+                                <p class="f-hsb" >Nombre Anfitrión</p>
+                                <p class="f-bm">Texto Ubicación</p>
+                            </div>
+                            <div class="clasif">
+                                <img src="images/icons/estrella.svg" alt="">
+                                <span class="f-bm">5.0</span>
+                            </div>
+                        </div>
+                        <div class="iconosCard">
+                            <div class="iconText">
+                                <img src="images/icons/perro-verde.svg" alt="">
+                                <p class="f-bm c-primario">1 Perro</p>
+                            </div>
+                            <div class="iconText">
+                                <img src="images/icons/casa-verde.svg" alt="">
+                                <p class="f-bm c-primario">Casa</p>
+                            </div>
+                            <div class="iconText">
+                                <img src="images/icons/jardin-verde.svg" alt="">
+                                <p class="f-bm c-primario">1 Jardin</p>
+                            </div>
+                            <div class="iconText">
+                                <img src="images/icons/cerco-verde.svg" alt="">
+                                <p class="f-bm c-primario">Cercado</p>
+                            </div>
+                        </div>
+                        <p class="f-bm c-texto-gris" >
+                            Write an amazing description in this dedicated card section. Each word counts.
+                        </p>
+                    </div>
+                    <div class="precioCard">
+                        <div>
+                            <span class="f-tlb">$50.000</span>
+                            <p class="f-ll">AR/noche</p>
+                        </div>
+                        <div>
+                            <button class="btt-1">Label</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+<!-- cuarta card -->
+            <!-- <div class="paraTiCard bg-blanco-1 br-8">
+                <img src="images/Screenshot 2024-04-02 at 09.26 1.png" alt="">
+                
+                <div class="cuerpoCard">
+                    <div class="esp">
+                        <div class="nombreCard">
+                            <div>
+                                <p class="f-hsb" >Nombre Anfitrión</p>
+                                <p class="f-bm">Texto Ubicación</p>
+                            </div>
+                            <div class="clasif">
+                                <img src="images/icons/estrella.svg" alt="">
+                                <span class="f-bm">5.0</span>
+                            </div>
+                        </div>
+                        <div class="iconosCard">
+                            <div class="iconText">
+                                <img src="images/icons/perro-verde.svg" alt="">
+                                <p class="f-bm c-primario">1 Perro</p>
+                            </div>
+                            <div class="iconText">
+                                <img src="images/icons/casa-verde.svg" alt="">
+                                <p class="f-bm c-primario">Casa</p>
+                            </div>
+                            <div class="iconText">
+                                <img src="images/icons/jardin-verde.svg" alt="">
+                                <p class="f-bm c-primario">1 Jardin</p>
+                            </div>
+                            <div class="iconText">
+                                <img src="images/icons/cerco-verde.svg" alt="">
+                                <p class="f-bm c-primario">Cercado</p>
+                            </div>
+                        </div>
+                        <p class="f-bm c-texto-gris" >
+                            Write an amazing description in this dedicated card section. Each word counts.
+                        </p>
+                    </div>
+                    <div class="precioCard">
+                        <div>
+                            <span class="f-tlb">$50.000</span>
+                            <p class="f-ll">AR/noche</p>
+                        </div>
+                        <div>
+                            <button class="btt-1">Label</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </section>
+
+    <!-- QUIENES NOS ELIGEN -->
+
+    <section class="testimonial bg-fondo">
+        <h3 class="f-dsb c-texto">Quiénes nos eligen</h3>
+        <div class="cardTestimonial">
+            <div class="informacion">
+                <img src="images/quienesNosEligen1.png" alt="Foto de perfil">
+                <p class="f-bl">"¡Excelente experiencia! Recibí actualizaciones diarias y fotos de mi mascota mientras viajaba. Altamente recomendado."</p>
+                <p class="f-hsm c-primario">Laura G.</p>
+            </div>
+            <div class="informacion">
+                <img src="images/quienesNosEligen2.png" alt="Foto de perfil">
+                <p class="f-bl">"Encontré un anfitrión cercano que cuidó a mi gato como si fuera suyo. ¡Gran alivio mientras estaba fuera!"</p>
+                <p class="f-hsm c-primario">Martín R.</p>
+            </div>
+            <div class="informacion">
+                <img src="images/quienesNosEligen3.png" alt="Foto de perfil">
+                <p class="f-bl">"Encontré personas que se preocuparon por el bienestar de mis mascotas. ¡Increíble servicio!"</p>
+                <p class="f-hsm c-primario">María L.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+
+    <section class="pgtsFrecuentes bg-blanco-1" >
+        <h3 class="f-dsb c-texto">Preguntas frecuentes</h3>
+        <div class="preguntas">
+            <details>
+                <summary class="question f-blb c-texto br-8">¿Cuáles son los requisitos para alojar a mi mascota en casa de alguien más?</summary>
+                <div class="answer f-bl c-texto bg-fondo">
+                    Los requisitos principales incluyen estar al día con las vacunas y tener un comportamiento adecuado en entornos <br> 
+                    sociales.</div>
+            </details>
+    
+            <details>
+                <summary class="question f-blb c-texto br-8">¿Cómo puedo comunicarme con un anfitrión potencial?</summary>
+                <div class="answer f-bl c-texto bg-fondo">
+                    Puedes comunicarte a través de la plataforma utilizando la función de mensajería interna, una vez que realizas la <br>
+                    búsqueda aplicando los filtros de búsqueda.</div>
+            </details>
+
+            <details>
+                <summary class="question f-blb c-texto br-8">¿Cómo se manejan las emergencias médicas o situaciones inesperadas durante la estadía de mi mascota?</summary>
+                <div class="answer f-bl c-texto bg-fondo">
+                    Los anfitriones están preparados para manejar emergencias y se contactará contigo de inmediato en caso de <br>
+                    necesidad.</div>
+            </details>
+
+            <details>
+                <summary class="question f-blb c-texto br-8">¿Qué sucede si mi mascota tiene alguna necesidad especial o requiere medicación durante su estadía?</summary>
+                <div class="answer f-bl c-texto bg-fondo">
+                    Puedes proporcionar detalles sobre las necesidades especiales de tu mascota al hacer la reserva, y el anfitrión se <br>
+                     encargará de cumplir con esas necesidades</div>
+            </details>
+
+            <details>
+                <summary class="question f-blb c-texto br-8">¿Cómo se establecen los precios y pagos por el alojamiento de mi mascota?</summary>
+                <div class="answer f-bl c-texto bg-fondo">
+                    Los precios se establecen según las tarifas establecidas por el anfitrión y se realizan los pagos previo acuerdo<br>
+                     con el anfitrión.</div>
+            </details>
+
+            <details>
+                <summary class="question f-blb c-texto br-8">¿Qué sucede si mi mascota y el anfitrión no se llevan bien durante la estadía?</summary>
+                <div class="answer f-bl c-texto bg-fondo">
+                    En caso de que sea necesario y acordado entre ambas partes, se podría buscar un nuevo anfitrión o tomar<br> 
+                    medidas para garantizar que la estadía sea lo más cómoda posible para tu mascota. La comunicación abierta<br> 
+                    y la colaboración son clave para resolver cualquier problema de compatibilidad durante la estadía</div>
+            </details>
+
+            <details>
+                <summary class="question f-blb c-texto br-8">¿Qué medidas de seguridad tienen implementadas para garantizar la seguridad de mi mascota?</summary>
+                <div class="answer f-bl c-texto bg-fondo">
+                    El equipo de soporte realiza verificaciones de perfiles de los anfitriones y se proporciona información <br>
+                    detallada sobre el entorno y las condiciones de alojamiento para garantizar la seguridad de las mascotas.</div>
+            </details>
+
+            <details>
+                <summary class="question f-blb c-texto br-8">¿Qué sucede si mi mascota causa algún daño durante su estadía en casa de un anfitrión?</summary>
+                <div class="answer f-bl c-texto bg-fondo">
+                    Dependiendo de la situación y de las políticas establecidas, se buscará una solución justa y se tomarán medidas<br>
+                    adecuadas para resolver la situación de manera satisfactoria para ambas partes. Es importante mantener una<br>
+                     comunicación abierta y transparente para resolver cualquier problema de manera efectiva.
+                </div>
+            </details>
+
+            <details>
+                <summary class="question f-blb c-texto br-8">¿Cómo puedo dejar comentarios y reseñas sobre la experiencia de mi mascota en casa de un anfitrión?</summary>
+                <div class="answer f-bl c-texto bg-fondo">
+                    Puedes dejar comentarios y reseñas a través de la plataforma después de completar la estadía de tu mascota.</div>
+            </details>
+
+            <details>
+                <summary class="question f-blb c-texto br-8"> ¿Qué sucede si necesito cancelar una reserva de alojamiento para mi mascota?</summary>
+                <div class="answer f-bl c-texto bg-fondo">
+                    Si necesitas cancelar una reserva de alojamiento para tu mascota, es importante comunicarte con el anfitrión con<br>
+                    menos 24 horas de anticipación. De esta manera, se puede coordinar de manera efectiva y se facilita la posibilidad<br>
+                    de encontrar una solución adecuada para ambas partes. La comunicación temprana permite ajustar los planes y <br>
+                    minimizar posibles inconvenientes.</div>
+            </details>
+
+        </div>
+    </section>
+
+    <!-- MARCAS -->
+
+    <section class="brands bg-blanco-2">
+        <h3 class="f-dsb c-texto">Marcas que nos apoyan</h3>
+        <div class="contenedorBrands">
+            <div class="brand">
+                <img src="images/marcas-royal-canin-logo-ps 1.png" alt="Logo 1">
+            </div>
+            <div class="brand">
+                <img src="images/marcas-ken-l-logo-ps 1.png" alt="Logo 2">
+            </div>
+            <div class="brand">
+                <img src="images/marcas-club-performance-logo-ps 1.png" alt="Logo 3">
+            </div>
+            <div class="brand">
+                <img src="images/marcas-old-prince-logo-ps 1.png" alt="Logo 1">
+            </div>
+            <div class="brand">
+                <img src="images/marcas-eukanuba-logo-ps 1.png" alt="Logo 2">
+            </div>
+            <div class="brand">
+                <img src="images/marcas-top-nutrition-logo-ps 1.png" alt="Logo 3">
+            </div>
+        </div>
+   </section>
+
+</main>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs'); -%>
+
+<script src="js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/general-style.css">
+    <link rel="stylesheet" href="../css/alojamientoElegido.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/icons/w.svg" />
+
+    <title>Alojamiento Elejido</title>
+</head>
+
+<body>
+
+    <!-- modelo sin iniciar sesión -->
+    
+    <% if(login) {%>
+
+        <header>
+            <nav class="nav">  
+                <!-- nav bar con logo y quienes somos y planes -->
+                <div class="nav-bar c-fondo">
+                    <a href="/"><img src="../images/logo-header.png" alt="logo"></a>
+                    <a class="f-tm c-blanco-1" href="/quienes-somos">Quiénes somos</a>
+                    <a class="f-tm c-blanco-1" href="/planes-y-precios">Planes y precios</a>
+                </div>
+                <!-- nav bar mobile -->
+                <div class="nav-bar-mobile">
+                    <div class="menu-container">
+                        <img src="../images/icons/header/menuDesplegable.svg" alt="Menu desplegable" class="menu-desplegable" id="menu-desplegable">
+                        <div class="dropdown-menu" id="dropdown-menu">
+                          <a class="f-hs c-blanco-1" href="/quienes-somos">Quiénes somos</a>
+                          <a class="f-hs c-blanco-1" href="/planes-y-precios">Planes y precios</a>
+                        </div>
+                    </div>
+        
+                    <div class="logo-perfil">
+                        <img class="logo" src="../images/logo-header.png" alt="">
+                    </div>
+                </div>
+                <!-- sesion iniciada desktop -->
+               <div class="nav-icon">
+                    <a href=""><img class="icon" src="../images/icons/header/state-layer.svg" alt=""></a>
+                    <a href=""><img class="icon" src="../images/icons/header/container.svg" alt=""></a>
+                    <div class="menu-container">
+                        <img src="../images/images_perfil/<%= id %>/<%= usuarioSesion.foto_url %>" alt="Imagen de perfil" class="profile-image" id="profile-image">
+                        <div class="dropdown-perfil" id="dropdown-perfil">
+                          <a class="f-hs c-blanco-1" href="/logout">Cerrar Sesión</a>
+                          <a class="f-hs c-blanco-1" href="/mi-perfil">Mi Perfil</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+    <% } else {%>
+    <header>
+            <nav class="nav">
+            <!-- nav bar con logo y quienes somos y planes -->
+            <div class="nav-bar c-fondo">
+                <a href="/"><img src="../images/logo-header.png" alt="logo"></a>
+                <a class="f-tm c-blanco-1" href="/quienes-somos">Quiénes somos</a>
+                <a class="f-tm c-blanco-1" href="/planes-y-precios">Planes y precios</a>
+            </div>
+            <!-- nav bar mobile -->
+            <div class="nav-bar-mobile">
+                <div class="menu-container">
+                    <img src="../images/icons/header/menuDesplegable.svg" alt="Menu desplegable" class="menu-desplegable" id="menu-desplegable">
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <a class="f-hs c-blanco-1" href="/quienes-somos">Quiénes somos</a>
+                      <a class="f-hs c-blanco-1" href="/planes-y-precios">Planes y precios</a>
+                    </div>
+                </div>
+                <div class="logo-perfil">
+                    <img class="logo" src="../images/logo-header.png" alt="">
+                    <div class="menu-container">
+                        <img src="../images/icons/header/perfil.svg" alt="Imagen de perfil" class="profile-image" id="profile-image">
+                        <div class="dropdown-perfil" id="dropdown-perfil">
+                          <a class="f-hs c-blanco-1" href="/login">Iniciar Sesión</a>
+                          <a class="f-hs c-blanco-1" href="/register">Registrate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- botones para iniciar sesion desktop -->
+            <div class="nav-button">
+                <button class="f-tm c-a-dark-mode"><a href="/login">Iniciar sesión</a></button>
+                <button class="f-tm btt-2"><a href="/register">Registrate</a></button>
+            </div>
+        </nav>  
+    </header>
+    <% } %>
+
+    <main>
+
+        <!-- SEARCH -->
+        <%- include('partials/search.ejs'); -%>
+
+        <!-- ALOJAMIENTO -->
+        <section class="alojamiento">
+            <h3 class="f-dsb c-texto">Alojamiento</h3>
+            <!-- CONTENEDOR -->
+            <div class="contenedor">
+                <!-- IMAGENES Y MAPA-->
+                <div class="imagenes bg-blanco-1 br-8">
+                    <div class="seccionImagenes br-8 bg-blanco-1">
+                        <div class="imgPrincipal br-8">
+                            <img class="br-8" src="../images/images_alojamientos/<%= alojamiento.alojamientoid %>/<%= alojamiento.imagenes_alojamiento[0].url_imagen_alojamiento %>" alt="">
+                        </div>
+                        <div class="imgSecundarias">
+                            <div class="img br-8">
+                                <img class="br-8" src="../images/images_alojamientos/<%= alojamiento.alojamientoid %>/<%= alojamiento.imagenes_alojamiento[1].url_imagen_alojamiento %>" alt="">
+                            </div>
+                            <div class="img br-8">
+                                <img class="br-8" src="../images/images_alojamientos/<%= alojamiento.alojamientoid %>/<%= alojamiento.imagenes_alojamiento[2].url_imagen_alojamiento %>" alt="">
+                            </div>
+                            <div class="img br-8">
+                                <img class="br-8" src="../images/images_alojamientos/<%= alojamiento.alojamientoid %>/<%= alojamiento.imagenes_alojamiento[3].url_imagen_alojamiento %>" alt="">
+                            </div>
+                            <% if(typeof alojamiento.imagenes_alojamiento[4] !== 'undefined') {%>
+                            <div class="img br-8">
+                                <img class="br-8" src="../images/images_alojamientos/<%= alojamiento.alojamientoid %>/<%= alojamiento.imagenes_alojamiento[4].url_imagen_alojamiento %>" alt="">
+                            </div>
+                            <% } %>
+
+                            <% if(typeof alojamiento.imagenes_alojamiento[5] !== 'undefined') {%>
+                            <div class="img br-8">
+                                <img class="br-8" src="../images/images_alojamientos/<%= alojamiento.alojamientoid %>/<%= alojamiento.imagenes_alojamiento[5].url_imagen_alojamiento %>" alt="">
+                            </div>
+                            <% } %>
+                            
+                        </div>
+                    </div>
+                    <div class="ubicacion">
+                        <h4 class="f-hsb c-texto">Ubicación</h4>
+                        <!-- MAPA -->
+                    </div>
+                </div>
+
+                <div class="informacion br-8 bg-blanco-1">
+
+                    <div class="iconosCard">
+                        <div class="iconText">
+                            <% if(mascotas[0].tipo_mascota === 'Perro') { %>
+                                <img src="../images/icons/perro-verde.svg" alt="">
+                            <% } else {%>
+                                <img src="../images/icons/gato-verde.svg" alt="">
+                            <% } %>    
+                            <p class="f-bm c-primario"><%= mascotas.length %> <%= mascotas[0].tipo_mascota %></p>
+                        </div>
+                        <div class="iconText">
+                            <% if(alojamiento.tipo_alojamiento === 'Casa') { %>
+                                <img src="../images/icons/casa-verde.svg" alt="">
+                                <p class="f-bm c-primario">Casa</p>
+                            <% } else { %>
+                                <img src="../images/icons/edificio-verde.svg" alt="">
+                                <p class="f-bm c-primario">Departamento</p>
+                            <% } %>    
+                        </div>
+                        <div class="iconText">
+                            <% if(alojamiento.aire_libre === 'Jardin') { %>
+                                <img src="../images/icons/jardin-verde.svg" alt="">
+                                <p class="f-bm c-primario">Jardin</p>
+                            <% } else if(alojamiento.aire_libre === 'Patio') { %>
+                                <img src="../images/icons/jardin-verde.svg" alt="">
+                                <p class="f-bm c-primario">Patio</p>
+                            <% } else {%>
+                                <img src="../images/icons/jardin-1-verde.svg" alt="">
+                                <p class="f-bm c-primario">Balcón</p> 
+                            <% } %>    
+
+                        </div>
+
+                        <% if(alojamiento.cercado === 'Si') { %>
+                        <div class="iconText">
+                            <img src="../images/icons/cerco-verde.svg" alt="">
+                            <p class="f-bm c-primario">Cercado</p>
+                        </div>
+                        <% } %>
+
+                        <% if(alojamiento.parque_cerca === 'Si') { %>
+                        <div class="iconText">
+                            <img src="../images/icons/plaza-cerca-verde.svg" alt="">
+                            <p class="f-bm c-primario">Parque cerca</p>
+                        </div>
+                        <% } %>
+                    </div>
+
+                    <div class="descripcion">
+                        <h4 class="f-hsb c-texto">Descripción</h4>
+                        <p class="f-bl c-texto-gris">
+                           <%= alojamiento.descripcion %>
+                        </p>
+                    </div>
+
+                    <div class="condiciones">
+                        <h4 class="f-hsb c-texto">Condiciones</h4>
+                        <p class="f-bl c-texto-gris">
+                            <%= alojamiento.condiciones %>
+                        </p>
+                    </div>
+
+                    <div class="precio">
+                        <p class="f-tlr"><span class="f-hmb">$ <%= alojamiento.costo_alojamiento %></span>  <%= alojamiento.moneda %>/noche</p>
+                        <button class="btt-1">Contacta al anfitrión</button>
+                    </div>
+                    
+                    <div>
+                        <p class="f-bm c-texto-gris">*Para contactarte con un anfitrión, debes registrarte e iniciar sesión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERFIL DE ANFITRIÓN -->
+        <section class="perfil">
+            <h3 class="f-dsb c-texto">Perfil de anfitrión</h3>
+            <section class="sectionMiPerfil"  id="sectionMiPerfil">
+                <!--SECTION 1 DATOS PERSONALES-->
+                <section class="miPerfil br-8 bg-blanco-1">
+                    <img  class="miPerfil__foto" src="../images/images_perfil/<%= perfil.usuarioid %>/<%= perfil.foto_url %>">
+                    <div class="section-group">
+                        <h3 class=" f-hsb c-texto"> <%= perfil.nombres %> <%= perfil.apellidos %></h3>
+                        <p class="f-tlr c-texto-gris"><%= perfil.ciudad %>, <%= perfil.provincia %>, Argentina</p>
+                    </div>
+                    <div class="section-group">
+                        <div class="section-group__dato">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M7.71778 10.9244C8.99778 13.44 11.06 15.4933 13.5756 16.7822L15.5311 14.8267C15.7711 14.5867 16.1267 14.5067 16.4378 14.6133C17.4333 14.9422 18.5089 15.12 19.6111 15.12C20.1 15.12 20.5 15.52 20.5 16.0089V19.1111C20.5 19.6 20.1 20 19.6111 20C11.2644 20 4.5 13.2356 4.5 4.88889C4.5 4.4 4.9 4 5.38889 4H8.5C8.98889 4 9.38889 4.4 9.38889 4.88889C9.38889 6 9.56667 7.06667 9.89556 8.06222C9.99333 8.37333 9.92222 8.72 9.67333 8.96889L7.71778 10.9244Z" fill="#1D2621"/>
+                                </svg>
+                            <p class="f-tlr c-texto-gris">+<%= perfil.numero_telefono %></p>
+                        </div>
+                        <div class="section-group__dato">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M22.5 6C22.5 4.9 21.6 4 20.5 4H4.5C3.4 4 2.5 4.9 2.5 6V18C2.5 19.1 3.4 20 4.5 20H20.5C21.6 20 22.5 19.1 22.5 18V6ZM20.5 6L12.5 11L4.5 6H20.5ZM20.5 18H4.5V8L12.5 13L20.5 8V18Z" fill="#1D2621"/>
+                                </svg>
+                            <p class="f-tlr c-texto-gris"><%= email %></p>
+                       </div>
+                    </div>
+                    <!-- <button class="btt-2">Editar mi perfil</button> -->
+                </section>
+                <!--SECTION DETALLE MI  PERFIL-->
+                <section class="sectionMiPerfil__detalle br-8 ">
+                    <section  class="sectionMiPerfil__descripcion bg-blanco-1 br-8">
+                        <p class="sectionMiPerfil__parrafo  f-bl c-texto-gris"><%= perfil.sobre_mi %></p>
+                    </section>
+                   
+                    <% mascotas.map((m) => { %>
+                    <section class="sectionMiPerfil__mascota bg-blanco-1 br-8">
+                        <div class="mascota__card ">
+                                <img class="mascota__avatar" src='../images/images_mascotas/<%= m.mascotaid %>/<%= m.imagenes_mascotas[0].url_imagen_mascota %>'  alt="imagen del perl de la mascota">
+                                <div class="mascota__detalle">
+                                    <h4 class="f-hsb c-texto"><%= m.nombre_mascota %></h4>
+                                    <div class="mascota__dato">                                      
+                                        <p  class="f-bmb c-texto-gris " >Raza: <span class="f-bm c-texto-gris " id="mastotaDatoRaza"><%= m.raza %></span></p>
+                                        <p  class="f-bmb c-texto-gris " >Edad: <span class="f-bm c-texto-gris " id="mastotaDatoEdad"><%= m.edad %> años</span></p>
+                                        <p  class="f-bmb c-texto-gris " >Sexo: <span class="f-bm c-texto-gris " id="mastotaDatoSexo"><%= m.genero %></span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div class="mascota__cardDetalle">
+                            <div class="f-bl c-texto-gris"> 
+                                <%= m.info_mascota %>
+                            </div>
+                            <div> 
+                                <p class="f-blb c-texto-gris">Condiciones de salud: <span class="f-bl c-texto-gris"><%= m.condicion %></span></p>
+                            </div>
+                            <div> 
+                                <p class="f-blb c-texto-gris">Alergias:<span class="f-bl c-texto-gris"><%= m.alergias %></span></p>
+                            </div>
+                        </div>
+                    </section>
+                    <% }) %>
+                    
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    
+    <footer class="bg-p-oscuro">
+        <h3 class="f-dsb c-blanco-1">Contacto</h3> 
+        <section class="footer c-blanco-2">
+            <div class="footer-info">
+                <h4 class="f-hsm c-a-dark-mode" >Estamos aquí para ayudarte!</h4>
+                <p class="f-bl">Ponete en contacto con nosotros si tienes alguna pregunta, comentario o sugerencia.</p>
+                <div class="footer-redes">
+                    <a href=""><img src="../images/icons/footer/facebook.svg" alt=""></a>
+                    <a href=""><img src="../images/icons/footer/twitter.svg" alt=""></a>
+                    <a href=""><img src="../images/icons/footer/instagram.svg" alt=""></a>
+                </div>
+                <ul class="footer-contacto ">
+                    <li class="f-bl">
+                        <img src="../images/icons/footer/telefono.svg" alt="">
+                        123 456 789
+                    </li>
+                    <li class="f-bl">
+                        <img src="../images/icons/footer/sobre.svg" alt="">
+                        wasi@info.com
+                    </li>
+                    <li class="f-bl">
+                        <img src="../images/icons/footer/mundo.svg" alt="">
+                        Dirección 123 - Argentina
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-form c-blanco-1">
+                <form action="">
+                    <label class="f-bm" for="">E-mail</label>
+                    <input class="footerEmail br-8 c-texto" type="email" placeholder="email@email.com">
+    
+                    <label class="f-bm" for="">Tu consulta</label>
+                    <textarea class="br-8 c-texto" id="" cols="20" rows="10"></textarea>
+                
+                    <input class="enviar f-tm btt-1" type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+    </footer>
+    <script src="../js/search1.js"></script>
+    <script src="../js/header.js"></script>
+</body>
+
+</html>

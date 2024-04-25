@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/general-style.css">
+        <link rel="stylesheet" href="css/planesYPrecios.css">
+
+        <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="images/icons/w.svg" />
+    
+        <title>Planes y precios</title>
+    </head>
+
+    <body>
+
+        <!-- HEADER -->
+        <% if(login){%>
+            <%- include('partials/headerSesionIniciada.ejs'); -%>
+        <% } else {%>
+            <%- include('partials/header.ejs'); -%> 
+        <% } %>   
+
+        <!-- MAIN -->
+        <main>
+            <section class="planes">
+                <h3 class="f-dsb c-texto">Nuestros planes de suscripción</h3>
+
+                <div class="tiposDePlanes">
+                    <div class="plan clasico bg-blanco-1 br-8">
+                        <h4 class="f-dsb c-texto">Clásico</h4>
+                        <p class="f-blb c-primario">7 días gratis de prueba</p>
+                        <p class="f-ll c-texto-gris">
+                            Los usuarios tienen acceso a un perfil básico donde pueden agregar información sobre sus
+                            mascotas y preferencias de alojamiento.
+                        </p>
+                        <ul class="clasico f-ts c-primario">
+                            <li>Publicación de alojamiento</li>
+                            <li>Búsqueda Avanzada</li>
+                            <li>Central de reservas</li>
+                            <li>Mensajería con usuarios</li>
+                        </ul>
+                        <p class="f-bl c-texto-gris"><span class="f-dsb c-texto">$8.000</span>AR/mes</p>
+                        <button class="btt-1">Suscríbete</button>
+                    </div>
+                    <div class="plan premium bg-p-claro br-8">
+                        <h4 class="f-dsb c-texto">Premium</h4>
+                        <p class="f-blb c-texto">30 días gratis de prueba</p>
+                        <p class="f-ll c-texto-gris">
+                            Los usuarios tienen acceso a un perfil premium donde pueden ser calificados y
+                            recomendados por los propios usuarios.
+                        </p>
+                        <ul class="premium f-ts c-texto-gris">
+                            <li>Publicación de alojamiento</li>
+                            <li>Búsqueda Avanzada</li>
+                            <li>Central de reservas</li>
+                            <li>Mensajería con usuarios</li>
+                            <li>Reseñas por usuarios</li>
+                            <li>Ser usuario recomendado</li>
+                        </ul>
+                        <p class="mes f-bl c-texto-gris"><span class="f-dsb c-texto">$12.000</span>AR/mes</p>
+                        <button class="btt-1">Suscríbete</button>
+                    </div>
+                </div>
+                <div class="descripcion">
+                    <p class="f-bl c-texto-gris">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                        faucibus, leo ac ultricies pulvinar, urna ipsum facilisis mi, sit amet dapibus ligula leo
+                        eget mauris. Quisque auctor ultricies augue, nec bibendum justo tincidunt ac. Vestibulum
+                        ante ipsum primis in faucibus.</p>
+                </div>
+
+            </section>
+        </main>
+
+
+            <!-- FOOTER -->
+            <%- include('partials/footer.ejs'); -%>
+
+    </body>
+
+</html>

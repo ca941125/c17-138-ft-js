@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style -->
+    <link rel="stylesheet" href="../../public/css/reset.css">
+    <link rel="stylesheet" href="../../public/css/general-style.css">
+    <title>Home Wasi</title>
+</head>
+<body>
+    
+    <!-- modelo con sesión iniciada--> 
+    <header>
+        <nav class="nav">
+            <!-- nav bar con logo y quienes somos y planes -->
+            <div class="nav-bar c-fondo">
+                <a href="#"><img src="../../public/images/logo-header.png" alt="logo"></a>
+                <a class="f-tm c-blanco-1" href="">Quiénes somos</a>
+                <a class="f-tm c-blanco-1" href="">Planes y precios</a>
+            </div>
+            <!-- nav bar mobile -->
+            <div class="nav-bar-mobile">
+                <div class="menu-container">
+                    <img src="../../public/images/icons/header/menuDesplegable.svg" alt="Menu desplegable" class="menu-desplegable" id="menu-desplegable">
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <a class="f-hs c-blanco-1" href="#">Quiénes somos</a>
+                      <a class="f-hs c-blanco-1" href="">Planes y precios</a>
+                    </div>
+                </div>
+
+                <div class="logo-perfil">
+                    <img class="logo" src="../../public/images/logo-header.png" alt="">
+                </div>
+            </div>
+            <!-- sesion iniciada desktop -->
+           <div class="nav-icon">
+                <a href=""><img class="icon" src="../../public/images/icons/header/state-layer.svg" alt=""></a>
+                <a href=""><img class="icon" src="../../public/images/icons/header/container.svg" alt=""></a>
+                <div class="menu-container">
+                    <img src="../../public/images/usuarios/usuario-1/perfil_usuario_1.jpg" alt="Imagen de perfil" class="profile-image" id="profile-image">
+                    <div class="dropdown-perfil" id="dropdown-perfil">
+                      <a class="f-hs c-blanco-1" href="#">Iniciar Sesión</a>
+                      <a class="f-hs c-blanco-1" href="#">Mi Perfil</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script src="../../public/js/header.js"></script>
+</body>
+</html>

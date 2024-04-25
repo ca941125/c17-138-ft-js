@@ -1,0 +1,71 @@
+
+/* -------------------------------------------- */
+/* BOTTON STYLE */
+/* -------------------------------------------- */
+button{
+    cursor: pointer;
+}
+/* boton principal  */
+
+.btt-1{
+    color: var(--blanco-1);
+    background-color: var(--acento);
+    border-radius: 8px;
+    padding: 4px;
+    height: 48px;
+}
+.btt-1:hover{
+    box-shadow: 0px 4px 4px 0px #00000040;
+    transition: .3s;
+}
+
+.btt-1:disabled{
+    background: #C2C2C2;
+    box-shadow: none;
+    cursor:default;
+}
+
+/* boton secundario */
+
+.btt-2{
+    color: var(--acento-dark-mode);
+    background-color: none;
+    border: 2px solid var(--acento-dark-mode);
+    border-radius: 8px;
+    padding: 4px;
+    height: 48px;
+}
+.btt-2:hover{
+    box-shadow: 0px 4px 4px 0px #00000040;
+    background-color: #F4670133;
+    transition: .3s;
+}
+.btt-2:disabled{
+    border: 2px solid  #C2C2C2;
+    background: none;
+    color: #C2C2C2;
+    box-shadow: none;
+    cursor:default;
+}
+
+/* boton terciario */
+.btt-3{
+    color: var(--acento);
+    background-color: none;
+    border: 2px solid var(--acento);
+    border-radius: 8px;
+    padding: 4px;
+    height: 48px;
+}
+.btt-3:hover{
+    box-shadow: 0px 4px 4px 0px #00000040;
+    background-color: #F4670133;
+    transition: .3s;
+}
+.btt-3:disabled{
+    border: 2px solid  #C2C2C2;
+    background: none;
+    color: #C2C2C2;
+    box-shadow: none;
+    cursor:default;
+}

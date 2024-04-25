@@ -1,11 +1,10 @@
 @import url(colores.css);
 @import url(fuentes.css);
+@import url(search.css);
+@import url(botones.css);
 
 /*
-BORDER RADIUS
-BOTTON STYLE
- -boton principal
- -boton secundario
+
 GENERAL STYLE
 HEADER
 FOOTER
@@ -17,33 +16,6 @@ FOOTER
 
 .br-8{
     border-radius: 8px;
-}
-
-/* -------------------------------------------- */
-/* BOTTON STYLE */
-/* -------------------------------------------- */
-
-/* boton principal  */
-
-.btt-1{
-    color: var(--blanco-1);
-    background-color: var(--acento);
-    border-radius: 8px;
-    padding: 4px;
-    height: 48px;
-    width: 164px;
-}
-
-/* boton secundario */
-
-.btt-2{
-    color: var(--acento-dark-mode);
-    background-color: none;
-    border: 2px solid var(--acento-dark-mode);
-    border-radius: 8px;
-    padding: 4px;
-    height: 48px;
-    width: 164px;
 }
 
 /* -------------------------------------------- */
@@ -60,16 +32,16 @@ body {
 
 header{
     width: 100%;
-    margin: 20px auto;
+    padding: 24px;
 }
-
+/* sin iniciar sesión */
 header nav{
-    width: 80%;
+    max-width: 1128px;
     height: 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px auto;
+    margin: 0 auto;
     padding: 0 24px 0 24px;
     border-radius: 8px;
     background-color: var(--primario-oscuro);
@@ -77,62 +49,140 @@ header nav{
 header nav .nav-bar{
     display: flex;
     align-items: center;
+    gap: 16px;
 }
-header nav a{
+header nav .nav-bar a{
     padding: 0 8px 0 8px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of c06b16c (modifique el camino a la imagen del logo del header, agregue logo nuevo y elimine el logo anterior)
-=======
->>>>>>> parent of c06b16c (modifique el camino a la imagen del logo del header, agregue logo nuevo y elimine el logo anterior)
-header nav .nav-bar img{
-    width: 80px;
+header nav .nav-bar a:hover{
+    color: var(--acento-dark-mode);
 }
->>>>>>> parent of c06b16c (modifique el camino a la imagen del logo del header, agregue logo nuevo y elimine el logo anterior)
+.nav-bar-mobile{
+    display: none;
+}
+
 header nav .nav-button{
     width: 291px;
     display: flex;
     justify-content: space-between;
 }
+header nav .nav-button button{
+    width: 141px;
+}
+/* con sesión iniciada */
+header nav .nav-icon{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav .nav-icon a{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+header nav .nav-icon .icon {
+    width: 40px;
+    height: 40px;
+}
+header nav .nav-icon .profile-image{
+    border-radius: 50%;
+    width: 48px;
+}
+
+
+header nav .menu-container {
+    position: relative;
+    display: inline-block;
+}
+header nav .menu-container .dropdown-perfil a{
+    width: 100%;
+}
+header nav .menu-container .dropdown-perfil {
+    display: none;
+    position: absolute;
+    top: 125%;
+    right: -24px;
+    background-color: var(--blanco-1);
+    min-width: 170px;
+    z-index: 1;
+}
+header nav .menu-container .dropdown-perfil a {
+    display: block;
+    padding: 16px 0px 8px 8px;
+    text-decoration: none;
+    color: black;
+    width: 75%;
+    height: auto;
+}
+header nav .menu-container .dropdown-perfil a:hover {
+    background-color: #f1f1f1;
+}
+
+header nav .menu-desplegable{
+    width: 48px;
+}
+
+
+header nav .menu-container .dropdown-menu a{
+    width: 100%;
+}
+header nav .menu-container .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 125%;
+    right: -100px;
+    background-color: var(--blanco-1);
+    min-width: 170px;
+    z-index: 1;
+}
+header nav .menu-container .dropdown-menu a {
+    display: block;
+    padding: 16px 0px 8px 8px;
+    text-decoration: none;
+    color: black;
+    width: 75%;
+}
+header nav .menu-container .dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
 
 /* -------------------------------------------- */
 /* FOOTER STYLE */
 /* -------------------------------------------- */
 
 footer{
-    padding: 24px 0 64px 0;
     width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 24px 0 64px 0;
+    gap: 48px;
 }
-footer section{
-    width: 80%;
+footer .footer{
+    max-width: 1128px;
     display: flex;
     justify-content: center;
-    margin: 20px;
+    gap: 48px;
+    margin: 0 24px;
 }
 footer .footer-info{
-    padding: 0 30px;
-    width: 35%;
+    max-width: 360px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 8px;
 }
-
 footer .footer-redes{
     padding-left: 10px ;
 }
 footer .footer-redes img{
     margin: 20px 35px 20px 0;
 }
-
 footer .footer-contacto {
     padding-left: 10px;
     display: flex;
@@ -150,14 +200,12 @@ footer .footer-contacto li{
     align-items: center;
 }
 footer .footer-form{
-    padding: 0 30px;
-    width: 35%;
+    width: 360px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 8px;
 }
 footer form{
-    width: 100%;
     display: flex;
     flex-direction:column;
 }
@@ -176,4 +224,55 @@ footer textarea{
 footer .enviar{
     width: 100%;
     margin-top: 10px;
+}
+
+/* MEDIA QUERIES */
+/* Tablet */
+@media only screen and (max-width:768px) {
+    /* HEADER */
+    header nav .nav-bar{
+        gap: 0px;
+    }
+    header nav .nav-bar a {
+        padding: 0 4px 0 4px;
+    }
+    /* FOOTER */
+    footer .footer{
+        flex-direction: column;
+    }
+}
+/* Celular */
+@media only screen and (max-width: 650px){
+    /* HEADER */
+    header nav{
+        width: 100%;
+        flex-direction: row;
+    }
+    /* desaparezco los elementos del header desktop */
+    .nav .nav-bar{
+        display: none;
+    }
+    .nav .nav-button{
+        display: none;
+    }
+    /* muestro el nav mobile */
+    .nav .nav-bar-mobile{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    /* menu desplegable */
+
+    .logo-perfil{
+       width: 90%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+    }
+    .logo-perfil .logo{
+       width: 100px;
+    }
+    .logo-perfil .perfil{
+       width: 48px;
+    }
 }

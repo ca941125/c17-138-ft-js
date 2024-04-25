@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general-style.css">
+    <link rel="stylesheet" href="css/resultadosBusqueda.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="images/icons/w.svg" />
+    
+    <title>Resultados Búsquedas</title>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <% if(login){%>
+        <%- include('partials/headerSesionIniciada.ejs'); -%>
+    <% } else {%>
+        <%- include('partials/header.ejs'); -%> 
+    <% } %>   
+    
+<main>
+    <!-- SEARCH -->
+    <%- include('partials/search.ejs'); -%>
+
+    <!-- RECOMENDADOS PARA TI -->
+
+    <section class="recomendadosParaTi bg-fondo">
+        <h3 class="f-dsb c-texto">Resultados de tu búsqueda</h3>
+        
+        <!-- CONTENEDOR BUSCADOR Y CARDS -->
+        <div class="buscadorPerfiles">
+            <!-- BUSCADOR -->
+            <aside class="buscador">
+                <div class="filtro bg-blanco-1 br-8">
+                    <img src="images/icons/filtros.svg" alt="">
+                    <form action="" class="bg-blanco-1">
+                        <select name="" id="" class="bg-blanco-1 f-bl c-texto" placeholder="Ordenar" >
+                            <option value="">Ordenar</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </form>
+                </div>
+                <div class="resultadosBusqueda">
+                    <div class="resultados">
+                        <h4 class=" f-hsb c-texto">Mascotas</h4>
+
+                        <div class="itemsMascotas">
+                            <p class="f-bl c-texto-gris">Perros (<span id="perro"></span>)</p>
+                            <p class="f-bl c-texto-gris">Gatos (<span id="gato"></span>)</p>
+                        </div>
+                    </div>
+                    <div class="resultados">
+                        <h4 class=" f-hsb c-texto">Alojamiento</h4>
+
+                        <div class="itemsAlojamientos">
+                            <p class="f-bl c-texto-gris">Casa (<span id="casa"></span>)</p>
+                            <p class="f-bl c-texto-gris">Departamento (<span id="departamento"></span>)</p>
+                        </div>
+                    </div>
+                    <div class="resultados">
+                        <h4 class=" f-hsb c-texto">Aire libre</h4>
+
+                        <div class="itemsAireLibre">
+                            <p class="f-bl c-texto-gris">Patio (<span id="patio"></span>)</p>
+                            <p class="f-bl c-texto-gris">Jardin (<span id="jardin"></span>)</p>
+                        </div>
+                    </div>
+                    <div class="resultados">
+                        <h4 class=" f-hsb c-texto">Seguridad</h4>
+
+                        <div class="itemsMascotas">
+                            <p class="f-bl c-texto-gris">Cercado (<span id="cercado">4</span>)</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <div id="cards" class="cards">
+                <% alojamientos.map((alojamientos) => { %>
+
+                    <div class="paraTiCard bg-blanco-1 br-8">
+                        <div class="imgCard br-8">
+                            <img src="images/images_perfil/<%= alojamientos.usuarioid %>/<%= alojamientos.foto_url %>" alt="">
+                        </div>
+                        <div class="cuerpoCard">
+                            <div class="esp">
+                                <div class="nombreCard">
+                                    <div>
+                                        <p class="f-hsb" ><%= alojamientos.nombres %> <br><%= alojamientos.apellidos %></p>
+                                        <p class="f-bm"><%= alojamientos.ciudad %>, <%= alojamientos.provincia %></p>
+                                    </div>
+                                    <div class="clasif">
+                                        <img src="images/icons/estrella.svg" alt="">
+                                        <span class="f-bm">5.0</span>
+                                    </div>
+                                </div>
+                                <div class="iconosCard">
+                                    <div class="iconText">
+                                        <% if(alojamientos.mascotas[0].tipo_mascota === 'Perro') {%>
+                                            <img src="images/icons/perro-verde.svg" alt="">
+                                        <% } else {%>
+                                            <img src="images/icons/gato-verde.svg" alt="">
+                                        <% } %>    
+                                        <p class="f-bm c-primario"><%= alojamientos.mascotas.length %> <%= alojamientos.mascotas[0].tipo_mascota %></p>
+                                    </div>
+                                    <div class="iconText">
+                                        <% if(alojamientos.tipo_alojamiento === 'Casa') {%>
+                                            <img src="images/icons/casa-verde.svg" alt="">
+                                        <%} else {%>
+                                            <img src="images/icons/edificio-verde.svg" alt="">
+                                        <% } %>    
+                                        <p class="f-bm c-primario"><%= alojamientos.tipo_alojamiento %></p>
+                                    </div>
+                                    <div class="iconText">
+                                        <% if(alojamientos.aire_libre === 'Jardin' || alojamientos.aire_libre === 'Patio') {%>
+                                            <img src="images/icons/jardin-verde.svg" alt="">
+                                            <p class="f-bm c-primario"><%= alojamientos.aire_libre %></p>
+                                        <%} else if(alojamientos.parque_cerca === 'Si'){%>
+                                            <img src="images/icons/plaza-cerca-verde.svg" alt="">  
+                                            <p class="f-bm c-primario">Parque <br>cerca</p>                               
+                                        <% } %>
+                                        
+                                    </div>
+                                    
+                                        
+                                    <% if(alojamientos.cercado === 'Si') { %>
+                                        <div class="iconText">
+                                            <img src="images/icons/cerco-verde.svg" alt="">
+                                            <p class="f-bm c-primario">Cercado</p>
+                                        </div>    
+                                    <% } %>
+                                             
+                                    
+                                </div>
+                                <p class="f-bm c-texto-gris" >
+                                    <%= alojamientos.resumen_card %>
+                                </p>
+                            </div>
+                            <div class="precioCard">
+                                <div class="izq">
+                                    <span class="f-tlb">$<%= alojamientos.costo_alojamiento %></span>
+                                    <p class="f-ll"><%= alojamientos.moneda %>/noche</p>
+                                </div>
+                                <div class="der">
+                                    <button class="btt-1"><a href="/alojamientos/<%= alojamientos.usuarioid %>">Entrar</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <% }) %>
+            </div>
+        </div>   
+        
+        <!-- PAGINACIÓN -->
+        <div class="paginas">
+            <div class="cargarMas">
+                <button id="cargarMas" class="btt-3">Cargar más...</button>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs'); -%>
+
+    <script src="js/search.js"></script>
+    <script src="js/resultadoBusqueda.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<header>
+    <% if(typeof index !=='undefined' ){ %>
+        <nav class="nav bg-oscuro80">
+    <% } else { %>
+        <nav class="nav">
+    <% } %>    
+        <!-- nav bar con logo y quienes somos y planes -->
+        <div class="nav-bar c-fondo">
+            <a href="/"><img src="images/logo-header.png" alt="logo"></a>
+            <a class="f-tm c-blanco-1" href="/quienes-somos">Quiénes somos</a>
+            <a class="f-tm c-blanco-1" href="/planes-y-precios">Planes y precios</a>
+        </div>
+        <!-- nav bar mobile -->
+        <div class="nav-bar-mobile">
+            <div class="menu-container">
+                <img src="images/icons/header/menuDesplegable.svg" alt="Menu desplegable" class="menu-desplegable" id="menu-desplegable">
+                <div class="dropdown-menu" id="dropdown-menu">
+                  <a class="f-hs c-blanco-1" href="/quienes-somos">Quiénes somos</a>
+                  <a class="f-hs c-blanco-1" href="/planes-y-precios">Planes y precios</a>
+                </div>
+            </div>
+
+            <div class="logo-perfil">
+                <a href="/"><img class="logo" src="images/logo-header.png" alt=""></a>
+            </div>
+        </div>
+        <!-- sesion iniciada desktop -->
+       <div class="nav-icon">
+            <a href=""><img class="icon" src="images/icons/header/state-layer.svg" alt=""></a>
+            <a href=""><img class="icon" src="images/icons/header/container.svg" alt=""></a>
+            <div class="menu-container">
+                <img src="images/images_perfil/<%= id %>/<%= usuarioSesion.foto_url %>" alt="Imagen de perfil" class="profile-image" id="profile-image">
+                <div class="dropdown-perfil" id="dropdown-perfil">
+                  <a class="f-hs c-blanco-1" href="/logout">Cerrar Sesión</a>
+                  <a class="f-hs c-blanco-1" href="/mi-perfil">Mi Perfil</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
