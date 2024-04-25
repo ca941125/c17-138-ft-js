@@ -25,14 +25,11 @@ body {
    gap:24px;
    width: 100%;
    max-width: 1128px;
-    margin: 0 auto;
+   margin: 0 auto;
 
  }
 
-  form h3{
-   text-align: left;
-   width: 80%;
- }
+
 
  .miPerfil{
    width:35%;
@@ -45,10 +42,10 @@ body {
  
 
  .miPerfil__avatar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 80%;
  }
  .miPerfil__avatar {
    text-align: center;
@@ -167,20 +164,28 @@ align-items: center;
 }
  /*ESTILOS A LOS BOTONES */
 
+.title__btn{
+
+padding-left:24px;
+ }
+
 .formularioBoton-btn{
    display:flex;
-   gap: 8px;
-   width: 80%;
+   width: 100%;
    background-color: var(--blanco-1);
    align-items: center;
    max-width: 1128px;
-   padding: 24px;
-   
+   justify-content: space-between;
+   height: 104px;
+}
+.formularioPerfil .formularioBoton-btn{
+   justify-content: flex-end;
 }
 .block-btn{
    display: flex;
    gap:8px;
    justify-content:flex-end;
+   padding: 0 24px;
 }
 
 .btt-3--blanco{
@@ -219,8 +224,7 @@ align-items: center;
  }
  .mascota__card{
   min-height: 410px;
-  width:264px
-  ;
+  width:264px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -273,9 +277,7 @@ flex-direction: row;
    padding: 24px 0 24px;
 
 }
-.miPerfil__ubicacion .formularioBoton-btn{
-   padding: 0;
- }
+
 
 .form-group__textarea {
 
@@ -306,12 +308,13 @@ flex-direction: row;
       flex-wrap: wrap;
   }
 
- 
-
-
-
+.miPerfil__ubicacion .formularioBoton-btn{
+   padding: 0;
+ }
 
 }
+
+
 @media only screen and (max-width: 507px){
 
    .avatar-label {
@@ -368,6 +371,10 @@ flex-direction: row;
 .formularioBoton-btn {
    flex-direction: column;
    align-items: center;
+   padding: 24px 0 24px 0;
+        height: auto;
+        gap: 8px;
+    
 }
 .formularioBoton-btn .block-btn {
    width: 100%
@@ -377,13 +384,5 @@ flex-direction: row;
    padding: 24px 0 0 0;
  }
 
-.block-btn {
-   align-items: center;
-   justify-content: center;
-
-
 }
 
-
-
-}
