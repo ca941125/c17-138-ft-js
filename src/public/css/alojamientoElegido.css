@@ -135,6 +135,7 @@ h3{
   gap:24px;
 } 
 .miPerfil{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,8 +144,10 @@ h3{
 }
 .miPerfil__foto{
   border-radius: 50%;
-  min-width: 240px;
   object-fit: cover;
+}
+.miPerfil img{
+    width: 80%;
 }
 .section-group{
   display: flex;
