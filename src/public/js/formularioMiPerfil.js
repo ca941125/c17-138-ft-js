@@ -20,27 +20,6 @@ function searchApi() {
         })
 }
 
-window.onbeforeunload = function() {
-    swal.fire({
-        title: "Aviso",
-        text: "Esta seguro que desea salir?",
-        type: "warning",
-        showCancelButton: true,
-        confirmButtonClass: "btn-danger",
-        confirmButtonText: "Salir",
-        cancelButtonText: "Cancelar",
-        closeOnConfirm: false,
-        closeOnCancel: false
-      },
-      function(isConfirm) {
-        if (isConfirm) {
-          location.href ="http://www.pagina1.com";
-        } else {
-          swal("Cancelado", "Usted esta aqui", "error");
-        }
-      });
-}
-
 
 searchApi()
 
