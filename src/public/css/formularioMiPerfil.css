@@ -26,6 +26,9 @@ body {
    width: 80%;
  }
 
+  section h3{
+   text-align: left;
+ }
 
  .miPerfil{
    width:35%;
@@ -256,6 +259,7 @@ flex-direction: row;
 @media only screen and (max-width: 1127px) {
 
 }
+
 @media only screen and (max-width:767px) {
    .avatar-label {
      
@@ -269,7 +273,6 @@ flex-direction: row;
   }
   .miPerfil__ubicacion {
    width: 50%;
-   height: auto;
    padding: 24px 0 24px;
 
 }
