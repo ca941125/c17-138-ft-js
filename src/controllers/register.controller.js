@@ -45,8 +45,9 @@ export const postRegister = async (req, res) => {
     
     let passwordHaash = await bcryptjs.hash(body.pass_user, 8)
 
-        
-        const verifiEmail = await client.sql`SELECT usuarioid FROM usuarios WHERE correo_electronico = ${body.email_user};`;
+        try {
+          
+          const verifiEmail = await client.sql`SELECT usuarioid FROM usuarios WHERE correo_electronico = ${body.email_user};`;
         console.log(verifiEmail.rowCount)
         if(verifiEmail.rowCount === 0){
         
@@ -248,7 +249,7 @@ export const postRegister = async (req, res) => {
                 })
                 .finally(() => {
                   // Cerrar la conexión a la base de datos
-                  client.end();
+                  
                 });      
     
         }   
@@ -315,7 +316,7 @@ export const postRegister = async (req, res) => {
               })
               .finally(() => {
                 // Cerrar la conexión a la base de datos
-                client.end();
+                
               });      
   
       }  
@@ -381,7 +382,7 @@ export const postRegister = async (req, res) => {
             })
             .finally(() => {
               // Cerrar la conexión a la base de datos
-              client.end();
+             
             });      
 
     }  
@@ -447,15 +448,29 @@ export const postRegister = async (req, res) => {
           })
           .finally(() => {
             // Cerrar la conexión a la base de datos
-            client.end();
+            
           });      
 
     }  
-
-     res.send({msg: 'correcto', ruta: '/login'}) 
+    client.end();
+     res.send({
+      msg: "correcto", 
+      ruta: "/login"
+      }) 
   } else {
-      res.send({msg: 'email', ruta: ''}) 
+    client.end();
+      res.send({
+        msg: "email", 
+        ruta: ""
+      }) 
   }
+
+        } catch (error) {
+          
+          return res.status(500).json({error});
+
+        }
+        
         
   
     

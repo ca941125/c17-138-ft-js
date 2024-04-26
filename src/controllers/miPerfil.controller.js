@@ -38,5 +38,27 @@ export const getMiPerfil = async (req, res) => {
     }
 
 }
+
+export const getMisChats = async (req, res) => {
+    const id = req.signedCookies['idUser']
+    
+    if(req.signedCookies['loggedin']){
+        const usuarioSesion = {
+            nombres: req.signedCookies['nombres'],
+            apellidos: req.signedCookies['apellidos'],
+            foto_url: req.signedCookies['foto_url'] 
+        }
+
+        res.render('misChats', {
+         login: true,
+         id: req.signedCookies['idUser'],
+         usuarioSesion
+        })
+    } else {
+        res.redirect('/')        
+    }
+
+}
+    
     
 

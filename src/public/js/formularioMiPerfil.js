@@ -114,7 +114,7 @@ document.getElementById('submit').addEventListener('click', () => {
 })
 
 function postFetch() {
-    const url = '/register';
+    
     /* let body = {
         user,
         mascotas,
@@ -148,14 +148,19 @@ function postFetch() {
             m++
         })
 
+    let url = "/register"
     var request = new Request(url, {
         method: 'POST',
         body: fd,
-        
+        headers: {
+            /* "Content-Type": "multipart/form-data", */
+            /* "Content-Type": "application/x-www-form-urlencoded", */
+        }, 
     });
     fetch(request)
     .then(response => response.json())
     .then( (data) => {
+        console.log(data)
         if(data.msg === 'correcto'){
 
             Swal.fire({
@@ -176,7 +181,9 @@ function postFetch() {
                 })
         }
         
-
+        if(data.error){
+            console.log(data.error)
+        }
     
     })
 }

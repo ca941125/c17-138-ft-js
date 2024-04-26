@@ -1,10 +1,12 @@
 import {Router} from 'express'
-import {getMiPerfil} from '../controllers/miPerfil.controller.js'
+import {getMiPerfil, getMisChats} from '../controllers/miPerfil.controller.js'
 import { putEditarMiPerfil, getEditarMiPerfil, postEditarMiPerfil } from '../controllers/editarMiPerfil.controller.js'
 
 const router = Router()
 
 router.get('/mi-perfil', getMiPerfil)
+
+router.get('/mis-chats', getMisChats)   
 
 router.post('/', )
 

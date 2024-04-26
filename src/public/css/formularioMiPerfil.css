@@ -1,17 +1,15 @@
 @import url(colores.css);
 @import url(fuentes.css);
-
 html{
    background-color: var(--fondo);
 }
-
 body {
     display:flex;
     flex-direction: column;
     min-height: 100vh;
 }
  main{
-     grid-row: 1;
+    flex-grow:  1;
      background-color: var(--fondo) ;
      display: flex;
      flex-direction: column;
@@ -27,8 +25,12 @@ body {
    flex-direction: row;
    justify-content: center;
    gap:24px;
-   width: 80%;
+   width: 100%;
+   max-width: 1128px;
+   margin: 0 auto;
+
  }
+
 
 
  .miPerfil{
@@ -38,14 +40,15 @@ body {
    flex-direction: column;
    justify-content: space-evenly;
    align-items: center;
+   padding: 24px;
  }
  
 
  .miPerfil__avatar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 80%;
  }
  .miPerfil__avatar {
    text-align: center;
@@ -81,7 +84,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 80px;
-    width: 80%;
+    width: 100%;
 }
 
 .form-group__label{
@@ -92,6 +95,7 @@ body {
 width: 100%;
 height: 48px;
 border:1px solid #7AA088;
+padding: 0 0 0 16px;
 
 }
 .form-group__password-box{
@@ -100,6 +104,7 @@ height: 48px;
 border:1px solid #7AA088;
 display:flex;
 align-items: center;
+padding: 0 0 0 16px;
 }
 .form-group__password-box input{
    width: 100%;
@@ -119,12 +124,13 @@ align-items: center;
     flex-direction: column;
     justify-content:space-evenly;
     align-items: center;
+    padding: 24px;
     
  }
  
 
  .miPerfil__ubicacion-group{
-   width:80% ;
+   width:100% ;
    height: 120px;
     display: flex;
     flex-direction: column;
@@ -141,7 +147,7 @@ align-items: center;
 
  }
  .miPerfil__ubicacionTexarea{
-   width:80% ;
+   width:100% ;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -163,34 +169,31 @@ align-items: center;
   padding:4px 0 ;
 }
  /*ESTILOS A LOS BOTONES */
-.formularioBoton{
-   height: 104px;
-   width: 80%;
-   padding: 0 32px 0 32px;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   background-color: var(--blanco-1);
-   align-items: center;
-}
-.formularioBoton--transparente{
- background-color: transparent;
-}
+
+.title__btn{
+
+padding-left:24px;
+ }
+
 .formularioBoton-btn{
    display:flex;
-   gap: 8px;
-   width: 80%;
+   width: 100%;
    background-color: var(--blanco-1);
    align-items: center;
-   padding: 24px 32px 24px 32px;
-   margin-bottom: 48px;
-   
+   max-width: 1128px;
+   justify-content: space-between;
+   height: 104px;
+   margin-bottom: 40px;
+   padding-left: 24px;
+}
+.formularioPerfil .formularioBoton-btn{
+   justify-content: flex-end;
 }
 .block-btn{
-   width: 100%;
    display: flex;
    gap:8px;
    justify-content:flex-end;
+   padding: 0 24px;
 }
 
 .btt-3--blanco{
@@ -215,6 +218,9 @@ align-items: center;
 .btt-198 .btt-198{
    width: 198px;
 }
+.miPerfil__ubicacionTexarea h3{
+   padding-left: 24px;
+}
 
  /*ESTILO A LOS CARD RESUMEN */
 
@@ -226,11 +232,11 @@ align-items: center;
     gap:24px;
     width: 80%;
    margin-bottom: 24px;
+   flex-wrap: wrap;
  }
  .mascota__card{
   min-height: 410px;
-  width:264px
-  ;
+  width:264px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -241,13 +247,6 @@ align-items: center;
    border-radius: 50%;
    height: 130px;
    width: 134px;
-   object-fit: cover;
-   object-position: center;
- }
- .mascota__avatar1{
-   border-radius: 50%;
-   height: 100%;
-   width: 100%;
    object-fit: cover;
    object-position: center;
  }
@@ -267,7 +266,13 @@ flex-direction: row;
 
 @media only screen and (max-width: 1127px) {
 
+   .formularioPerfil{
+
+ padding: 24px;
+    }
+
 }
+
 @media only screen and (max-width:767px) {
    .avatar-label {
      
@@ -281,17 +286,13 @@ flex-direction: row;
   }
   .miPerfil__ubicacion {
    width: 50%;
-   height: auto;
-   padding: 24px 0 24px;
+ 
 
 }
-.miPerfil__ubicacion .formularioBoton-btn{
-   padding: 0;
- }
+
 
 .form-group__textarea {
-
-   height: 30vh;
+   height: 200px;
 
 }
 
@@ -318,12 +319,19 @@ flex-direction: row;
       flex-wrap: wrap;
   }
 
- 
+.miPerfil__ubicacion .formularioBoton-btn{
+   padding: 0;
+ }
 
+ .miPerfil__ubicacion .block-btn {
 
-
+   flex-direction: column;
+   
+}
 
 }
+
+
 @media only screen and (max-width: 507px){
 
    .avatar-label {
@@ -355,23 +363,29 @@ flex-direction: row;
    gap: 8px;
  }
  .miPerfil__ubicacion-group{
-   width: 80%;
+   width: 100%;
    height: 200px;
+   padding: 0 24px 0 24px;
  }
  .form-group__fila .form-group{
    width: 100%;
 
  }
+
+ .miPerfil .form-group{
+   padding: 0 24px 0 24px;
+ }
  
  .form-group__textarea {
-   height: 40vh;
+   height: 400px;
+}
+
+.miPerfil__ubicacionTexarea-subgroup {
+
+   padding: 0 24px 0 24px;
 }
 
 
-.formularioBoton {
-   flex-direction: column;
-   justify-content: center;
-}
 
 .card-container {
    flex-direction: column;
@@ -384,22 +398,20 @@ flex-direction: row;
 .formularioBoton-btn {
    flex-direction: column;
    align-items: center;
+   padding: 24px 0 24px 0;
+        height: auto;
+        gap: 8px;
+    
 }
 .formularioBoton-btn .block-btn {
-   width: 100%
+   width: 100%;
+   flex-direction: row;
+    
 }
 
 .miPerfil__ubicacion .formularioBoton-btn{
    padding: 24px 0 0 0;
  }
 
-.block-btn {
-   align-items: center;
-   justify-content: center;
-
-
 }
 
-
-
-}

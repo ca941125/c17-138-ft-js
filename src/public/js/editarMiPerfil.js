@@ -80,9 +80,8 @@ let mascotas = []
         setTimeout(function () {
             document.getElementById('opcionCiudad').value = data.perfil.ciudad
         }, 500)
-        
+        let n = 0
         data.mascotas.map( (m) => {
-
             document.getElementById('cardMascotas'). innerHTML += `
                 <article class="mascota__card bg-blanco-1 br-8">
                     <img class="mascota__avatar" src="../images/images_mascotas/${m.mascotaid}/${m.imagenes_mascotas[0].url_imagen_mascota}"  alt="imagen del perl de la mascota">
@@ -101,20 +100,20 @@ let mascotas = []
                             <p  class="f-bm c-texto-gris " id="mastotaDatoSexo">${m.genero}</p>
                         </section>
                     </div>
-                    <button class="btt-3" onclick="editarCard(${m.mascotaid})">Editar</button>
+                    <button class="btt-3" onclick="editarCard(${n})">Editar</button>
                     </article> 
             `
-
+            n++
         })  
             document.getElementById('cardMascotas'). innerHTML += `        
                     <!-- CARD DEFAULT -->
-                    <article class="mascota__card bg-blanco-1 br-8" style="display: none;">
-                    <button id="btn__agregarMascota">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" viewBox="0 0 65 64" fill="none">
-                            <path d="M32.5 0C14.827 0 0.5 14.327 0.5 32C0.5 49.674 14.827 64 32.5 64C50.174 64 64.5 49.674 64.5 32C64.5 14.327 50.174 0 32.5 0ZM32.5 60.063C17.061 60.063 4.5 47.439 4.5 31.9999C4.5 16.5609 17.061 3.99988 32.5 3.99988C47.939 3.99988 60.5 16.5609 60.5 31.9999C60.5 47.4388 47.939 60.063 32.5 60.063ZM46.5 30H34.5V18C34.5 16.896 33.604 16 32.5 16C31.396 16 30.5 16.896 30.5 18V30H18.5C17.396 30 16.5 30.896 16.5 32C16.5 33.104 17.396 34 18.5 34H30.5V46C30.5 47.104 31.396 48 32.5 48C33.604 48 34.5 47.104 34.5 46V34H46.5C47.604 34 48.5 33.104 48.5 32C48.5 30.896 47.604 30 46.5 30Z" fill="#1D2621"/>
-                            </svg>
-                    </button>
-                </article>
+                    <article class="mascota__card bg-blanco-1 br-8" >
+                <button id="agregarMascota" onclick="agregarMascota()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" viewBox="0 0 65 64" fill="none">
+                        <path d="M32.5 0C14.827 0 0.5 14.327 0.5 32C0.5 49.674 14.827 64 32.5 64C50.174 64 64.5 49.674 64.5 32C64.5 14.327 50.174 0 32.5 0ZM32.5 60.063C17.061 60.063 4.5 47.439 4.5 31.9999C4.5 16.5609 17.061 3.99988 32.5 3.99988C47.939 3.99988 60.5 16.5609 60.5 31.9999C60.5 47.4388 47.939 60.063 32.5 60.063ZM46.5 30H34.5V18C34.5 16.896 33.604 16 32.5 16C31.396 16 30.5 16.896 30.5 18V30H18.5C17.396 30 16.5 30.896 16.5 32C16.5 33.104 17.396 34 18.5 34H30.5V46C30.5 47.104 31.396 48 32.5 48C33.604 48 34.5 47.104 34.5 46V34H46.5C47.604 34 48.5 33.104 48.5 32C48.5 30.896 47.604 30 46.5 30Z" fill="#1D2621"/>
+                        </svg>
+                </button>
+            </article>
 
             `  
     })
@@ -180,6 +179,37 @@ document.getElementById('guardarMascota').addEventListener('click', () => {
 
 })
 
+function editarCard(id){
+    for(let i = 0; i < mascotas.length; i++){
+        if(mascotas[i].id_mascota === id){
+            document.getElementById('formularioMiMascota').removeAttribute('style')
+            document.getElementById('svg').setAttribute('style', 'display: none')
+            document.getElementById('guardarMascota').setAttribute('style', 'display: none')
+            document.getElementById('eliminarDatos').removeAttribute('style')
+            document.getElementById('agregarMascota').removeAttribute('onclick')
+            document.getElementById('eliminarDatos').setAttribute('onclick', `eliminarCard(${mascotas[i].id_mascota})`)
+            document.getElementById('editarDatos').removeAttribute('style')
+            document.getElementById('editarDatos').setAttribute('onclick', `updateCard(${mascotas[i].id_mascota})`)
+            if(mascotas[i].foto_url){
+                document.getElementById('img').setAttribute('src', `${mascotas[i].foto_url}`)
+            } else {
+                document.getElementById('img').setAttribute('src', `../images/images_mascotas/${mascotas[i].mascotaid}/${mascotas[i].imagenes_mascotas[0].url_imagen_mascota}`)
+            }
+            
+            /* document.getElementById('foto-mascota').value = mascotas[i].foto_mascota */
+            document.getElementById('nombreMascota').value = mascotas[i].nombre_mascota
+            document.getElementById('raza').value = mascotas[i].raza
+            document.getElementById('sexo').value = mascotas[i].genero
+            document.getElementById('edad').value = mascotas[i].edad
+            document.getElementById('salud').value = mascotas[i].condicion
+            document.getElementById('alergia').value = mascotas[i].alergias
+            document.getElementById('sobreMiMascota').value = mascotas[i].info_mascota
+        }
+    }
+
+    
+}
+
 
 function updateCard(id){
     let k = 0
@@ -207,12 +237,12 @@ function updateCard(id){
                 mascotas[i].foto_url = objectURL
             }          
             mascotas[i].nombre_mascota = document.getElementById('nombreMascota').value 
-            mascotas[i].raza_mascota = document.getElementById('raza').value
-            mascotas[i].sexo_mascota = document.getElementById('sexo').value
-            mascotas[i].edad_mascota = document.getElementById('edad').value
-            mascotas[i].condicion_mascota = document.getElementById('salud').value
-            mascotas[i].alergia_mascota = document.getElementById('alergia').value
-            mascotas[i].sobre_mascota = document.getElementById('sobreMiMascota').value
+            mascotas[i].raza = document.getElementById('raza').value
+            mascotas[i].genero = document.getElementById('sexo').value
+            mascotas[i].edad = document.getElementById('edad').value
+            mascotas[i].condicion = document.getElementById('salud').value
+            mascotas[i].alergias = document.getElementById('alergia').value
+            mascotas[i].info_mascota = document.getElementById('sobreMiMascota').value
             
             
         }
@@ -255,29 +285,55 @@ function eliminarCard(id){
 
 function actualizarCardsMascotas(){
     document.getElementById('cardMascotas').innerHTML = ''
-    mascotas.map((mascota) =>{       
-        document.getElementById('cardMascotas').innerHTML += `
-        <article class="mascota__card bg-blanco-1 br-8" id="card${mascota.id_mascota}">
+
+    mascotas.map((mascota) =>{  
+        if(mascota.foto_url){
+            document.getElementById('cardMascotas').innerHTML += `
+            <article class="mascota__card bg-blanco-1 br-8" id="card${mascota.id_mascota}">
                 <img class="mascota__avatar" src="${mascota.foto_url}"  alt="imagen del perl de la mascota">
                 <div class="mascota__detalle">
                     <h3 class="f-hsb c-texto">${mascota.nombre_mascota}</h3>
                     <section class="mascota__dato">
                         <h3 class="f-bmb c-texto-gris">Raza:</h3>
-                        <p  class="f-bm c-texto-gris " id="mastotaDatoRaza">${mascota.raza_mascota}</p>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoRaza">${mascota.raza}</p>
                     </section>
                     <section class="mascota__dato">
                         <h3 class="f-bmb c-texto-gris">Edad:</h3>
-                        <p  class="f-bm c-texto-gris " id="mastotaDatoEdad">${mascota.edad_mascota} años</p>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoEdad">${mascota.edad} años</p>
                     </section>
                     <section class="mascota__dato">
                         <h3  class="f-bmb c-texto-gris">Sexo:</h3>
-                        <p  class="f-bm c-texto-gris " id="mastotaDatoSexo">${mascota.sexo_mascota}</p>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoSexo">${mascota.genero}</p>
                     </section>
                 </div>
                 
                 <button class="btt-3" onclick="editarCard(${mascota.id_mascota})">Editar</button>
             </article>
         `
+        } else {
+            document.getElementById('cardMascotas').innerHTML += `
+            <article class="mascota__card bg-blanco-1 br-8" id="card${mascota.id_mascota}">
+                <img class="mascota__avatar" src="../images/images_mascotas/${mascota.mascotaid}/${mascota.imagenes_mascotas[0].url_imagen_mascota}"  alt="imagen del perl de la mascota">
+                <div class="mascota__detalle">
+                    <h3 class="f-hsb c-texto">${mascota.nombre_mascota}</h3>
+                    <section class="mascota__dato">
+                        <h3 class="f-bmb c-texto-gris">Raza:</h3>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoRaza">${mascota.raza}</p>
+                    </section>
+                    <section class="mascota__dato">
+                        <h3 class="f-bmb c-texto-gris">Edad:</h3>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoEdad">${mascota.edad} años</p>
+                    </section>
+                    <section class="mascota__dato">
+                        <h3  class="f-bmb c-texto-gris">Sexo:</h3>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoSexo">${mascota.genero}</p>
+                    </section>
+                </div>
+                
+                <button class="btt-3" onclick="editarCard(${mascota.id_mascota})">Editar</button>
+            </article>
+        `
+        }
     })
     if(mascotas.length === 5){
         document.getElementById('cardMascotas').innerHTML += `
