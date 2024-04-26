@@ -21,7 +21,6 @@
 
 ## Información del Proyecto 
 ***
-● Industria o Rubro: El sector al que pertenece el proyecto (Fintech, Ecommerce, SAAS,etc.). Descripción: Una breve descripción del proyecto y su propósito.
 ### Contexto
 
 *En la actualidad, según un estudio nacional realizado por Kantar, ocho de cada diez argentinos tienen al menos una mascota en su hogar, considerándose parte de la familia y asignando una parte significativa de su presupuesto para su cuidado. Los perros ocupan el primer lugar en preferencia, seguidos por los gatos. Estas mascotas se han convertido en miembros de la familia que demandan atención constante.*
@@ -70,30 +69,23 @@
 
 ## Tecnologías
 ***
-Lista de tecnologías usadas:
+### Lista de tecnologías usadas:
 
-* Visual Studio Code  
-* Express.js
-* NODEjs
-* PostgreSQL
-* Figma
-* Google Forms
-* Google Docs
-* Optimal Workshop
-* HTML
-* CSS
-* JavaScript
-* Git 
-* GitHub
-
-
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-
+| Desarollo         | Diseño          | Organización |
+|-------------------|-----------------|--------------|
+| Visual Studio Code| Figma           | Discord |
+| Express.js        | Google Docs     | FigJam |
+| NODEjs            | Google Forms    | Trello
+| PostgreSQL        | Optimal Workshop| Google Forms
+| HTML              | FigJam          | Slack
+| CSS               |
+| JavaScript|
+| Git 
+| GitHub
 
 ## Galeria
 ***
-
+<img src="./src/public/images/wasi-home.png" width="100%">
 
 
 ## Agradecimientos
