@@ -214,6 +214,9 @@ padding-left:24px;
 .btt-198 .btt-198{
    width: 198px;
 }
+.miPerfil__ubicacionTexarea h3{
+   padding-left: 24px;
+}
 
  /*ESTILO A LOS CARD RESUMEN */
 
@@ -285,7 +288,7 @@ flex-direction: row;
 
 
 .form-group__textarea {
-   height: 600px;
+   height: 200px;
 
 }
 
@@ -316,7 +319,7 @@ flex-direction: row;
    padding: 0;
  }
 
- .block-btn {
+ .miPerfil__ubicacion .block-btn {
 
    flex-direction: column;
    
@@ -397,7 +400,9 @@ flex-direction: row;
     
 }
 .formularioBoton-btn .block-btn {
-   width: 100%
+   width: 100%;
+   flex-direction: row;
+    
 }
 
 .miPerfil__ubicacion .formularioBoton-btn{
