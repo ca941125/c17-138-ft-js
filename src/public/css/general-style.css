@@ -89,8 +89,8 @@ header nav .nav-icon .icon {
 header nav .nav-icon .profile-image{
     border-radius: 50%;
     width: 48px;
+    cursor: pointer;
 }
-
 
 header nav .menu-container {
     position: relative;
@@ -165,13 +165,15 @@ footer{
 }
 footer .footer{
     max-width: 1128px;
+    min-width: 250px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 48px;
     margin: 0 24px;
 }
 footer .footer-info{
-    max-width: 360px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -200,7 +202,7 @@ footer .footer-contacto li{
     align-items: center;
 }
 footer .footer-form{
-    width: 360px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -241,7 +243,7 @@ footer .enviar{
         flex-direction: column;
     }
 }
-/* Celular */
+
 @media only screen and (max-width: 650px){
     /* HEADER */
     header nav{
@@ -261,8 +263,9 @@ footer .enviar{
         display: flex;
         align-items: center;
     }
-    /* menu desplegable */
-
+    .nav-bar-mobile .profile-image{
+        cursor: pointer;
+    }
     .logo-perfil{
        width: 90%;
        display: flex;
@@ -276,3 +279,4 @@ footer .enviar{
        width: 48px;
     }
 }
+ 
