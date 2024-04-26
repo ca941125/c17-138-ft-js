@@ -1,7 +1,7 @@
 @import url(colores.css);
 @import url(fuentes.css);
 
-html{
+/* html{
   background-color: var(--fondo);
 }
 
@@ -117,16 +117,17 @@ height: auto;
   .mascota__dato{
   display: flex;
   flex-direction: row;
-  }
+  } */
 
   .sectionAnfitrion{
      display: flex;
      justify-content: center;
      flex-direction: column;
      align-items: center;
-     width: 80%;
+     max-width: 1128px;
      height: auto;
      margin-bottom: 24px;
+     padding: 24px 0;
 }
 .sectionAnfitrion__group{
     display: flex;
