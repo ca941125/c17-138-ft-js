@@ -14,7 +14,7 @@
 2. [Funcionalidades](#funcionalidades)
 3. [Colaboradores](#Colaboradores)
 4. [Tecnologías](#Tecnologías)
-5. [Diseño](https://www.figma.com/file/0Xt3ahiROQiteDSt5R8OLq/Wasi---Pet-hosting?type=design&node-id=525%3A3645&mode=design&t=emoDcJyRC9weWJwn-1)
+5. [Design System](https://www.figma.com/file/0Xt3ahiROQiteDSt5R8OLq/Wasi---Pet-hosting?type=design&node-id=525%3A3645&mode=design&t=emoDcJyRC9weWJwn-1)
 6. [Galeria](#Galeria)
 
 ## Información del Proyecto 
