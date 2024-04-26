@@ -84,7 +84,7 @@ Una aplicación WEB que conecta dueños de mascotas dispuestos a brindar alojami
 ## Galeria
 ***
 
-![PRESENTACIÓN](./src/public/images/c17-138-ft-js-VIDEO.mp4)
+[PRESENTACIÓN](https://drive.google.com/file/d/1OhVUGpzI0SN1GAn5muv-jddz2nxpLaAA/view)
 
 
 <img src="./src/public/images/wasi-home.png" width="100%">
