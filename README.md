@@ -6,7 +6,8 @@
 [<div style="display: flex; justify-content: center;"><img src="./src/public/images/logo-inicio-de-sesion.png" width=130><br><p style="color: white; text-align: center; ">Home Wasi</p> </div>](https://wasi-zeta.vercel.app/)
 
 <p align="center">
-    <img width="200" src="./src/public/images/logo-inicio-de-sesion.png" alt="Material Bread logo">
+    <a href="https://wasi-zeta.vercel.app/"><img width="200" src="./src/public/images/logo-inicio-de-sesion.png" alt=""></a>
+    
 </p>
 
 
