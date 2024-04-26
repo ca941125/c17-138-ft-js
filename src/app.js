@@ -27,9 +27,10 @@ app.use(express.urlencoded({extended: true, limit: '50mb', parameterLimit:50000}
 
 app.use(
 	cors({
-		origin: ["https://wasi-zeta.vercel.app/", "http://localhost:8080"],
+		origin: ["https://wasi-zeta.vercel.app", "http://localhost:8080"],
 		methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 		credentials: true,
+        allowedHeaders: ['Content-Type']
 	})
 )
 

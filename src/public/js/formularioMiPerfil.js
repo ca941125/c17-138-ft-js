@@ -181,7 +181,9 @@ function postFetch() {
                 })
         }
         
-
+        if(data.error){
+            console.log(data.error)
+        }
     
     })
 }
