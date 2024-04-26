@@ -70,7 +70,7 @@ let mascotas = []
         data1 = data
         mascotas = data.mascotas
         document.getElementById('nombre').value = data.perfil.nombres
-        document.getElementById('apellido').value = data.perfil.nombres
+        document.getElementById('apellido').value = data.perfil.apellidos
         document.getElementById('email').value = data.user_email
         document.getElementById('telefono').value = data.perfil.numero_telefono
         document.getElementById('celular').value = data.perfil.numero_telefono_secundario
@@ -119,11 +119,18 @@ let mascotas = []
             `  
     })
 
-/* setTimeout(function () {
+setTimeout(function () {
     console.log(data1.perfil.nombres)
-}, 3000) */
+    let m = mascotas.length
+    let v = 0
+    data1.mascotas.map( (m) => {
+        m.id_mascota = v
+        v++ 
+    })
+    console.log(data1.mascotas)
+}, 3000)
 
-let m = mascotas.length
+
 document.getElementById('guardarMascota').addEventListener('click', () => {
 
     /* let foto = document.getElementById('foto-mascota').files[0] */
