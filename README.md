@@ -1,19 +1,22 @@
 # c17-138-ft-js
 
 
-# Bienvenidos a Wasi 
-[img src=""]
+<div style="display: flex; justify-content: center;"><p style="color: white; text-align: center; font-size: 36px; font-weight: bold; ">Bienvenidos a Wasi</p></div>
 
-Enlace del Proyecto
+[<div style="display: flex; justify-content: center;"><img src="./src/public/images/logo-inicio-de-sesion.png" width=130><br><p style="color: white; text-align: center; ">Home Wasi</p> </div>](https://wasi-zeta.vercel.app/)
+
+
+
+
+
+
 
 ## Tabla de Contenidos
 1. [Información del Proyecto](#Información-General)
 2. [Funcionalidades](#funcionalidades)
 3. [Colaboradores](#Colaboradores)
 4. [Tecnologías](#Tecnologías)
-5. [Instalación](#Instalación)
 6. [Galeria](#Galeria)
-7.
 
 ## Información del Proyecto 
 ***
@@ -68,29 +71,35 @@ Enlace del Proyecto
 ***
 Lista de tecnologías usadas:
 
-* [Visual Studio Code](https://example.com) 
-* [![Next][Next.js]][Next-url]
-* [Express.js](https://example.com)
-* [NODEjs](https://example.com)
-* [PostgreSQL](https://example.com)
-* [Figma](https://example.com)
-* [Google Forms](https://example.com)
-* [Google Docs](https://example.com)
-* [Optimal Workshop](https://example.com)
-* [HTML](https://example.com)
-* [CSS](https://example.com)
-* [JavaScript](https://example.com)
-* [Git ](https://example.com)
-* [GitHub](https://example.com)
+* Visual Studio Code  
+* Express.js
+* NODEjs
+* PostgreSQL
+* Figma
+* Google Forms
+* Google Docs
+* Optimal Workshop
+* HTML
+* CSS
+* JavaScript
+* Git 
+* GitHub
 
 
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 
 
-## Instalación
-***
-
-
 ## Galeria
 ***
+
+
+
+## Agradecimientos
+
+<div>
+  <a href="https://www.nocountry.tech/" target="_blank">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsukYB3HL90LSwYv_RIR2O2OlCV8Sbkx2eNHv8nRvOu8L16FxLQ0nPzY02wQ_BJOfQZw&usqp=CAU" width="200">
+  </a>
+</div>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00adef&height=120&section=footer"/>
