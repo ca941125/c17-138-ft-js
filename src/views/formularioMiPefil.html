@@ -18,27 +18,41 @@
 <body>
         <!-- HEADER -->
         <header>
-            <nav class="nav">
+            <nav class="nav bg-oscuro80">
+                <!-- nav bar con logo y quienes somos y planes -->
                 <div class="nav-bar c-fondo">
                     <a href="#"><img src="../public/images/logo-header.png" alt="logo"></a>
                     <a class="f-tm c-blanco-1" href="">Quiénes somos</a>
                     <a class="f-tm c-blanco-1" href="">Planes y precios</a>
                 </div>
-    
-                 <!-- ICÓNOS DE SESIÓN INICIADA -->
-    
-                <!-- <div class="nav-icon">
-                    <a href=""><img class="icon" src="../public/images/icons/header/state-layer.svg" alt=""></a>
-                    <a href=""><img class="icon" src="../public/images/icons/header/container.svg" alt=""></a>
-                    <a href=""><img class="foto-perfil" src="../public/images/usuarios/usuario-1/perfil_usuario_1.jpg" alt=""></a>
-                </div>  -->
-    
+                <!-- nav bar mobile -->
+                <div class="nav-bar-mobile">
+                    <div class="menu-container">
+                        <img src="../public/images/icons/header/menuDesplegable.svg" alt="Menu desplegable" class="menu-desplegable" id="menu-desplegable">
+                        <div class="dropdown-menu" id="dropdown-menu">
+                          <a class="f-hs c-blanco-1" href="#">Quiénes somos</a>
+                          <a class="f-hs c-blanco-1" href="">Planes y precios</a>
+                        </div>
+                    </div>
+                    <div class="logo-perfil">
+                        <img class="logo" src="../public/images/logo-header.png" alt="">
+                        <div class="menu-container">
+                            <img src="../public/images/icons/header/perfil.svg" alt="Imagen de perfil" class="profile-image" id="profile-image">
+                            <div class="dropdown-perfil" id="dropdown-perfil">
+                              <a class="f-hs c-blanco-1" href="#">Iniciar Sesión</a>
+                              <a class="f-hs c-blanco-1" href="#">Mi Perfil</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- botones para iniciar sesion desktop -->
                 <div class="nav-button">
                     <button class="f-tm c-a-dark-mode">Inicia sesión</button>
                     <button class="f-tm btt-2">Registrate</button>
                 </div>
-            </nav>
+            </nav>  
         </header>
+    
     
     <main>
         <h3 class=" f-dsb c-texto">Mi perfil</h3>   
@@ -165,7 +179,7 @@
                     </label>
                 </section>
 
-                <h3 class="f-hsb c-texto"> Datos personales</h3>
+                <h3 class="f-hsb c-texto"> Sobre mi mascota</h3>
         
             
                 <div class="form-group">
@@ -225,15 +239,10 @@
                
             </section>
         </form>
-        <!-- BOTON ELIMINAR PERFIL MASCOTA  -->
-
-        <div class="formularioBoton formularioBoton--transparente">
-            <button class="btt-3 btt-198">Editar datos</button>
-        </div>
 
         <!-- BOTONES  -->
         <section class="formularioBoton-btn br-8">
-            <h3 class="f-hsb c-texto">Confirmar tus datos</h3>
+            <h3 class="f-hsb c-texto title__btn">Confirmar tus datos</h3>
             <div class="block-btn">
                 <button class="btt-3 btt-3--blanco">Editar datos</button>
                 <button class="btt-1 btt-1--gris">Guardar datos</button>
@@ -311,7 +320,7 @@
                 <button class="btt-3">Editar</button>
             </article>
 
-              <!-- CARD DEFAULT -->
+            <!-- CARD DEFAULT -->
             <article class="mascota__card bg-blanco-1 br-8" >
                 <button id="btn__agregarMascota">
                     <svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" viewBox="0 0 65 64" fill="none">
@@ -323,7 +332,7 @@
         </section>
         
     </main>
-        <!-- FOOTER -->
+        <!---FOOTER -->
         <footer class="bg-p-oscuro">
             <h3 class="f-dsb c-secundario">Contacto</h3>
             
