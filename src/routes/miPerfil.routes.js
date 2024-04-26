@@ -6,7 +6,7 @@ const router = Router()
 
 router.get('/mi-perfil', getMiPerfil)
 
-router.get('/mis-chats', getMisChats)
+router.get('/mis-chats', getMisChats)   
 
 router.post('/', )
 
