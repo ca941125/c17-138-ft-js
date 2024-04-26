@@ -2,6 +2,7 @@ import {Router} from 'express'
 import multer from 'multer'
 import {getRegister, postRegister} from '../controllers/register.controller.js'
 import axios from 'axios'
+import fs from 'node:fs'
 
 const router = Router()
 const upload = multer({ dest: 'src/public/images/upload/'} )
@@ -19,8 +20,8 @@ const clientId = 'b527d48d26ca21b';
 const uploadUrl = 'https://api.imgur.com/3/image';
 
 // Función para subir una imagen a Imgur
-const imageFile = req.file.toString('base64')
-console.log(imageFile)
+const imageFile = fs.readFileSync(req.file.path, { encoding: 'base64' });
+
 
   try {
     // Configurar la solicitud POST con la imagen y las credenciales
