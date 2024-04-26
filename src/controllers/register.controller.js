@@ -2,7 +2,6 @@ import pool from '../db.js'
 import { db } from '@vercel/postgres'
 import bcryptjs from 'bcryptjs'
 import fs from 'node:fs'
-import axios from 'axios'
 
 export const getRegister = async (req, res) => {
     /* const client = await db.connect() */
@@ -37,10 +36,6 @@ export const postRegister = async (req, res) => {
 
     const files = req.files
     const body = req.body
-    const clientId = 'b527d48d26ca21b';
-
-// URL del endpoint para subir imágenes
-    const uploadUrl = 'https://api.imgur.com/3/image';
 
     /* console.log(body)
     console.log(files.length) */
@@ -78,35 +73,12 @@ export const postRegister = async (req, res) => {
 
         const idUsuario = await client.sql`SELECT usuarioid FROM usuarios WHERE correo_electronico = ${body.email_user};`;
         
-        /* const newPath1 = `./src/public/images/upload/${files[0].originalname}`
+        const newPath1 = `./src/public/images/upload/${files[0].originalname}`
         fs.renameSync(files[0].path, newPath1)
         const truePath1 = `./src/public/images/images_perfil/${idUsuario.rows[0].usuarioid}/${files[0].originalname}` 
         fs.mkdirSync(`./src/public/images/images_perfil/${idUsuario.rows[0].usuarioid}`, {recursive: true}) 
         fs.copyFileSync(newPath1, truePath1)
-        fs.unlinkSync(newPath1) */
-        const imageFile = fs.readFileSync(files[0].path, { encoding: 'base64' });
-        let url_imagen_user
-        try {
-          // Configurar la solicitud POST con la imagen y las credenciales
-          const response = await axios.post(uploadUrl, {
-            image: imageFile
-          }, {
-            headers: {
-              'Authorization': `Client-ID ${clientId}`
-            }
-          });
-          
-          // Imprimir la URL de la imagen subida
-          console.log('Image uploaded successfully:', response.data.data.link);
-          url_imagen_user = response.data.data.link 
-          // Devolver la URL de la imagen subida
-          
-        } catch (error) {
-          // Manejar cualquier error que ocurra durante la carga de la imagen
-          console.error('Error uploading image:', error.message);
-          res.status(500).json({ error: 'Error al subir la imagen' });
-          
-        }
+        fs.unlinkSync(newPath1)
     
 
         const query1 = {
@@ -114,7 +86,7 @@ export const postRegister = async (req, res) => {
                   VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
             values: [
               idUsuario.rows[0].usuarioid,
-              url_imagen_user,
+              files[0].originalname,
               body.nombres_user,
               body.apellidos_user,
               'algo',
@@ -180,36 +152,12 @@ export const postRegister = async (req, res) => {
 
             const idMascota_0 = await client.sql`SELECT mascotaid FROM mascotas WHERE usuarioid = ${idUsuario.rows[0].usuarioid};`;
 
-            /* const newPath = `./src/public/images/upload/${files[1].originalname}`
+            const newPath = `./src/public/images/upload/${files[1].originalname}`
             fs.renameSync(files[1].path, newPath)
             const truePath = `./src/public/images/images_mascotas/${idMascota_0.rows[0].mascotaid}/${files[1].originalname}` 
             fs.mkdirSync(`./src/public/images/images_mascotas/${idMascota_0.rows[0].mascotaid}`, {recursive: true}) 
             fs.copyFileSync(newPath, truePath)
-            fs.unlinkSync(newPath) */
-
-            const imageFile = fs.readFileSync(files[1].path, { encoding: 'base64' });
-            let url_imagen_mascota
-            try {
-              // Configurar la solicitud POST con la imagen y las credenciales
-              const response = await axios.post(uploadUrl, {
-                image: imageFile
-              }, {
-                headers: {
-                  'Authorization': `Client-ID ${clientId}`
-                }
-              });
-              
-              // Imprimir la URL de la imagen subida
-              console.log('Image uploaded successfully:', response.data.data.link);
-              url_imagen_mascota = response.data.data.link 
-              // Devolver la URL de la imagen subida
-              
-            } catch (error) {
-              // Manejar cualquier error que ocurra durante la carga de la imagen
-              console.error('Error uploading image:', error.message);
-              res.status(500).json({ error: 'Error al subir la imagen' });
-              
-            }
+            fs.unlinkSync(newPath)
            
 
             const query3 = {
@@ -217,7 +165,7 @@ export const postRegister = async (req, res) => {
                           VALUES ($1, $2)`,
                 values: [
                   idMascota_0.rows[0].mascotaid,
-                  url_imagen_mascota,
+                  files[1].originalname,
                 ],
               };
               
