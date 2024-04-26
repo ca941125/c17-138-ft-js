@@ -451,10 +451,17 @@ export const postRegister = async (req, res) => {
           });      
 
     }  
-
-     res.send({msg: 'correcto', ruta: '/login'}) 
+    client.release();
+     res.send({
+      msg: "correcto", 
+      ruta: "/login"
+      }) 
   } else {
-      res.send({msg: 'email', ruta: ''}) 
+    client.release();
+      res.send({
+        msg: "email", 
+        ruta: ""
+      }) 
   }
         
   

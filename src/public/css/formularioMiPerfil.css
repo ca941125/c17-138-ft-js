@@ -1,6 +1,8 @@
 @import url(colores.css);
 @import url(fuentes.css);
-
+html{
+   background-color: var(--fondo);
+}
 body {
     display:flex;
     flex-direction: column;
@@ -181,6 +183,8 @@ padding-left:24px;
    max-width: 1128px;
    justify-content: space-between;
    height: 104px;
+   margin-bottom: 40px;
+   padding-left: 24px;
 }
 .formularioPerfil .formularioBoton-btn{
    justify-content: flex-end;

@@ -1,6 +1,9 @@
 @import url(colores.css);
 @import url(fuentes.css);
 
+html{
+  background-color: var(--fondo);
+}
 
  main{
     flex-grow: 1;

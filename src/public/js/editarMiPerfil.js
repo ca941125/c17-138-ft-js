@@ -237,12 +237,12 @@ function updateCard(id){
                 mascotas[i].foto_url = objectURL
             }          
             mascotas[i].nombre_mascota = document.getElementById('nombreMascota').value 
-            mascotas[i].raza_mascota = document.getElementById('raza').value
-            mascotas[i].sexo_mascota = document.getElementById('sexo').value
-            mascotas[i].edad_mascota = document.getElementById('edad').value
-            mascotas[i].condicion_mascota = document.getElementById('salud').value
-            mascotas[i].alergia_mascota = document.getElementById('alergia').value
-            mascotas[i].sobre_mascota = document.getElementById('sobreMiMascota').value
+            mascotas[i].raza = document.getElementById('raza').value
+            mascotas[i].genero = document.getElementById('sexo').value
+            mascotas[i].edad = document.getElementById('edad').value
+            mascotas[i].condicion = document.getElementById('salud').value
+            mascotas[i].alergias = document.getElementById('alergia').value
+            mascotas[i].info_mascota = document.getElementById('sobreMiMascota').value
             
             
         }
@@ -285,29 +285,55 @@ function eliminarCard(id){
 
 function actualizarCardsMascotas(){
     document.getElementById('cardMascotas').innerHTML = ''
-    mascotas.map((mascota) =>{       
-        document.getElementById('cardMascotas').innerHTML += `
-        <article class="mascota__card bg-blanco-1 br-8" id="card${mascota.id_mascota}">
+
+    mascotas.map((mascota) =>{  
+        if(mascota.foto_url){
+            document.getElementById('cardMascotas').innerHTML += `
+            <article class="mascota__card bg-blanco-1 br-8" id="card${mascota.id_mascota}">
                 <img class="mascota__avatar" src="${mascota.foto_url}"  alt="imagen del perl de la mascota">
                 <div class="mascota__detalle">
                     <h3 class="f-hsb c-texto">${mascota.nombre_mascota}</h3>
                     <section class="mascota__dato">
                         <h3 class="f-bmb c-texto-gris">Raza:</h3>
-                        <p  class="f-bm c-texto-gris " id="mastotaDatoRaza">${mascota.raza_mascota}</p>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoRaza">${mascota.raza}</p>
                     </section>
                     <section class="mascota__dato">
                         <h3 class="f-bmb c-texto-gris">Edad:</h3>
-                        <p  class="f-bm c-texto-gris " id="mastotaDatoEdad">${mascota.edad_mascota} años</p>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoEdad">${mascota.edad} años</p>
                     </section>
                     <section class="mascota__dato">
                         <h3  class="f-bmb c-texto-gris">Sexo:</h3>
-                        <p  class="f-bm c-texto-gris " id="mastotaDatoSexo">${mascota.sexo_mascota}</p>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoSexo">${mascota.genero}</p>
                     </section>
                 </div>
                 
                 <button class="btt-3" onclick="editarCard(${mascota.id_mascota})">Editar</button>
             </article>
         `
+        } else {
+            document.getElementById('cardMascotas').innerHTML += `
+            <article class="mascota__card bg-blanco-1 br-8" id="card${mascota.id_mascota}">
+                <img class="mascota__avatar" src="../images/images_mascotas/${mascota.mascotaid}/${mascota.imagenes_mascotas[0].url_imagen_mascota}"  alt="imagen del perl de la mascota">
+                <div class="mascota__detalle">
+                    <h3 class="f-hsb c-texto">${mascota.nombre_mascota}</h3>
+                    <section class="mascota__dato">
+                        <h3 class="f-bmb c-texto-gris">Raza:</h3>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoRaza">${mascota.raza}</p>
+                    </section>
+                    <section class="mascota__dato">
+                        <h3 class="f-bmb c-texto-gris">Edad:</h3>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoEdad">${mascota.edad} años</p>
+                    </section>
+                    <section class="mascota__dato">
+                        <h3  class="f-bmb c-texto-gris">Sexo:</h3>
+                        <p  class="f-bm c-texto-gris " id="mastotaDatoSexo">${mascota.genero}</p>
+                    </section>
+                </div>
+                
+                <button class="btt-3" onclick="editarCard(${mascota.id_mascota})">Editar</button>
+            </article>
+        `
+        }
     })
     if(mascotas.length === 5){
         document.getElementById('cardMascotas').innerHTML += `
