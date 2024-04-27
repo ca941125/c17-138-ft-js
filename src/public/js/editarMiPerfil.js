@@ -483,8 +483,8 @@ document.getElementById('submit').addEventListener('click', () => {
         let celular = document.getElementById('celular').value
         let sobre_mi = document.getElementById('sobreMi').value
 
-        if(foto1.name !== '' && nombres !== '' && apellidos !== '' && email !== '' && pass !== '' && provincia !== '' && ciudad !== '' && telefono !== '' && celular !== '' && sobre_mi !== ''){
-            if(typeof document.getElementById('foto-mascota').files[0] === 'undefined'){
+        if(nombres !== '' && apellidos !== '' && email !== '' && provincia !== '' && ciudad !== '' && telefono !== '' && celular !== '' && sobre_mi !== ''){
+            if(typeof document.getElementById('avatar-input').files[0] === 'undefined'){
                 user = {
                     nombres_user: nombres,
                     apellidos_user: apellidos,
@@ -498,8 +498,8 @@ document.getElementById('submit').addEventListener('click', () => {
                     foto_user: perfil.foto_url
                     /* foto: objectURL1 */
                 }
-            }
-            user = {
+            } else {
+                user = {
                 nombres_user: nombres,
                 apellidos_user: apellidos,
                 email_user: email,
@@ -512,6 +512,8 @@ document.getElementById('submit').addEventListener('click', () => {
                 foto_user: foto1,
                 foto: objectURL1
             }
+            }
+            
 
             
 

@@ -71,25 +71,19 @@ export const postEditarMiPerfil = async (req, res) => {
 
 export const putEditarMiPerfil = async (req, res) => {
 
-
+    console.log(req.body)
+    console.log(req.files)
     
-    if(req.signedCookies['loggedin']){
+    /* if(req.signedCookies['loggedin']){
         const usuarioSesion = {
             nombres: req.signedCookies['nombres'],
             apellidos: req.signedCookies['apellidos'],
             foto_url: req.signedCookies['foto_url'] 
         }
 
-        res.render('editarMiPerfil', {
-         login: true,
-         id: req.signedCookies['idUser'],
-         usuarioSesion,
-         perfil: result.rows[0],
-         mascotas,
-         email: result3.rows[0].correo_electronico
-        })
+        res.redirect('/mi-perfil')       
     } else {
         res.redirect('/')        
-    }
+    } */
 
 }
