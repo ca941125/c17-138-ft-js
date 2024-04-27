@@ -370,7 +370,7 @@ function actualizarCardsMascotas(){
 }
 
 function postFetch() {
-    const url = '/mi-perfil/editar';
+    const url3 = '/mi-perfil/editar';
     /* let body = {
         user,
         mascotas,
@@ -390,36 +390,23 @@ function postFetch() {
         fd.append("foto_user", user.foto_user);
         fd.append("mascotas_user", mascotas.length);
         /* const formData = new URLSearchParams(fd) */
-        let m = 0
+        let mc = 0
         mascotas.map( (mascota) => {
-            fd.append(`nombre_mascota_${m}`, mascota.nombre_mascota)
-            fd.append(`raza_mascota_${m}`, mascota.raza_mascota)
-            fd.append(`sexo_mascota_${m}`, mascota.sexo_mascota)
-            fd.append(`edad_mascota_${m}`, mascota.edad_mascota)
-            fd.append(`condicion_mascota_${m}`, mascota.condicion_mascota)
-            fd.append(`alergia_mascota_${m}`, mascota.alergia_mascota)
-            fd.append(`sobre_mascota_${m}`, mascota.sobre_mascota)
-            fd.append(`foto_mascota_${m}`, mascota.foto_mascota)
-            fd.append(`tipo_mascota_${m}`, mascota.tipo_mascota)
-            m++
+            fd.append(`nombre_mascota_${mc}`, mascota.nombre_mascota)
+            fd.append(`raza_mascota_${mc}`, mascota.raza)
+            fd.append(`sexo_mascota_${mc}`, mascota.genero)
+            fd.append(`edad_mascota_${mc}`, mascota.edad)
+            fd.append(`condicion_mascota_${mc}`, mascota.condicion)
+            fd.append(`alergia_mascota_${mc}`, mascota.alergias)
+            fd.append(`sobre_mascota_${mc}`, mascota.info_mascota)
+            fd.append(`foto_mascota_${mc}`, mascota.foto_mascota)
+            fd.append(`tipo_mascota_${mc}`, mascota.tipo_mascota)
+            mc++
         })
 
-        let mascota = {
-            foto_mascota: foto,
-            nombre_mascota: nombre,
-            raza: raza,
-            genero: sexo,
-            edad: edad,
-            condicion: salud,
-            alergias: alergia,
-            info_mascota: sobre,
-            id_mascota: m,
-            foto_url: objectURL,
-            tipo_mascota: tipo_mascota
-        }
 
-    var request = new Request(url, {
-        method: 'POST',
+    var request = new Request(url3, {
+        method: 'PUT',
         body: fd,
         headers: {
             /* "Content-Type": "multipart/form-data", */
