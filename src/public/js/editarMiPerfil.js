@@ -53,7 +53,7 @@ function searchCiudad(){
         })
 
 }
-
+let m
 let data1 = []
 let mascotas = [] 
     let url2 = "/mi-perfil/editar"
@@ -67,7 +67,7 @@ let mascotas = []
     fetch(request)
     .then(response => response.json())
     .then( (data) => {
-        data1 = data
+        perfil = data.perfil
         mascotas = data.mascotas
         document.getElementById('nombre').value = data.perfil.nombres
         document.getElementById('apellido').value = data.perfil.apellidos
@@ -80,30 +80,30 @@ let mascotas = []
         setTimeout(function () {
             document.getElementById('opcionCiudad').value = data.perfil.ciudad
         }, 500)
-        let n = 0
-        data.mascotas.map( (m) => {
+        m = 0
+        data.mascotas.map( (mascota) => {
             document.getElementById('cardMascotas'). innerHTML += `
                 <article class="mascota__card bg-blanco-1 br-8">
-                    <img class="mascota__avatar" src="../images/images_mascotas/${m.mascotaid}/${m.imagenes_mascotas[0].url_imagen_mascota}"  alt="imagen del perl de la mascota">
+                    <img class="mascota__avatar" src="../images/images_mascotas/${mascota.mascotaid}/${mascota.imagenes_mascotas[0].url_imagen_mascota}"  alt="imagen del perl de la mascota">
                     <div class="mascota__detalle">
-                        <h3 class="f-hsb c-texto">${m.nombre_mascota}</h3>
+                        <h3 class="f-hsb c-texto">${mascota.nombre_mascota}</h3>
                         <section class="mascota__dato">
                             <h3 class="f-bmb c-texto-gris">Raza:</h3>
-                            <p  class="f-bm c-texto-gris " id="mastotaDatoRaza">${m.raza}</p>
+                            <p  class="f-bm c-texto-gris " id="mastotaDatoRaza">${mascota.raza}</p>
                         </section>
                         <section class="mascota__dato">
                             <h3 class="f-bmb c-texto-gris">Edad:</h3>
-                            <p  class="f-bm c-texto-gris " id="mastotaDatoEdad">${m.edad} años</p>
+                            <p  class="f-bm c-texto-gris " id="mastotaDatoEdad">${mascota.edad} años</p>
                         </section>
                         <section class="mascota__dato">
                             <h3  class="f-bmb c-texto-gris">Sexo:</h3>
-                            <p  class="f-bm c-texto-gris " id="mastotaDatoSexo">${m.genero}</p>
+                            <p  class="f-bm c-texto-gris " id="mastotaDatoSexo">${mascota.genero}</p>
                         </section>
                     </div>
-                    <button class="btt-3" onclick="editarCard(${n})">Editar</button>
+                    <button class="btt-3" onclick="editarCard(${m})">Editar</button>
                     </article> 
             `
-            n++
+            m++
         })  
             document.getElementById('cardMascotas'). innerHTML += `        
                     <!-- CARD DEFAULT -->
@@ -119,14 +119,15 @@ let mascotas = []
     })
 
 setTimeout(function () {
-    console.log(data1.perfil.nombres)
-    let m = mascotas.length
+    /* console.log(data1.perfil.nombres) */
+    /* let ml = mascotas.length */
     let v = 0
-    data1.mascotas.map( (m) => {
+    mascotas.map( (m) => {
         m.id_mascota = v
+        m.foto_mascota = m.imagenes_mascotas[0].url_imagen_mascota
         v++ 
     })
-    console.log(data1.mascotas)
+    /* console.log(data1.mascotas) */
 }, 3000)
 
 
@@ -140,24 +141,25 @@ document.getElementById('guardarMascota').addEventListener('click', () => {
     let salud = document.getElementById('salud').value
     let alergia = document.getElementById('alergia').value
     let sobre = document.getElementById('sobreMiMascota').value
+    let tipo_mascota = document.getElementById('tipo').value
 
     if(foto.name !== '' && nombre !== '' && raza !== '' && edad !== '' && salud !== '' && alergia !== '' && sobre !== ''){
     
     let mascota = {
         foto_mascota: foto,
         nombre_mascota: nombre,
-        raza_mascota: raza,
-        sexo_mascota: sexo,
-        edad_mascota: edad,
-        condicion_mascota: salud,
-        alergia_mascota: alergia,
-        sobre_mascota: sobre,
+        raza: raza,
+        genero: sexo,
+        edad: edad,
+        condicion: salud,
+        alergias: alergia,
+        info_mascota: sobre,
         id_mascota: m,
         foto_url: objectURL,
-        tipo_mascota: 'Gato'
+        tipo_mascota: tipo_mascota
     }
-    const url = window.URL || window.webkitURL;
-    objectURL = url.createObjectURL(foto)
+    /* const url = window.URL || window.webkitURL;
+    objectURL = url.createObjectURL(foto) */
     /* images/usuarios/usuario-1/perfil_mascota_1.jpg */
     mascotas.push(mascota)
     actualizarCardsMascotas()
@@ -213,11 +215,14 @@ function editarCard(id){
 
 function updateCard(id){
     let k = 0
-    for(let j = 0; j < mascotas.length; j++){
+    if(foto){
+        for(let j = 0; j < mascotas.length; j++){
         if(foto === mascotas[j].foto_mascota){
             k++
         }  
     }
+    }
+    
     for(let i = 0; i < mascotas.length; i++){
         if(mascotas[i].id_mascota === id){
             document.getElementById('formularioMiMascota').setAttribute('style', 'display: none')
@@ -233,8 +238,12 @@ function updateCard(id){
                 
             } */
              if(k === 0){
-                mascotas[i].foto_mascota = document.getElementById('foto-mascota').files[0]
-                mascotas[i].foto_url = objectURL
+                if(typeof document.getElementById('foto-mascota').files[0] !== 'undefined'){
+                    mascotas[i].foto_mascota = document.getElementById('foto-mascota').files[0]
+                    mascotas[i].foto_url = objectURL
+                    delete mascotas[i].imagenes_mascotas
+                }
+                
             }          
             mascotas[i].nombre_mascota = document.getElementById('nombreMascota').value 
             mascotas[i].raza = document.getElementById('raza').value
@@ -243,6 +252,7 @@ function updateCard(id){
             mascotas[i].condicion = document.getElementById('salud').value
             mascotas[i].alergias = document.getElementById('alergia').value
             mascotas[i].info_mascota = document.getElementById('sobreMiMascota').value
+            mascotas[i].tipo_mascota = document.getElementById('tipo').value
             
             
         }
@@ -360,7 +370,7 @@ function actualizarCardsMascotas(){
 }
 
 function postFetch() {
-    const url = '/register';
+    const url = '/mi-perfil/editar';
     /* let body = {
         user,
         mascotas,
@@ -393,6 +403,20 @@ function postFetch() {
             fd.append(`tipo_mascota_${m}`, mascota.tipo_mascota)
             m++
         })
+
+        let mascota = {
+            foto_mascota: foto,
+            nombre_mascota: nombre,
+            raza: raza,
+            genero: sexo,
+            edad: edad,
+            condicion: salud,
+            alergias: alergia,
+            info_mascota: sobre,
+            id_mascota: m,
+            foto_url: objectURL,
+            tipo_mascota: tipo_mascota
+        }
 
     var request = new Request(url, {
         method: 'POST',
@@ -473,7 +497,21 @@ document.getElementById('submit').addEventListener('click', () => {
         let sobre_mi = document.getElementById('sobreMi').value
 
         if(foto1.name !== '' && nombres !== '' && apellidos !== '' && email !== '' && pass !== '' && provincia !== '' && ciudad !== '' && telefono !== '' && celular !== '' && sobre_mi !== ''){
-            
+            if(typeof document.getElementById('foto-mascota').files[0] === 'undefined'){
+                user = {
+                    nombres_user: nombres,
+                    apellidos_user: apellidos,
+                    email_user: email,
+                    pass_user: pass,
+                    provincia_user: provincia,
+                    ciudad_user: ciudad,
+                    telefono_user: telefono,
+                    celular_user: celular,
+                    sobre_mi_user: sobre_mi, 
+                    foto_user: perfil.foto_url
+                    /* foto: objectURL1 */
+                }
+            }
             user = {
                 nombres_user: nombres,
                 apellidos_user: apellidos,
