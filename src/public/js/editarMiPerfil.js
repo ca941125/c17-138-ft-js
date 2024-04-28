@@ -187,6 +187,7 @@ function editarCard(id){
             document.getElementById('formularioMiMascota').removeAttribute('style')
             document.getElementById('svg').setAttribute('style', 'display: none')
             document.getElementById('guardarMascota').setAttribute('style', 'display: none')
+            document.getElementById('cancelarDatos').setAttribute('style', 'display: none')
             document.getElementById('eliminarDatos').removeAttribute('style')
             document.getElementById('agregarMascota').removeAttribute('onclick')
             document.getElementById('eliminarDatos').setAttribute('onclick', `eliminarCard(${mascotas[i].id_mascota})`)
@@ -206,6 +207,7 @@ function editarCard(id){
             document.getElementById('salud').value = mascotas[i].condicion
             document.getElementById('alergia').value = mascotas[i].alergias
             document.getElementById('sobreMiMascota').value = mascotas[i].info_mascota
+            document.getElementById('tipo').value = mascotas[i].tipo_mascota
         }
     }
 
@@ -266,16 +268,18 @@ function agregarMascota(){
     document.getElementById('svg').removeAttribute('style')
     document.getElementById('img').removeAttribute('src')
     document.getElementById('guardarMascota').removeAttribute('style')
+    document.getElementById('cancelarDatos').removeAttribute('style')
     document.getElementById('editarDatos').removeAttribute('onclick')
-        document.getElementById('editarDatos').setAttribute('style', 'display: none')
-        document.getElementById('foto-mascota').value = ''
-        document.getElementById('nombreMascota').value = ''
-        document.getElementById('raza').value = ''
-        document.getElementById('sexo').value = ''
-        document.getElementById('edad').value = ''
-        document.getElementById('salud').value = ''
-        document.getElementById('alergia').value = ''
-        document.getElementById('sobreMiMascota').value = ''
+    document.getElementById('editarDatos').setAttribute('style', 'display: none')
+    document.getElementById('tipo').value = ''
+    document.getElementById('foto-mascota').value = ''
+    document.getElementById('nombreMascota').value = ''
+    document.getElementById('raza').value = ''
+    document.getElementById('sexo').value = ''
+    document.getElementById('edad').value = ''
+    document.getElementById('salud').value = ''
+    document.getElementById('alergia').value = ''
+    document.getElementById('sobreMiMascota').value = ''
 }
 
 function eliminarCard(id){
@@ -524,4 +528,8 @@ document.getElementById('submit').addEventListener('click', () => {
         }
 
     
+})
+
+document.getElementById('cancelarDatos').addEventListener('click', () => {
+    document.getElementById('formularioMiMascota').setAttribute('style', 'display: none')
 })
