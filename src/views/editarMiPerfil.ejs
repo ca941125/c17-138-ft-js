@@ -103,8 +103,7 @@
 
                     <div class="form-group">
                         <label class="form-group__label c-texto-gris f-bm " for="email">E-mail *</label>
-                        <input class="form-group__input f-bl c-texto br-8" type="email" id="email" name="email" value=""
-                            required>
+                        <input class="form-group__input f-bl c-texto br-8" type="email" id="email" name="email" required>
                     </div>
 
 
@@ -216,17 +215,17 @@
                     <div class="form-group">
                         <label class="form-group__label c-texto-gris f-bm" for="nombreMascota">Nombre </label>
                         <input class="form-group__input f-bl c-texto br-8" type="text" id="nombreMascota"
-                            name="nombreMascota" required>
+                            name="nombreMascota" >
                     </div>
 
                     <div class="form-group">
                         <label class="form-group__label c-texto-gris f-bm" for="raza">Raza</label>
-                        <input class="form-group__input f-bl c-texto br-8" type="text" id="raza" name="raza" required>
+                        <input class="form-group__input f-bl c-texto br-8" type="text" id="raza" name="raza" >
                     </div>
 
                     <div class="form-group">
                         <label class="form-group__label c-texto-gris f-bm" for="sexo">Sexo</label>
-                        <select class="form-group__input f-bl c-texto br-8" id="sexo" name="sexo" required>
+                        <select class="form-group__input f-bl c-texto br-8" id="sexo" name="sexo" >
                             <option value="Hembra">Hembra</option>
                             <option value="Macho">Macho</option>
                         </select>
@@ -234,12 +233,12 @@
 
                     <div class="form-group">
                         <label class="form-group__label c-texto-gris f-bm" for="edad">Edad</label>
-                        <input class="form-group__input f-bl c-texto br-8" type="text" id="edad" name="edad" required>
+                        <input class="form-group__input f-bl c-texto br-8" type="text" id="edad" name="edad" >
                     </div>
 
                     <div class="form-group">
                         <label class="form-group__label c-texto-gris f-bm" for="tipo">Tipo</label>
-                        <select class="form-group__input f-bl c-texto br-8" type="text" id="tipo" name="tipo" required>
+                        <select class="form-group__input f-bl c-texto br-8" type="text" id="tipo" name="tipo" >
                             <option value="Perro">Perro</option>
                             <option value="Gato">Gato</option>
                         </select>
@@ -277,6 +276,7 @@
                         <div class="block-btn" id="botonesM">
                             <button class="btt-3 " id="eliminarDatos" style="display: none;">Eliminar</button>
                             <button class="btt-1 " id="editarDatos" style="display: none;">Guardar datos</button>
+                            <button class="btt-3 " id="cancelarDatos">Cancelar</button> 
                             <button class="btt-1 " id="guardarMascota">Guardar datos</button>
                         </div>
                     </div>
@@ -327,11 +327,11 @@
                 </div>
                 <div class="footer-form c-blanco-1">
                     <form action="">
-                        <label class="f-bm" for="">E-mail</label>
-                        <input class="footerEmail br-8 c-texto" type="email" placeholder="email@email.com">
+                        <label class="f-bm" for="email1">E-mail</label>
+                        <input class="footerEmail br-8 c-texto" type="email" name="email1" id="email1" placeholder="email@email.com">
         
-                        <label class="f-bm" for="">Tu consulta</label>
-                        <textarea class="br-8 c-texto" id="" cols="20" rows="10"></textarea>
+                        <label class="f-bm" for="consulta">Tu consulta</label>
+                        <textarea class="br-8 c-texto" id="consulta" cols="20" rows="10" name="consulta"></textarea>
                     
                         <input class="enviar f-tm btt-1" type="submit" value="Enviar">
                     </form>
