@@ -13,8 +13,8 @@
 1. [Información del Proyecto](#Información-General)
 2. [Funcionalidades](#funcionalidades)
 3. [Colaboradores](#Colaboradores)
-4. [Tecnologías](#Tecnologías)
-5. [Figma](https://www.figma.com/file/0Xt3ahiROQiteDSt5R8OLq/Wasi---Pet-hosting?type=design&node-id=525%3A3645&mode=design&t=emoDcJyRC9weWJwn-1)
+4. [Diseño](#diseño)
+5. [Tecnologías](#Tecnologías)
 6. [Galeria](#Galeria)
 
 ## Información del Proyecto 
@@ -64,6 +64,10 @@ Una aplicación WEB que conecta dueños de mascotas dispuestos a brindar alojami
 | [<img src="https://avatars.githubusercontent.com/u/111989915?v=4" width=130><br><sub>Aldana Gusmeroli</sub>](https://www.linkedin.com/in/leandro-jonatan-andriani-07194b238/) |
 | :---: |
 
+## Diseño
+
+* [FIGMA](https://www.figma.com/file/0Xt3ahiROQiteDSt5R8OLq/Wasi---Pet-hosting?type=design&node-id=525%3A3645&mode=design&t=emoDcJyRC9weWJwn-1)
+* [UX/UI Case](https://drive.google.com/file/d/1f6t9KJ7HNMqycCuRcDAwINFpgTtM_Ga-/view?usp=drive_link)
 
 ## Tecnologías
 ***
@@ -80,6 +84,8 @@ Una aplicación WEB que conecta dueños de mascotas dispuestos a brindar alojami
 | JavaScript|
 | Git 
 | GitHub
+
+
 
 ## Galeria
 ***
